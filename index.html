@@ -1,159 +1,106 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <header style="text-align: center; padding: 20px;">
-        <div class="container">
-            <img src="img/pro-scholar-tools-logo.jpg" 
-                 alt="ProScholarTools Logo - AI Academic & Legal Tools" 
-                 loading="lazy" 
-                 width="200" 
-                 height="200" 
-                 style="display: block; margin: 0 auto; max-width: 100%; height: auto; aspect-ratio: 1/1;">
-            
-            <h1 style="color: #38bdf8; margin-top: 15px;">برو سكولر تولز</h1>
-            <p style="color: white; opacity: 0.8;">أدوات الذكاء الاصطناعي الأكاديمية والقانونية</p>
-        </div>
-    </header>
-    <meta name="description" content="ProScholarTools - المنصة الشاملة لأدوات الذكاء الاصطناعي المجانية. سكربتات تيك توك، فحص الانتحال، وتحليل المستندات للطلاب والمهنيين.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.proscholartools.com/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProScholarTools | مستقبل البحث والتحليل</title>
-    
-    <meta name="description" content="أفضل أدوات الذكاء الاصطناعي المجانية للطلاب وصناع المحتوى. سكربتات تيك توك وفحص انتحال احترافي.">
-    <meta name="keywords" content="ذكاء اصطناعي, تيك توك, فحص انتحال, ProScholarTools">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="ProScholarTools - أدوات ذكاء اصطناعي احترافية للأكاديميين والقانونيين. سكربتات تيك توك، فحص انتحال، وتحليل مالي.">
+    <title>برو سكولر تولز | ProScholarTools</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
     <style>
-        :root { --glass: rgba(255, 255, 255, 0.1); --blur: blur(12px); }
-        body { 
-            margin: 0; font-family: 'Cairo', sans-serif; 
-            background: #0f172a; color: white; 
-            overflow-x: hidden; scroll-behavior: smooth;
+        :root { --primary: #38bdf8; --bg: #0f172a; --card-bg: rgba(30, 41, 59, 0.7); }
+        body { margin: 0; font-family: 'Cairo', sans-serif; background: var(--bg); color: white; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* الهيدر واللوجو */
+        header { text-align: center; padding: 60px 20px; }
+        .logo-img { 
+            width: 150px; height: 150px; border-radius: 50%; 
+            border: 3px solid var(--primary); margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            object-fit: cover;
         }
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
-        
-        /* Hero Section */
-        .hero { text-align: center; padding: 60px 20px; animation: fadeIn 1s ease-in; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #38bdf8; }
-        
-        /* Grid System */
+        h1 { font-size: 2.5rem; color: var(--primary); margin: 0; }
+        .tagline { font-size: 1.1rem; opacity: 0.8; margin-top: 10px; }
+
+        /* الشبكة والأدوات */
         .grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 25px; margin-top: 40px; 
         }
-        
-        /* Glass Card */
-        .card {
-            background: var(--glass);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 20px;
-            transition: 0.3s;
-            text-align: center;
+        .card { 
+            background: var(--card-bg); padding: 25px; border-radius: 15px; 
+            border: 1px solid rgba(255,255,255,0.1); text-align: center;
+            transition: transform 0.3s ease; backdrop-filter: blur(10px);
         }
-        .card:hover { transform: translateY(-10px); border-color: #38bdf8; }
-        
-        /* Image Optimization */
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
         .card img { 
-            width: 100%; height: 200px; object-fit: cover; 
-            border-radius: 15px; margin-bottom: 15px;
-            background: #1e293b; /* مكان محجوز للصورة أثناء التحميل */
+            width: 100%; height: auto; aspect-ratio: 300/200; 
+            border-radius: 10px; margin-bottom: 15px; object-fit: cover;
+            background: #1e293b;
+        }
+        h3 { color: var(--primary); margin-bottom: 10px; }
+        button { 
+            background: var(--primary); color: #0f172a; border: none; 
+            padding: 10px 25px; border-radius: 8px; cursor: pointer; 
+            font-weight: bold; width: 100%; font-family: 'Cairo';
         }
 
-        button {
-            background: #38bdf8; color: #0f172a; border: none;
-            padding: 10px 25px; border-radius: 10px; font-weight: bold;
-            cursor: pointer; transition: 0.3s; width: 100%;
-        }
-        button:hover { background: #7dd3fc; }
-
-        footer { margin-top: 80px; padding: 40px; text-align: center; opacity: 0.7; border-top: 1px solid var(--glass); }
-        footer a { color: white; text-decoration: none; margin: 0 10px; font-size: 14px; }
-
-        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        /* ذيل الصفحة */
+        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
+        .f-links a { color: var(--primary); text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        .copy { opacity: 0.5; font-size: 0.8rem; margin-top: 15px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="hero">
-        <h1>مستقبل البحث والتحليل</h1>
-        <p>أدوات ذكية مدعومة بالذكاء الاصطناعي لرفع إنتاجيتك</p>
-    </div>
+    <header>
+        <img src="img/logo.jpg" alt="ProScholarTools Logo" class="logo-img" fetchpriority="high" width="150" height="150">
+        <h1>برو سكولر تولز</h1>
+        <p class="tagline">أدوات الذكاء الاصطناعي الأكاديمية والقانونية المتطورة</p>
+    </header>
 
     <div class="grid">
         <div class="card">
-            <img src="img/viral-tiktok-scripts-social-media-roi.jpg" alt="TikTok Scripts" loading="lazy" width="300" height="200">
+            <img src="img/tiktok.jpg" alt="سكربتات تيك توك" loading="eager" width="300" height="200">
             <h3>Viral TikTok Scripts</h3>
-            <p>حوّل أفكارك إلى فيديوهات تتصدر التريند.</p>
-            <button onclick="alert('جاري تشغيل الذكاء الاصطناعي...')">ابدأ الآن</button>
+            <p>اصنع محتوى يتصدر التريند عالمياً.</p>
+            <button onclick="alert('جاري التجهيز...')">ابدأ الآن</button>
         </div>
 
         <div class="card">
-            <img src="img/academic-integrity-plagiarism-checker.jpg" alt="Plagiarism Checker" loading="lazy" width="300" height="200">
+            <img src="img/academic.jpg" alt="فحص الانتحال" loading="lazy" width="300" height="200">
             <h3>Plagiarism Checker</h3>
-            <p>تأكد من أصالة محتواك الأكاديمي بدقة.</p>
-            <button onclick="alert('جاري فحص المحتوى...')">فحص الملف</button>
+            <p>تأكد من أصالة أبحاثك العلمية.</p>
+            <button onclick="alert('جاري الفحص...')">فحص الملف</button>
         </div>
 
         <div class="card">
-            <img src="img/financial-compliance-ai-reporting.jpg" alt="Financial AI" loading="lazy" width="300" height="200">
-            <h3>Financial Analysis</h3>
-            <p>تحليل البيانات المالية والامتثال الضريبي.</p>
-            <button onclick="alert('جاري تحليل البيانات...')">حلل الآن</button>
-        </div>
-
-        <div class="card">
-            <img src="img/legal-document-analysis-ai.jpg" alt="Legal AI" loading="lazy" width="300" height="200">
+            <img src="img/legal.jpg" alt="مساعد قانوني" loading="lazy" width="300" height="200">
             <h3>Legal Assistant</h3>
-            <p>مراجعة العقود والمستندات القانونية بذكاء.</p>
-            <button onclick="alert('جاري مراجعة العقد...')">ابدأ التحليل</button>
+            <p>تحليل العقود والمستندات بذكاء.</p>
+            <button onclick="alert('جاري التحليل...')">ابدأ التحليل</button>
+        </div>
+
+        <div class="card">
+            <img src="img/financial.jpg" alt="تحليل مالي" loading="lazy" width="300" height="200">
+            <h3>Financial Analysis</h3>
+            <p>إدارة البيانات والامتثال المالي.</p>
+            <button onclick="alert('جاري العمل...')">ابدأ الآن</button>
         </div>
     </div>
 
     <footer>
-        <a href="privacy.html">سياسة الخصوصية</a> | 
-        <a href="contact.html">اتصل بنا</a> | 
-        <a href="index.html">الرئيسية</a>
-        <p>© 2026 ProScholarTools - جميع الحقوق محفوظة</p>
-        <style>
-        /* تأكد من إضافة هذا التنسيق ليظهر الذيل بشكل احترافي */
-        footer { 
-            margin-top: 80px; 
-            padding: 40px 20px; 
-            text-align: center; 
-            border-top: 1px solid rgba(255,255,255,0.1);
-            background: rgba(15, 23, 42, 0.8);
-        }
-        .footer-links { margin-bottom: 20px; }
-        .footer-links a { 
-            color: #38bdf8; 
-            text-decoration: none; 
-            margin: 0 15px; 
-            font-size: 16px; 
-            transition: 0.3s;
-        }
-        .footer-links a:hover { color: white; text-decoration: underline; }
-        .copyright { font-size: 14px; opacity: 0.6; margin-top: 10px; }
-    </style>
-
-    <footer>
-        <div class="footer-links">
+        <div class="f-links">
             <a href="index.html">الرئيسية</a>
-            <a href="about.html">من نحن</a> <a href="contact.html">اتصل بنا</a>
+            <a href="about.html">من نحن</a>
+            <a href="contact.html">اتصل بنا</a>
             <a href="privacy.html">سياسة الخصوصية</a>
         </div>
-        <p class="copyright">© 2026 ProScholarTools - جميع الحقوق محفوظة</p>
-    </footer>
+        <p class="copy">© 2026 ProScholarTools - جميع الحقوق محفوظة</p>
     </footer>
 </div>
+
 </body>
 </html>
