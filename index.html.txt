@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProScholarTools | المنصة العالمية للذكاء الاصطناعي</title>
+    <meta name="description" content="أدوات البحث القانوني لدرجة الدكتوراه، امتثال التقنيات المالية، قانون التأمين السيبراني، وكشف الاستلال.">
+    <meta name="keywords" content="Cyber Insurance Law, FinTech AI Compliance, Plagiarism Checker API, أدوات الذكاء الاصطناعي">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="google_translate_element" class="translate-bar"></div>
+    <header class="glass-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo-container">
+                <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 20C20 20 10 30 10 40C10 60 40 80 50 85C60 80 90 60 90 40C90 30 80 20 70 20C60 20 50 30 50 30C50 30 40 20 30 20Z" fill="#7c3aed" opacity="0.9"/>
+                    <path d="M40 50L50 50M60 50L50 50M50 50L50 40M50 50L50 60" stroke="#f8fafc" stroke-width="6"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-en"><span>Pro</span>ScholarTools</span>
+                    <span class="logo-ar">برو سكولر تولز</span>
+                </div>
+            </a>
+            <nav><a href="#tools">الأدوات 💎</a><a href="about.html">من نحن</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="badge">مدعوم بذكاء Gemini 1.5 المتطور</span>
+            <h1>مستقبل البحث والتحليل <br><span>بين يديك الآن</span></h1>
+            <p class="authority-text">🏆 موثوق ومُطور من قبل باحثين، أساتذة جامعات، محامين، وخبراء ماليين عالميين.</p>
+        </section>
+
+        <section id="tools" class="tool-section">
+            <h2 class="cat-title">💎 الأدوات العالمية (Premium Tools)</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="icon" style="font-size: 2.5rem;">🔐</div>
+                    <h3>الامتثال المالي والتأمين السيبراني</h3>
+                    <p>أداة استشارية لتحليل توافق الشركات مع قوانين FinTech.</p>
+                    <a href="compliance.html" class="btn-primary">افتح الأداة والمقال</a>
+                </div>
+                <div class="tool-card">
+                    <div class="icon" style="font-size: 2.5rem;">🛡️</div>
+                    <h3>مستشار التأمين على الحياة والممتلكات</h3>
+                    <p>احصل على خطة مالية وتقييم للمخاطر بذكاء اصطناعي اكتواري.</p>
+                    <a href="insurance.html" class="btn-primary">افتح الأداة والمقال</a>
+                </div>
+                <div class="tool-card">
+                    <div class="icon" style="font-size: 2.5rem;">✒️</div>
+                    <h3>كشف الاستلال والبحث الأكاديمي</h3>
+                    <p>للباحثين: كشف السرقة العلمية وإعادة الصياغة الاحترافية.</p>
+                    <a href="plagiarism.html" class="btn-primary">افتح الأداة والمقال</a>
+                </div>
+                <div class="tool-card">
+                    <div class="icon" style="font-size: 2.5rem;">🔥</div>
+                    <h3>صانع المحتوى الفيروسي (Viral Hooks)</h3>
+                    <p>مولد سكربتات تيك توك لزيادة التفاعل والمبيعات.</p>
+                    <a href="viral-hooks.html" class="btn-primary">افتح الأداة والمقال</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 ProScholarTools.com - جميع الحقوق محفوظة.</p>
+            <div class="footer-links"><a href="about.html">من نحن</a><a href="privacy.html">سياسة الخصوصية</a><a href="contact.html">اتصل بنا</a></div>
+            <p class="footer-email">للتواصل المباشر: <span>info@proscholartools.com</span></p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'ar', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); }</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <script src="script.js"></script>
+
+</body> </html>
+</body>
+</html>

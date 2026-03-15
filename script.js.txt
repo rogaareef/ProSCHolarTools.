@@ -1,0 +1,37 @@
+// 🔥 ضع مفتاح API الخاص بك هنا
+const GEMINI_API_KEY = "AIzaSyAHsd1dntPfW046aIqGjDZ5BM-qWrMst3w";
+async function askGemini(prompt) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+    try {
+        const response = await fetch(url, {
+            method: "POST", headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+        const data = await response.json();
+        return data.candidates[0].content.parts[0].text;
+    } catch (error) {
+        return "⚠️ حدث خطأ في الاتصال. يرجى المحاولة لاحقاً أو التأكد من صحة مفتاح API.";
+    }
+}
+
+async function runMegaTool(actionType, inputId, resultId) {
+    const inputVal = document.getElementById(inputId).value;
+    const resultBox = document.getElementById(resultId);
+    if (!inputVal) { alert("يرجى إدخال البيانات المطلوبة أولاً."); return; }
+
+    let prompt = "";
+    switch(actionType) {
+        case 'compliance': prompt = `كمستشار دولي، حلل هذا النظام بناءً على (FinTech AI Compliance) و (Cyber Insurance Law) واستخرج الثغرات: ${inputVal}`; break;
+        case 'insurance': prompt = `كمستشار مالي واكتواري. حلل هذه البيانات: "${inputVal}". قدم تقريراً يضم التغطية المثالية، المخاطر، و3 نصائح لتقليل القسط.`; break;
+        case 'plagiarism': prompt = `حلل هذا النص كخبير كشف استلال (Plagiarism Checker API). حدد الجمل المنقولة واقترح صياغة أصيلة لها: ${inputVal}`; break;
+        case 'legal': prompt = `أنت مستشار قانوني. صغ عقداً أو مذكرة احترافية بالديباجة الرسمية بناءً على هذه التفاصيل: ${inputVal}`; break;
+        case 'viral': prompt = `أنت خبير تسويق فيروسي. اكتب 3 خطافات (Hooks) تخطف الانتباه في أول 3 ثوانٍ لفيديو قصير حول: "${inputVal}". ثم اكتب سكربت مدته 30 ثانية.`; break;
+        case 'lesson': prompt = `أنت خبير تربوي. لخص هذا الدرس للطلاب، ثم ضع 3 أسئلة اختيار من متعدد لاختبارهم: ${inputVal}`; break;
+        case 'hse': prompt = `كبروفيسور، استخدم أدوات البحث القانوني (PhD Legal Research) لتحليل النص واربطه بمعايير (International HSE Standards): ${inputVal}`; break;
+    }
+
+    resultBox.style.display = "block"; 
+    resultBox.innerHTML = "<div style='color:#10b981;'><em>⏳ جاري التحليل والمعالجة بذكاء Gemini...</em></div>";
+    const response = await askGemini(prompt);
+    resultBox.innerHTML = `<strong>النتيجة الذكية:</strong><br><br>${response.replace(/\n/g, '<br>')}`;
+}

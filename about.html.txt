@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | ProScholarTools</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo-container">
+                <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 20C20 20 10 30 10 40C10 60 40 80 50 85C60 80 90 60 90 40C90 30 80 20 70 20C60 20 50 30 50 30C50 30 40 20 30 20Z" fill="#7c3aed" opacity="0.9"/><path d="M40 50L50 50M60 50L50 50M50 50L50 40M50 50L50 60" stroke="#f8fafc" stroke-width="6"/></svg>
+                <div class="logo-text"><span class="logo-en"><span>Pro</span>ScholarTools</span><span class="logo-ar">برو سكولر تولز</span></div>
+            </a>
+            <nav><a href="index.html">الرئيسية</a></nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 0;">
+        <article class="seo-article">
+            <h1 style="color: #db2777; margin-bottom: 30px;">من نحن - قصة ProScholarTools</h1>
+            <p>مرحباً بكم في <strong>ProScholarTools</strong>، المنصة الرائدة التي تدمج قوة الذكاء الاصطناعي مع احتياجات الباحثين، المحامين، وصناع المحتوى الرقمي في عام 2026.</p>
+            <h3>رؤيتنا</h3>
+            <p>نحن نؤمن بأن التكنولوجيا يجب أن تكون في خدمة العقل البشري لا أن تحل محله. رؤيتنا هي تمكين المتخصصين من الوصول إلى أدوات تحليلية دقيقة في مجالات معقدة مثل الامتثال المالي، البحث الأكاديمي، وقانون التأمين السيبراني بضغطة زر واحدة.</p>
+            <h3>فريقنا</h3>
+            <p>يضم فريقنا نخبة من المبرمجين والباحثين القانونيين الذين عملوا على تطويع نماذج Gemini المتطورة لتقديم حلول حقيقية وموثوقة تتوافق مع المعايير الدولية.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container"><p>© 2026 ProScholarTools.com - رفيقك في النجاح الرقمي.</p></div>
+    </footer>
+</body>
+</html>

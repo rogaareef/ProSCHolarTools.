@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صانع المحتوى الفيروسي وسكربتات تيك توك | ProScholarTools</title>
+    <meta name="description" content="مولد الخطافات الفيروسية (Viral TikTok Scripts) لزيادة العائد على الاستثمار.">
+    <meta name="keywords" content="Viral TikTok Scripts, Social Media Marketing ROI, TikTok Hook Generator">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="google_translate_element" class="translate-bar"></div>
+    <header class="glass-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo-container">
+                <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 20C20 20 10 30 10 40C10 60 40 80 50 85C60 80 90 60 90 40C90 30 80 20 70 20C60 20 50 30 50 30C50 30 40 20 30 20Z" fill="#7c3aed" opacity="0.9"/><path d="M40 50L50 50M60 50L50 50M50 50L50 40M50 50L50 60" stroke="#f8fafc" stroke-width="6"/></svg>
+                <div class="logo-text"><span class="logo-en"><span>Pro</span>ScholarTools</span><span class="logo-ar">برو سكولر تولز</span></div>
+            </a>
+            <nav><a href="index.html">العودة للرئيسية</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="tool-card" style="margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="icon" style="font-size: 3rem; text-align: center;">🔥</div>
+            <h1 style="text-align: center; color: #db2777;">صانع المحتوى الفيروسي (Viral Hooks)</h1>
+            <textarea id="viralInput" placeholder="عن ماذا يتحدث الفيديو الخاص بك؟ (مثال: أسرار العقارات، نصائح للذكاء الاصطناعي)..."></textarea>
+            <button onclick="runMegaTool('viral', 'viralInput', 'viralResult')" class="btn-primary">توليد سكربت تيك توك/شورتس</button>
+            <div id="viralResult" class="ai-box"></div>
+        </section>
+
+        <section class="instructions">
+            <h2>كيف تصنع فيديو يحصد ملايين المشاهدات؟</h2>
+            <ol>
+                <li>اكتب الفكرة الأساسية لفيديوهاتك.</li>
+                <li>اضغط على "توليد سكربت تيك توك/شورتس".</li>
+                <li>ستحصل فوراً على 3 "خطافات" (Hooks) مصممة نفسياً لخطف انتباه المشاهد في أول 3 ثوانٍ.</li>
+            </ol>
+        </section>
+
+        <article class="seo-article">
+            <h2>علم النفس وراء الفيديوهات الفيروسية وكيفية مضاعفة الـ ROI</h2>
+            <picture>
+                <source srcset="img/viral-tiktok-scripts-social-media-roi.webp" type="image/webp">
+                <img src="img/viral-tiktok-scripts-social-media-roi.jpg" 
+                     alt="توليد سكربتات تيك توك الفيروسية لزيادة العائد على الاستثمار (Social Media Marketing ROI)" 
+                     width="800" height="450" loading="lazy" 
+                     style="width: 100%; height: auto; border-radius: 16px; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.05);">
+            </picture>
+            <p>في عالم السوشيال ميديا السريع، لديك 3 ثوانٍ فقط لإقناع المشاهد بالبقاء. سر النجاح يكمن في قوة الكلمة الأولى. أداة توليد <strong>Viral TikTok Scripts</strong> هي السلاح السري لأكبر صناع المحتوى والوكالات الإعلانية.</p>
+            <h3>تعظيم العائد على الاستثمار (Social Media Marketing ROI)</h3>
+            <p>منصة ProScholarTools تحلل خوارزميات الترند لتمنحك نصوصاً مصممة لزيادة التفاعل والمبيعات. وفر تكاليف كتاب المحتوى الباهظة، واستخدم الذكاء الاصطناعي لتوليد أفكار لا تنضب تجعل علامتك التجارية تتصدر منصات الفيديو القصير.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-content"><p>© 2026 ProScholarTools.com - للتواصل: <span>info@proscholartools.com</span></p></div></footer>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'ar', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); }</script>
+    <script src="script.js"></script>
+</body>
+</html>

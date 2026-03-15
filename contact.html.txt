@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا | ProScholarTools</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo-container">
+                <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 20C20 20 10 30 10 40C10 60 40 80 50 85C60 80 90 60 90 40C90 30 80 20 70 20C60 20 50 30 50 30C50 30 40 20 30 20Z" fill="#7c3aed" opacity="0.9"/><path d="M40 50L50 50M60 50L50 50M50 50L50 40M50 50L50 60" stroke="#f8fafc" stroke-width="6"/></svg>
+                <div class="logo-text"><span class="logo-en"><span>Pro</span>ScholarTools</span><span class="logo-ar">برو سكولر تولز</span></div>
+            </a>
+            <nav><a href="index.html">الرئيسية</a></nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 0; text-align: center;">
+        <div class="tool-card" style="max-width: 600px; margin: 0 auto; padding: 50px;">
+            <div class="icon" style="font-size: 3rem;">📧</div>
+            <h1 style="color: #db2777;">تواصل معنا</h1>
+            <p style="margin: 20px 0; color: var(--text-gray);">نحن هنا للرد على استفساراتكم واقتراحاتكم لتطوير المنصة.</p>
+            <div style="background: var(--glass); padding: 20px; border-radius: 12px; border: 1px solid var(--accent);">
+                <p style="font-size: 1.2rem; font-weight: bold; color: var(--text);">البريد الإلكتروني الرسمي:</p>
+                <p style="font-size: 1.4rem; color: #10b981; margin-top: 10px;">info@proscholartools.com</p>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.9rem; color: var(--text-gray);">سنقوم بالرد عليكم في غضون 24-48 ساعة عمل.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container"><p>© 2026 ProScholarTools.com - دائماً في خدمتكم.</p></div>
+    </footer>
+</body>
+</html>
