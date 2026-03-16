@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta -->
+    <!-- ✅ العنوان الجديد - ProScholarTools فقط -->
     <title>ProScholarTools | منصة الأدوات الأكاديمية والبحثية الذكية</title>
-    <meta name="description" content="ProScholarTools - منصة متكاملة للأدوات الأكاديمية والبحثية والمالية. فاحص انتحال، حاسبة قروض، أدوات PDF، ودعم الباحثين والطلاب.">
-    <meta name="keywords" content="ProScholarTools, أدوات بحثية, فاحص انتحال, حاسبة GPA, تحويل PDF, أدوات أكاديمية">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="ProScholarTools - منصة متكاملة للأدوات الأكاديمية والبحثية. فاحص انتحال، حاسبة GPA، أدوات PDF، ودعم الباحثين.">
+    <meta name="keywords" content="ProScholarTools, أدوات بحثية, فاحص انتحال, حاسبة GPA, أدوات أكاديمية">
     <meta name="author" content="ProScholarTools">
-    <meta name="robots" content="index, follow">
     
     <!-- Open Graph -->
     <meta property="og:title" content="ProScholarTools | منصة الأدوات الأكاديمية">
-    <meta property="og:description" content="أدوات ذكية للباحثين والطلاب والأكاديميين">
-    <meta property="og:image" content="https://proscholartools.com/assets/logo.png">
+    <meta property="og:description" content="أدوات ذكية للباحثين والطلاب">
+    <meta property="og:site_name" content="ProScholarTools">
+    
+    <!-- Twitter -->
+    <meta name="twitter:title" content="ProScholarTools">
     
     <!-- Canonical -->
     <link rel="canonical" href="https://proscholartools.com/">
     
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <!-- Font Awesome للأيقونات -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <!-- Critical CSS -->
@@ -33,16 +36,14 @@
         body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
         .container{max-width:1400px;margin:0 auto;padding:0 20px}
         
-        /* Header Top Bar */
+        /* Top Bar */
         .top-bar{background:rgba(0,0,0,0.3);border-bottom:1px solid rgba(255,255,255,0.1);padding:10px 0;position:sticky;top:0;z-index:1001}
         .top-bar-content{display:flex;justify-content:space-between;align-items:center}
         
-        /* Social Icons - Right Side */
-        .social-icons{display:flex;gap:15px;align-items:center}
-        .social-icon{width:35px;height:35px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--text);text-decoration:none;transition:all 0.3s;border:1px solid rgba(255,255,255,0.2)}
+        .social-icons{display:flex;gap:12px}
+        .social-icon{width:35px;height:35px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--text);text-decoration:none;transition:all 0.3s}
         .social-icon:hover{background:var(--primary);color:#000;transform:translateY(-3px)}
         
-        /* Language Switcher - Left Side */
         .lang-switcher{display:flex;gap:8px}
         .lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.2);color:#94a3b8;padding:6px 14px;border-radius:20px;cursor:pointer;font-size:0.85rem;transition:all 0.3s}
         .lang-btn:hover,.lang-btn.active{background:var(--primary);color:#000;border-color:var(--primary)}
@@ -52,52 +53,73 @@
         .spinner{width:50px;height:50px;border:3px solid rgba(56,189,248,0.3);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite}
         @keyframes spin{to{transform:rotate(360deg)}}
         
-        /* Hero */
+        /* ✅ Hero with ProScholarTools */
         .hero{padding:60px 20px 40px;text-align:center}
         .logo-container{margin-bottom:20px}
-        .site-name{font-size:2.5rem;font-weight:800;background:linear-gradient(to right,var(--primary),#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
-        .tagline{color:#94a3b8;font-size:1.2rem;margin-top:10px}
+        
+        /* ✅ الاسم الجديد هنا */
+        .site-name{
+            font-size:2.8rem;
+            font-weight:900;
+            background:linear-gradient(135deg,#38bdf8 0%,#818cf8 50%,#c084fc 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+            letter-spacing:-2px;
+            display:inline-block;
+        }
+        
+        .site-name span{color:#f472b6;-webkit-text-fill-color:#f472b6}
+        
+        .tagline{color:#94a3b8;font-size:1.2rem;margin-top:15px;font-weight:400}
+        .tagline strong{color:var(--primary);font-weight:600}
         
         /* Ad Units */
         .ad-unit{margin:30px auto;background:rgba(255,255,255,0.02);border:1px dashed rgba(148,163,184,0.3);border-radius:12px;padding:15px;text-align:center;min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-        .ad-label{font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+        .ad-label{font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:2px;margin-bottom:5px}
         
         /* Tools Grid */
         .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin:40px 0}
         .tool-card{background:var(--card);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:25px;transition:all 0.3s;cursor:pointer;backdrop-filter:blur(10px)}
-        .tool-card:hover{transform:translateY(-5px);border-color:var(--primary);box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+        .tool-card:hover{transform:translateY(-5px);border-color:var(--primary);box-shadow:0 15px 35px rgba(56,189,248,0.2)}
         .tool-icon{width:60px;height:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:15px;background:linear-gradient(135deg,var(--primary),#818cf8)}
-        .tool-card h3{font-size:1.2rem;margin-bottom:8px}
-        .tool-card p{color:#94a3b8;font-size:0.95rem;margin-bottom:15px}
-        .btn{width:100%;padding:12px;background:linear-gradient(135deg,var(--primary),#818cf8);color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:opacity 0.3s}
-        .btn:hover{opacity:0.9}
+        .tool-card h3{font-size:1.25rem;margin-bottom:10px;color:var(--text)}
+        .tool-card p{color:#94a3b8;font-size:0.95rem;margin-bottom:15px;line-height:1.6}
+        .btn{width:100%;padding:12px;background:linear-gradient(135deg,var(--primary),#818cf8);color:#000;border:none;border-radius:10px;font-weight:700;cursor:pointer;transition:all 0.3s}
+        .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(56,189,248,0.3)}
         
-        .section-title{font-size:1.5rem;color:var(--primary);margin:50px 0 25px;display:flex;align-items:center;gap:10px;border-bottom:2px solid rgba(255,255,255,0.1);padding-bottom:15px}
+        .section-title{font-size:1.5rem;color:var(--primary);margin:50px 0 25px;display:flex;align-items:center;gap:12px;padding-bottom:15px;border-bottom:2px solid rgba(255,255,255,0.1)}
         
-        /* Footer - AdSense Required Pages */
+        /* Footer */
         footer{margin-top:80px;background:rgba(0,0,0,0.5);border-top:1px solid rgba(255,255,255,0.1);padding:50px 0 20px}
         .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px}
-        .footer-section h4{color:var(--primary);margin-bottom:20px;font-size:1.1rem}
+        .footer-section h4{color:var(--primary);margin-bottom:20px;font-size:1.1rem;font-weight:700}
         .footer-section p{color:#94a3b8;line-height:1.8;font-size:0.95rem}
         .footer-links{list-style:none}
         .footer-links li{margin-bottom:12px}
-        .footer-links a{color:#94a3b8;text-decoration:none;display:flex;align-items:center;gap:8px;transition:all 0.3s;font-size:0.95rem}
+        .footer-links a{color:#94a3b8;text-decoration:none;display:flex;align-items:center;gap:10px;transition:all 0.3s;font-size:0.95rem}
         .footer-links a:hover{color:var(--primary);padding-right:5px}
-        .footer-links a i{color:var(--primary);font-size:0.8rem}
+        .footer-links a i{font-size:0.8rem;color:var(--primary)}
         
-        /* Required AdSense Pages Highlight */
-        .required-pages{background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.3);border-radius:12px;padding:20px;margin-top:20px}
-        .required-pages h5{color:var(--primary);margin-bottom:15px;font-size:1rem}
-        .badge-required{background:#ef4444;color:white;padding:2px 8px;border-radius:20px;font-size:0.7rem;margin-right:8px}
+        .required-pages{background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.3);border-radius:12px;padding:20px;margin-top:20px}
+        .required-pages h5{color:var(--primary);margin-bottom:15px;font-size:1rem;display:flex;align-items:center;gap:8px}
+        .badge-required{background:#ef4444;color:white;padding:2px 8px;border-radius:20px;font-size:0.7rem;margin-right:6px;font-weight:700}
         
         .copyright{text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1);color:#64748b;font-size:0.9rem}
-        .adsense-notice{background:rgba(255,255,255,0.05);padding:15px;border-radius:8px;margin-top:20px;text-align:center;font-size:0.85rem;color:#64748b}
+        .adsense-notice{background:rgba(255,255,255,0.05);padding:15px;border-radius:10px;margin-top:20px;text-align:center;font-size:0.85rem;color:#64748b}
+        .adsense-notice a{color:var(--primary);text-decoration:none;font-weight:600}
+        
+        /* Modal */
+        #modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.9);z-index:2000;align-items:center;justify-content:center;padding:20px}
+        #modal-content{background:#1e293b;border:2px solid var(--primary);border-radius:20px;max-width:600px;width:100%;max-height:85vh;overflow-y:auto;position:relative;animation:modalIn 0.3s ease}
+        @keyframes modalIn{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+        .modal-close{position:absolute;top:15px;right:15px;background:#ef4444;color:white;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;z-index:10;transition:all 0.3s}
+        .modal-close:hover{transform:rotate(90deg)}
         
         @media(max-width:768px){
             .top-bar-content{flex-direction:column;gap:10px}
-            .site-name{font-size:1.8rem}
+            .site-name{font-size:2rem}
             .tools-grid{grid-template-columns:1fr}
-            .footer-content{grid-template-columns:1fr}
         }
     </style>
     
@@ -111,38 +133,25 @@
 </head>
 <body>
 
-    <!-- Loading Screen -->
+    <!-- Loading -->
     <div class="loader" id="loader"><div class="spinner"></div></div>
 
-    <!-- Top Header Bar with Social Icons -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
-            <!-- Language Switcher (Left in RTL = visually right) -->
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLang('ar')">🇸🇦 العربية</button>
                 <button class="lang-btn" onclick="setLang('en')">🇺🇸 English</button>
             </div>
             
-            <!-- Social Icons (Right in RTL = visually left) -->
+            <!-- ✅ الأيقونات في أقصى اليمين -->
             <div class="social-icons">
-                <a href="https://facebook.com/proscholartools" class="social-icon" target="_blank" rel="noopener" title="فيسبوك" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com/proscholartools" class="social-icon" target="_blank" rel="noopener" title="تويتر" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://instagram.com/proscholartools" class="social-icon" target="_blank" rel="noopener" title="انستغرام" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://linkedin.com/company/proscholartools" class="social-icon" target="_blank" rel="noopener" title="لينكد إن" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://t.me/proscholartools" class="social-icon" target="_blank" rel="noopener" title="تلغرام" aria-label="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-                <a href="mailto:support@proscholartools.com" class="social-icon" title="بريد إلكتروني" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+                <a href="#" class="social-icon" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" title="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" title="انستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" title="تلغرام"><i class="fab fa-telegram-plane"></i></a>
+                <a href="mailto:support@proscholartools.com" class="social-icon" title="بريد إلكتروني"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </div>
@@ -156,11 +165,14 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- ✅ Hero with Correct Name: ProScholarTools -->
     <header class="hero">
         <div class="logo-container">
-            <div class="site-name">ProScholarTools</div>
-            <div class="tagline">منصة الأدوات الأكاديمية والبحثية الذكية</div>
+            <!-- ✅ الاسم الجديد: ProScholarTools -->
+            <div class="site-name">Pro<span>Scholar</span>Tools</div>
+            <div class="tagline">
+                منصة <strong>الأدوات الأكاديمية</strong> والبحثية الذكية
+            </div>
         </div>
     </header>
 
@@ -168,7 +180,7 @@
         
         <!-- Academic Tools -->
         <section>
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> أدوات أكاديمية</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap" style="color:#38bdf8"></i> أدوات أكاديمية</h2>
             <div class="tools-grid">
                 <article class="tool-card" onclick="openTool('writer')">
                     <div class="tool-icon">✍️</div>
@@ -187,7 +199,7 @@
                 <article class="tool-card" onclick="openTool('references')">
                     <div class="tool-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">📚</div>
                     <h3>منسق المراجع APA</h3>
-                    <p>نظّم مراجعك البحثية تلقائياً حسب المعايير</p>
+                    <p>نظّم مراجعك البحثية تلقائياً</p>
                     <button class="btn">نسّق المراجع</button>
                 </article>
             </div>
@@ -195,12 +207,12 @@
 
         <!-- Financial Tools -->
         <section>
-            <h2 class="section-title"><i class="fas fa-calculator"></i> أدوات مالية</h2>
+            <h2 class="section-title"><i class="fas fa-calculator" style="color:#22c55e"></i> أدوات مالية</h2>
             <div class="tools-grid">
                 <article class="tool-card" onclick="openTool('loan')">
                     <div class="tool-icon" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🏦</div>
                     <h3>حاسبة القروض</h3>
-                    <p>احسب الأقساط والفوائد المركبة بسهولة</p>
+                    <p>احسب الأقساط والفوائد المركبة</p>
                     <button class="btn">احسب الآن</button>
                 </article>
 
@@ -213,27 +225,7 @@
             </div>
         </section>
 
-        <!-- File Tools -->
-        <section>
-            <h2 class="section-title"><i class="fas fa-file-alt"></i> أدوات الملفات</h2>
-            <div class="tools-grid">
-                <article class="tool-card" onclick="openTool('pdf')">
-                    <div class="tool-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)">📄</div>
-                    <h3>تحويل PDF</h3>
-                    <p>دمج، تقسيم، ضغط وتحويل ملفات PDF</p>
-                    <button class="btn">أدخل الأداة</button>
-                </article>
-
-                <article class="tool-card" onclick="openTool('image')">
-                    <div class="tool-icon" style="background:linear-gradient(135deg,#fb923c,#ea580c)">🖼️</div>
-                    <h3>تحويل الصور</h3>
-                    <p>حول الصور بين الصيغ مع ضغط ذكي</p>
-                    <button class="btn">حوّل الصورة</button>
-                </article>
-            </div>
-        </section>
-
-        <!-- Mid Page Ad -->
+        <!-- Mid Ad -->
         <div class="ad-unit" style="margin:40px auto;">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -241,122 +233,186 @@
 
     </main>
 
-    <!-- Footer with Required AdSense Pages -->
+    <!-- ✅ Footer with Required Pages -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- About -->
+                
                 <div class="footer-section">
                     <h4>عن ProScholarTools</h4>
-                    <p>منصة متخصصة في تقديم الأدوات الذكية للباحثين والطلاب والأكاديميين. نسعى لتبسيط العمليات البحثية والأكاديمية باستخدام أحدث التقنيات.</p>
+                    <p>منصة متخصصة في تقديم الأدوات الذكية للباحثين والطلاب. نسعى لتبسيط العمليات البحثية باستخدام أحدث التقنيات.</p>
                 </div>
 
-                <!-- Quick Links -->
                 <div class="footer-section">
                     <h4>روابط سريعة</h4>
                     <ul class="footer-links">
                         <li><a href="/"><i class="fas fa-home"></i> الرئيسية</a></li>
-                        <li><a href="/tools/"><i class="fas fa-tools"></i> جميع الأدوات</a></li>
                         <li><a href="/blog/"><i class="fas fa-blog"></i> المدونة</a></li>
                         <li><a href="/contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
 
-                <!-- Required AdSense Pages (مهم جداً) -->
+                <!-- ✅ الصفحات المطلوبة لـ AdSense -->
                 <div class="footer-section required-pages">
-                    <h5><i class="fas fa-shield-alt"></i> الصفحات المطلوبة (AdSense)</h5>
+                    <h5><i class="fas fa-shield-alt"></i> صفحات مطلوبة</h5>
                     <ul class="footer-links">
                         <li>
                             <a href="/privacy-policy.html">
-                                <i class="fas fa-lock"></i> 
                                 <span class="badge-required">مطلوب</span>
-                                سياسة الخصوصية (Privacy Policy)
+                                <i class="fas fa-lock"></i> سياسة الخصوصية
                             </a>
                         </li>
                         <li>
                             <a href="/terms.html">
-                                <i class="fas fa-file-contract"></i>
                                 <span class="badge-required">مطلوب</span>
-                                شروط الخدمة (Terms of Service)
+                                <i class="fas fa-file-contract"></i> شروط الخدمة
                             </a>
                         </li>
                         <li>
                             <a href="/cookie-policy.html">
-                                <i class="fas fa-cookie-bite"></i>
                                 <span class="badge-required">مطلوب</span>
-                                سياسة ملفات الكوكيز (Cookie Policy)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/about.html">
-                                <i class="fas fa-info-circle"></i>
-                                من نحن (About Us)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/contact.html">
-                                <i class="fas fa-phone"></i>
-                                <span class="badge-required">مطلوب</span>
-                                اتصل بنا (Contact Us)
+                                <i class="fas fa-cookie-bite"></i> سياسة الكوكيز
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
                 <div class="footer-section">
                     <h4>تواصل معنا</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:support@proscholartools.com"><i class="fas fa-envelope"></i> support@proscholartools.com</a></li>
-                        <li><a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a></li>
-                        <li><span style="color:#94a3b8"><i class="fas fa-map-marker-alt"></i> الموقع الإلكتروني فقط</span></li>
                     </ul>
-                    
-                    <!-- Social in Footer too -->
-                    <div style="margin-top:20px;display:flex;gap:10px;">
-                        <a href="https://facebook.com/proscholartools" class="social-icon" style="width:40px;height:40px;" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/proscholartools" class="social-icon" style="width:40px;height:40px;" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com/proscholartools" class="social-icon" style="width:40px;height:40px;" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <div style="margin-top:15px;display:flex;gap:10px;">
+                        <a href="#" class="social-icon" style="width:38px;height:38px"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" style="width:38px;height:38px"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" style="width:38px;height:38px"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
             </div>
 
+            <!-- ✅ Copyright with ProScholarTools -->
             <div class="copyright">
-                <p>© 2025 ProScholarTools. جميع الحقوق محفوظة.</p>
+                <p>© 2025 <strong>ProScholarTools</strong>. جميع الحقوق محفوظة.</p>
                 <div class="adsense-notice">
-                    <i class="fab fa-google" style="color:var(--primary)"></i> 
-                    هذا الموقع يستخدم Google AdSense لعرض الإعلانات. 
-                    <a href="/privacy-policy.html" style="color:var(--primary);text-decoration:none;">سياسة الخصوصية</a> | 
-                    <a href="/cookie-policy.html" style="color:var(--primary);text-decoration:none;">ملفات الكوكيز</a>
+                    هذا الموقع يستخدم Google AdSense | 
+                    <a href="/privacy-policy.html">سياسة الخصوصية</a> | 
+                    <a href="/cookie-policy.html">ملفات الكوكيز</a>
                 </div>
             </div>
+            
         </div>
     </footer>
 
-    <!-- Basic Scripts -->
+    <!-- Modal -->
+    <div id="modal-overlay" onclick="if(event.target===this)closeModal()">
+        <div id="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modal-body" style="padding:40px 30px 30px"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script>
         // Hide loader
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 500);
+            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 500);
         });
 
-        // Language switcher
+        // Language
         function setLang(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if(btn.textContent.includes(lang === 'ar' ? 'العربية' : 'English')) {
-                    btn.classList.add('active');
-                }
+                btn.classList.toggle('active', btn.textContent.includes(lang==='ar'?'العربية':'English'));
             });
-            // Here you would implement actual language switching logic
-            console.log('Language switched to:', lang);
         }
 
-        // Tool opener
-        function openTool(toolName) {
-            alert('جاري فتح أداة: ' + toolName + '\n(قم بربط هذه الدالة بالـ Modal أو الصفحة المناسبة)');
+        // Modal functions
+        function openTool(tool) {
+            const modal = document.getElementById('modal-overlay');
+            const body = document.getElementById('modal-body');
+            
+            const contents = {
+                writer: `<h2 style="color:#38bdf8;margin-bottom:20px">✍️ كاتب الأبحاث</h2>
+                        <input id="w-title" style="width:100%;padding:12px;margin-bottom:15px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="عنوان البحث...">
+                        <textarea id="w-desc" rows="4" style="width:100%;padding:12px;margin-bottom:15px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="المتطلبات..."></textarea>
+                        <button class="btn" onclick="alert('جاري الاتصال بالخادم...')">🚀 إنشاء المحتوى</button>`,
+                        
+                plagiarism: `<h2 style="color:#3b82f6;margin-bottom:20px">🔍 فاحص الانتحال</h2>
+                            <textarea id="p-text" rows="6" style="width:100%;padding:12px;margin-bottom:15px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="الصق النص هنا..."></textarea>
+                            <button class="btn" style="background:linear-gradient(135deg,#3b82f6,#2563eb);color:white" onclick="alert('جاري الفحص...')">🔍 فحص النص</button>`,
+                            
+                loan: `<h2 style="color:#22c55e;margin-bottom:20px">🏦 حاسبة القروض</h2>
+                       <input type="number" id="l-amount" style="width:100%;padding:12px;margin-bottom:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="المبلغ ($)">
+                       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px">
+                           <input type="number" id="l-rate" style="padding:12px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="الفائدة %" step="0.1">
+                           <input type="number" id="l-years" style="padding:12px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="السنوات">
+                       </div>
+                       <button class="btn" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white" onclick="calcLoan()">🧮 احسب</button>
+                       <div id="l-res" style="display:none;margin-top:20px;padding:20px;background:#0f172a;border-radius:10px;text-align:center">
+                           <div style="font-size:2rem;color:#38bdf8;font-weight:800" id="l-monthly">\$0</div>
+                           <div style="color:#94a3b8">القسط الشهري</div>
+                       </div>`,
+                       
+                gpa: `<h2 style="color:#c084fc;margin-bottom:20px">📊 حاسبة GPA</h2>
+                      <div id="grade-rows">
+                          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-bottom:10px">
+                              <input placeholder="المادة" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white">
+                              <input type="number" placeholder="الدرجة" class="g-grade" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white">
+                              <input type="number" placeholder="الساعات" class="g-credit" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" value="3">
+                          </div>
+                      </div>
+                      <button onclick="addGradeRow()" style="width:100%;padding:10px;margin-bottom:15px;background:transparent;border:1px dashed #334155;color:#94a3b8;border-radius:8px;cursor:pointer">+ إضافة مادة</button>
+                      <button class="btn" style="background:linear-gradient(135deg,#c084fc,#9333ea);color:white" onclick="calcGPA()">📊 احسب المعدل</button>
+                      <div id="gpa-res" style="display:none;margin-top:20px;padding:20px;background:#0f172a;border-radius:10px;text-align:center">
+                          <div style="font-size:3rem;color:#c084fc;font-weight:800" id="gpa-val">0.00</div>
+                          <div style="color:#94a3b8">المعدل التراكمي</div>
+                      </div>`,
+                      
+                default: `<h2 style="color:#38bdf8">قيد التطوير</h2><p style="color:#94a3b8;text-align:center">سيتم إضافة هذه الأداة قريباً</p>`
+            };
+            
+            body.innerHTML = contents[tool] || contents.default;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Calculator functions
+        function calcLoan() {
+            const P = parseFloat(document.getElementById('l-amount').value) || 0;
+            const r = (parseFloat(document.getElementById('l-rate').value) || 0) / 100 / 12;
+            const n = (parseFloat(document.getElementById('l-years').value) || 0) * 12;
+            if(P && r && n) {
+                const monthly = P * (r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
+                document.getElementById('l-monthly').textContent = '$' + monthly.toFixed(2);
+                document.getElementById('l-res').style.display = 'block';
+            }
+        }
+
+        function addGradeRow() {
+            const row = document.createElement('div');
+            row.style.cssText = 'display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-bottom:10px';
+            row.innerHTML = `<input placeholder="المادة" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white"><input type="number" placeholder="الدرجة" class="g-grade" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white"><input type="number" placeholder="الساعات" class="g-credit" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" value="3">`;
+            document.getElementById('grade-rows').appendChild(row);
+        }
+
+        function calcGPA() {
+            const grades = document.querySelectorAll('.g-grade');
+            const credits = document.querySelectorAll('.g-credit');
+            let totalPoints = 0, totalCredits = 0;
+            grades.forEach((g, i) => {
+                const grade = parseFloat(g.value) || 0;
+                const credit = parseFloat(credits[i].value) || 0;
+                totalPoints += grade * credit;
+                totalCredits += credit;
+            });
+            const gpa = totalCredits ? (totalPoints / totalCredits / 20 * 4).toFixed(2) : '0.00';
+            document.getElementById('gpa-val').textContent = gpa;
+            document.getElementById('gpa-res').style.display = 'block';
         }
     </script>
 </body>
