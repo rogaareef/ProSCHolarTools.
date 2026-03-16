@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <div class="site-logo-container">
+    <a href="/" aria-label="ProScholarTools - الرئيسية">
+        <img src="/img/15200.webp" 
+             alt="ProScholarTools - أدوات الذكاء الاصطناعي الأكاديمية والقانونية" 
+             class="site-logo"
+             loading="eager"
+             decoding="async">
+    </a>
+</div>
+
+<style>
+    .site-logo-container {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .site-logo {
+        width: 250px; /* الحجم على الكمبيوتر */
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* تأثير تكبير بسيط عند مرور الماوس يعطي لمسة احترافية */
+    .site-logo:hover {
+        transform: scale(1.03);
+    }
+
+    /* تعديل الحجم ليناسب شاشات الموبايل الصغيرة */
+    @media (max-width: 768px) {
+        .site-logo {
+            width: 180px; /* حجم أصغر للموبايل */
+        }
+    }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ProScholarTools - منصة ذكاء اصطناعي شاملة للأكاديميين والقانونيين. سكربتات تيك توك، فحص انتحال، وتحليل مالي متطور.">
