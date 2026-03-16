@@ -3,53 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ProScholarTools - منصة ذكاء اصطناعي شاملة للأكاديميين والقانونيين.">
+    <meta name="description" content="ProScholarTools - منصة ذكاء اصطناعي شاملة للأكاديميين والقانونيين. سكربتات تيك توك، فحص انتحال، وتحليل قانوني متطور.">
     <title>برو سكولر تولز | ProScholarTools</title>
+    
     <link rel="icon" type="image/webp" href="/img/logo.webp">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        :root { --primary: #38bdf8; --bg: #0f172a; --card-bg: rgba(30, 41, 59, 0.7); }
-        body { margin: 0; font-family: 'Cairo', sans-serif; background: var(--bg); color: white; line-height: 1.6; }
+        :root { 
+            --primary: #38bdf8; 
+            --bg: #0f172a; 
+            --card-bg: rgba(30, 41, 59, 0.7); 
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: 'Cairo', sans-serif; 
+            background: var(--bg); 
+            color: white; 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+        }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* تنسيق اللوجو الاحترافي */
-        header { text-align: center; padding: 50px 20px; }
-        .logo-container { display: inline-block; margin-bottom: 20px; transition: transform 0.3s; }
-        .site-logo {
-            width: 280px; height: auto; display: block;
-            image-rendering: -webkit-optimize-contrast; /* لمنع التشويش */
+        /* تنسيق الهيدر واللوجو الجديد */
+        header { 
+            text-align: center; 
+            padding: 50px 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .logo-container:hover { transform: scale(1.05); }
 
-        h1 { font-size: 2.5rem; color: var(--primary); margin: 0; }
+        .logo-wrapper {
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .site-logo {
+            width: 280px; /* الحجم المثالي */
+            height: auto;
+            display: block;
+            /* منع التشويش وزيادة حدة الصورة */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        .logo-wrapper:hover { 
+            transform: scale(1.03); 
+        }
+
+        h1 { font-size: 2.5rem; color: var(--primary); margin: 0; text-shadow: 0 0 15px rgba(56, 189, 248, 0.2); }
         .tagline { font-size: 1.1rem; opacity: 0.8; margin-top: 10px; }
 
-        /* الشبكة والأدوات */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
-        .card { 
-            background: var(--card-bg); padding: 25px; border-radius: 15px; 
-            border: 1px solid rgba(255,255,255,0.1); text-align: center;
-            transition: 0.3s; backdrop-filter: blur(10px);
+        /* شبكة الأدوات */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 40px; 
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+        .card { 
+            background: var(--card-bg); 
+            padding: 25px; 
+            border-radius: 15px; 
+            border: 1px solid rgba(255,255,255,0.1); 
+            text-align: center;
+            transition: 0.3s; 
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--primary); 
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+        }
+
+        .card img { 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 300/200; 
+            border-radius: 10px; 
+            margin-bottom: 15px; 
+            object-fit: cover;
+        }
+
+        h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.4rem; }
+        p { font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px; }
 
         button { 
-            background: var(--primary); color: #0f172a; border: none; padding: 12px 25px; 
-            border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; 
+            background: var(--primary); 
+            color: #0f172a; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            width: 100%; 
+            font-family: 'Cairo';
+            transition: 0.3s;
         }
 
-        @media (max-width: 768px) { .site-logo { width: 190px; } h1 { font-size: 2rem; } }
+        button:hover { background: #7dd3fc; transform: scale(1.02); }
+
+        /* ذيل الصفحة */
+        footer { 
+            margin-top: 80px; 
+            padding: 40px 0; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            text-align: center; 
+        }
+
+        .f-links a { color: var(--primary); text-decoration: none; margin: 0 15px; transition: 0.3s; }
+        .f-links a:hover { color: white; }
+        .copy { opacity: 0.5; font-size: 0.85rem; margin-top: 15px; }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            .site-logo { width: 190px; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <div class="logo-container">
-            <a href="/">
-                <img src="/img/logo.webp" alt="ProScholarTools Logo" class="site-logo">
+        <div class="logo-wrapper">
+            <a href="/" aria-label="ProScholarTools Home">
+                <img src="/img/logo.webp" 
+                     alt="ProScholarTools Logo" 
+                     class="site-logo" 
+                     loading="eager" 
+                     decoding="async">
             </a>
         </div>
         <h1>برو سكولر تولز</h1>
@@ -58,24 +147,35 @@
 
     <main class="grid">
         <div class="card">
-            <img src="/img/viral-tiktok-scripts-social-media-roi.jpg" alt="TikTok Scripts">
+            <img src="/img/viral-tiktok-scripts-social-media-roi.jpg" alt="Viral TikTok Scripts" loading="lazy">
             <h3>Viral TikTok Scripts</h3>
-            <p>محتوى إبداعي يتصدر نتائج البحث.</p>
-            <button onclick="alert('قريباً...')">ابدأ الآن</button>
+            <p>اصنع محتوى إبداعي يتصدر نتائج البحث والتريند.</p>
+            <button onclick="alert('جاري التجهيز...')">ابدأ الآن</button>
         </div>
+
         <div class="card">
-            <img src="/img/academic-integrity-plagiarism-checker.jpg" alt="Plagiarism Checker">
+            <img src="/img/academic-integrity-plagiarism-checker.jpg" alt="Plagiarism Checker" loading="lazy">
             <h3>Plagiarism Checker</h3>
-            <p>فحص دقيق للأصالة العلمية.</p>
-            <button onclick="alert('قريباً...')">فحص الملف</button>
+            <p>فحص دقيق للأصالة العلمية لضمان جودة الأبحاث.</p>
+            <button onclick="alert('جاري معالجة الملف...')">فحص الملف</button>
         </div>
+
         <div class="card">
-            <img src="/img/legal-document-analysis-ai.jpg" alt="Legal Assistant">
+            <img src="/img/legal-document-analysis-ai.jpg" alt="Legal Assistant" loading="lazy">
             <h3>Legal Assistant</h3>
-            <p>تحليل المستندات القانونية بذكاء.</p>
-            <button onclick="alert('قريباً...')">ابدأ التحليل</button>
+            <p>تحليل العقود والمستندات القانونية بذكاء اصطناعي فائق.</p>
+            <button onclick="alert('جاري التحليل القانوني...')">ابدأ الآن</button>
         </div>
     </main>
+
+    <footer>
+        <nav class="f-links">
+            <a href="/">الرئيسية</a>
+            <a href="#">من نحن</a>
+            <a href="#">اتصل بنا</a>
+        </nav>
+        <p class="copy">© 2026 ProScholarTools - جميع الحقوق محفوظة</p>
+    </footer>
 </div>
 
 </body>
