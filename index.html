@@ -5,114 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta -->
-    <title>ProGlobal Tools | منصة الأدوات الذكية - أدوات أكاديمية ومالية</title>
-    <meta name="description" content="منصة عالمية متكاملة للأدوات الأكاديمية والمالية. فاحص انتحال، حاسبة قروض، أسعار الذهب، تأمين صحي، تحويل ملفات.">
-    <meta name="keywords" content="أدوات أكاديمية, حاسبة قروض, فاحص انتحال, أسعار الذهب, تأمين صحي, تحويل pdf, Gemini AI">
-    <meta name="author" content="ProGlobal Tools">
+    <title>ProScholarTools | منصة الأدوات الأكاديمية والبحثية الذكية</title>
+    <meta name="description" content="ProScholarTools - منصة متكاملة للأدوات الأكاديمية والبحثية والمالية. فاحص انتحال، حاسبة قروض، أدوات PDF، ودعم الباحثين والطلاب.">
+    <meta name="keywords" content="ProScholarTools, أدوات بحثية, فاحص انتحال, حاسبة GPA, تحويل PDF, أدوات أكاديمية">
+    <meta name="author" content="ProScholarTools">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://proscholartools.com/">
-    <meta property="og:title" content="ProGlobal Tools | منصة الأدوات الذكية">
-    <meta property="og:description" content="أدوات أكاديمية ومالية مدعومة بالذكاء الاصطناعي">
-    <meta property="og:image" content="https://proscholartools.com/assets/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://proscholartools.com/">
-    <meta property="twitter:title" content="ProGlobal Tools">
-    <meta property="twitter:description" content="أدوات أكاديمية ومالية متكاملة">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ProScholarTools | منصة الأدوات الأكاديمية">
+    <meta property="og:description" content="أدوات ذكية للباحثين والطلاب والأكاديميين">
+    <meta property="og:image" content="https://proscholartools.com/assets/logo.png">
     
     <!-- Canonical -->
     <link rel="canonical" href="https://proscholartools.com/">
     
-    <!-- Hreflang -->
-    <link rel="alternate" hreflang="ar" href="https://proscholartools.com/">
-    <link rel="alternate" hreflang="en" href="https://proscholartools.com/en/">
-    
-    <!-- Preconnect for Speed -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <!-- Critical CSS (Above the fold only) -->
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Critical CSS -->
     <style>
-        /* Critical CSS - يوضع هنا فقط ما يظهر أولاً */
         :root{--primary:#38bdf8;--bg:#0f172a;--text:#f8fafc;--card:rgba(30,41,59,0.8)}
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
         .container{max-width:1400px;margin:0 auto;padding:0 20px}
-        .hero{padding:100px 20px 60px;text-align:center}
-        .logo-3d{width:120px;height:120px;background:linear-gradient(135deg,var(--primary),#818cf8);border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:3rem;box-shadow:0 0 40px rgba(56,189,248,0.4);animation:float 4s ease-in-out infinite}
-        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-        h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;background:linear-gradient(to left,var(--text),var(--primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
+        
+        /* Header Top Bar */
+        .top-bar{background:rgba(0,0,0,0.3);border-bottom:1px solid rgba(255,255,255,0.1);padding:10px 0;position:sticky;top:0;z-index:1001}
+        .top-bar-content{display:flex;justify-content:space-between;align-items:center}
+        
+        /* Social Icons - Right Side */
+        .social-icons{display:flex;gap:15px;align-items:center}
+        .social-icon{width:35px;height:35px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--text);text-decoration:none;transition:all 0.3s;border:1px solid rgba(255,255,255,0.2)}
+        .social-icon:hover{background:var(--primary);color:#000;transform:translateY(-3px)}
+        
+        /* Language Switcher - Left Side */
+        .lang-switcher{display:flex;gap:8px}
+        .lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.2);color:#94a3b8;padding:6px 14px;border-radius:20px;cursor:pointer;font-size:0.85rem;transition:all 0.3s}
+        .lang-btn:hover,.lang-btn.active{background:var(--primary);color:#000;border-color:var(--primary)}
+        
         .loader{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 0.5s}
         .loader.hidden{opacity:0;pointer-events:none}
         .spinner{width:50px;height:50px;border:3px solid rgba(56,189,248,0.3);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite}
         @keyframes spin{to{transform:rotate(360deg)}}
+        
+        /* Hero */
+        .hero{padding:60px 20px 40px;text-align:center}
+        .logo-container{margin-bottom:20px}
+        .site-name{font-size:2.5rem;font-weight:800;background:linear-gradient(to right,var(--primary),#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+        .tagline{color:#94a3b8;font-size:1.2rem;margin-top:10px}
+        
+        /* Ad Units */
+        .ad-unit{margin:30px auto;background:rgba(255,255,255,0.02);border:1px dashed rgba(148,163,184,0.3);border-radius:12px;padding:15px;text-align:center;min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+        .ad-label{font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+        
+        /* Tools Grid */
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin:40px 0}
+        .tool-card{background:var(--card);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:25px;transition:all 0.3s;cursor:pointer;backdrop-filter:blur(10px)}
+        .tool-card:hover{transform:translateY(-5px);border-color:var(--primary);box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+        .tool-icon{width:60px;height:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:15px;background:linear-gradient(135deg,var(--primary),#818cf8)}
+        .tool-card h3{font-size:1.2rem;margin-bottom:8px}
+        .tool-card p{color:#94a3b8;font-size:0.95rem;margin-bottom:15px}
+        .btn{width:100%;padding:12px;background:linear-gradient(135deg,var(--primary),#818cf8);color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:opacity 0.3s}
+        .btn:hover{opacity:0.9}
+        
+        .section-title{font-size:1.5rem;color:var(--primary);margin:50px 0 25px;display:flex;align-items:center;gap:10px;border-bottom:2px solid rgba(255,255,255,0.1);padding-bottom:15px}
+        
+        /* Footer - AdSense Required Pages */
+        footer{margin-top:80px;background:rgba(0,0,0,0.5);border-top:1px solid rgba(255,255,255,0.1);padding:50px 0 20px}
+        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px}
+        .footer-section h4{color:var(--primary);margin-bottom:20px;font-size:1.1rem}
+        .footer-section p{color:#94a3b8;line-height:1.8;font-size:0.95rem}
+        .footer-links{list-style:none}
+        .footer-links li{margin-bottom:12px}
+        .footer-links a{color:#94a3b8;text-decoration:none;display:flex;align-items:center;gap:8px;transition:all 0.3s;font-size:0.95rem}
+        .footer-links a:hover{color:var(--primary);padding-right:5px}
+        .footer-links a i{color:var(--primary);font-size:0.8rem}
+        
+        /* Required AdSense Pages Highlight */
+        .required-pages{background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.3);border-radius:12px;padding:20px;margin-top:20px}
+        .required-pages h5{color:var(--primary);margin-bottom:15px;font-size:1rem}
+        .badge-required{background:#ef4444;color:white;padding:2px 8px;border-radius:20px;font-size:0.7rem;margin-right:8px}
+        
+        .copyright{text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1);color:#64748b;font-size:0.9rem}
+        .adsense-notice{background:rgba(255,255,255,0.05);padding:15px;border-radius:8px;margin-top:20px;text-align:center;font-size:0.85rem;color:#64748b}
+        
+        @media(max-width:768px){
+            .top-bar-content{flex-direction:column;gap:10px}
+            .site-name{font-size:1.8rem}
+            .tools-grid{grid-template-columns:1fr}
+            .footer-content{grid-template-columns:1fr}
+        }
     </style>
     
-    <!-- External CSS (Lazy loaded) -->
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
-    
-    <!-- Google AdSense -->
+    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809" crossorigin="anonymous"></script>
     
-    <!-- Schema.org Structured Data (مهم للـ SEO) -->
+    <!-- Schema -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "ProGlobal Tools",
-        "url": "https://proscholartools.com/",
-        "description": "منصة أدوات أكاديمية ومالية ذكية",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://proscholartools.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "ProGlobal AI Tools",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Web",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "1250"
-        }
-    }
+    {"@context":"https://schema.org","@type":"WebSite","name":"ProScholarTools","url":"https://proscholartools.com/","description":"منصة أدوات أكاديمية وبحثية ذكية"}
     </script>
 </head>
 <body>
 
-    <!-- Loading Screen (يمنع شاشة البياض) -->
-    <div class="loader" id="loader">
-        <div class="spinner"></div>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader"><div class="spinner"></div></div>
+
+    <!-- Top Header Bar with Social Icons -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <!-- Language Switcher (Left in RTL = visually right) -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="setLang('ar')">🇸🇦 العربية</button>
+                <button class="lang-btn" onclick="setLang('en')">🇺🇸 English</button>
+            </div>
+            
+            <!-- Social Icons (Right in RTL = visually left) -->
+            <div class="social-icons">
+                <a href="https://facebook.com/proscholartools" class="social-icon" target="_blank" rel="noopener" title="فيسبوك" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/proscholartools" class="social-icon" target="_blank" rel="noopener" title="تويتر" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/proscholartools" class="social-icon" target="_blank" rel="noopener" title="انستغرام" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/company/proscholartools" class="social-icon" target="_blank" rel="noopener" title="لينكد إن" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://t.me/proscholartools" class="social-icon" target="_blank" rel="noopener" title="تلغرام" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="mailto:support@proscholartools.com" class="social-icon" title="بريد إلكتروني" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
-    <!-- Language Switcher -->
-    <div class="lang-bar" role="navigation" aria-label="Language switcher">
-        <button class="lang-btn active" onclick="setLang('ar')" aria-label="العربية">🇸🇦 AR</button>
-        <button class="lang-btn" onclick="setLang('en')" aria-label="English">🇺🇸 EN</button>
-    </div>
-
-    <!-- Header Ad (Responsive) -->
-    <div class="container" style="margin-top:80px;">
+    <!-- Header Ad -->
+    <div class="container" style="margin-top:20px;">
         <div class="ad-unit">
-            <div class="ad-label">إعلان</div>
+            <div class="ad-label">إعلان Google</div>
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
@@ -120,169 +158,206 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="logo-3d" role="img" aria-label="ProGlobal Logo">🌍</div>
-        <h1>ProGlobal AI Tools</h1>
-        <p class="hero-desc">منصة عالمية متكاملة للأدوات الأكاديمية والمالية المدعومة بالذكاء الاصطناعي</p>
+        <div class="logo-container">
+            <div class="site-name">ProScholarTools</div>
+            <div class="tagline">منصة الأدوات الأكاديمية والبحثية الذكية</div>
+        </div>
     </header>
 
     <main class="container">
-
+        
         <!-- Academic Tools -->
-        <section aria-labelledby="academic-heading">
-            <h2 id="academic-heading" class="section-title">🎓 أدوات أكاديمية</h2>
+        <section>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> أدوات أكاديمية</h2>
             <div class="tools-grid">
-                
-                <!-- Tool 1 -->
-                <article class="tool-card" onclick="openModal('writer')" role="button" tabindex="0" aria-label="فتح كاتب الأبحاث">
-                    <div class="tool-icon-wrap">✍️</div>
+                <article class="tool-card" onclick="openTool('writer')">
+                    <div class="tool-icon">✍️</div>
                     <h3>كاتب الأبحاث الذكي</h3>
-                    <p>اكتب مقالات أكاديمية مع مراجع APA وملخص تنفيذي</p>
-                    <div class="tool-meta">
-                        <span>⚡ Gemini AI</span>
-                        <span>📄 2000+ كلمة</span>
-                    </div>
-                    <button class="action-btn">ابدأ الكتابة</button>
+                    <p>اكتب مقالات أكاديمية مع المراجع والهيكلة الصحيحة</p>
+                    <button class="btn">ابدأ الكتابة</button>
                 </article>
 
-                <!-- Tool 2 -->
-                <article class="tool-card" onclick="openModal('legal')" role="button" tabindex="0" aria-label="فتح المحلل القانوني">
-                    <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#f59e0b,#d97706)">⚖️</div>
-                    <h3>المحلل القانوني AI</h3>
-                    <p>حلل العقود واستخرج البنود والمخاطر القانونية</p>
-                    <div class="tool-meta">
-                        <span>⚖️ مدني وتجاري</span>
-                        <span>🔍 فحص ثغرات</span>
-                    </div>
-                    <button class="action-btn">حلل المستند</button>
-                </article>
-
-                <!-- Tool 3 -->
-                <article class="tool-card" onclick="openModal('plagiarism')" role="button" tabindex="0" aria-label="فتح فاحص الانتحال">
-                    <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">🔍</div>
+                <article class="tool-card" onclick="openTool('plagiarism')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">🔍</div>
                     <h3>فاحص الانتحال</h3>
-                    <p>فحص الأصالة + كشف النصوص المولدة بالـ AI</p>
-                    <div class="tool-meta">
-                        <span>🎯 دقة 99%</span>
-                        <span>🤖 AI Detection</span>
-                    </div>
-                    <button class="action-btn">فحص النص</button>
+                    <p>تحقق من أصالة النصوص والمحتوى البحثي</p>
+                    <button class="btn">فحص النص</button>
+                </article>
+
+                <article class="tool-card" onclick="openTool('references')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">📚</div>
+                    <h3>منسق المراجع APA</h3>
+                    <p>نظّم مراجعك البحثية تلقائياً حسب المعايير</p>
+                    <button class="btn">نسّق المراجع</button>
                 </article>
             </div>
         </section>
 
-        <!-- Financial Tools (High CPC) -->
-        <section aria-labelledby="finance-heading">
-            <h2 id="finance-heading" class="section-title">💰 أدوات مالية</h2>
+        <!-- Financial Tools -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-calculator"></i> أدوات مالية</h2>
             <div class="tools-grid">
-                
-                <article class="tool-card" onclick="openModal('loan')" role="button" tabindex="0">
-                    <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🏦</div>
+                <article class="tool-card" onclick="openTool('loan')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🏦</div>
                     <h3>حاسبة القروض</h3>
-                    <p>احسب EMI القروض مع جدول استهلاك الرصيد</p>
-                    <button class="action-btn">احسب قسطك</button>
+                    <p>احسب الأقساط والفوائد المركبة بسهولة</p>
+                    <button class="btn">احسب الآن</button>
                 </article>
 
-                <article class="tool-card" onclick="openModal('gold')" role="button" tabindex="0">
-                    <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#fbbf24,#f59e0b)">🥇</div>
-                    <h3>أسعار الذهب</h3>
-                    <p>أسعار لحظية مع تحليلات مستقبلية</p>
-                    <button class="action-btn">تفقد السعر</button>
-                </article>
-
-                <article class="tool-card" onclick="openModal('insurance')" role="button" tabindex="0">
-                    <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#ef4444,#dc2626)">🏥</div>
-                    <h3>مقارنة التأمين الصحي</h3>
-                    <p>قارن بين شركات التأمين واحصل على عروض</p>
-                    <button class="action-btn">قارن الآن</button>
+                <article class="tool-card" onclick="openTool('gpa')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#c084fc,#9333ea)">📊</div>
+                    <h3>حاسبة GPA</h3>
+                    <p>احسب معدلك التراكمي في جميع الأنظمة</p>
+                    <button class="btn">احسب المعدل</button>
                 </article>
             </div>
         </section>
 
-        <!-- Mid Content Ad -->
-        <div class="ad-unit" style="margin:40px 0;">
+        <!-- File Tools -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> أدوات الملفات</h2>
+            <div class="tools-grid">
+                <article class="tool-card" onclick="openTool('pdf')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)">📄</div>
+                    <h3>تحويل PDF</h3>
+                    <p>دمج، تقسيم، ضغط وتحويل ملفات PDF</p>
+                    <button class="btn">أدخل الأداة</button>
+                </article>
+
+                <article class="tool-card" onclick="openTool('image')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#fb923c,#ea580c)">🖼️</div>
+                    <h3>تحويل الصور</h3>
+                    <p>حول الصور بين الصيغ مع ضغط ذكي</p>
+                    <button class="btn">حوّل الصورة</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Mid Page Ad -->
+        <div class="ad-unit" style="margin:40px auto;">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- Utility Tools -->
-        <section aria-labelledby="utility-heading">
-            <h2 id="utility-heading" class="section-title">🛠️ أدوات مساعدة</h2>
-            <div class="tools-grid">
-                <article class="tool-card" onclick="openModal('grades')" role="button" tabindex="0">
-                    <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#c084fc,#9333ea)">📊</div>
-                    <h3>حاسبة GPA</h3>
-                    <p>احسب المعدل التراكمي لجميع النظم</p>
-                    <button class="action-btn">احسب معدلك</button>
-                </article>
-
-                <article class="tool-card" onclick="openModal('pdf')" role="button" tabindex="0">
-                    <div class="tool-icon-wrap" style="background:linear-gradient(135deg,#ef4444,#dc2626)">📄</div>
-                    <h3>أدوات PDF</h3>
-                    <p>دمج، تقسيم، ضغط، وتحويل PDF</p>
-                    <button class="action-btn">أدخل الأدوات</button>
-                </article>
-            </div>
-        </section>
-
     </main>
 
-    <!-- Footer (مهم جداً لـ AdSense) -->
-    <footer role="contentinfo">
+    <!-- Footer with Required AdSense Pages -->
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>ProGlobal Tools</h4>
-                    <p style="color:#94a3b8;line-height:1.8">منصة متكاملة للأدوات الأكاديمية والمالية والصحية. نساعدك في إنجاز مهامك بذكاء وسرعة.</p>
+            <div class="footer-content">
+                <!-- About -->
+                <div class="footer-section">
+                    <h4>عن ProScholarTools</h4>
+                    <p>منصة متخصصة في تقديم الأدوات الذكية للباحثين والطلاب والأكاديميين. نسعى لتبسيط العمليات البحثية والأكاديمية باستخدام أحدث التقنيات.</p>
                 </div>
-                <div class="footer-col">
+
+                <!-- Quick Links -->
+                <div class="footer-section">
                     <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="/">الرئيسية</a></li>
-                        <li><a href="/tools/">جميع الأدوات</a></li>
-                        <li><a href="/blog/">المدونة</a></li>
+                    <ul class="footer-links">
+                        <li><a href="/"><i class="fas fa-home"></i> الرئيسية</a></li>
+                        <li><a href="/tools/"><i class="fas fa-tools"></i> جميع الأدوات</a></li>
+                        <li><a href="/blog/"><i class="fas fa-blog"></i> المدونة</a></li>
+                        <li><a href="/contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>معلومات قانونية</h4>
-                    <!-- ⚠️ مطلوب لقبول AdSense -->
-                    <ul>
-                        <li><a href="/privacy-policy.html">سياسة الخصوصية (Privacy Policy)</a></li>
-                        <li><a href="/terms.html">شروط الاستخدام (Terms)</a></li>
-                        <li><a href="/cookie-policy.html">سياسة ملفات الكوكيز</a></li>
-                        <li><a href="/contact.html">اتصل بنا (Contact Us)</a></li>
+
+                <!-- Required AdSense Pages (مهم جداً) -->
+                <div class="footer-section required-pages">
+                    <h5><i class="fas fa-shield-alt"></i> الصفحات المطلوبة (AdSense)</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="/privacy-policy.html">
+                                <i class="fas fa-lock"></i> 
+                                <span class="badge-required">مطلوب</span>
+                                سياسة الخصوصية (Privacy Policy)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/terms.html">
+                                <i class="fas fa-file-contract"></i>
+                                <span class="badge-required">مطلوب</span>
+                                شروط الخدمة (Terms of Service)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/cookie-policy.html">
+                                <i class="fas fa-cookie-bite"></i>
+                                <span class="badge-required">مطلوب</span>
+                                سياسة ملفات الكوكيز (Cookie Policy)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about.html">
+                                <i class="fas fa-info-circle"></i>
+                                من نحن (About Us)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact.html">
+                                <i class="fas fa-phone"></i>
+                                <span class="badge-required">مطلوب</span>
+                                اتصل بنا (Contact Us)
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <div class="footer-col">
+
+                <!-- Contact Info -->
+                <div class="footer-section">
                     <h4>تواصل معنا</h4>
-                    <ul>
-                        <li>📧 support@proscholartools.com</li>
-                        <li>🌐 <a href="https://proscholartools.com">www.proscholartools.com</a></li>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@proscholartools.com"><i class="fas fa-envelope"></i> support@proscholartools.com</a></li>
+                        <li><a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a></li>
+                        <li><span style="color:#94a3b8"><i class="fas fa-map-marker-alt"></i> الموقع الإلكتروني فقط</span></li>
                     </ul>
+                    
+                    <!-- Social in Footer too -->
+                    <div style="margin-top:20px;display:flex;gap:10px;">
+                        <a href="https://facebook.com/proscholartools" class="social-icon" style="width:40px;height:40px;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/proscholartools" class="social-icon" style="width:40px;height:40px;" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/proscholartools" class="social-icon" style="width:40px;height:40px;" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
+
             <div class="copyright">
-                <p>© 2025 ProGlobal Tools. جميع الحقوق محفوظة.</p>
-                <p style="font-size:0.8rem;margin-top:10px;color:#64748b">
+                <p>© 2025 ProScholarTools. جميع الحقوق محفوظة.</p>
+                <div class="adsense-notice">
+                    <i class="fab fa-google" style="color:var(--primary)"></i> 
                     هذا الموقع يستخدم Google AdSense لعرض الإعلانات. 
-                    <a href="/privacy-policy.html" style="color:var(--primary)">اعرف أكثر</a>
-                </p>
+                    <a href="/privacy-policy.html" style="color:var(--primary);text-decoration:none;">سياسة الخصوصية</a> | 
+                    <a href="/cookie-policy.html" style="color:var(--primary);text-decoration:none;">ملفات الكوكيز</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modals Container (مبسطة للمساحة) -->
-    <div id="modals-container"></div>
-
-    <!-- Deferred Scripts -->
-    <script src="js/main.js" defer></script>
-    
-    <!-- Hide Loader -->
+    <!-- Basic Scripts -->
     <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
+        // Hide loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
             }, 500);
         });
+
+        // Language switcher
+        function setLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.textContent.includes(lang === 'ar' ? 'العربية' : 'English')) {
+                    btn.classList.add('active');
+                }
+            });
+            // Here you would implement actual language switching logic
+            console.log('Language switched to:', lang);
+        }
+
+        // Tool opener
+        function openTool(toolName) {
+            alert('جاري فتح أداة: ' + toolName + '\n(قم بربط هذه الدالة بالـ Modal أو الصفحة المناسبة)');
+        }
     </script>
 </body>
 </html>
