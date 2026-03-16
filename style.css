@@ -14,7 +14,39 @@ body { background-color: var(--bg); color: var(--text); font-family: 'IBM Plex S
 .logo-ar { font-size: 0.9rem; font-weight: 400; color: var(--text-gray); line-height: 1.2; }
 nav a { color: var(--text-gray); text-decoration: none; margin-right: 20px; font-weight: 600; transition: 0.3s; }
 nav a:hover { color: var(--text); }
+/* تنسيق اللوجو ومنع التشويش */
+.logo-wrapper {
+    display: flex;
+    padding: 15px 0;
+}
 
+.site-logo {
+    width: 260px; /* الحجم المثالي للكمبيوتر */
+    height: auto;
+    display: block;
+    
+    /* الخصائص السحرية لمنع التشويش وتحسين الوضوح */
+    image-rendering: -webkit-optimize-contrast; /* لمحركات متصفحات Chrome و Safari */
+    image-rendering: crisp-edges;               /* للمتصفحات الأخرى */
+    
+    /* تنعيم الحواف */
+    shape-rendering: geometricPrecision;
+    
+    transition: transform 0.3s ease;
+}
+
+/* تأثير احترافي عند مرور الماوس */
+.site-logo:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05); /* إضاءة خفيفة تزيد الوضوح عند التفاعل */
+}
+
+/* التجاوب مع الجوال لضمان عدم بكسلة الصورة عند تصغيرها */
+@media (max-width: 768px) {
+    .site-logo {
+        width: 170px; 
+    }
+}
 /* الواجهة والموثوقية */
 .hero { text-align: center; padding: 60px 0; }
 .badge { background: var(--glass); padding: 8px 20px; border-radius: 20px; color: var(--accent); border: 1px solid rgba(124,58,237,0.3); font-size: 0.9rem;}
