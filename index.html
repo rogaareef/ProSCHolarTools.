@@ -1,179 +1,181 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <div class="logo-wrapper">
-    <a href="/" aria-label="ProScholarTools Home">
-        <img src="img/logo.webp" 
-             alt="ProScholarTools - أدوات الذكاء الاصطناعي الأكاديمية والقانونية" 
-             class="site-logo"
-             loading="eager">
-    </a>
-</div>
-    <style>
-    /* تنسيق لوجو ProScholarTools */
-    .logo-wrapper {
-        padding: 20px 0;
-        display: flex;
-        justify-content: flex-start; /* يضع اللوجو في جهة اليمين أو اليسار */
-    }
-
-    .site-logo {
-        width: 260px; /* الحجم المثالي للكمبيوتر */
-        height: auto;
-        display: block;
-        transition: transform 0.3s ease;
-    }
-
-    /* تأثير بسيط عند تمرير الماوس */
-    .site-logo:hover {
-        transform: scale(1.02);
-    }
-
-    /* التجاوب مع شاشات الجوال */
-    @media (max-width: 768px) {
-        .logo-wrapper {
-            justify-content: center; /* توسيط اللوجو في الموبايل */
-        }
-        .site-logo {
-            width: 180px; /* تصغير اللوجو ليناسب الهاتف */
-        }
-    }
-</style>
-    <div class="logo-wrapper">
-    <a href="/" aria-label="ProScholarTools - الرئيسية">
-        <img src="/img/logo.webp" 
-             alt="ProScholarTools - أدوات الذكاء الاصطناعي الأكاديمية والقانونية" 
-             title="ProScholarTools"
-             width="280" 
-             height="90" 
-             class="site-logo"
-             loading="eager"
-             decoding="async">
-    </a>
-</div>
-
-<style>
-    .site-logo-container {
-        display: flex;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .site-logo {
-        width: 250px; /* الحجم على الكمبيوتر */
-        height: auto;
-        display: block;
-        transition: transform 0.3s ease;
-    }
-
-    /* تأثير تكبير بسيط عند مرور الماوس يعطي لمسة احترافية */
-    .site-logo:hover {
-        transform: scale(1.03);
-    }
-
-    /* تعديل الحجم ليناسب شاشات الموبايل الصغيرة */
-    @media (max-width: 768px) {
-        .site-logo {
-            width: 180px; /* حجم أصغر للموبايل */
-        }
-    }
-</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ProScholarTools - منصة ذكاء اصطناعي شاملة للأكاديميين والقانونيين. سكربتات تيك توك، فحص انتحال، وتحليل مالي متطور.">
     <title>برو سكولر تولز | ProScholarTools</title>
+    
+    <link rel="icon" type="image/webp" href="/img/logo.webp">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        :root { --primary: #38bdf8; --bg: #0f172a; --card-bg: rgba(30, 41, 59, 0.7); }
-        body { margin: 0; font-family: 'Cairo', sans-serif; background: var(--bg); color: white; line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        
-        /* الهيدر واللوجو */
-        header { text-align: center; padding: 60px 20px; }
-        .logo-img { 
-            width: 150px; height: 150px; border-radius: 50%; 
-            border: 3px solid var(--primary); margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
-            object-fit: cover; background: #1e293b;
+        :root { 
+            --primary: #38bdf8; 
+            --bg: #0f172a; 
+            --card-bg: rgba(30, 41, 59, 0.7); 
         }
+        
+        body { 
+            margin: 0; 
+            font-family: 'Cairo', sans-serif; 
+            background: var(--bg); 
+            color: white; 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* تنسيق الهيدر واللوجو الجديد */
+        header { 
+            text-align: center; 
+            padding: 50px 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .site-logo {
+            width: 280px; /* الحجم المثالي للوجو على الكمبيوتر */
+            height: auto;
+            display: block;
+            /* منع التشويش وزيادة حدة الصورة */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        .logo-wrapper:hover { 
+            transform: scale(1.03); 
+        }
+
         h1 { font-size: 2.5rem; color: var(--primary); margin: 0; }
         .tagline { font-size: 1.1rem; opacity: 0.8; margin-top: 10px; }
 
-        /* الشبكة والأدوات */
+        /* شبكة الأدوات */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; margin-top: 40px; 
+            gap: 25px; 
+            margin-top: 40px; 
         }
+
         .card { 
-            background: var(--card-bg); padding: 25px; border-radius: 15px; 
-            border: 1px solid rgba(255,255,255,0.1); text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s; backdrop-filter: blur(10px);
+            background: var(--card-bg); 
+            padding: 25px; 
+            border-radius: 15px; 
+            border: 1px solid rgba(255,255,255,0.1); 
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s; 
+            backdrop-filter: blur(10px);
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        
-        /* تحسين عرض الصور للسيو والسرعة */
+
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--primary); 
+        }
+
         .card img { 
-            width: 100%; height: auto; aspect-ratio: 300/200; 
-            border-radius: 10px; margin-bottom: 15px; object-fit: cover;
-            background: #1e293b; display: block;
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 300/200; 
+            border-radius: 10px; 
+            margin-bottom: 15px; 
+            object-fit: cover;
+            background: #1e293b; 
         }
 
         h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.4rem; }
         p { font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px; height: 3em; overflow: hidden; }
-        
+
         button { 
-            background: var(--primary); color: #0f172a; border: none; 
-            padding: 12px 25px; border-radius: 8px; cursor: pointer; 
-            font-weight: bold; width: 100%; font-family: 'Cairo';
+            background: var(--primary); 
+            color: #0f172a; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            width: 100%; 
+            font-family: 'Cairo';
             transition: 0.3s;
         }
-        button:hover { opacity: 0.9; transform: scale(1.02); }
+
+        button:hover { 
+            opacity: 0.9; 
+            transform: scale(1.02); 
+        }
 
         /* ذيل الصفحة */
-        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
-        .f-links { margin-bottom: 20px; }
-        .f-links a { color: var(--primary); text-decoration: none; margin: 0 15px; font-size: 0.95rem; transition: 0.3s; }
-        .f-links a:hover { text-decoration: underline; color: white; }
+        footer { 
+            margin-top: 80px; 
+            padding: 40px 0; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            text-align: center; 
+        }
+
+        .f-links a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 0.95rem; 
+            transition: 0.3s; 
+        }
+
+        .f-links a:hover { color: white; }
         .copy { opacity: 0.5; font-size: 0.85rem; margin-top: 15px; }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            .site-logo { width: 190px; } /* تصغير اللوجو في الجوال */
+            h1 { font-size: 2rem; }
+            header { padding: 30px 20px; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <img src="./img/pro-scholar-tools-logo-ai-academic-legal.jpg" alt="ProScholarTools Logo - AI Academic and Legal" class="logo-img" fetchpriority="high" width="150" height="150">
+        <div class="logo-wrapper">
+            <a href="/" aria-label="ProScholarTools Home">
+                <img src="/img/logo.webp" 
+                     alt="ProScholarTools Logo" 
+                     class="site-logo" 
+                     loading="eager" 
+                     decoding="async">
+            </a>
+        </div>
         <h1>برو سكولر تولز</h1>
         <p class="tagline">حلول الذكاء الاصطناعي المتكاملة للبحث العلمي والتحليل القانوني</p>
     </header>
 
     <main class="grid">
         <div class="card">
-            <img src="./img/viral-tiktok-scripts-social-media-roi.jpg" alt="Viral TikTok Scripts - AI Content Creator" loading="eager" width="300" height="200">
+            <img src="./img/viral-tiktok-scripts-social-media-roi.jpg" alt="Viral TikTok Scripts" loading="lazy">
             <h3>Viral TikTok Scripts</h3>
             <p>اصنع محتوى إبداعي يتصدر نتائج البحث والتريند.</p>
             <button onclick="alert('جاري التجهيز للتشغيل...')">ابدأ الآن</button>
         </div>
 
         <div class="card">
-            <img src="./img/academic-integrity-plagiarism-checker.jpg" alt="Academic Integrity and Plagiarism Checker" loading="lazy" width="300" height="200">
+            <img src="./img/academic-integrity-plagiarism-checker.jpg" alt="Plagiarism Checker" loading="lazy">
             <h3>Plagiarism Checker</h3>
             <p>فحص دقيق للأصالة العلمية لضمان جودة الأبحاث.</p>
             <button onclick="alert('جاري معالجة الملف...')">فحص الملف</button>
         </div>
 
         <div class="card">
-            <img src="./img/legal-document-analysis-ai.jpg" alt="Legal Document Analysis AI Assistant" loading="lazy" width="300" height="200">
+            <img src="./img/legal-document-analysis-ai.jpg" alt="Legal Document Analysis" loading="lazy">
             <h3>Legal Assistant</h3>
             <p>تحليل العقود والمستندات القانونية بذكاء اصطناعي فائق.</p>
             <button onclick="alert('جاري بدء التحليل القانوني...')">ابدأ التحليل</button>
-        </div>
-
-        <div class="card">
-            <img src="./img/financial-compliance-ai-reporting.jpg" alt="Financial Compliance and AI Reporting" loading="lazy" width="300" height="200">
-            <h3>Financial Analysis</h3>
-            <p>إدارة البيانات المالية والامتثال الضريبي باحترافية.</p>
-            <button onclick="alert('جاري فتح المنصة المالية...')">ابدأ الآن</button>
         </div>
     </main>
 
@@ -182,7 +184,6 @@
             <a href="index.html">الرئيسية</a>
             <a href="about.html">من نحن</a>
             <a href="contact.html">اتصل بنا</a>
-            <a href="privacy.html">سياسة الخصوصية</a>
         </nav>
         <p class="copy">© 2026 ProScholarTools - جميع الحقوق محفوظة لمحرك الأدوات الأكاديمية</p>
     </footer>
