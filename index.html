@@ -1,814 +1,130 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- ==================== 
-         البيانات الوصفية الأساسية 
-         ==================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="ProScholarTools - منصة ذكاء اصطناعي متطورة للأكاديميين والقانونيين.">
+    <title>برو سكولر تولز | ProScholarTools</title>
     
-    <!-- SEO: العنوان والوصف -->
-    <title>برو سكولر تولز | منصة ذكاء اصطناعي للأكاديميين والقانونيين</title>
-    <meta name="description" content="ProScholarTools - منصة متكاملة تقدم أدوات AI متخصصة: فحص انتحال، تحليل قانوني، سكربتات فيروسية، وتحليل مالي. حلول ذكية للباحثين والمحامين.">
-    <meta name="keywords" content="أدوات أكاديمية, فحص انتحال, تحليل قانوني, ذكاء اصطناعي, سكربتات تيك توك, أدوات البحث العلمي, مساعد قانوني">
-    <meta name="author" content="ProScholarTools Team">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://www.proscholartools.com/">
-    
-    <!-- ==================== 
-         Open Graph / Social Media 
-         ==================== -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.proscholartools.com/">
-    <meta property="og:title" content="برو سكولر تولز | أدوات AI للأكاديميين والقانونيين">
-    <meta property="og:description" content="منصة شاملة للأدوات الأكاديمية والقانونية الذكية">
-    <meta property="og:image" content="https://www.proscholartools.com/img/og-image.webp">
-    <meta property="og:locale" content="ar_AR">
-    <meta property="og:site_name" content="ProScholarTools">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="برو سكولر تولز | ProScholarTools">
-    <meta name="twitter:description" content="حلول الذكاء الاصطناعي للبحث العلمي والتحليل القانوني">
-    <meta name="twitter:image" content="https://www.proscholartools.com/img/og-image.webp">
-    
-    <!-- ==================== 
-         الأيقونات والخطوط 
-         ==================== -->
-    <link rel="icon" type="image/webp" href="/img/logo.webp">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.webp">
-    <link rel="mask-icon" href="/img/logo.svg" color="#38bdf8">
-    <meta name="theme-color" content="#0f172a">
-    
-    <!-- Preconnect للأداء -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" media="print" onload="this.media='all'">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- ==================== 
-         بيانات منظمة Schema.org 
-         ==================== -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ProScholarTools",
-      "url": "https://www.proscholartools.com",
-      "description": "منصة أدوات ذكاء اصطناعي للأكاديميين والقانونيين",
-      "inLanguage": "ar",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.proscholartools.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ProScholarTools",
-      "url": "https://www.proscholartools.com",
-      "logo": "https://www.proscholartools.com/img/logo.webp",
-      "sameAs": [
-        "https://twitter.com/proscholartools",
-        "https://linkedin.com/company/proscholartools"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "contact@proscholartools.com",
-        "contactType": "customer service"
-      }
-    }
-    </script>
+    <link rel="icon" type="image/webp" href="/img/logo.webp">
 
-    <!-- ==================== 
-         CSS Styles 
-         ==================== -->
     <style>
-        /* -------------------------
-           CSS Variables (المتغيرات)
-           ------------------------- */
-        :root {
-            --primary: #38bdf8;
-            --primary-dark: #0ea5e9;
-            --primary-light: #7dd3fc;
-            --bg: #0f172a;
-            --bg-secondary: #1e293b;
-            --card-bg: rgba(30, 41, 59, 0.8);
-            --text-primary: #ffffff;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --border: rgba(148, 163, 184, 0.2);
-            --shadow: rgba(0, 0, 0, 0.3);
-            --radius: 16px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        :root { --primary: #38bdf8; --bg: #0f172a; --card-bg: rgba(30, 41, 59, 0.7); }
+        
+        /* منع قفز النصوص قبل تحميل الخط */
+        body { 
+            margin: 0; font-family: 'Cairo', sans-serif; background: var(--bg); 
+            color: white; line-height: 1.6; overflow-x: hidden; font-display: swap; 
         }
 
-        /* -------------------------
-           Reset & Base (إعادة الضبط)
-           ------------------------- */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* 2. إصلاح الـ CLS للهيدر */
+        header { 
+            text-align: center; padding: 40px 20px; 
+            min-height: 200px; /* حجز مساحة الهيدر */
         }
 
-        html {
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: var(--bg);
-            color: var(--text-primary);
-            line-height: 1.6;
-            min-height: 100vh;
-            overflow-x: hidden;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        button {
-            font-family: inherit;
-            cursor: pointer;
-            border: none;
-            outline: none;
-        }
-
-        /* -------------------------
-           Layout (الهيكل العام)
-           ------------------------- */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Skip to content (للوصول السريع) */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 0 0 8px 8px;
-            font-weight: 600;
-            z-index: 9999;
-            transition: top 0.3s;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-
-        /* -------------------------
-           Header (الترويسة)
-           ------------------------- */
-        .header {
-            text-align: center;
-            padding: 60px 20px 40px;
-            position: relative;
-        }
-
-        .logo-wrapper {
+        .logo-container {
             display: inline-block;
-            margin-bottom: 24px;
-            transition: var(--transition);
-        }
-
-        .logo-wrapper:hover {
-            transform: scale(1.05);
+            width: 250px;
+            height: 90px; /* حجز مساحة اللوجو */
+            margin-bottom: 20px;
         }
 
         .site-logo {
-            width: 260px;
-            height: auto;
-            filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+            width: 250px; height: 90px; display: block;
+            image-rendering: -webkit-optimize-contrast;
+            aspect-ratio: 250 / 90;
         }
 
-        .site-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 12px;
-            text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
-            letter-spacing: -0.5px;
+        h1 { font-size: 2.5rem; color: var(--primary); margin: 0; }
+
+        /* 3. إصلاح الـ CLS للكروت (حجز مساحة الصور المحذوفة) */
+        .grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; margin-top: 40px; 
         }
 
-        .site-tagline {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 400;
-        }
-
-        /* -------------------------
-           AdSense Slots (مواقع الإعلانات)
-           ------------------------- */
-        .ad-slot {
-            margin: 30px auto;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px dashed var(--border);
-            overflow: hidden;
-        }
-
-        .ad-slot-label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* -------------------------
-           Main Grid (شبكة الأدوات)
-           ------------------------- */
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
-        }
-
-        /* Tool Card (بطاقة الأداة) */
-        .tool-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition);
+        .card { 
+            background: var(--card-bg); padding: 25px; border-radius: 15px; 
+            border: 1px solid rgba(255,255,255,0.1); text-align: center;
             backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
         }
 
-        .tool-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
-        }
-
-        .tool-card:hover::before {
-            opacity: 1;
-        }
-
-        .tool-image-wrapper {
+        .card-img-placeholder {
             width: 100%;
-            height: 220px;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 24px;
-            background: var(--bg-secondary);
-            position: relative;
-        }
-
-        .tool-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .tool-card:hover .tool-image {
-            transform: scale(1.1);
-        }
-
-        .tool-category {
-            display: inline-block;
-            font-size: 0.75rem;
-            color: var(--primary);
-            background: rgba(56, 189, 248, 0.1);
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .tool-title {
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .tool-description {
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            flex-grow: 1;
-            line-height: 1.7;
-        }
-
-        .tool-btn {
-            background: var(--primary);
-            color: #0f172a;
-            padding: 14px 28px;
+            aspect-ratio: 3 / 2; /* حجز مساحة الصورة لمنع القفز */
+            background: #1e293b;
             border-radius: 10px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 15px;
+            display: block;
+            object-fit: cover;
         }
 
-        .tool-btn:hover {
-            background: var(--primary-light);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+        button { 
+            background: var(--primary); color: #0f172a; border: none; 
+            padding: 12px 25px; border-radius: 8px; cursor: pointer; 
+            font-weight: bold; width: 100%; font-family: 'Cairo';
         }
 
-        .tool-btn:active {
-            transform: translateY(0);
+        footer { 
+            margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); 
+            text-align: center; 
         }
+        
+        footer a { color: var(--primary); text-decoration: none; margin: 0 10px; }
 
-        /* -------------------------
-           Footer (التذييل)
-           ------------------------- */
-        .footer {
-            margin-top: 80px;
-            padding: 50px 0 30px;
-            border-top: 1px solid var(--border);
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            list-style: none;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-            background: rgba(56, 189, 248, 0.1);
-        }
-
-        .footer-copyright {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        /* -------------------------
-           Toast Notification (الإشعارات)
-           ------------------------- */
-        .toast-container {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            z-index: 9999;
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .toast-container.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .toast {
-            background: var(--card-bg);
-            color: var(--text-primary);
-            padding: 16px 32px;
-            border-radius: 50px;
-            border: 1px solid var(--primary);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px var(--shadow);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .toast-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
-            font-weight: bold;
-        }
-
-        /* -------------------------
-           Responsive Design (التصميم المتجاوب)
-           ------------------------- */
         @media (max-width: 768px) {
-            .header {
-                padding: 40px 16px;
-            }
-
-            .site-logo {
-                width: 200px;
-            }
-
-            .site-tagline {
-                font-size: 1.1rem;
-            }
-
-            .tools-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .tool-card {
-                padding: 24px;
-            }
-
-            .ad-slot {
-                min-height: 100px;
-                margin: 20px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-
-            .tool-image-wrapper {
-                height: 180px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 8px;
-            }
-        }
-
-        /* Reduced Motion (تقليل الحركة) */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-
-        /* Print Styles (للطباعة) */
-        @media print {
-            .ad-slot, .toast-container, .tool-btn {
-                display: none !important;
-            }
-            
-            body {
-                background: white;
-                color: black;
-            }
-        }
-
-        /* Focus Visible (لتحسين الوصول) */
-        :focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
+            .site-logo { width: 180px; height: auto; }
+            header { min-height: 150px; }
         }
     </style>
 </head>
-
 <body>
-    <!-- رابط الوصول السريع -->
-    <a href="#main-content" class="skip-link">انتقل للمحتوى الرئيسي</a>
 
-    <!-- ==================== 
-         Header Section 
-         ==================== -->
-    <header class="header">
-        <div class="container">
-            <a href="/" class="logo-wrapper" aria-label="الصفحة الرئيسية">
-                <img src="/img/logo.webp" 
-                     alt="شعار ProScholarTools" 
-                     class="site-logo"
-                     width="260"
-                     height="80"
-                     loading="eager"
-                     fetchpriority="high">
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <a href="/" aria-label="ProScholarTools Home">
+                <img src="/img/logo.webp" alt="ProScholarTools Logo" class="site-logo" fetchpriority="high">
             </a>
-            
-            <h1 class="site-title">برو سكولر تولز</h1>
-            <p class="site-tagline">منصة متكاملة للأدوات الأكاديمية والقانونية الذكية</p>
-
-            <!-- إعلان AdSense - الهيدر -->
-            <div class="ad-slot" aria-label="إعلان">
-                <span class="ad-slot-label">Advertisement</span>
-                <!-- 
-                    ضع كود AdSense هنا:
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXX" data-ad-slot="XXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-                -->
-            </div>
         </div>
+        <h1>برو سكولر تولز</h1>
+        <p style="opacity: 0.8;">حلول الذكاء الاصطناعي للباحثين والقانونيين</p>
     </header>
 
-    <!-- ==================== 
-         Main Content 
-         ==================== -->
-    <main id="main-content" class="container">
-        <div class="tools-grid">
-            
-            <!-- أداة 1: TikTok Scripts -->
-            <article class="tool-card">
-                <div class="tool-image-wrapper">
-                    <img src="/img/tiktok-scripts.webp" 
-                         alt="أداة إنشاء سكربتات تيك توك فيروسية" 
-                         class="tool-image"
-                         width="400"
-                         height="300"
-                         loading="lazy">
-                </div>
-                <span class="tool-category">سوشال ميديا</span>
-                <h2 class="tool-title">Viral TikTok Scripts</h2>
-                <p class="tool-description">
-                    أنشئ محتوى إبداعي يتصدر التريندات باستخدام خوارزميات AI متطورة. تحليل تلقائي للهاشتاغات والصيغ الأكثر انتشاراً.
-                </p>
-                <button class="tool-btn" onclick="handleToolAction(this, 'tiktok')">
-                    <span>ابدأ الآن</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </button>
-            </article>
-
-            <!-- أداة 2: Plagiarism Checker -->
-            <article class="tool-card">
-                <div class="tool-image-wrapper">
-                    <img src="/img/plagiarism-checker.webp" 
-                         alt="أداة فحص الانتحال الأكاديمي" 
-                         class="tool-image"
-                         width="400"
-                         height="300"
-                         loading="lazy">
-                </div>
-                <span class="tool-category">أكاديمي</span>
-                <h2 class="tool-title">Plagiarism Checker</h2>
-                <p class="tool-description">
-                    فحص دقيق للأصالة العلمية مع تقارير تفصيلية ونسبة تشابه مئوية. دعم كامل للغة العربية والإنجليزية.
-                </p>
-                <button class="tool-btn" onclick="handleToolAction(this, 'plagiarism')">
-                    <span>فحص المستند</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                    </svg>
-                </button>
-            </article>
-
-            <!-- إعلان وسطي -->
-            <div class="ad-slot" style="grid-column: 1 / -1;" aria-label="إعلان">
-                <span class="ad-slot-label">Advertisement</span>
-                <!-- كود AdSense إضافي -->
-            </div>
-
-            <!-- أداة 3: Legal Assistant -->
-            <article class="tool-card">
-                <div class="tool-image-wrapper">
-                    <img src="/img/legal-assistant.webp" 
-                         alt="المساعد القانوني الذكي" 
-                         class="tool-image"
-                         width="400"
-                         height="300"
-                         loading="lazy">
-                </div>
-                <span class="tool-category">قانوني</span>
-                <h2 class="tool-title">Legal Assistant</h2>
-                <p class="tool-description">
-                    تحليل العقود والمستندات القانونية بذكاء اصطناعي. استخراج البنود الأساسية وكشف الثغرات القانونية تلقائياً.
-                </p>
-                <button class="tool-btn" onclick="handleToolAction(this, 'legal')">
-                    <span>حلل العقد</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                </button>
-            </article>
-
-            <!-- أداة 4: Financial Analysis -->
-            <article class="tool-card">
-                <div class="tool-image-wrapper">
-                    <img src="/img/financial-analysis.webp" 
-                         alt="أداة التحليل المالي والامتثال" 
-                         class="tool-image"
-                         width="400"
-                         height="300"
-                         loading="lazy">
-                </div>
-                <span class="tool-category">مالي</span>
-                <h2 class="tool-title">Financial Analysis</h2>
-                <p class="tool-description">
-                    إدارة البيانات المالية والامتثال الضريبي باحترافية. تقارير مالية ذكية وتحليلات تنبؤية للأداء المالي.
-                </p>
-                <button class="tool-btn" onclick="handleToolAction(this, 'financial')">
-                    <span>حلل البيانات</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 20V10M18 20V4M6 20v-4"/>
-                    </svg>
-                </button>
-            </article>
-
+    <main class="grid">
+        <div class="card">
+            <img src="/img/tiktok.webp" alt="TikTok Scripts" class="card-img-placeholder" loading="lazy">
+            <h3>Viral TikTok Scripts</h3>
+            <button onclick="alert('جاري التجهيز...')">ابدأ الآن</button>
         </div>
 
-        <!-- إعلان قبل الفوتر -->
-        <div class="ad-slot" aria-label="إعلان">
-            <span class="ad-slot-label">Advertisement</span>
-            <!-- كود AdSense إضافي -->
+        <div class="card">
+            <img src="/img/plagiarism.webp" alt="Plagiarism Checker" class="card-img-placeholder" loading="lazy">
+            <h3>Plagiarism Checker</h3>
+            <button onclick="alert('قريباً...')">فحص الملف</button>
+        </div>
+
+        <div class="card">
+            <img src="/img/legal.webp" alt="Legal Assistant" class="card-img-placeholder" loading="lazy">
+            <h3>Legal Assistant</h3>
+            <button onclick="alert('قريباً...')">ابدأ الآن</button>
         </div>
     </main>
 
-    <!-- ==================== 
-         Footer 
-         ==================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <nav aria-label="روابط الفوتر">
-                    <ul class="footer-links">
-                        <li><a href="/" rel="home">الرئيسية</a></li>
-                        <li><a href="/about" rel="nofollow">من نحن</a></li>
-                        <li><a href="/privacy-policy" rel="nofollow">سياسة الخصوصية</a></li>
-                        <li><a href="/terms" rel="nofollow">شروط الاستخدام</a></li>
-                        <li><a href="/contact" rel="nofollow">اتصل بنا</a></li>
-                        <li><a href="/sitemap.xml">خريطة الموقع</a></li>
-                    </ul>
-                </nav>
-                
-                <p class="footer-copyright">
-                    © <span id="current-year">2025</span> ProScholarTools. جميع الحقوق محفوظة.
-                </p>
-            </div>
-        </div>
+    <footer>
+        <a href="/">الرئيسية</a>
+        <a href="privacy.html">سياسة الخصوصية</a>
+        <p style="opacity: 0.5; margin-top: 15px;">© 2026 ProScholarTools</p>
     </footer>
+</div>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast-container" role="status" aria-live="polite">
-        <div class="toast">
-            <span class="toast-icon">!</span>
-            <span id="toast-message">جاري التوجيه للأداة...</span>
-        </div>
-    </div>
-
-    <!-- ==================== 
-         JavaScript 
-         ==================== -->
-    <script>
-        // تحديث سنة الفوتر تلقائياً
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // نظام Toast Notifications
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMessage = document.getElementById('toast-message');
-            
-            toastMessage.textContent = message;
-            toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        // معالجة النقر على الأدوات
-        function handleToolAction(button, toolName) {
-            // منع النقر المتكرر
-            if (button.disabled) return;
-            
-            button.disabled = true;
-            const originalText = button.innerHTML;
-            button.innerHTML = '<span>جاري التحميل...</span>';
-            
-            // محاكاة التحميل
-            setTimeout(() => {
-                button.disabled = false;
-                button.innerHTML = originalText;
-                
-                // هنا يتم التوجيه الفعلي أو فتح الأداة
-                showToast(`جاري فتح أداة ${toolName}...`);
-                
-                // التوجيه الفعلي (لاحقاً):
-                // window.location.href = `/tools/${toolName}`;
-                
-            }, 800);
-        }
-
-        // تحسين أداء الصور: Lazy Loading متقدم
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            }, {
-                rootMargin: '50px 0px',
-                threshold: 0.01
-            });
-
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        // تسجيل Service Worker (لـ PWA مستقبلاً)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(error => {
-                        console.log('SW registration failed: ', error);
-                    });
-            });
-        }
-
-        // منع فقدان البيانات عند مغادرة الصفحة (إذا كان هناك نماذج)
-        window.addEventListener('beforeunload', (e) => {
-            // تفعيل فقط إذا كان هناك تفاعل مستخدم نشط
-        });
-    </script>
-
-    <!-- Google Analytics (تفعيل لاحقاً) -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-    -->
-
-    <!-- AdSense Script (في نهاية Body لتحسين الأداء) -->
-    <!--
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-    -->
 </body>
 </html>
