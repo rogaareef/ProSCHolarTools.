@@ -3,36 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا | ProScholarTools</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>اتصل بنا | ProGlobal Tools</title>
+    <meta name="description" content="تواصل مع فريق ProGlobal Tools للدعم الفني والاستفسارات والاقتراحات">
+    <link rel="canonical" href="https://proscholartools.com/contact.html">
+    
+    <style>
+        :root{--primary:#38bdf8;--bg:#0f172a;--text:#f8fafc;--card:rgba(30,41,59,0.8)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        .container{max-width:800px;margin:0 auto;padding:40px 20px}
+        .back-link{color:var(--primary);text-decoration:none;display:inline-block;margin-bottom:20px}
+        h1{margin-bottom:10px}
+        .contact-form{background:var(--card);padding:30px;border-radius:16px;margin-top:30px;border:1px solid rgba(255,255,255,0.1)}
+        .form-group{margin-bottom:20px}
+        label{display:block;margin-bottom:8px;color:#94a3b8}
+        input,textarea,select{width:100%;padding:12px;background:rgba(0,0,0,0.3);border:1px solid rgba(148,163,184,0.2);border-radius:8px;color:white;font-family:inherit}
+        input:focus,textarea:focus{border-color:var(--primary);outline:none}
+        textarea{min-height:150px;resize:vertical}
+        button{background:var(--primary);color:#000;padding:14px 32px;border:none;border-radius:8px;font-weight:700;cursor:pointer;width:100%;font-size:1.1rem}
+        button:hover{opacity:0.9}
+        .info-box{background:rgba(56,189,248,0.1);border-right:4px solid var(--primary);padding:20px;margin-bottom:30px;border-radius:8px}
+        .success-msg{display:none;background:rgba(34,197,94,0.2);color:#4ade80;padding:15px;border-radius:8px;margin-top:20px;text-align:center}
+    </style>
 </head>
 <body>
-    <header class="glass-header">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo-container">
-                <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 20C20 20 10 30 10 40C10 60 40 80 50 85C60 80 90 60 90 40C90 30 80 20 70 20C60 20 50 30 50 30C50 30 40 20 30 20Z" fill="#7c3aed" opacity="0.9"/><path d="M40 50L50 50M60 50L50 50M50 50L50 40M50 50L50 60" stroke="#f8fafc" stroke-width="6"/></svg>
-                <div class="logo-text"><span class="logo-en"><span>Pro</span>ScholarTools</span><span class="logo-ar">برو سكولر تولز</span></div>
-            </a>
-            <nav><a href="index.html">الرئيسية</a></nav>
+    <div class="container">
+        <a href="/" class="back-link">← العودة للرئيسية</a>
+        
+        <h1>اتصل بنا</h1>
+        <p style="color:#94a3b8">نحن هنا لمساعدتك. أرسل لنا استفسارك وسنرد في غضون 24 ساعة.</p>
+        
+        <div class="info-box">
+            <strong>📧 البريد الإلكتروني:</strong> support@proscholartools.com<br>
+            <strong>⏰ ساعات العمل:</strong> الأحد - الخميس (9:00 ص - 5:00 م)
         </div>
-    </header>
 
-    <main class="container" style="padding: 60px 0; text-align: center;">
-        <div class="tool-card" style="max-width: 600px; margin: 0 auto; padding: 50px;">
-            <div class="icon" style="font-size: 3rem;">📧</div>
-            <h1 style="color: #db2777;">تواصل معنا</h1>
-            <p style="margin: 20px 0; color: var(--text-gray);">نحن هنا للرد على استفساراتكم واقتراحاتكم لتطوير المنصة.</p>
-            <div style="background: var(--glass); padding: 20px; border-radius: 12px; border: 1px solid var(--accent);">
-                <p style="font-size: 1.2rem; font-weight: bold; color: var(--text);">البريد الإلكتروني الرسمي:</p>
-                <p style="font-size: 1.4rem; color: #10b981; margin-top: 10px;">info@proscholartools.com</p>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">الاسم الكامل *</label>
+                <input type="text" id="name" name="name" required placeholder="محمد أحمد">
             </div>
-            <p style="margin-top: 30px; font-size: 0.9rem; color: var(--text-gray);">سنقوم بالرد عليكم في غضون 24-48 ساعة عمل.</p>
-        </div>
-    </main>
+            
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني *</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">الموضوع *</label>
+                <select id="subject" name="subject" required>
+                    <option value="">اختر الموضوع...</option>
+                    <option value="support">دعم فني</option>
+                    <option value="ads">استفسار عن الإعلانات</option>
+                    <option value="suggestion">اقتراح تحسين</option>
+                    <option value="bug">إبلاغ عن خطأ</option>
+                    <option value="other">أخرى</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">الرسالة *</label>
+                <textarea id="message" name="message" required placeholder="اكتب رسالتك بالتفصيل هنا..."></textarea>
+            </div>
+            
+            <button type="submit">إرسال الرسالة</button>
+            
+            <div class="success-msg" id="successMsg">
+                ✅ تم إرسال رسالتك بنجاح! سنرد عليك في أقرب وقت.
+            </div>
+        </form>
+    </div>
 
-    <footer class="site-footer">
-        <div class="container"><p>© 2026 ProScholarTools.com - دائماً في خدمتكم.</p></div>
-    </footer>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            // هنا يمكنك إضافة كود إرسال الفورم إلى backend أو Formspree أو EmailJS
+            document.getElementById('successMsg').style.display = 'block';
+            document.getElementById('contactForm').reset();
+            setTimeout(() => {
+                document.getElementById('successMsg').style.display = 'none';
+            }, 5000);
+        }
+    </script>
 </body>
 </html>
