@@ -28,34 +28,31 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* تنسيق الهيدر واللوجو الجديد */
+        /* الهيدر واللوجو المحسن */
         header { 
             text-align: center; 
-            padding: 50px 20px; 
+            padding: 40px 20px; 
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .logo-wrapper {
-            margin-bottom: 20px;
+        .logo-container {
+            margin-bottom: 25px;
             transition: transform 0.3s ease;
         }
 
         .site-logo {
-            width: 280px; /* الحجم المثالي للوجو على الكمبيوتر */
+            width: 280px; /* الحجم المثالي */
             height: auto;
             display: block;
-            /* منع التشويش وزيادة حدة الصورة */
+            /* معالجة التشويش لضمان حدة الصورة */
             image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
         }
 
-        .logo-wrapper:hover { 
-            transform: scale(1.03); 
-        }
+        .logo-container:hover { transform: scale(1.03); }
 
-        h1 { font-size: 2.5rem; color: var(--primary); margin: 0; }
+        h1 { font-size: 2.5rem; color: var(--primary); margin: 0; text-shadow: 0 0 15px rgba(56, 189, 248, 0.3); }
         .tagline { font-size: 1.1rem; opacity: 0.8; margin-top: 10px; }
 
         /* شبكة الأدوات */
@@ -79,6 +76,7 @@
         .card:hover { 
             transform: translateY(-10px); 
             border-color: var(--primary); 
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
         }
 
         .card img { 
@@ -92,7 +90,7 @@
         }
 
         h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.4rem; }
-        p { font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px; height: 3em; overflow: hidden; }
+        p { font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px; }
 
         button { 
             background: var(--primary); 
@@ -107,10 +105,7 @@
             transition: 0.3s;
         }
 
-        button:hover { 
-            opacity: 0.9; 
-            transform: scale(1.02); 
-        }
+        button:hover { background: #7dd3fc; transform: scale(1.02); }
 
         /* ذيل الصفحة */
         footer { 
@@ -133,9 +128,8 @@
 
         /* التجاوب مع الجوال */
         @media (max-width: 768px) {
-            .site-logo { width: 190px; } /* تصغير اللوجو في الجوال */
+            .site-logo { width: 200px; }
             h1 { font-size: 2rem; }
-            header { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -143,7 +137,7 @@
 
 <div class="container">
     <header>
-        <div class="logo-wrapper">
+        <div class="logo-container">
             <a href="/" aria-label="ProScholarTools Home">
                 <img src="/img/logo.webp" 
                      alt="ProScholarTools Logo" 
@@ -158,34 +152,34 @@
 
     <main class="grid">
         <div class="card">
-            <img src="./img/viral-tiktok-scripts-social-media-roi.jpg" alt="Viral TikTok Scripts" loading="lazy">
+            <img src="/img/viral-tiktok-scripts-social-media-roi.jpg" alt="Viral TikTok Scripts" loading="lazy">
             <h3>Viral TikTok Scripts</h3>
             <p>اصنع محتوى إبداعي يتصدر نتائج البحث والتريند.</p>
-            <button onclick="alert('جاري التجهيز للتشغيل...')">ابدأ الآن</button>
+            <button onclick="alert('جاري التجهيز...')">ابدأ الآن</button>
         </div>
 
         <div class="card">
-            <img src="./img/academic-integrity-plagiarism-checker.jpg" alt="Plagiarism Checker" loading="lazy">
+            <img src="/img/academic-integrity-plagiarism-checker.jpg" alt="Plagiarism Checker" loading="lazy">
             <h3>Plagiarism Checker</h3>
             <p>فحص دقيق للأصالة العلمية لضمان جودة الأبحاث.</p>
             <button onclick="alert('جاري معالجة الملف...')">فحص الملف</button>
         </div>
 
         <div class="card">
-            <img src="./img/legal-document-analysis-ai.jpg" alt="Legal Document Analysis" loading="lazy">
+            <img src="/img/legal-document-analysis-ai.jpg" alt="Legal Assistant AI" loading="lazy">
             <h3>Legal Assistant</h3>
             <p>تحليل العقود والمستندات القانونية بذكاء اصطناعي فائق.</p>
-            <button onclick="alert('جاري بدء التحليل القانوني...')">ابدأ التحليل</button>
+            <button onclick="alert('جاري بدء التحليل...')">ابدأ التحليل</button>
         </div>
     </main>
 
     <footer>
         <nav class="f-links">
-            <a href="index.html">الرئيسية</a>
-            <a href="about.html">من نحن</a>
-            <a href="contact.html">اتصل بنا</a>
+            <a href="/">الرئيسية</a>
+            <a href="#">من نحن</a>
+            <a href="#">اتصل بنا</a>
         </nav>
-        <p class="copy">© 2026 ProScholarTools - جميع الحقوق محفوظة لمحرك الأدوات الأكاديمية</p>
+        <p class="copy">© 2026 ProScholarTools - جميع الحقوق محفوظة</p>
     </footer>
 </div>
 
