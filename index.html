@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <style>
+    /* تنسيق لوجو ProScholarTools */
+    .logo-wrapper {
+        padding: 20px 0;
+        display: flex;
+        justify-content: flex-start; /* يضع اللوجو في جهة اليمين أو اليسار */
+    }
+
+    .site-logo {
+        width: 260px; /* الحجم المثالي للكمبيوتر */
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* تأثير بسيط عند تمرير الماوس */
+    .site-logo:hover {
+        transform: scale(1.02);
+    }
+
+    /* التجاوب مع شاشات الجوال */
+    @media (max-width: 768px) {
+        .logo-wrapper {
+            justify-content: center; /* توسيط اللوجو في الموبايل */
+        }
+        .site-logo {
+            width: 180px; /* تصغير اللوجو ليناسب الهاتف */
+        }
+    }
+</style>
     <div class="logo-wrapper">
     <a href="/" aria-label="ProScholarTools - الرئيسية">
         <img src="/img/logo.webp" 
