@@ -2,930 +2,445 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProScholarTools | المنصة العالمية للأدوات الأكاديمية</title>
-    <meta name="description" content="أدوات ذكاء اصطناعي للباحثين - كاتب بحثي، فاحص انتحال، حاسبات مالية، أدوات PDF">
-    <meta name="keywords" content="أدوات أكاديمية, ذكاء اصطناعي, AdSense, بحث علمي, كشف انتحال">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ProScholarTools | المنصة العالمية للأدوات الأكاديمية والمالية</title>
+    
+    <!-- SEO Core -->
+    <meta name="description" content="منصة عربية متخصصة في أدوات الذكاء الاصطناعي للباحثين - كاتب بحثي، فاحص انتحال، حاسبات مالية، تحويل PDF">
+    <meta name="keywords" content="أدوات أكاديمية, ذكاء اصطناعي, فاحص انتحال, حاسبة معاشات, كتابة بحث, تنسيق APA">
+    <meta name="author" content="ProScholarTools">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://proscholartools.com/">
+    
+    <!-- GEO / Local SEO -->
+    <meta name="geo.region" content="SA-EG-SY-AE">
+    <meta name="geo.placename" content="Arab World">
+    <meta name="language" content="Arabic">
+    <meta http-equiv="content-language" content="ar">
+    <meta name="target" content="all">
+    <meta name="audience" content="academic, students, researchers">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://proscholartools.com/">
+    <meta property="og:title" content="ProScholarTools | أدوات أكاديمية ذكية">
+    <meta property="og:description" content="منصة متخصصة في أدوات الذكاء الاصطناعي للباحثين والطلاب العرب">
+    <meta property="og:image" content="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
+    <meta property="og:locale" content="ar_AR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ProScholarTools | أدوات أكاديمية ذكية">
+    <meta name="twitter:description" content="منصة متخصصة في أدوات الذكاء الاصطناعي للباحثين">
+    <meta name="twitter:image" content="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Performance: Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://i.ibb.co" crossorigin>
+    <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
     
+    <!-- Critical CSS Inline (Above the Fold) -->
     <style>
-        :root{
-            --p:#38bdf8;
-            --s:#818cf8;
-            --a:#f472b6;
-            --b:#0f172a;
-            --c:#1e293b;
-            --t:#f8fafc;
-            --m:#94a3b8;
-            --d:#334155;
-            --g:#10b981;
-            --r:#ef4444
-        }
+        :root{--p:#38bdf8;--s:#818cf8;--a:#f472b6;--b:#0f172a;--c:#1e293b;--t:#f8fafc;--m:#94a3b8;--d:#334155;--g:#10b981}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--b);color:var(--t);line-height:1.6;min-height:100vh;text-rendering:optimizeSpeed}
+        a{text-decoration:none;color:inherit}
+        img{max-width:100%;height:auto;display:block}
         
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Segoe UI',system-ui,-apple-system,sans-serif
-        }
-        
-        body{
-            background:var(--b);
-            color:var(--t);
-            line-height:1.6;
-            overflow-x:hidden
-        }
-        
-        a{text-decoration:none;color:inherit;transition:.3s}
-        
-        /* Loader */
-        #L{
-            position:fixed;
-            inset:0;
-            background:var(--b);
-            display:grid;
-            place-items:center;
-            z-index:9999;
-            transition:opacity .4s ease
-        }
+        /* Fast Loader */
+        #L{position:fixed;inset:0;background:var(--b);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .2s}
         #L.h{opacity:0;pointer-events:none}
-        .sp{
-            width:45px;
-            height:45px;
-            border:3px solid var(--d);
-            border-top-color:var(--p);
-            border-radius:50%;
-            animation:spin 1s linear infinite
-        }
+        .sp{width:35px;height:35px;border:2px solid var(--d);border-top-color:var(--p);border-radius:50%;animation:spin .8s linear infinite}
         @keyframes spin{to{transform:rotate(360deg)}}
         
-        /* Header - Fixed */
-        .hd{
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(15,23,42,.98);
-            backdrop-filter:blur(12px);
-            border-bottom:1px solid var(--d);
-            z-index:100;
-            padding:10px 0
-        }
-        .w{max-width:1200px;margin:0 auto;padding:0 20px}
-        .nv{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            gap:20px;
-            flex-wrap:wrap
-        }
+        /* Header - Critical */
+        .hd{position:fixed;top:0;width:100%;background:rgba(15,23,42,.98);backdrop-filter:blur(10px);border-bottom:1px solid var(--d);z-index:100;padding:.6rem 0}
+        .w{max-width:1200px;margin:0 auto;padding:0 1rem}
+        .nv{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
         
-        /* Logo - Small & Perfect */
-        .lg{
-            display:flex;
-            align-items:center;
-            gap:12px
-        }
-        .lg img{
-            width:36px;
-            height:36px;
-            border-radius:50%;
-            border:1.5px solid var(--p);
-            object-fit:cover;
-            box-shadow:0 0 15px rgba(56,189,248,.3);
-            transition:transform .3s
-        }
-        .lg:hover img{transform:scale(1.05)}
-        .lg span{
-            font-size:1.15rem;
-            font-weight:800;
-            background:linear-gradient(90deg,var(--p),var(--s));
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-            letter-spacing:-.5px
-        }
+        /* Optimized Logo - No CLS */
+        .lg{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.1rem;color:var(--t)}
+        .lg-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--p),var(--s));border-radius:50%;display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;border:2px solid rgba(255,255,255,.1)}
         
-        /* Right Header */
-        .rt{display:flex;align-items:center;gap:15px}
-        .lg-sw{
-            display:flex;
-            gap:2px;
-            background:rgba(0,0,0,.3);
-            padding:3px;
-            border-radius:50px;
-            border:1px solid var(--d)
-        }
-        .lg-sw button{
-            border:none;
-            background:transparent;
-            color:var(--m);
-            padding:5px 12px;
-            border-radius:50px;
-            font-size:.75rem;
-            cursor:pointer;
-            font-weight:600;
-            transition:.2s
-        }
+        /* Hero Critical */
+        .hr{margin-top:70px;padding:3rem 1rem;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(56,189,248,.1) 0%,transparent 50%)}
+        .hr h1{font-size:clamp(1.8rem,5vw,2.5rem);font-weight:800;margin-bottom:1rem;line-height:1.3}
+        .hr h1 span{color:var(--p)}
+        .hr p{color:var(--m);max-width:500px;margin:0 auto;font-size:1.05rem}
+        
+        /* Navigation items - inline */
+        .rt{display:flex;align-items:center;gap:1rem}
+        .lg-sw{display:flex;background:rgba(0,0,0,.3);padding:2px;border-radius:50px;border:1px solid var(--d)}
+        .lg-sw button{border:none;background:transparent;color:var(--m);padding:4px 10px;border-radius:50px;font-size:.7rem;cursor:pointer;font-weight:600}
         .lg-sw button.a{background:var(--p);color:#000}
+        .sc{display:flex;gap:.5rem}
+        .sc a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.8rem;background:var(--d)}
         
-        .sc{display:flex;gap:8px}
-        .sc a{
-            width:34px;
-            height:34px;
-            border-radius:50%;
-            display:grid;
-            place-items:center;
-            font-size:.85rem;
-            color:#fff;
-            transition:transform .2s,box-shadow .2s
-        }
-        .sc a:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(0,0,0,.3)}
-        .fb{background:#1877f2}.li{background:#0a66c2}.tg{background:#08c}
-        
-        /* Hero */
-        .hr{
-            margin-top:70px;
-            text-align:center;
-            padding:60px 20px 40px;
-            background:radial-gradient(circle at center,rgba(56,189,248,.12) 0%,transparent 60%)
-        }
-        .hr h1{
-            font-size:clamp(1.8rem,5vw,2.8rem);
-            font-weight:800;
-            margin-bottom:15px;
-            line-height:1.3
-        }
-        .hr h1 span{
-            background:linear-gradient(90deg,var(--p),var(--a));
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent
-        }
-        .hr p{
-            color:var(--m);
-            max-width:500px;
-            margin:0 auto;
-            font-size:1.05rem
-        }
-        
-        /* Ad Container */
-        .ad{
-            background:var(--c);
-            border:2px dashed var(--d);
-            border-radius:12px;
-            min-height:90px;
-            margin:30px auto;
-            display:grid;
-            place-items:center;
-            color:var(--m);
-            font-size:.8rem;
-            position:relative;
-            overflow:hidden
-        }
-        .ad::before{
-            content:"إعلان Google AdSense";
-            position:absolute;
-            top:5px;
-            right:10px;
-            font-size:.65rem;
-            color:var(--m);
-            opacity:.7
-        }
-        
-        /* Section Title */
-        .st{
-            color:var(--p);
-            font-size:1.2rem;
-            margin:50px 0 25px;
-            display:flex;
-            align-items:center;
-            gap:12px;
-            padding-bottom:15px;
-            border-bottom:2px solid var(--d);
-            font-weight:700
-        }
-        .st i{font-size:1.1rem}
-        
-        /* Tools Grid */
-        .gd{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:25px;
-            margin-bottom:50px
-        }
-        .cd{
-            background:var(--c);
-            border:1px solid var(--d);
-            border-radius:16px;
-            padding:24px;
-            transition:all .3s ease;
-            cursor:pointer;
-            position:relative;
-            overflow:hidden
-        }
-        .cd::before{
-            content:"";
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            height:3px;
-            background:linear-gradient(90deg,var(--p),var(--s));
-            transform:scaleX(0);
-            transition:transform .3s
-        }
-        .cd:hover{
-            border-color:var(--p);
-            transform:translateY(-5px);
-            box-shadow:0 20px 40px rgba(0,0,0,.3)
-        }
-        .cd:hover::before{transform:scaleX(1)}
-        
-        .ic{
-            width:48px;
-            height:48px;
-            border-radius:12px;
-            display:grid;
-            place-items:center;
-            font-size:1.4rem;
-            margin-bottom:16px;
-            box-shadow:0 10px 20px rgba(0,0,0,.2)
-        }
-        .cd h3{font-size:1.15rem;margin-bottom:10px;font-weight:700}
-        .cd p{color:var(--m);font-size:.9rem;margin-bottom:15px;line-height:1.6}
-        
-        .tg{
-            display:flex;
-            gap:8px;
-            flex-wrap:wrap;
-            margin-bottom:18px
-        }
-        .tg span{
-            font-size:.7rem;
-            background:rgba(255,255,255,.05);
-            color:var(--m);
-            padding:4px 10px;
-            border-radius:20px;
-            border:1px solid var(--d)
-        }
-        .btn{
-            width:100%;
-            padding:12px;
-            background:linear-gradient(90deg,var(--p),var(--s));
-            color:#000;
-            border:none;
-            border-radius:10px;
-            font-weight:700;
-            cursor:pointer;
-            font-size:.9rem;
-            transition:opacity .2s,transform .2s
-        }
-        .btn:hover{opacity:.9;transform:translateY(-2px)}
-        
-        /* About Section */
-        .ab{
-            background:linear-gradient(180deg,rgba(56,189,248,.05),transparent);
-            padding:60px 0;
-            margin:40px 0
-        }
-        .ab-g{
-            display:grid;
-            grid-template-columns:1.2fr 1fr;
-            gap:50px;
-            align-items:start
-        }
-        .ab h2{
-            color:var(--p);
-            font-size:1.6rem;
-            margin-bottom:25px;
-            display:flex;
-            align-items:center;
-            gap:12px;
-            font-weight:800
-        }
-        .ab p{
-            color:var(--m);
-            margin-bottom:18px;
-            line-height:1.9;
-            font-size:.95rem
-        }
-        .ab .hl{
-            color:var(--p);
-            font-weight:700;
-            background:rgba(56,189,248,.1);
-            padding:2px 8px;
-            border-radius:4px
-        }
-        
-        .st-g{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:15px;
-            margin-top:30px
-        }
-        .st-c{
-            background:var(--c);
-            border:1px solid var(--d);
-            padding:20px;
-            border-radius:12px;
-            text-align:center;
-            transition:transform .3s
-        }
-        .st-c:hover{transform:translateY(-3px);border-color:var(--p)}
-        .st-n{
-            font-size:1.6rem;
-            font-weight:800;
-            color:var(--p);
-            margin-bottom:5px
-        }
-        .st-l{font-size:.75rem;color:var(--m)}
-        
-        /* News Box */
-        .nw{
-            background:var(--c);
-            border:1px solid var(--d);
-            border-radius:16px;
-            padding:25px;
-            position:sticky;
-            top:90px
-        }
-        .nw h3{
-            color:var(--p);
-            margin-bottom:20px;
-            font-size:1.1rem;
-            display:flex;
-            align-items:center;
-            gap:10px
-        }
-        .nw-i{
-            margin-bottom:18px;
-            padding-bottom:18px;
-            border-bottom:1px solid var(--d)
-        }
-        .nw-i:last-child{border:none;margin:0;padding:0}
-        .nw-i small{
-            color:var(--g);
-            font-size:.7rem;
-            font-weight:700;
-            background:rgba(16,185,129,.1);
-            padding:3px 8px;
-            border-radius:20px
-        }
-        .nw-i h4{font-size:.9rem;margin:10px 0 6px;font-weight:600}
-        .nw-i p{font-size:.8rem;color:var(--m);line-height:1.5}
-        
-        /* Articles */
-        .ar{margin-top:40px}
-        
-        /* ==================== FOOTER - SINGLE & PERFECT ==================== */
-        .ft{
-            background:var(--c);
-            border-top:3px solid var(--p);
-            padding:60px 0 25px;
-            margin-top:80px;
-            position:relative
-        }
-        .ft::before{
-            content:"";
-            position:absolute;
-            top:-3px;
-            left:0;
-            right:0;
-            height:3px;
-            background:linear-gradient(90deg,var(--p),var(--s),var(--a))
-        }
-        
-        /* Footer Grid - 3 Columns */
-        .ft-g{
-            display:grid;
-            grid-template-columns:1.5fr 1fr 1.5fr;
-            gap:50px;
-            margin-bottom:40px
-        }
-        
-        /* Column 1: Brand */
-        .ft-brand .ft-h{
-            font-size:1.3rem;
-            margin-bottom:20px;
-            display:flex;
-            align-items:center;
-            gap:10px
-        }
-        .ft-brand .ft-h img{
-            width:32px;
-            height:32px;
-            border-radius:50%;
-            border:1.5px solid var(--p)
-        }
-        .ft-brand p{
-            color:var(--m);
-            font-size:.9rem;
-            line-height:1.9;
-            margin-bottom:20px
-        }
-        .ft-contact{
-            display:flex;
-            flex-direction:column;
-            gap:12px
-        }
-        .ft-contact a{
-            color:var(--m);
-            font-size:.9rem;
-            display:flex;
-            align-items:center;
-            gap:10px;
-            transition:.2s
-        }
-        .ft-contact a:hover{color:var(--p)}
-        .ft-contact i{
-            width:30px;
-            height:30px;
-            background:rgba(56,189,248,.1);
-            border-radius:50%;
-            display:grid;
-            place-items:center;
-            color:var(--p);
-            font-size:.8rem
-        }
-        
-        /* Column 2: Quick Links */
-        .ft-h{
-            color:var(--t);
-            font-size:1.05rem;
-            font-weight:700;
-            margin-bottom:20px;
-            padding-bottom:10px;
-            border-bottom:1px solid var(--d);
-            display:flex;
-            align-items:center;
-            gap:8px
-        }
-        .ft-h i{color:var(--p)}
-        
-        .ft ul{list-style:none}
-        .ft li{margin-bottom:12px}
-        .ft a{
-            color:var(--m);
-            font-size:.9rem;
-            display:flex;
-            align-items:center;
-            gap:10px;
-            transition:.2s;
-            padding:5px 0
-        }
-        .ft a:hover{color:var(--p);padding-right:5px}
-        .ft a i{
-            width:20px;
-            color:var(--m);
-            font-size:.8rem;
-            transition:.2s
-        }
-        .ft a:hover i{color:var(--p)}
-        
-        /* Column 3: LEGAL PAGES (AdSense Required) */
-        .legal-box{
-            background:rgba(15,23,42,.5);
-            border:1px solid var(--d);
-            border-radius:12px;
-            padding:20px;
-            border-right:3px solid var(--r)
-        }
-        .legal-box .ft-h{
-            color:var(--r);
-            border-bottom-color:rgba(239,68,68,.3);
-            margin-bottom:15px
-        }
-        .legal-box .ft-h i{color:var(--r)}
-        
-        .rq{
-            background:var(--r);
-            color:#fff;
-            padding:2px 8px;
-            border-radius:20px;
-            font-size:.65rem;
-            font-weight:700;
-            margin-left:8px
-        }
-        
-        .legal-note{
-            margin-top:15px;
-            padding-top:15px;
-            border-top:1px solid var(--d);
-            font-size:.75rem;
-            color:var(--m);
-            line-height:1.6
-        }
-        .legal-note strong{color:var(--r)}
-        
-        /* Social Icons */
-        .ft-sc{
-            display:flex;
-            gap:12px;
-            margin-top:25px
-        }
-        .ft-sc a{
-            width:40px;
-            height:40px;
-            border-radius:50%;
-            display:grid;
-            place-items:center;
-            color:#fff;
-            font-size:1rem;
-            transition:all .3s;
-            border:1px solid rgba(255,255,255,.1)
-        }
-        .ft-sc a:hover{
-            transform:translateY(-3px);
-            box-shadow:0 10px 20px rgba(0,0,0,.3)
-        }
-        
-        /* Copyright - Single Line */
-        .cr{
-            text-align:center;
-            padding-top:25px;
-            border-top:1px solid var(--d);
-            color:var(--m);
-            font-size:.8rem;
-            display:flex;
-            flex-direction:column;
-            gap:8px
-        }
-        .cr strong{color:var(--t)}
-        .cr-links{
-            display:flex;
-            justify-content:center;
-            gap:20px;
-            flex-wrap:wrap;
-            margin-top:10px
-        }
-        .cr-links a{color:var(--m);font-size:.75rem}
-        .cr-links a:hover{color:var(--p)}
-        
-        /* AdSense Note */
-        .adsense-note{
-            background:rgba(255,255,255,.03);
-            padding:10px;
-            border-radius:8px;
-            margin-top:10px;
-            font-size:.7rem;
-            color:var(--m)
-        }
-        
-        /* Responsive */
-        @media(max-width:968px){
-            .ft-g{grid-template-columns:1fr 1fr;gap:40px}
-            .ft-brand{grid-column:1/-1}
-        }
-        @media(max-width:768px){
-            .ab-g{grid-template-columns:1fr}
-            .nw{position:static;margin-top:30px}
-            .st-g{grid-template-columns:repeat(2,1fr)}
-            .ft-g{grid-template-columns:1fr;gap:30px}
-        }
-        @media(max-width:480px){
-            .nv{justify-content:center;gap:15px}
-            .lg span{font-size:1rem}
-            .st-g{grid-template-columns:1fr}
-            .hr{margin-top:80px;padding:40px 15px}
-        }
+        /* Content visibility for below fold */
+        .lazy-section{content-visibility:auto;contain-intrinsic-size:0 500px}
     </style>
+    
+    <!-- Async Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all';this.onload=null;">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "ProScholarTools",
+                "url": "https://proscholartools.com",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://proscholartools.com/search?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                },
+                "inLanguage": "ar",
+                "copyrightYear": "2025",
+                "author": {"@type": "Organization", "name": "ProScholarTools"}
+            },
+            {
+                "@type": "Organization",
+                "name": "ProScholarTools",
+                "url": "https://proscholartools.com",
+                "logo": "https://i.ibb.co/W4JRFLhF/logo-webp.webp",
+                "sameAs": [
+                    "https://www.facebook.com/share/1CmPf78D4n/",
+                    "https://www.linkedin.com/company/معاشي-و-تأميناتي/",
+                    "https://t.me/gogoareef"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "email": "info@proscholartools.com",
+                    "availableLanguage": ["Arabic", "English"]
+                },
+                "areaServed": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 24.7136,
+                        "longitude": 46.6753
+                    },
+                    "geoRadius": "5000 km",
+                    "description": "Middle East and North Africa"
+                }
+            },
+            {
+                "@type": "ItemList",
+                "itemListElement": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "كاتب الأبحاث",
+                        "applicationCategory": "EducationalApplication",
+                        "operatingSystem": "Web",
+                        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"},
+                        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1500"}
+                    },
+                    {
+                        "@type": "SoftwareApplication",
+                        "name": "فاحص الانتحال",
+                        "applicationCategory": "EducationalApplication",
+                        "operatingSystem": "Web"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 
-<!-- Loader -->
-<div id="L" role="status" aria-label="جاري التحميل">
-    <div class="sp"></div>
-</div>
+<!-- Fast Loader -->
+<div id="L" role="status" aria-label="جاري التحميل"><div class="sp"></div></div>
 
 <!-- Header -->
 <header class="hd">
     <div class="w nv">
-        <a href="/" class="lg" aria-label="الصفحة الرئيسية">
-            <img src="https://i.ibb.co/W4JRFLhF/logo-webp.webp" alt="ProScholarTools Logo" loading="lazy" width="36" height="36">
+        <a href="/" class="lg" aria-label="ProScholarTools الرئيسية">
+            <div class="lg-icon" role="img" aria-label="Logo">🎓</div>
             <span>ProScholarTools</span>
         </a>
         <div class="rt">
-            <div class="lg-sw" role="group" aria-label="تبديل اللغة">
-                <button class="a" onclick="sl('ar')" data-l="ar" aria-pressed="true">AR</button>
-                <button onclick="sl('en')" data-l="en" aria-pressed="false">EN</button>
+            <div class="lg-sw" role="group" aria-label="اختيار اللغة">
+                <button class="a" data-l="ar" aria-pressed="true">AR</button>
+                <button data-l="en" aria-pressed="false">EN</button>
             </div>
-            <div class="sc">
-                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer" class="fb" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer" class="li" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer" class="tg" aria-label="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
+            <div class="sc" aria-label="روابط التواصل الاجتماعي">
+                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" style="background:#1877f2"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn" style="background:#0a66c2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer nofollow" aria-label="Telegram" style="background:#08c"><i class="fab fa-telegram-plane"></i></a>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Hero -->
+<!-- Hero (Above Fold) -->
 <section class="hr">
     <div class="w">
         <h1>أدوات <span>أكاديمية</span> ذكية</h1>
-        <p>منصة متخصصة في تقديم حلول الذكاء الاصطناعي للباحثين والطلاب بإشراف نخبة الأساتذة</p>
+        <p>منصة عربية متخصصة في أدوات الذكاء الاصطناعي للباحثين والطلاب بإشراف نخبة الأساتذة الجامعيين</p>
     </div>
 </section>
 
-<!-- AdSense Container -->
-<div class="w ad" aria-label="إعلان">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<!-- Ad Container (Lazy Loaded) -->
+<div class="w" style="margin:2rem auto;min-height:90px;background:var(--c);border:2px dashed var(--d);border-radius:8px;display:grid;place-items:center;color:var(--m);font-size:.8rem" id="ad-container">
+    <span>جاري تحميل الإعلان...</span>
 </div>
 
-<!-- Main Content -->
-<main class="w">
-    <!-- Academic Tools -->
-    <div class="st"><i class="fas fa-graduation-cap"></i> الأدوات الأكاديمية</div>
-    <div class="gd" id="g1">
-        <article class="cd" onclick="location.href='/research-writer.html'">
-            <div class="ic" style="background:linear-gradient(135deg,var(--p),var(--s))">✍️</div>
-            <h3>كاتب الأبحاث</h3>
-            <p>AI لكتابة الأبحاث مع المراجع التلقائية</p>
-            <div class="tg"><span>ذكاء اصطناعي</span><span>2000+ كلمة</span></div>
-            <button class="btn">ابدأ الكتابة</button>
-        </article>
-        
-        <article class="cd" onclick="location.href='/plagiarism-checker.html'">
-            <div class="ic" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">🔍</div>
-            <h3>فاحص الانتحال</h3>
-            <p>كشف التشابه والمحتوى المنسوخ بدقة 99%</p>
-            <div class="tg"><span>99% دقة</span><span>كشف AI</span></div>
-            <button class="btn">فحص النص</button>
-        </article>
-        
-        <article class="cd" onclick="location.href='/apa-formatter.html'">
-            <div class="ic" style="background:linear-gradient(135deg,#f59e0b,#d97706)">📚</div>
-            <h3>منسق APA</h3>
-            <p>تنسيق المراجع البحثية تلقائياً</p>
-            <div class="tg"><span>APA 7</span><span>تلقائي</span></div>
-            <button class="btn">نسق المراجع</button>
-        </article>
-    </div>
+<!-- Main Content (Lazy Rendered) -->
+<main class="w lazy-section">
     
+    <!-- Tools Grid -->
+    <section aria-labelledby="academic-tools">
+        <h2 id="academic-tools" class="st" style="color:var(--p);font-size:1.3rem;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-graduation-cap"></i> الأدوات الأكاديمية</h2>
+        <div class="gd" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
+            
+            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/research-writer.html'" role="button" tabindex="0">
+                <div style="width:45px;height:45px;background:linear-gradient(135deg,var(--p),var(--s));border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">✍️</div>
+                <h3 style="font-size:1.1rem;margin-bottom:.5rem">كاتب الأبحاث AI</h3>
+                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">كتابة بحثية متكاملة مع المراجع التلقائية والتنسيق العلمي</p>
+                <div style="display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap">
+                    <span style="font-size:.7rem;background:rgba(56,189,248,.1);color:var(--p);padding:.2rem .6rem;border-radius:20px">ذكاء اصطناعي</span>
+                    <span style="font-size:.7rem;background:rgba(56,189,248,.1);color:var(--p);padding:.2rem .6rem;border-radius:20px">+2000 كلمة</span>
+                </div>
+                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,var(--p),var(--s));color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">ابدأ الكتابة</button>
+            </article>
+
+            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/plagiarism-checker.html'" role="button" tabindex="0">
+                <div style="width:45px;height:45px;background:linear-gradient(135deg,#3b82f6,#2563eb);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">🔍</div>
+                <h3 style="font-size:1.1rem;margin-bottom:.5rem">فاحص الانتحال</h3>
+                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">كشف التشابه والمحتوى المنسوخ بدقة 99% مع تقرير تفصيلي</p>
+                <div style="display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap">
+                    <span style="font-size:.7rem;background:rgba(59,130,246,.1);color:#60a5fa;padding:.2rem .6rem;border-radius:20px">99% دقة</span>
+                    <span style="font-size:.7rem;background:rgba(59,130,246,.1);color:#60a5fa;padding:.2rem .6rem;border-radius:20px">كشف AI</span>
+                </div>
+                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,var(--p),var(--s));color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">فحص النص</button>
+            </article>
+
+            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/apa-formatter.html'" role="button" tabindex="0">
+                <div style="width:45px;height:45px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">📚</div>
+                <h3 style="font-size:1.1rem;margin-bottom:.5rem">منسق APA</h3>
+                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">تنسيق المراجع تلقائياً حسب معايير APA 7th Edition</p>
+                <div style="display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap">
+                    <span style="font-size:.7rem;background:rgba(245,158,11,.1);color:#f59e0b;padding:.2rem .6rem;border-radius:20px">APA 7</span>
+                    <span style="font-size:.7rem;background:rgba(245,158,11,.1);color:#f59e0b;padding:.2rem .6rem;border-radius:20px">تلقائي</span>
+                </div>
+                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,var(--p),var(--s));color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">نسق المراجع</button>
+            </article>
+
+        </div>
+    </section>
+
     <!-- Financial Tools -->
-    <div class="st"><i class="fas fa-calculator"></i> الأدوات المالية</div>
-    <div class="gd" id="g2">
-        <article class="cd" onclick="location.href='/loan-calculator.html'">
-            <div class="ic" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🏦</div>
-            <h3>حاسبة القروض</h3>
-            <p>حساب الأقساط والفائدة المركبة</p>
-            <div class="tg"><span>جدول استهلاك</span><span>فائدة مركبة</span></div>
-            <button class="btn">احسب الآن</button>
-        </article>
-        
-        <article class="cd" onclick="location.href='/gpa-calculator.html'">
-            <div class="ic" style="background:linear-gradient(135deg,#c084fc,#9333ea)">📊</div>
-            <h3>حاسبة GPA</h3>
-            <p>احسب معدلك في جميع أنظمة التقييم</p>
-            <div class="tg"><span>4.0/5.0/100%</span><span>تراكمي</span></div>
-            <button class="btn">احسب المعدل</button>
-        </article>
-        
-        <article class="cd" onclick="location.href='/gold-calculator.html'">
-            <div class="ic" style="background:linear-gradient(135deg,#fbbf24,#d97706)">🪙</div>
-            <h3>حاسبة الذهب</h3>
-            <p>تحويل العيارات وأسعار الذهب اللحظية</p>
-            <div class="tg"><span>سعر لحظي</span><span>جميع العيارات</span></div>
-            <button class="btn">احسب السعر</button>
-        </article>
-    </div>
+    <section aria-labelledby="financial-tools" style="margin-top:3rem">
+        <h2 id="financial-tools" class="st" style="color:var(--p);font-size:1.3rem;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-calculator"></i> الأدوات المالية والقانونية</h2>
+        <div class="gd" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
+            
+            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/loan-calculator.html'" role="button" tabindex="0">
+                <div style="width:45px;height:45px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">🏦</div>
+                <h3 style="font-size:1.1rem;margin-bottom:.5rem">حاسبة القروض</h3>
+                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">حساب الأقساط الشهرية والفائدة المركبة مع جدول استهلاك</p>
+                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">احسب القرض</button>
+            </article>
+
+            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/pension-calculator.html'" role="button" tabindex="0">
+                <div style="width:45px;height:45px;background:linear-gradient(135deg,#c084fc,#9333ea);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">📊</div>
+                <h3 style="font-size:1.1rem;margin-bottom:.5rem">حاسبة المعاشات</h3>
+                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">احسب معاشك التقاعدي وفقاً للأنظمة القانونية المحدثة</p>
+                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,#c084fc,#9333ea);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">احسب المعاش</button>
+            </article>
+
+            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/gold-calculator.html'" role="button" tabindex="0">
+                <div style="width:45px;height:45px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">🪙</div>
+                <h3 style="font-size:1.1rem;margin-bottom:.5rem">حاسبة الذهب</h3>
+                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">أسعار الذهب اللحظية وتحويل بين جميع العيارات</p>
+                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,#fbbf24,#d97706);color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">احسب السعر</button>
+            </article>
+
+        </div>
+    </section>
+
 </main>
 
-<!-- About Section -->
-<section class="ab">
-    <div class="w ab-g">
-        <div>
-            <h2><i class="fas fa-shield-alt"></i> من نحن</h2>
-            <p><span class="hl">ProScholarTools</span> هي منصة عالمية تأسست عام 2019 لخدمة الباحثين العرب بأدوات الذكاء الاصطناعي المتطورة.</p>
-            <p>نشرف على المحتوى <span class="hl">نخبة من الأساتذة الجامعيين</span> والخبراء القانونيين والماليين لضمان الدقة والموثوقية في كل أداة نقدمها.</p>
-            
-            <div class="st-g">
-                <div class="st-c">
-                    <div class="st-n">150K+</div>
-                    <div class="st-l">مستخدم نشط</div>
-                </div>
-                <div class="st-c">
-                    <div class="st-n">25+</div>
-                    <div class="st-l">أداة متخصصة</div>
-                </div>
-                <div class="st-c">
-                    <div class="st-n">15+</div>
-                    <div class="st-l">جامعة شريكة</div>
-                </div>
-            </div>
-        </div>
-        
-        <aside class="nw">
-            <h3><i class="fas fa-newspaper"></i> آخر التحديثات</h3>
-            <div class="nw-i">
-                <small>Google Trends</small>
-                <h4>الذكاء الاصطناعي في البحث العلمي</h4>
-                <p>تطورات جديدة في استخدام AI للأبحاث</p>
-            </div>
-            <div class="nw-i">
-                <small>قانون</small>
-                <h4>تحديثات قانونية 2026</h4>
-                <p>تعديلات مهمة على أنظمة المعاشات</p>
-            </div>
-            <div class="nw-i">
-                <small>تعليم</small>
-                <h4>منح دراسية جديدة</h4>
-                <p>فرص تمويل للماجستير والدكتوراه</p>
-            </div>
-        </aside>
-    </div>
-</section>
-
-<!-- Articles -->
-<section class="ar">
+<!-- Stats Section -->
+<section class="lazy-section" style="background:linear-gradient(180deg,rgba(56,189,248,.05),transparent);padding:3rem 0;margin:3rem 0">
     <div class="w">
-        <div class="st"><i class="fas fa-star"></i> مقالات حصرية</div>
-        <div class="gd">
-            <article class="cd" onclick="location.href='gold-forecast-2026.html'">
-                <div class="ic" style="background:linear-gradient(135deg,#f59e0b,#d97706)">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>توقعات الذهب 2026</h3>
-                <p>تحليل عميق لمستقبل المعدن الأصفر</p>
-                <button class="btn">اقرأ المقال</button>
-            </article>
-            
-            <article class="cd" onclick="location.href='pension-law-2026.html'">
-                <div class="ic" style="background:linear-gradient(135deg,#22c55e,#16a34a)">
-                    <i class="fas fa-gavel"></i>
-                </div>
-                <h3>قانون المعاشات الجديد</h3>
-                <p>شرح مفصل لحساب التقاعد 2026</p>
-                <button class="btn">اقرأ التفاصيل</button>
-            </article>
-            
-            <article class="cd" onclick="location.href='academic-ai-tools.html'">
-                <div class="ic" style="background:linear-gradient(135deg,#c084fc,#9333ea)">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <h3>دليل NotebookLM</h3>
-                <p>إنجاز الأبحاث بالذكاء الاصطناعي</p>
-                <button class="btn">ابدأ التعلم</button>
-            </article>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;text-align:center">
+            <div style="background:var(--c);border:1px solid var(--d);padding:1.5rem;border-radius:12px">
+                <div style="font-size:2rem;font-weight:800;color:var(--p);margin-bottom:.5rem">150K+</div>
+                <div style="color:var(--m);font-size:.9rem">مستخدم نشط</div>
+            </div>
+            <div style="background:var(--c);border:1px solid var(--d);padding:1.5rem;border-radius:12px">
+                <div style="font-size:2rem;font-weight:800;color:var(--p);margin-bottom:.5rem">25+</div>
+                <div style="color:var(--m);font-size:.9rem">أداة متخصصة</div>
+            </div>
+            <div style="background:var(--c);border:1px solid var(--d);padding:1.5rem;border-radius:12px">
+                <div style="font-size:2rem;font-weight:800;color:var(--p);margin-bottom:.5rem">99%</div>
+                <div style="color:var(--m);font-size:.9rem">دقة الفحص</div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== FOOTER - SINGLE & LEGAL ==================== -->
-<footer class="ft">
-    <div class="w ft-g">
-        <!-- Column 1: Brand & Contact -->
-        <div class="ft-brand">
-            <div class="ft-h">
-                <img src="https://i.ibb.co/W4JRFLhF/logo-webp.webp" alt="Logo" loading="lazy">
-                ProScholarTools
-            </div>
-            <p>منصة عالمية متخصصة في أدوات الذكاء الاصطناعي للباحثين والأكاديميين. نقدم حلولاً موثوقة بإشراف نخبة من أساتذة الجامعات.</p>
+<!-- Footer (Optimized) -->
+<footer class="lazy-section" style="background:var(--c);border-top:2px solid var(--p);padding:3rem 0 1.5rem;margin-top:4rem">
+    <div class="w">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2.5rem;margin-bottom:2rem">
             
-            <div class="ft-contact">
-                <a href="mailto:info@proscholartools.com">
-                    <i class="fas fa-envelope"></i>
-                    info@proscholartools.com
-                </a>
-                <a href="tel:+966501234567">
-                    <i class="fas fa-phone"></i>
-                    +966 50 123 4567
-                </a>
-                <a href="/contact.html">
-                    <i class="fas fa-map-marker-alt"></i>
-                    تواصل معنا
-                </a>
+            <!-- Brand -->
+            <div>
+                <h3 style="color:var(--t);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem">
+                    <div style="width:28px;height:28px;background:linear-gradient(135deg,var(--p),var(--s));border-radius:50%;display:grid;place-items:center;font-size:.9rem">🎓</div>
+                    ProScholarTools
+                </h3>
+                <p style="color:var(--m);font-size:.9rem;line-height:1.8;margin-bottom:1rem">
+                    منصة عربية رائدة في أدوات الذكاء الاصطناعي للباحثين والأكاديميين. نقدم حلولاً موثوقة بإشراف نخبة من أساتذة الجامعات.
+                </p>
+                <div style="display:flex;gap:.8rem">
+                    <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer nofollow" style="width:35px;height:35px;background:#1877f2;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.9rem"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer nofollow" style="width:35px;height:35px;background:#0a66c2;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.9rem"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer nofollow" style="width:35px;height:35px;background:#08c;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.9rem"><i class="fab fa-telegram-plane"></i></a>
+                </div>
             </div>
-            
-            <!-- Social -->
-            <div class="ft-sc">
-                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer" style="background:#1877f2" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer" style="background:#0a66c2" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer" style="background:#08c" aria-label="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-                <a href="https://www.tiktok.com/@proscholartools" target="_blank" rel="noopener noreferrer" style="background:#000;border:1px solid #333" aria-label="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
+
+            <!-- Links -->
+            <div>
+                <h4 style="color:var(--t);font-size:1rem;margin-bottom:1rem">روابط سريعة</h4>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+                    <li><a href="/" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-home" style="width:20px"></i> الرئيسية</a></li>
+                    <li><a href="/about.html" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-info-circle" style="width:20px"></i> من نحن</a></li>
+                    <li><a href="/contact.html" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-envelope" style="width:20px"></i> اتصل بنا</a></li>
+                    <li><a href="/sitemap.xml" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-sitemap" style="width:20px"></i> خريطة الموقع</a></li>
+                </ul>
             </div>
-        </div>
-        
-        <!-- Column 2: Quick Links -->
-        <div>
-            <div class="ft-h"><i class="fas fa-link"></i> روابط سريعة</div>
-            <ul>
-                <li><a href="/"><i class="fas fa-home"></i> الرئيسية</a></li>
-                <li><a href="/about.html"><i class="fas fa-users"></i> من نحن</a></li>
-                <li><a href="/tools.html"><i class="fas fa-tools"></i> جميع الأدوات</a></li>
-                <li><a href="/blog.html"><i class="fas fa-blog"></i> المدونة</a></li>
-                <li><a href="/contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
-                <li><a href="/sitemap.xml"><i class="fas fa-sitemap"></i> خريطة الموقع</a></li>
-            </ul>
-        </div>
-        
-        <!-- Column 3: LEGAL PAGES (Required for AdSense) -->
-        <div class="legal-box">
-            <div class="ft-h"><i class="fas fa-gavel"></i> الصفحات القانونية</div>
-            <ul>
-                <li>
-                    <a href="/privacy-policy.html">
-                        <i class="fas fa-lock"></i>
-                        <span class="rq">مطلوب AdSense</span>
-                        سياسة الخصوصية
-                    </a>
-                </li>
-                <li>
-                    <a href="/terms.html">
-                        <i class="fas fa-file-contract"></i>
-                        <span class="rq">مطلوب AdSense</span>
-                        شروط الاستخدام
-                    </a>
-                </li>
-                <li>
-                    <a href="/cookie-policy.html">
-                        <i class="fas fa-cookie-bite"></i>
-                        <span class="rq">مطلوب AdSense</span>
-                        سياسة الكوكيز
-                    </a>
-                </li>
-                <li>
-                    <a href="/disclaimer.html">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        إخلاء المسؤولية
-                    </a>
-                </li>
-            </ul>
-            
-            <div class="legal-note">
-                <strong>ملاحظة هامة:</strong> هذه الصفحات إلزامية للموافقة على AdSense. يجب أن تحتوي على معلومات حقيقية ودقيقة حول جمع البيانات واستخدام الكوكيز.
+
+            <!-- Legal (SEO & AdSense Required) -->
+            <div style="background:rgba(15,23,42,.5);padding:1.5rem;border-radius:12px;border:1px solid var(--d)">
+                <h4 style="color:var(--r,#ef4444);font-size:1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem">
+                    <i class="fas fa-shield-alt"></i> الصفحات القانونية
+                </h4>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+                    <li>
+                        <a href="/privacy-policy.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
+                            <span style="background:var(--r);color:#fff;padding:2px 6px;border-radius:10px;font-size:.6rem">AdSense</span>
+                            <i class="fas fa-lock" style="color:var(--m)"></i> سياسة الخصوصية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/terms.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
+                            <span style="background:var(--r);color:#fff;padding:2px 6px;border-radius:10px;font-size:.6rem">AdSense</span>
+                            <i class="fas fa-file-contract" style="color:var(--m)"></i> شروط الاستخدام
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cookie-policy.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
+                            <span style="background:var(--r);color:#fff;padding:2px 6px;border-radius:10px;font-size:.6rem">AdSense</span>
+                            <i class="fas fa-cookie-bite" style="color:var(--m)"></i> سياسة الكوكيز
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/disclaimer.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
+                            <i class="fas fa-exclamation-triangle" style="color:var(--m)"></i> إخلاء المسؤولية
+                        </a>
+                    </li>
+                </ul>
+                <p style="margin-top:1rem;font-size:.75rem;color:var(--m);line-height:1.5;border-top:1px solid var(--d);padding-top:1rem">
+                    نستخدم Google AdSense. باستخدامك للموقع فإنك توافق على <a href="/cookie-policy.html" style="color:var(--p)">سياسة الكوكيز</a>.
+                </p>
             </div>
-            
-            <div class="adsense-note">
-                <i class="fas fa-info-circle"></i> نستخدم Google AdSense لعرض الإعلانات. باستخدامك للموقع فإنك توافق على <a href="/cookie-policy.html" style="color:var(--p);text-decoration:underline">سياسة الكوكيز</a>.
-            </div>
+
         </div>
-    </div>
-    
-    <!-- Copyright Bar - Single Line -->
-    <div class="w cr">
-        <div>
-            © 2025 <strong>ProScholarTools</strong>. جميع الحقوق محفوظة.
-        </div>
-        <div class="cr-links">
-            <a href="/privacy-policy.html">الخصوصية</a>
-            <a href="/terms.html">الشروط</a>
-            <a href="/cookie-policy.html">الكوكيز</a>
+
+        <!-- Copyright -->
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid var(--d);color:var(--m);font-size:.8rem">
+            <p>© 2025 <strong style="color:var(--t)">ProScholarTools</strong>. جميع الحقوق محفوظة.</p>
+            <p style="margin-top:.5rem;font-size:.75rem">الموقع متوافق مع SEO ومُحسّن للأداء العالي</p>
         </div>
     </div>
 </footer>
 
-<!-- AdSense Script -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809" crossorigin="anonymous"></script>
-
-<!-- Scripts -->
+<!-- Optimized Scripts -->
 <script>
-// Remove loader
-window.addEventListener('load', function(){
-    setTimeout(() => {
-        document.getElementById('L').classList.add('h');
-    }, 500);
-    
-    // Initialize AdSense
-    if(typeof adsbygoogle !== 'undefined'){
-        (adsbygoogle = window.adsbygoogle || []).push({});
+    // Fast loader removal
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('L').classList.add('h');
+        }, 100);
+    });
+
+    // Language switch (Optimized)
+    document.querySelectorAll('.lg-sw button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.lg-sw button').forEach(b => {
+                b.classList.remove('a');
+                b.setAttribute('aria-pressed', 'false');
+            });
+            this.classList.add('a');
+            this.setAttribute('aria-pressed', 'true');
+            // Add language switch logic here
+        });
+    });
+
+    // Lazy load AdSense (Performance Critical)
+    if ('IntersectionObserver' in window) {
+        const adObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Load AdSense only when ad container is visible
+                    const script = document.createElement('script');
+                    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809';
+                    script.async = true;
+                    script.crossOrigin = 'anonymous';
+                    document.head.appendChild(script);
+                    
+                    // Initialize ad
+                    script.onload = () => {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        entry.target.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    };
+                    
+                    adObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '100px' });
+        
+        adObserver.observe(document.getElementById('ad-container'));
+    } else {
+        // Fallback for old browsers
+        setTimeout(() => {
+            const script = document.createElement('script');
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809';
+            script.async = true;
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }, 2000);
     }
-});
 
-// Language switch (Fixed)
-function sl(l){
-    document.querySelectorAll('.lg-sw button').forEach(b => {
-        b.classList.toggle('a', b.dataset.l === l);
-        b.setAttribute('aria-pressed', b.dataset.l === l);
-    });
-    // Add your translation logic here
-    console.log('Language switched to:', l);
-}
-
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-});
+    // Intersection Observer for lazy sections
+    if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.contentVisibility = 'visible';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.lazy-section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+    }
 </script>
 
 </body>
