@@ -1,462 +1,1006 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>ProScholarTools | المنصة العالمية للأدوات الأكاديمية والمالية</title>
     
-    <!-- SEO Core -->
-    <meta name="description" content="منصة عربية متخصصة في أدوات الذكاء الاصطناعي للباحثين - كاتب بحثي، فاحص انتحال، حاسبات مالية، تحويل PDF">
-    <meta name="keywords" content="أدوات أكاديمية, ذكاء اصطناعي, فاحص انتحال, حاسبة معاشات, كتابة بحث, تنسيق APA">
-    <meta name="author" content="ProScholarTools">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://proscholartools.com/">
+    <!-- Dynamic Title per Language -->
+    <title data-i18n="meta.title">ProScholarTools | Global Academic & Financial Tools Platform</title>
     
-    <!-- GEO / Local SEO -->
-    <meta name="geo.region" content="SA-EG-SY-AE">
-    <meta name="geo.placename" content="Arab World">
-    <meta name="language" content="Arabic">
-    <meta http-equiv="content-language" content="ar">
-    <meta name="target" content="all">
-    <meta name="audience" content="academic, students, researchers">
+    <!-- SEO Multilingual -->
+    <meta name="description" data-i18n="meta.desc" content="AI-powered academic tools for researchers worldwide - Plagiarism checker, research writer, financial calculators">
+    <meta name="keywords" content="academic tools, AI research, plagiarism checker, GPA calculator, global education">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Hreflang Tags for Global SEO -->
+    <link rel="alternate" hreflang="ar" href="https://proscholartools.com/ar/" />
+    <link rel="alternate" hreflang="en" href="https://proscholartools.com/en/" />
+    <link rel="alternate" hreflang="fr" href="https://proscholartools.com/fr/" />
+    <link rel="alternate" hreflang="es" href="https://proscholartools.com/es/" />
+    <link rel="alternate" hreflang="ur" href="https://proscholartools.com/ur/" />
+    <link rel="alternate" hreflang="hi" href="https://proscholartools.com/hi/" />
+    <link rel="alternate" hreflang="x-default" href="https://proscholartools.com/en/" />
+    
+    <!-- Canonical with language parameter -->
+    <link rel="canonical" href="https://proscholartools.com/" id="canonical-link">
+    
+    <!-- Geo Tags for Global Reach -->
+    <meta name="geo.region" content="Global">
+    <meta name="geo.position" content="24.7136;46.6753">
+    <meta name="ICBM" content="24.7136, 46.6753">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    
+    <!-- Open Graph Multilingual -->
+    <meta property="og:locale" content="ar_AR" id="og-locale">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="es_ES">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://proscholartools.com/">
-    <meta property="og:title" content="ProScholarTools | أدوات أكاديمية ذكية">
-    <meta property="og:description" content="منصة متخصصة في أدوات الذكاء الاصطناعي للباحثين والطلاب العرب">
-    <meta property="og:image" content="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
-    <meta property="og:locale" content="ar_AR">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ProScholarTools | أدوات أكاديمية ذكية">
-    <meta name="twitter:description" content="منصة متخصصة في أدوات الذكاء الاصطناعي للباحثين">
-    <meta name="twitter:image" content="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
+    <meta property="og:title" data-i18n="og.title" content="ProScholarTools | Smart Academic Tools">
+    <meta property="og:description" data-i18n="og.desc" content="Global platform for AI academic tools">
+    <meta property="og:image" content="https://proscholartools.com/assets/og-global.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
-    <link rel="apple-touch-icon" href="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     
-    <!-- Performance: Resource Hints -->
+    <!-- Preconnect for Global CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://i.ibb.co" crossorigin>
-    <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
-    <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
     
-    <!-- Critical CSS Inline (Above the Fold) -->
+    <!-- Critical CSS with RTL/LTR Support -->
     <style>
-        :root{--p:#38bdf8;--s:#818cf8;--a:#f472b6;--b:#0f172a;--c:#1e293b;--t:#f8fafc;--m:#94a3b8;--d:#334155;--g:#10b981}
+        :root{
+            --p:#38bdf8;--s:#818cf8;--a:#f472b6;--b:#0f172a;--c:#1e293b;
+            --t:#f8fafc;--m:#94a3b8;--d:#334155;
+            --dir:rtl;
+            --text-align:right;
+            --float:right;
+            --margin-start:0;
+            --margin-end:auto;
+        }
+        
+        /* LTR Override Variables */
+        [dir="ltr"]{
+            --dir:ltr;
+            --text-align:left;
+            --float:left;
+            --margin-start:0;
+            --margin-end:auto;
+        }
+        
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth}
-        body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--b);color:var(--t);line-height:1.6;min-height:100vh;text-rendering:optimizeSpeed}
-        a{text-decoration:none;color:inherit}
-        img{max-width:100%;height:auto;display:block}
+        body{
+            font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+            background:var(--b);
+            color:var(--t);
+            line-height:1.6;
+            direction:var(--dir);
+            text-align:var(--text-align);
+            min-height:100vh;
+            text-rendering:optimizeSpeed;
+            transition:all 0.3s ease;
+        }
+        
+        /* Language Font Stacks */
+        [lang="ar"],[lang="ur"]{font-family:'Segoe UI','Noto Naskh Arabic',Arial,sans-serif}
+        [lang="hi"]{font-family:'Segoe UI','Noto Sans Devanagari',Arial,sans-serif}
+        
+        /* RTL/LTR Utilities */
+        .start-float{float:var(--float)}
+        .text-start{text-align:var(--text-align)}
+        .me-auto{margin-inline-end:auto}
+        .ms-auto{margin-inline-start:auto}
         
         /* Fast Loader */
-        #L{position:fixed;inset:0;background:var(--b);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .2s}
+        #L{
+            position:fixed;
+            inset:0;
+            background:var(--b);
+            z-index:9999;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:opacity 0.3s;
+        }
         #L.h{opacity:0;pointer-events:none}
-        .sp{width:35px;height:35px;border:2px solid var(--d);border-top-color:var(--p);border-radius:50%;animation:spin .8s linear infinite}
+        .sp{
+            width:40px;
+            height:40px;
+            border:3px solid var(--d);
+            border-top-color:var(--p);
+            border-radius:50%;
+            animation:spin 1s linear infinite;
+        }
         @keyframes spin{to{transform:rotate(360deg)}}
         
-        /* Header - Critical */
-        .hd{position:fixed;top:0;width:100%;background:rgba(15,23,42,.98);backdrop-filter:blur(10px);border-bottom:1px solid var(--d);z-index:100;padding:.6rem 0}
-        .w{max-width:1200px;margin:0 auto;padding:0 1rem}
-        .nv{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+        /* Header */
+        .hd{
+            position:fixed;
+            top:0;
+            width:100%;
+            background:rgba(15,23,42,.98);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid var(--d);
+            z-index:100;
+            padding:0.75rem 0;
+        }
+        .w{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+        .nv{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:1rem;
+            flex-wrap:wrap;
+        }
         
-        /* Optimized Logo - No CLS */
-        .lg{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.1rem;color:var(--t)}
-        .lg-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--p),var(--s));border-radius:50%;display:grid;place-items:center;font-size:1.2rem;flex-shrink:0;border:2px solid rgba(255,255,255,.1)}
+        /* Global Logo */
+        .lg{display:flex;align-items:center;gap:0.75rem;font-weight:800;font-size:1.1rem;color:var(--t)}
+        .lg-icon{
+            width:36px;
+            height:36px;
+            background:linear-gradient(135deg,var(--p),var(--s));
+            border-radius:50%;
+            display:grid;
+            place-items:center;
+            font-size:1.4rem;
+            flex-shrink:0;
+            border:2px solid rgba(255,255,255,0.1);
+            animation:pulse 2s infinite;
+        }
+        @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,0.4)}50%{box-shadow:0 0 0 10px rgba(56,189,248,0)}}
         
-        /* Hero Critical */
-        .hr{margin-top:70px;padding:3rem 1rem;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(56,189,248,.1) 0%,transparent 50%)}
-        .hr h1{font-size:clamp(1.8rem,5vw,2.5rem);font-weight:800;margin-bottom:1rem;line-height:1.3}
-        .hr h1 span{color:var(--p)}
-        .hr p{color:var(--m);max-width:500px;margin:0 auto;font-size:1.05rem}
+        /* Advanced Language Switcher */
+        .lang-menu{position:relative}
+        .lang-btn{
+            display:flex;
+            align-items:center;
+            gap:0.5rem;
+            background:var(--c);
+            border:1px solid var(--d);
+            color:var(--t);
+            padding:0.5rem 1rem;
+            border-radius:50px;
+            cursor:pointer;
+            font-size:0.9rem;
+            font-weight:600;
+            transition:all 0.3s;
+        }
+        .lang-btn:hover{background:var(--d);border-color:var(--p)}
+        .lang-btn img{width:20px;height:20px;border-radius:50%;object-fit:cover}
+        .lang-dropdown{
+            position:absolute;
+            top:120%;
+            inset-inline-end:0;
+            background:var(--c);
+            border:1px solid var(--d);
+            border-radius:12px;
+            padding:0.5rem;
+            min-width:180px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.5);
+            opacity:0;
+            visibility:hidden;
+            transform:translateY(-10px);
+            transition:all 0.3s;
+            z-index:1000;
+        }
+        .lang-menu.active .lang-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+        .lang-item{
+            display:flex;
+            align-items:center;
+            gap:0.75rem;
+            padding:0.75rem;
+            border-radius:8px;
+            cursor:pointer;
+            transition:background 0.2s;
+        }
+        .lang-item:hover{background:var(--d)}
+        .lang-item.active{background:var(--p);color:#000}
+        .lang-item img{width:24px;height:24px;border-radius:50%}
+        .lang-item span{font-size:0.85rem}
+        .lang-item small{font-size:0.7rem;opacity:0.7;margin-inline-start:auto}
         
-        /* Navigation items - inline */
-        .rt{display:flex;align-items:center;gap:1rem}
-        .lg-sw{display:flex;background:rgba(0,0,0,.3);padding:2px;border-radius:50px;border:1px solid var(--d)}
-        .lg-sw button{border:none;background:transparent;color:var(--m);padding:4px 10px;border-radius:50px;font-size:.7rem;cursor:pointer;font-weight:600}
-        .lg-sw button.a{background:var(--p);color:#000}
-        .sc{display:flex;gap:.5rem}
-        .sc a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.8rem;background:var(--d)}
+        /* Social Icons Global */
+        .sc{display:flex;gap:0.5rem}
+        .sc a{
+            width:34px;
+            height:34px;
+            border-radius:50%;
+            display:grid;
+            place-items:center;
+            color:#fff;
+            font-size:0.85rem;
+            transition:transform 0.2s;
+            border:1px solid rgba(255,255,255,0.1);
+        }
+        .sc a:hover{transform:translateY(-3px) scale(1.1)}
+        .fb{background:#1877f2}
+        .li{background:#0a66c2}
+        .tg{background:#08c}
+        .tt{background:#000;border-color:#333}
         
-        /* Content visibility for below fold */
-        .lazy-section{content-visibility:auto;contain-intrinsic-size:0 500px}
+        /* Hero Global */
+        .hr{
+            margin-top:80px;
+            padding:4rem 1.25rem;
+            text-align:center;
+            background:radial-gradient(circle at 50% 50%,rgba(56,189,248,0.1) 0%,transparent 60%);
+        }
+        .hr h1{
+            font-size:clamp(2rem,5vw,3.5rem);
+            font-weight:800;
+            margin-bottom:1rem;
+            line-height:1.2;
+        }
+        .hr h1 span{color:var(--p);display:block}
+        .hr p{
+            color:var(--m);
+            max-width:600px;
+            margin:0 auto;
+            font-size:1.1rem;
+            line-height:1.7;
+        }
+        
+        .global-badge{
+            display:inline-flex;
+            align-items:center;
+            gap:0.5rem;
+            background:rgba(56,189,248,0.1);
+            border:1px solid var(--p);
+            color:var(--p);
+            padding:0.5rem 1rem;
+            border-radius:50px;
+            font-size:0.85rem;
+            margin-bottom:1.5rem;
+            font-weight:600;
+        }
+        
+        /* Tools Grid */
+        .gd{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:1.5rem;
+            margin:3rem 0;
+        }
+        .cd{
+            background:var(--c);
+            border:1px solid var(--d);
+            border-radius:16px;
+            padding:1.5rem;
+            transition:all 0.3s;
+            cursor:pointer;
+            position:relative;
+            overflow:hidden;
+        }
+        .cd:hover{
+            border-color:var(--p);
+            transform:translateY(-5px);
+            box-shadow:0 20px 40px rgba(0,0,0,0.3);
+        }
+        .cd::before{
+            content:'';
+            position:absolute;
+            top:0;
+            inset-inline-start:0;
+            width:4px;
+            height:100%;
+            background:linear-gradient(to bottom,var(--p),var(--s));
+            transform:scaleY(0);
+            transition:transform 0.3s;
+        }
+        .cd:hover::before{transform:scaleY(1)}
+        
+        .ic{
+            width:50px;
+            height:50px;
+            border-radius:12px;
+            display:grid;
+            place-items:center;
+            font-size:1.5rem;
+            margin-bottom:1rem;
+            margin-inline-end:auto;
+        }
+        
+        .btn{
+            width:100%;
+            padding:0.875rem;
+            background:linear-gradient(90deg,var(--p),var(--s));
+            color:#000;
+            border:none;
+            border-radius:10px;
+            font-weight:700;
+            cursor:pointer;
+            font-size:0.95rem;
+            margin-top:1rem;
+            transition:opacity 0.2s;
+        }
+        
+        /* Stats Section */
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:1.5rem;
+            margin:4rem 0;
+            text-align:center;
+        }
+        .stat-item{
+            background:var(--c);
+            border:1px solid var(--d);
+            padding:2rem;
+            border-radius:16px;
+            transition:transform 0.3s;
+        }
+        .stat-item:hover{transform:translateY(-5px);border-color:var(--p)}
+        .stat-num{
+            font-size:2.5rem;
+            font-weight:800;
+            color:var(--p);
+            display:block;
+            margin-bottom:0.5rem;
+        }
+        .stat-label{color:var(--m);font-size:0.9rem}
+        
+        /* Global Footer */
+        .ft{
+            background:var(--c);
+            border-top:2px solid var(--p);
+            padding:4rem 0 2rem;
+            margin-top:6rem;
+        }
+        .ft-g{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:3rem;
+            margin-bottom:3rem;
+        }
+        .ft h3{
+            color:var(--t);
+            font-size:1.1rem;
+            margin-bottom:1.5rem;
+            display:flex;
+            align-items:center;
+            gap:0.75rem;
+        }
+        .ft p, .ft a{color:var(--m);font-size:0.9rem;line-height:1.8}
+        .ft a{display:block;margin-bottom:0.75rem;transition:color 0.2s}
+        .ft a:hover{color:var(--p)}
+        
+        .legal-box{
+            background:rgba(15,23,42,0.5);
+            border:1px solid var(--d);
+            border-radius:12px;
+            padding:1.5rem;
+            border-inline-start:4px solid #ef4444;
+        }
+        
+        /* Language Direction Specific Fixes */
+        [dir="ltr"] .ic{margin-inline-end:0;margin-inline-start:0}
+        [dir="rtl"] .lang-dropdown{inset-inline-end:0;inset-inline-start:auto}
+        [dir="ltr"] .lang-dropdown{inset-inline-start:0;inset-inline-end:auto}
+        
+        .cr{
+            text-align:center;
+            padding-top:2rem;
+            border-top:1px solid var(--d);
+            color:var(--m);
+            font-size:0.85rem;
+        }
+        
+        /* Responsive */
+        @media(max-width:768px){
+            .lang-btn span{display:none}
+            .hr h1{font-size:1.75rem}
+            .stats{grid-template-columns:1fr}
+        }
     </style>
     
-    <!-- Async Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all';this.onload=null;">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "name": "ProScholarTools",
-                "url": "https://proscholartools.com",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://proscholartools.com/search?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                },
-                "inLanguage": "ar",
-                "copyrightYear": "2025",
-                "author": {"@type": "Organization", "name": "ProScholarTools"}
-            },
-            {
-                "@type": "Organization",
-                "name": "ProScholarTools",
-                "url": "https://proscholartools.com",
-                "logo": "https://i.ibb.co/W4JRFLhF/logo-webp.webp",
-                "sameAs": [
-                    "https://www.facebook.com/share/1CmPf78D4n/",
-                    "https://www.linkedin.com/company/معاشي-و-تأميناتي/",
-                    "https://t.me/gogoareef"
-                ],
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "contactType": "customer service",
-                    "email": "info@proscholartools.com",
-                    "availableLanguage": ["Arabic", "English"]
-                },
-                "areaServed": {
-                    "@type": "GeoCircle",
-                    "geoMidpoint": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 24.7136,
-                        "longitude": 46.6753
-                    },
-                    "geoRadius": "5000 km",
-                    "description": "Middle East and North Africa"
-                }
-            },
-            {
-                "@type": "ItemList",
-                "itemListElement": [
-                    {
-                        "@type": "SoftwareApplication",
-                        "name": "كاتب الأبحاث",
-                        "applicationCategory": "EducationalApplication",
-                        "operatingSystem": "Web",
-                        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"},
-                        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1500"}
-                    },
-                    {
-                        "@type": "SoftwareApplication",
-                        "name": "فاحص الانتحال",
-                        "applicationCategory": "EducationalApplication",
-                        "operatingSystem": "Web"
-                    }
-                ]
-            }
-        ]
-    }
-    </script>
+    <!-- Async Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
 
-<!-- Fast Loader -->
-<div id="L" role="status" aria-label="جاري التحميل"><div class="sp"></div></div>
+<!-- Global Loader -->
+<div id="L" role="status" aria-label="Loading"><div class="sp"></div></div>
 
 <!-- Header -->
 <header class="hd">
     <div class="w nv">
-        <a href="/" class="lg" aria-label="ProScholarTools الرئيسية">
-            <div class="lg-icon" role="img" aria-label="Logo">🎓</div>
+        <a href="/" class="lg">
+            <div class="lg-icon">🌍</div>
             <span>ProScholarTools</span>
         </a>
-        <div class="rt">
-            <div class="lg-sw" role="group" aria-label="اختيار اللغة">
-                <button class="a" data-l="ar" aria-pressed="true">AR</button>
-                <button data-l="en" aria-pressed="false">EN</button>
+        
+        <div style="display:flex;align-items:center;gap:1rem">
+            <!-- Language Switcher -->
+            <div class="lang-menu" id="langMenu">
+                <button class="lang-btn" onclick="toggleLangMenu()">
+                    <span id="currentFlag">🇸🇦</span>
+                    <span id="currentLangLabel">العربية</span>
+                    <i class="fas fa-chevron-down" style="font-size:0.7rem"></i>
+                </button>
+                <div class="lang-dropdown">
+                    <div class="lang-item active" onclick="changeLang('ar')" data-lang="ar">
+                        <span>🇸🇦</span>
+                        <span>العربية</span>
+                        <small>RTL</small>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('en')" data-lang="en">
+                        <span>🇺🇸</span>
+                        <span>English</span>
+                        <small>LTR</small>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('fr')" data-lang="fr">
+                        <span>🇫🇷</span>
+                        <span>Français</span>
+                        <small>LTR</small>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('es')" data-lang="es">
+                        <span>🇪🇸</span>
+                        <span>Español</span>
+                        <small>LTR</small>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('ur')" data-lang="ur">
+                        <span>🇵🇰</span>
+                        <span>اردو</span>
+                        <small>RTL</small>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('hi')" data-lang="hi">
+                        <span>🇮🇳</span>
+                        <span>हिंदी</span>
+                        <small>LTR</small>
+                    </div>
+                </div>
             </div>
-            <div class="sc" aria-label="روابط التواصل الاجتماعي">
-                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" style="background:#1877f2"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn" style="background:#0a66c2"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer nofollow" aria-label="Telegram" style="background:#08c"><i class="fab fa-telegram-plane"></i></a>
-                <!-- داخل قسم Social في Header -->
-<div class="sc">
-    <a href="https://www.tiktok.com/@proscholartools" target="_blank" rel="noopener noreferrer nofollow" aria-label="TikTok" style="background:#000;border:1px solid #333;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;">
-        <!-- SVG TikTok مباشر -->
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:block">
-            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-        </svg>
-    </a>
-</div>
-
-<!-- داخل Footer -->
-<a href="https://www.tiktok.com/@proscholartools" target="_blank" rel="noopener noreferrer nofollow" style="width:35px;height:35px;background:#000;border-radius:50%;display:grid;place-items:center;color:#fff;border:1px solid #444;" aria-label="TikTok">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-    </svg>
-</a>
+            
+            <!-- Social -->
+            <div class="sc">
+                <a href="#" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" class="tt" aria-label="TikTok">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </a>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Hero (Above Fold) -->
+<!-- Hero Section -->
 <section class="hr">
     <div class="w">
-        <h1>أدوات <span>أكاديمية</span> ذكية</h1>
-        <p>منصة عربية متخصصة في أدوات الذكاء الاصطناعي للباحثين والطلاب بإشراف نخبة الأساتذة الجامعيين</p>
+        <div class="global-badge">
+            <i class="fas fa-globe"></i>
+            <span data-i18n="global.badge">Trusted by 150K+ Users Worldwide</span>
+        </div>
+        <h1 data-i18n="hero.title">
+            <span>Smart Academic</span>
+            Tools for Everyone
+        </h1>
+        <p data-i18n="hero.desc">
+            Global platform providing AI-powered research tools, plagiarism detection, and financial calculators for students and researchers worldwide
+        </p>
     </div>
 </section>
 
-<!-- Ad Container (Lazy Loaded) -->
-<div class="w" style="margin:2rem auto;min-height:90px;background:var(--c);border:2px dashed var(--d);border-radius:8px;display:grid;place-items:center;color:var(--m);font-size:.8rem" id="ad-container">
-    <span>جاري تحميل الإعلان...</span>
+<!-- Stats -->
+<div class="w stats">
+    <div class="stat-item">
+        <span class="stat-num">150K+</span>
+        <span class="stat-label" data-i18n="stats.users">Global Users</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-num">25+</span>
+        <span class="stat-label" data-i18n="stats.tools">Smart Tools</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-num">6</span>
+        <span class="stat-label" data-i18n="stats.languages">Languages</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-num">99%</span>
+        <span class="stat-label" data-i18n="stats.accuracy">Accuracy Rate</span>
+    </div>
 </div>
 
-<!-- Main Content (Lazy Rendered) -->
-<main class="w lazy-section">
+<!-- Tools -->
+<main class="w">
+    <h2 style="color:var(--p);margin:3rem 0 1.5rem;text-align:center;font-size:1.8rem" data-i18n="tools.title">
+        Powerful Tools for Global Researchers
+    </h2>
     
-    <!-- Tools Grid -->
-    <section aria-labelledby="academic-tools">
-        <h2 id="academic-tools" class="st" style="color:var(--p);font-size:1.3rem;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-graduation-cap"></i> الأدوات الأكاديمية</h2>
-        <div class="gd" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
-            
-            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/research-writer.html'" role="button" tabindex="0">
-                <div style="width:45px;height:45px;background:linear-gradient(135deg,var(--p),var(--s));border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">✍️</div>
-                <h3 style="font-size:1.1rem;margin-bottom:.5rem">كاتب الأبحاث AI</h3>
-                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">كتابة بحثية متكاملة مع المراجع التلقائية والتنسيق العلمي</p>
-                <div style="display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap">
-                    <span style="font-size:.7rem;background:rgba(56,189,248,.1);color:var(--p);padding:.2rem .6rem;border-radius:20px">ذكاء اصطناعي</span>
-                    <span style="font-size:.7rem;background:rgba(56,189,248,.1);color:var(--p);padding:.2rem .6rem;border-radius:20px">+2000 كلمة</span>
-                </div>
-                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,var(--p),var(--s));color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">ابدأ الكتابة</button>
-            </article>
-
-            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/plagiarism-checker.html'" role="button" tabindex="0">
-                <div style="width:45px;height:45px;background:linear-gradient(135deg,#3b82f6,#2563eb);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">🔍</div>
-                <h3 style="font-size:1.1rem;margin-bottom:.5rem">فاحص الانتحال</h3>
-                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">كشف التشابه والمحتوى المنسوخ بدقة 99% مع تقرير تفصيلي</p>
-                <div style="display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap">
-                    <span style="font-size:.7rem;background:rgba(59,130,246,.1);color:#60a5fa;padding:.2rem .6rem;border-radius:20px">99% دقة</span>
-                    <span style="font-size:.7rem;background:rgba(59,130,246,.1);color:#60a5fa;padding:.2rem .6rem;border-radius:20px">كشف AI</span>
-                </div>
-                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,var(--p),var(--s));color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">فحص النص</button>
-            </article>
-
-            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/apa-formatter.html'" role="button" tabindex="0">
-                <div style="width:45px;height:45px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">📚</div>
-                <h3 style="font-size:1.1rem;margin-bottom:.5rem">منسق APA</h3>
-                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">تنسيق المراجع تلقائياً حسب معايير APA 7th Edition</p>
-                <div style="display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap">
-                    <span style="font-size:.7rem;background:rgba(245,158,11,.1);color:#f59e0b;padding:.2rem .6rem;border-radius:20px">APA 7</span>
-                    <span style="font-size:.7rem;background:rgba(245,158,11,.1);color:#f59e0b;padding:.2rem .6rem;border-radius:20px">تلقائي</span>
-                </div>
-                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,var(--p),var(--s));color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">نسق المراجع</button>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Financial Tools -->
-    <section aria-labelledby="financial-tools" style="margin-top:3rem">
-        <h2 id="financial-tools" class="st" style="color:var(--p);font-size:1.3rem;margin:2.5rem 0 1.5rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-calculator"></i> الأدوات المالية والقانونية</h2>
-        <div class="gd" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
-            
-            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/loan-calculator.html'" role="button" tabindex="0">
-                <div style="width:45px;height:45px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">🏦</div>
-                <h3 style="font-size:1.1rem;margin-bottom:.5rem">حاسبة القروض</h3>
-                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">حساب الأقساط الشهرية والفائدة المركبة مع جدول استهلاك</p>
-                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">احسب القرض</button>
-            </article>
-
-            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/pension-calculator.html'" role="button" tabindex="0">
-                <div style="width:45px;height:45px;background:linear-gradient(135deg,#c084fc,#9333ea);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">📊</div>
-                <h3 style="font-size:1.1rem;margin-bottom:.5rem">حاسبة المعاشات</h3>
-                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">احسب معاشك التقاعدي وفقاً للأنظمة القانونية المحدثة</p>
-                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,#c084fc,#9333ea);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">احسب المعاش</button>
-            </article>
-
-            <article class="cd" style="background:var(--c);border:1px solid var(--d);border-radius:12px;padding:1.5rem;transition:.3s;cursor:pointer" onclick="location.href='/gold-calculator.html'" role="button" tabindex="0">
-                <div style="width:45px;height:45px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem">🪙</div>
-                <h3 style="font-size:1.1rem;margin-bottom:.5rem">حاسبة الذهب</h3>
-                <p style="color:var(--m);font-size:.9rem;margin-bottom:1rem;line-height:1.6">أسعار الذهب اللحظية وتحويل بين جميع العيارات</p>
-                <button style="width:100%;padding:.8rem;background:linear-gradient(90deg,#fbbf24,#d97706);color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem">احسب السعر</button>
-            </article>
-
-        </div>
-    </section>
-
+    <div class="gd">
+        <article class="cd">
+            <div class="ic" style="background:linear-gradient(135deg,var(--p),var(--s))">✍️</div>
+            <h3 data-i18n="tools.writer.title">AI Research Writer</h3>
+            <p style="color:var(--m);margin:1rem 0;line-height:1.6" data-i18n="tools.writer.desc">
+                Generate academic papers with automatic citations and references in APA, MLA, Chicago formats
+            </p>
+            <button class="btn" data-i18n="tools.writer.btn">Start Writing</button>
+        </article>
+        
+        <article class="cd">
+            <div class="ic" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">🔍</div>
+            <h3 data-i18n="tools.plag.title">Plagiarism Checker</h3>
+            <p style="color:var(--m);margin:1rem 0;line-height:1.6" data-i18n="tools.plag.desc">
+                Advanced AI detection with 99% accuracy. Check against global academic databases
+            </p>
+            <button class="btn" data-i18n="tools.plag.btn">Check Text</button>
+        </article>
+        
+        <article class="cd">
+            <div class="ic" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🌍</div>
+            <h3 data-i18n="tools.trans.title">Global Translator</h3>
+            <p style="color:var(--m);margin:1rem 0;line-height:1.6" data-i18n="tools.trans.desc">
+                Academic translation with terminology preservation across 100+ languages
+            </p>
+            <button class="btn" data-i18n="tools.trans.btn">Translate</button>
+        </article>
+    </div>
 </main>
 
-<!-- Stats Section -->
-<section class="lazy-section" style="background:linear-gradient(180deg,rgba(56,189,248,.05),transparent);padding:3rem 0;margin:3rem 0">
-    <div class="w">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;text-align:center">
-            <div style="background:var(--c);border:1px solid var(--d);padding:1.5rem;border-radius:12px">
-                <div style="font-size:2rem;font-weight:800;color:var(--p);margin-bottom:.5rem">150K+</div>
-                <div style="color:var(--m);font-size:.9rem">مستخدم نشط</div>
-            </div>
-            <div style="background:var(--c);border:1px solid var(--d);padding:1.5rem;border-radius:12px">
-                <div style="font-size:2rem;font-weight:800;color:var(--p);margin-bottom:.5rem">25+</div>
-                <div style="color:var(--m);font-size:.9rem">أداة متخصصة</div>
-            </div>
-            <div style="background:var(--c);border:1px solid var(--d);padding:1.5rem;border-radius:12px">
-                <div style="font-size:2rem;font-weight:800;color:var(--p);margin-bottom:.5rem">99%</div>
-                <div style="color:var(--m);font-size:.9rem">دقة الفحص</div>
-            </div>
+<!-- Footer -->
+<footer class="ft">
+    <div class="w ft-g">
+        <div>
+            <h3><i class="fas fa-globe-americas"></i> ProScholarTools</h3>
+            <p data-i18n="footer.about">
+                Empowering researchers worldwide with cutting-edge AI tools. Breaking language barriers in academic research.
+            </p>
+        </div>
+        
+        <div>
+            <h3 data-i18n="footer.links">Quick Links</h3>
+            <a href="/about.html" data-i18n="footer.about_link">About Us</a>
+            <a href="/contact.html" data-i18n="footer.contact">Contact</a>
+            <a href="/api.html">API Access</a>
+        </div>
+        
+        <div class="legal-box">
+            <h3 style="color:#ef4444"><i class="fas fa-shield-alt"></i> <span data-i18n="footer.legal">Legal</span></h3>
+            <a href="/privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="/terms.html" data-i18n="footer.terms">Terms of Use</a>
+            <a href="/cookies.html" data-i18n="footer.cookies">Cookie Policy</a>
         </div>
     </div>
-</section>
-
-<!-- Footer (Optimized) -->
-<footer class="lazy-section" style="background:var(--c);border-top:2px solid var(--p);padding:3rem 0 1.5rem;margin-top:4rem">
-    <div class="w">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2.5rem;margin-bottom:2rem">
-            
-            <!-- Brand -->
-            <div>
-                <h3 style="color:var(--t);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem">
-                    <div style="width:28px;height:28px;background:linear-gradient(135deg,var(--p),var(--s));border-radius:50%;display:grid;place-items:center;font-size:.9rem">🎓</div>
-                    ProScholarTools
-                </h3>
-                <p style="color:var(--m);font-size:.9rem;line-height:1.8;margin-bottom:1rem">
-                    منصة عربية رائدة في أدوات الذكاء الاصطناعي للباحثين والأكاديميين. نقدم حلولاً موثوقة بإشراف نخبة من أساتذة الجامعات.
-                </p>
-                <div style="display:flex;gap:.8rem">
-                    <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer nofollow" style="width:35px;height:35px;background:#1877f2;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.9rem"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer nofollow" style="width:35px;height:35px;background:#0a66c2;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.9rem"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer nofollow" style="width:35px;height:35px;background:#08c;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.9rem"><i class="fab fa-telegram-plane"></i></a>
-                </div>
-            </div>
-
-            <!-- Links -->
-            <div>
-                <h4 style="color:var(--t);font-size:1rem;margin-bottom:1rem">روابط سريعة</h4>
-                <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
-                    <li><a href="/" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-home" style="width:20px"></i> الرئيسية</a></li>
-                    <li><a href="/about.html" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-info-circle" style="width:20px"></i> من نحن</a></li>
-                    <li><a href="/contact.html" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-envelope" style="width:20px"></i> اتصل بنا</a></li>
-                    <li><a href="/sitemap.xml" style="color:var(--m);font-size:.9rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-sitemap" style="width:20px"></i> خريطة الموقع</a></li>
-                </ul>
-            </div>
-
-            <!-- Legal (SEO & AdSense Required) -->
-            <div style="background:rgba(15,23,42,.5);padding:1.5rem;border-radius:12px;border:1px solid var(--d)">
-                <h4 style="color:var(--r,#ef4444);font-size:1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem">
-                    <i class="fas fa-shield-alt"></i> الصفحات القانونية
-                </h4>
-                <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
-                    <li>
-                        <a href="/privacy-policy.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
-                            <span style="background:var(--r);color:#fff;padding:2px 6px;border-radius:10px;font-size:.6rem">AdSense</span>
-                            <i class="fas fa-lock" style="color:var(--m)"></i> سياسة الخصوصية
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/terms.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
-                            <span style="background:var(--r);color:#fff;padding:2px 6px;border-radius:10px;font-size:.6rem">AdSense</span>
-                            <i class="fas fa-file-contract" style="color:var(--m)"></i> شروط الاستخدام
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/cookie-policy.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
-                            <span style="background:var(--r);color:#fff;padding:2px 6px;border-radius:10px;font-size:.6rem">AdSense</span>
-                            <i class="fas fa-cookie-bite" style="color:var(--m)"></i> سياسة الكوكيز
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/disclaimer.html" style="color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:.5rem">
-                            <i class="fas fa-exclamation-triangle" style="color:var(--m)"></i> إخلاء المسؤولية
-                        </a>
-                    </li>
-                </ul>
-                <p style="margin-top:1rem;font-size:.75rem;color:var(--m);line-height:1.5;border-top:1px solid var(--d);padding-top:1rem">
-                    نستخدم Google AdSense. باستخدامك للموقع فإنك توافق على <a href="/cookie-policy.html" style="color:var(--p)">سياسة الكوكيز</a>.
-                </p>
-            </div>
-
-        </div>
-
-        <!-- Copyright -->
-        <div style="text-align:center;padding-top:2rem;border-top:1px solid var(--d);color:var(--m);font-size:.8rem">
-            <p>© 2025 <strong style="color:var(--t)">ProScholarTools</strong>. جميع الحقوق محفوظة.</p>
-            <p style="margin-top:.5rem;font-size:.75rem">الموقع متوافق مع SEO ومُحسّن للأداء العالي</p>
-        </div>
+    
+    <div class="cr">
+        <p>© 2025 ProScholarTools. <span data-i18n="footer.rights">All Rights Reserved. Serving Global Academic Community.</span></p>
+        <p style="margin-top:0.5rem;font-size:0.8rem">
+            <span id="userLocation">🌍 Detecting your location...</span>
+        </p>
     </div>
 </footer>
 
-<!-- Optimized Scripts -->
+<!-- Global Translations -->
 <script>
-    // Fast loader removal
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            document.getElementById('L').classList.add('h');
-        }, 100);
-    });
-
-    // Language switch (Optimized)
-    document.querySelectorAll('.lg-sw button').forEach(btn => {
-        btn.addEventListener('click', function() {
-            document.querySelectorAll('.lg-sw button').forEach(b => {
-                b.classList.remove('a');
-                b.setAttribute('aria-pressed', 'false');
-            });
-            this.classList.add('a');
-            this.setAttribute('aria-pressed', 'true');
-            // Add language switch logic here
-        });
-    });
-
-    // Lazy load AdSense (Performance Critical)
-    if ('IntersectionObserver' in window) {
-        const adObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Load AdSense only when ad container is visible
-                    const script = document.createElement('script');
-                    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809';
-                    script.async = true;
-                    script.crossOrigin = 'anonymous';
-                    document.head.appendChild(script);
-                    
-                    // Initialize ad
-                    script.onload = () => {
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        entry.target.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>';
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    };
-                    
-                    adObserver.unobserve(entry.target);
-                }
-            });
-        }, { rootMargin: '100px' });
-        
-        adObserver.observe(document.getElementById('ad-container'));
-    } else {
-        // Fallback for old browsers
-        setTimeout(() => {
-            const script = document.createElement('script');
-            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809';
-            script.async = true;
-            script.crossOrigin = 'anonymous';
-            document.head.appendChild(script);
-        }, 2000);
+// Translation Database
+const i18n = {
+    ar: {
+        meta: {
+            title: "ProScholarTools | المنصة العالمية للأدوات الأكاديمية",
+            desc: "منصة عالمية توفر أدوات ذكاء اصطناعي للباحثين - كاشف انتحال، كاتب بحثي، حاسبات مالية"
+        },
+        og: {
+            title: "ProScholarTools | أدوات أكاديمية ذكية",
+            desc: "منصة عالمية للباحثين والطلاب في جميع أنحاء العالم"
+        },
+        global: { badge: "موثوق من 150K+ مستخدم حول العالم" },
+        hero: {
+            title: "<span>أدوات أكاديمية</span> ذكية للجميع",
+            desc: "منصة عالمية توفر أدوات بحثية مدعومة بالذكاء الاصطناعي، كشف الانتحال، والحاسبات المالية للطلاب والباحثين حول العالم"
+        },
+        stats: {
+            users: "مستخدم عالمي",
+            tools: "أداة ذكية",
+            languages: "لغات",
+            accuracy: "نسبة الدقة"
+        },
+        tools: {
+            title: "أدوات قوية للباحثين العالميين",
+            writer: {
+                title: "كاتب الأبحاث AI",
+                desc: "إنشاء أوراق أكاديمية مع استشهادات تلقائية بالصيغ APA، MLA، شيكاغو",
+                btn: "ابدأ الكتابة"
+            },
+            plag: {
+                title: "فاحص الانتحال",
+                desc: "كشف متقدم بالذكاء الاصطناعي بدقة 99%. فحص مقابل قواعد البيانات الأكاديمية العالمية",
+                btn: "فحص النص"
+            },
+            trans: {
+                title: "المترجم العالمي",
+                desc: "ترجمة أكاديمية مع الحفاظ على المصطلحات عبر 100+ لغة",
+                btn: "ترجم الآن"
+            }
+        },
+        footer: {
+            about: "تمكين الباحثين حول العالم بأدوات ذكاء اصطناعي متطورة. كسر حواجز اللغة في البحث العلمي.",
+            links: "روابط سريعة",
+            about_link: "من نحن",
+            contact: "اتصل بنا",
+            legal: "قانوني",
+            privacy: "سياسة الخصوصية",
+            terms: "شروط الاستخدام",
+            cookies: "سياسة الكوكيز",
+            rights: "جميع الحقوق محفوظة. نخدم المجتمع الأكاديمي العالمي"
+        }
+    },
+    en: {
+        meta: {
+            title: "ProScholarTools | Global Academic & Financial Platform",
+            desc: "Worldwide platform providing AI research tools, plagiarism detection, and financial calculators for global students"
+        },
+        og: {
+            title: "ProScholarTools | Smart Academic Tools",
+            desc: "Global platform for researchers and students worldwide"
+        },
+        global: { badge: "Trusted by 150K+ Users Worldwide" },
+        hero: {
+            title: "<span>Smart Academic</span> Tools for Everyone",
+            desc: "Global platform providing AI-powered research tools, plagiarism detection, and financial calculators for students and researchers worldwide"
+        },
+        stats: {
+            users: "Global Users",
+            tools: "Smart Tools",
+            languages: "Languages",
+            accuracy: "Accuracy Rate"
+        },
+        tools: {
+            title: "Powerful Tools for Global Researchers",
+            writer: {
+                title: "AI Research Writer",
+                desc: "Generate academic papers with automatic citations in APA, MLA, Chicago formats",
+                btn: "Start Writing"
+            },
+            plag: {
+                title: "Plagiarism Checker",
+                desc: "Advanced AI detection with 99% accuracy. Check against global academic databases",
+                btn: "Check Text"
+            },
+            trans: {
+                title: "Global Translator",
+                desc: "Academic translation with terminology preservation across 100+ languages",
+                btn: "Translate Now"
+            }
+        },
+        footer: {
+            about: "Empowering researchers worldwide with cutting-edge AI tools. Breaking language barriers in academic research.",
+            links: "Quick Links",
+            about_link: "About Us",
+            contact: "Contact",
+            legal: "Legal",
+            privacy: "Privacy Policy",
+            terms: "Terms of Use",
+            cookies: "Cookie Policy",
+            rights: "All Rights Reserved. Serving Global Academic Community"
+        }
+    },
+    fr: {
+        meta: {
+            title: "ProScholarTools | Plateforme Académique Mondiale",
+            desc: "Outils de recherche IA, détection de plagiat et calculateurs financiers pour étudiants mondiaux"
+        },
+        og: {
+            title: "ProScholarTools | Outils Académiques Intelligents",
+            desc: "Plateforme mondiale pour chercheurs et étudiants"
+        },
+        global: { badge: "Fait confiance par 150K+ utilisateurs" },
+        hero: {
+            title: "<span>Outils Académiques</span> Intelligents",
+            desc: "Plateforme mondiale fournissant des outils de recherche IA, détection de plagiat et calculateurs financiers"
+        },
+        stats: {
+            users: "Utilisateurs",
+            tools: "Outils",
+            languages: "Langues",
+            accuracy: "Précision"
+        },
+        tools: {
+            title: "Outils Puissants pour Chercheurs",
+            writer: {
+                title: "Rédacteur IA",
+                desc: "Générez des papiers académiques avec citations automatiques APA, MLA, Chicago",
+                btn: "Commencer"
+            },
+            plag: {
+                title: "Détecteur Plagiat",
+                desc: "Détection IA avancée avec 99% de précision. Vérification globale",
+                btn: "Vérifier"
+            },
+            trans: {
+                title: "Traducteur Global",
+                desc: "Traduction académique préservant la terminologie sur 100+ langues",
+                btn: "Traduire"
+            }
+        },
+        footer: {
+            about: "Autonomiser les chercheurs mondiaux avec des outils IA de pointe.",
+            links: "Liens Rapides",
+            about_link: "À Propos",
+            contact: "Contact",
+            legal: "Légal",
+            privacy: "Confidentialité",
+            terms: "Conditions",
+            cookies: "Cookies",
+            rights: "Tous Droits Réservés"
+        }
+    },
+    es: {
+        meta: {
+            title: "ProScholarTools | Plataforma Académica Global",
+            desc: "Herramientas de investigación IA, detector de plagio y calculadoras financieras"
+        },
+        og: {
+            title: "ProScholarTools | Herramientas Académicas",
+            desc: "Plataforma global para investigadores y estudiantes"
+        },
+        global: { badge: "Confiado por 150K+ usuarios globales" },
+        hero: {
+            title: "<span>Herramientas Académicas</span> Inteligentes",
+            desc: "Plataforma global con herramientas de investigación IA, detector de plagio y calculadoras financieras"
+        },
+        stats: {
+            users: "Usuarios Globales",
+            tools: "Herramientas",
+            languages: "Idiomas",
+            accuracy: "Precisión"
+        },
+        tools: {
+            title: "Herramientas para Investigadores Globales",
+            writer: {
+                title: "Escritor IA",
+                desc: "Genere papers académicos con citas automáticas APA, MLA, Chicago",
+                btn: "Escribir"
+            },
+            plag: {
+                title: "Detector Plagio",
+                desc: "Detección avanzada IA con 99% precisión. Verificación global",
+                btn: "Verificar"
+            },
+            trans: {
+                title: "Traductor Global",
+                desc: "Traducción académica preservando terminología en 100+ idiomas",
+                btn: "Traducir"
+            }
+        },
+        footer: {
+            about: "Empoderando investigadores globales con herramientas IA avanzadas.",
+            links: "Enlaces Rápidos",
+            about_link: "Nosotros",
+            contact: "Contacto",
+            legal: "Legal",
+            privacy: "Privacidad",
+            terms: "Términos",
+            cookies: "Cookies",
+            rights: "Derechos Reservados"
+        }
+    },
+    ur: {
+        meta: {
+            title: "ProScholarTools | عالمی تعلیمی پلیٹ فارم",
+            desc: "AI تحقیقی ٹولز، پیچیدگی کا پتہ لگانے والے اور مالی کیلکولیٹر"
+        },
+        og: {
+            title: "ProScholarTools | ذہین تعلیمی ٹولز",
+            desc: "محققین اور طلباء کے لیے عالمی پلیٹ فارم"
+        },
+        global: { badge: "150K+ صارفین کا اعتماد" },
+        hero: {
+            title: "<span>ذہین تعلیمی</span> ٹولز",
+            desc: "AI سے چلنے والے تحقیقی ٹولز، پیچیدگی چیکر اور مالی کیلکولیٹرز فراہم کرنے والا عالمی پلیٹ فارم"
+        },
+        stats: {
+            users: "عالمی صارفین",
+            tools: "ذہین ٹولز",
+            languages: "زبانیں",
+            accuracy: "درستگی"
+        },
+        tools: {
+            title: "عالمی محققین کے لیے طاقتور ٹولز",
+            writer: {
+                title: "AI ریسرچ رائٹر",
+                desc: "APA، MLA، شکاگو فارمیٹ میں خودکار حوالوں کے ساتھ تعلیمی کاغذات بنائیں",
+                btn: "لکھنا شروع کریں"
+            },
+            plag: {
+                title: "پیچیدگی چیکر",
+                desc: "99% درستگی کے ساتھ جدید AI کا پتہ لگانا۔ عالمی تعلیمی ڈیٹا بیس کے خلاف چیک کریں",
+                btn: "متن چیک کریں"
+            },
+            trans: {
+                title: "عالمی مترجم",
+                desc: "100+ زبانوں میں اصطلاحات کو برقرار رکھتے ہوئے تعلیمی ترجمہ",
+                btn: "ترجمہ کریں"
+            }
+        },
+        footer: {
+            about: "جدید ترین AI ٹولز کے ساتھ دنیا بھر کے محققین کو بااختیار بنانا۔",
+            links: "فوری لنکس",
+            about_link: "ہمارے بارے میں",
+            contact: "رابطہ",
+            legal: "قانونی",
+            privacy: "رازداری کی پالیسی",
+            terms: "استعمال کی شرائط",
+            cookies: "کوکیز کی پالیسی",
+            rights: "جملہ حقوق محفوظ ہیں"
+        }
+    },
+    hi: {
+        meta: {
+            title: "ProScholarTools | वैश्विक शैक्षिक प्लेटफॉर्म",
+            desc: "AI अनुसंधान उपकरण, प्लagiarism डिटेक्टर और वित्तीय कैलकुलेटर"
+        },
+        og: {
+            title: "ProScholarTools | स्मार्ट शैक्षिक उपकरण",
+            desc: "शोधकर्ताओं और छात्रों के लिए वैश्विक मंच"
+        },
+        global: { badge: "150K+ वैश्विक उपयोगकर्ताओं का विश्वास" },
+        hero: {
+            title: "<span>स्मार्ट शैक्षिक</span> उपकरण",
+            desc: "AI-संचालित अनुसंधान उपकरण, प्लagiarism डिटेक्शन और छात्रों के लिए वित्तीय कैलकुलेटर प्रदान करने वाला वैश्विक मंच"
+        },
+        stats: {
+            users: "वैश्विक उपयोगकर्ता",
+            tools: "स्मार्ट उपकरण",
+            languages: "भाषाएँ",
+            accuracy: "सटीकता दर"
+        },
+        tools: {
+            title: "वैश्विक शोधकर्ताओं के लिए शक्तिशाली उपकरण",
+            writer: {
+                title: "AI रिसर्च राइटर",
+                desc: "APA, MLA, शिकागो प्रारूप में स्वचालित उद्धरण के साथ शैक्षिक पत्र बनाएं",
+                btn: "लिखना शुरू करें"
+            },
+            plag: {
+                title: "प्लagiarism चेकर",
+                desc: "99% सटीकता के साथ उन्नत AI का पता लगाना। वैश्विक शैक्षिक डेटाबेस के विरुद्ध जांचें",
+                btn: "टेक्स्ट जांचें"
+            },
+            trans: {
+                title: "वैश्विक अनुवादक",
+                desc: "100+ भाषाओं में शब्दावली संरक्षण के साथ शैक्षिक अनुवाद",
+                btn: "अनुवाद करें"
+            }
+        },
+        footer: {
+            about: "अत्याधुनिक AI उपकरणों के साथ दुनिया भर के शोधकर्ताओं को सशक्त बनाना।",
+            links: "त्वरित लिंक",
+            about_link: "हमारे बारे में",
+            contact: "संपर्क",
+            legal: "कानूनी",
+            privacy: "गोपनीयता नीति",
+            terms: "उपयोग की शर्तें",
+            cookies: "कुकी नीति",
+            rights: "सर्वाधिकार सुरक्षित"
+        }
     }
+};
 
-    // Intersection Observer for lazy sections
-    if ('IntersectionObserver' in window) {
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.contentVisibility = 'visible';
-                }
-            });
-        }, { threshold: 0.1 });
+// RTL Languages Configuration
+const rtlLanguages = ['ar', 'ur', 'fa', 'he'];
+const flagEmojis = {
+    ar: '🇸🇦', en: '🇺🇸', fr: '🇫🇷', 
+    es: '🇪🇸', ur: '🇵🇰', hi: '🇮🇳'
+};
+const languageNames = {
+    ar: 'العربية', en: 'English', fr: 'Français', 
+    es: 'Español', ur: 'اردو', hi: 'हिंदी'
+};
+
+// Initialize
+let currentLang = localStorage.getItem('proscholar-lang') || detectBrowserLang();
+
+function detectBrowserLang() {
+    const lang = navigator.language || navigator.userLanguage || 'en';
+    const shortLang = lang.split('-')[0];
+    return i18n[shortLang] ? shortLang : 'en';
+}
+
+function toggleLangMenu() {
+    document.getElementById('langMenu').classList.toggle('active');
+}
+
+function changeLang(lang) {
+    if (!i18n[lang]) return;
+    
+    currentLang = lang;
+    localStorage.setItem('proscholar-lang', lang);
+    
+    // Update HTML attributes
+    const html = document.getElementById('html-root');
+    html.lang = lang;
+    html.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
+    
+    // Update meta tags
+    document.title = i18n[lang].meta.title;
+    document.querySelector('meta[name="description"]').content = i18n[lang].meta.desc;
+    document.getElementById('og-locale').content = lang + (lang === 'en' ? '_US' : lang === 'ar' ? '_AR' : '_' + lang.toUpperCase());
+    
+    // Update UI elements with animation
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const keys = el.getAttribute('data-i18n').split('.');
+        let value = i18n[lang];
+        keys.forEach(key => value = value?.[key]);
         
-        document.querySelectorAll('.lazy-section').forEach(section => {
-            sectionObserver.observe(section);
-        });
+        if (value) {
+            el.style.opacity = '0';
+            setTimeout(() => {
+                if (keys[0] === 'hero' && keys[1] === 'title') {
+                    el.innerHTML = value;
+                } else {
+                    el.textContent = value;
+                }
+                el.style.opacity = '1';
+            }, 150);
+        }
+    });
+    
+    // Update language button
+    document.getElementById('currentFlag').textContent = flagEmojis[lang];
+    document.getElementById('currentLangLabel').textContent = languageNames[lang];
+    
+    // Update active state in dropdown
+    document.querySelectorAll('.lang-item').forEach(item => {
+        item.classList.toggle('active', item.dataset.lang === lang);
+    });
+    
+    // Close menu
+    document.getElementById('langMenu').classList.remove('active');
+    
+    // Update canonical URL
+    const canonical = document.getElementById('canonical-link');
+    canonical.href = `https://proscholartools.com/${lang}/`;
+    
+    // Track language change (optional analytics)
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'language_change', { language: lang });
     }
+}
+
+// Detect User Location for personalization
+function detectLocation() {
+    const locationEl = document.getElementById('userLocation');
+    const langNames = {
+        'SA': '🇸🇦 السعودية', 'AE': '🇦🇪 الإمارات', 'EG': '🇪🇬 مصر',
+        'PK': '🇵🇰 باكستان', 'IN': '🇮🇳 الهند', 'US': '🇺🇸 USA',
+        'FR': '🇫🇷 France', 'ES': '🇪🇸 España', 'GB': '🇬🇧 UK'
+    };
+    
+    // Simulated detection - in production use IP geolocation API
+    const userLang = navigator.language;
+    let location = '🌍 Global';
+    
+    if (userLang.includes('ar')) location = langNames['SA'] || '🌍 Arab World';
+    else if (userLang.includes('en-US')) location = langNames['US'];
+    else if (userLang.includes('en-GB')) location = langNames['GB'];
+    else if (userLang.includes('fr')) location = langNames['FR'];
+    else if (userLang.includes('es')) location = langNames['ES'];
+    else if (userLang.includes('ur')) location = langNames['PK'];
+    else if (userLang.includes('hi')) location = langNames['IN'];
+    
+    if (locationEl) locationEl.textContent = `📍 ${location}`;
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lang-menu')) {
+        document.getElementById('langMenu')?.classList.remove('active');
+    }
+});
+
+// Initialize on load
+window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('L').classList.add('h'), 300);
+    changeLang(currentLang);
+    detectLocation();
+});
+
+// Prevent flash of untranslated content
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.style.visibility = 'visible';
+});
 </script>
 
 </body>
