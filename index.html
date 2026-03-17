@@ -5,140 +5,623 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProScholarTools | المنصة العالمية للأدوات الأكاديمية</title>
     <meta name="description" content="أدوات ذكاء اصطناعي للباحثين - كاتب بحثي، فاحص انتحال، حاسبات مالية، أدوات PDF">
+    <meta name="keywords" content="أدوات أكاديمية, ذكاء اصطناعي, AdSense, بحث علمي, كشف انتحال">
     
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="https://i.ibb.co/W4JRFLhF/logo-webp.webp">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <style>
-        :root{--p:#38bdf8;--s:#818cf8;--a:#f472b6;--b:#0f172a;--c:#1e293b;--t:#f8fafc;--m:#94a3b8;--d:#334155}
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
-        body{background:var(--b);color:var(--t);line-height:1.6}
-        a{text-decoration:none;color:inherit}
+        :root{
+            --p:#38bdf8;
+            --s:#818cf8;
+            --a:#f472b6;
+            --b:#0f172a;
+            --c:#1e293b;
+            --t:#f8fafc;
+            --m:#94a3b8;
+            --d:#334155;
+            --g:#10b981;
+            --r:#ef4444
+        }
+        
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',system-ui,-apple-system,sans-serif
+        }
+        
+        body{
+            background:var(--b);
+            color:var(--t);
+            line-height:1.6;
+            overflow-x:hidden
+        }
+        
+        a{text-decoration:none;color:inherit;transition:.3s}
         
         /* Loader */
-        #L{position:fixed;inset:0;background:var(--b);display:grid;place-items:center;z-index:9999;transition:.3s}
+        #L{
+            position:fixed;
+            inset:0;
+            background:var(--b);
+            display:grid;
+            place-items:center;
+            z-index:9999;
+            transition:opacity .4s ease
+        }
         #L.h{opacity:0;pointer-events:none}
-        .sp{width:40px;height:40px;border:3px solid var(--d);border-top-color:var(--p);border-radius:50%;animation:r 1s linear infinite}
-        @keyframes r{to{transform:rotate(360deg)}}
+        .sp{
+            width:45px;
+            height:45px;
+            border:3px solid var(--d);
+            border-top-color:var(--p);
+            border-radius:50%;
+            animation:spin 1s linear infinite
+        }
+        @keyframes spin{to{transform:rotate(360deg)}}
         
-        /* Header */
-        .hd{position:fixed;top:0;width:100%;background:rgba(15,23,42,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--d);z-index:100;padding:12px 0}
+        /* Header - Fixed */
+        .hd{
+            position:fixed;
+            top:0;
+            width:100%;
+            background:rgba(15,23,42,.98);
+            backdrop-filter:blur(12px);
+            border-bottom:1px solid var(--d);
+            z-index:100;
+            padding:10px 0
+        }
         .w{max-width:1200px;margin:0 auto;padding:0 20px}
-        .nv{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+        .nv{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:20px;
+            flex-wrap:wrap
+        }
         
-        /* Logo Circular */
-        .lg{display:flex;align-items:center;gap:10px}
-        .lg img{width:42px;height:42px;border-radius:50%;border:2px solid var(--p);object-fit:cover;box-shadow:0 0 20px rgba(56,189,248,.4)}
-        .lg span{font-size:1.2rem;font-weight:800;background:linear-gradient(90deg,var(--p),var(--a));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        /* Logo - Small & Perfect */
+        .lg{
+            display:flex;
+            align-items:center;
+            gap:12px
+        }
+        .lg img{
+            width:36px;
+            height:36px;
+            border-radius:50%;
+            border:1.5px solid var(--p);
+            object-fit:cover;
+            box-shadow:0 0 15px rgba(56,189,248,.3);
+            transition:transform .3s
+        }
+        .lg:hover img{transform:scale(1.05)}
+        .lg span{
+            font-size:1.15rem;
+            font-weight:800;
+            background:linear-gradient(90deg,var(--p),var(--s));
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            letter-spacing:-.5px
+        }
         
-        /* Nav Items */
-        .rt{display:flex;align-items:center;gap:12px}
-        .lg-sw{display:flex;gap:3px;background:rgba(0,0,0,.3);padding:3px;border-radius:50px}
-        .lg-sw button{border:none;background:transparent;color:var(--m);padding:6px 12px;border-radius:50px;font-size:.7rem;cursor:pointer}
-        .lg-sw button.a{background:var(--p);color:#000;font-weight:700}
+        /* Right Header */
+        .rt{display:flex;align-items:center;gap:15px}
+        .lg-sw{
+            display:flex;
+            gap:2px;
+            background:rgba(0,0,0,.3);
+            padding:3px;
+            border-radius:50px;
+            border:1px solid var(--d)
+        }
+        .lg-sw button{
+            border:none;
+            background:transparent;
+            color:var(--m);
+            padding:5px 12px;
+            border-radius:50px;
+            font-size:.75rem;
+            cursor:pointer;
+            font-weight:600;
+            transition:.2s
+        }
+        .lg-sw button.a{background:var(--p);color:#000}
         
-        .sc{display:flex;gap:6px}
-        .sc a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;color:#fff;transition:.2s}
-        .sc a:hover{transform:scale(1.1)}
+        .sc{display:flex;gap:8px}
+        .sc a{
+            width:34px;
+            height:34px;
+            border-radius:50%;
+            display:grid;
+            place-items:center;
+            font-size:.85rem;
+            color:#fff;
+            transition:transform .2s,box-shadow .2s
+        }
+        .sc a:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(0,0,0,.3)}
         .fb{background:#1877f2}.li{background:#0a66c2}.tg{background:#08c}
         
         /* Hero */
-        .hr{margin-top:80px;text-align:center;padding:60px 20px;background:radial-gradient(circle at center,rgba(56,189,248,.15)0%,transparent 50%)}
-        .hr h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:15px}
-        .hr h1 span{background:linear-gradient(90deg,var(--p),var(--a));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-        .hr p{color:var(--m);max-width:450px;margin:0 auto;font-size:1rem}
+        .hr{
+            margin-top:70px;
+            text-align:center;
+            padding:60px 20px 40px;
+            background:radial-gradient(circle at center,rgba(56,189,248,.12) 0%,transparent 60%)
+        }
+        .hr h1{
+            font-size:clamp(1.8rem,5vw,2.8rem);
+            font-weight:800;
+            margin-bottom:15px;
+            line-height:1.3
+        }
+        .hr h1 span{
+            background:linear-gradient(90deg,var(--p),var(--a));
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent
+        }
+        .hr p{
+            color:var(--m);
+            max-width:500px;
+            margin:0 auto;
+            font-size:1.05rem
+        }
         
-        /* Ad */
-        .ad{background:var(--c);border:1px dashed var(--d);border-radius:12px;height:100px;margin:30px auto;display:grid;place-items:center;color:var(--m);font-size:.75rem}
+        /* Ad Container */
+        .ad{
+            background:var(--c);
+            border:2px dashed var(--d);
+            border-radius:12px;
+            min-height:90px;
+            margin:30px auto;
+            display:grid;
+            place-items:center;
+            color:var(--m);
+            font-size:.8rem;
+            position:relative;
+            overflow:hidden
+        }
+        .ad::before{
+            content:"إعلان Google AdSense";
+            position:absolute;
+            top:5px;
+            right:10px;
+            font-size:.65rem;
+            color:var(--m);
+            opacity:.7
+        }
         
         /* Section Title */
-        .st{color:var(--p);font-size:1.1rem;margin:40px 0 20px;display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--d)}
+        .st{
+            color:var(--p);
+            font-size:1.2rem;
+            margin:50px 0 25px;
+            display:flex;
+            align-items:center;
+            gap:12px;
+            padding-bottom:15px;
+            border-bottom:2px solid var(--d);
+            font-weight:700
+        }
+        .st i{font-size:1.1rem}
         
         /* Tools Grid */
-        .gd{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:40px}
-        .cd{background:var(--c);border:1px solid var(--d);border-radius:16px;padding:20px;transition:.2s;cursor:pointer}
-        .cd:hover{border-color:var(--p);transform:translateY(-5px)}
-        .ic{width:45px;height:45px;border-radius:10px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
-        .cd h3{font-size:1rem;margin-bottom:8px}
-        .cd p{color:var(--m);font-size:.85rem;margin-bottom:12px}
-        .tg{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:15px}
-        .tg span{font-size:.65rem;background:rgba(255,255,255,.05);color:var(--m);padding:3px 8px;border-radius:20px}
-        .btn{width:100%;padding:10px;background:linear-gradient(90deg,var(--p),var(--s));color:#000;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.9rem}
+        .gd{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-bottom:50px
+        }
+        .cd{
+            background:var(--c);
+            border:1px solid var(--d);
+            border-radius:16px;
+            padding:24px;
+            transition:all .3s ease;
+            cursor:pointer;
+            position:relative;
+            overflow:hidden
+        }
+        .cd::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:3px;
+            background:linear-gradient(90deg,var(--p),var(--s));
+            transform:scaleX(0);
+            transition:transform .3s
+        }
+        .cd:hover{
+            border-color:var(--p);
+            transform:translateY(-5px);
+            box-shadow:0 20px 40px rgba(0,0,0,.3)
+        }
+        .cd:hover::before{transform:scaleX(1)}
         
-        /* About */
-        .ab{background:linear-gradient(180deg,rgba(0,0,0,.2),transparent);padding:50px 0;margin:40px 0}
-        .ab-g{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-        .ab h2{color:var(--p);font-size:1.5rem;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-        .ab p{color:var(--m);margin-bottom:15px;line-height:1.8;font-size:.9rem}
-        .ab .hl{color:var(--p);font-weight:700}
-        .st-g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
-        .st-c{background:var(--c);border:1px solid var(--d);padding:18px;border-radius:10px;text-align:center}
-        .st-n{font-size:1.4rem;font-weight:800;color:var(--p)}
-        .st-l{font-size:.7rem;color:var(--m);margin-top:5px}
+        .ic{
+            width:48px;
+            height:48px;
+            border-radius:12px;
+            display:grid;
+            place-items:center;
+            font-size:1.4rem;
+            margin-bottom:16px;
+            box-shadow:0 10px 20px rgba(0,0,0,.2)
+        }
+        .cd h3{font-size:1.15rem;margin-bottom:10px;font-weight:700}
+        .cd p{color:var(--m);font-size:.9rem;margin-bottom:15px;line-height:1.6}
+        
+        .tg{
+            display:flex;
+            gap:8px;
+            flex-wrap:wrap;
+            margin-bottom:18px
+        }
+        .tg span{
+            font-size:.7rem;
+            background:rgba(255,255,255,.05);
+            color:var(--m);
+            padding:4px 10px;
+            border-radius:20px;
+            border:1px solid var(--d)
+        }
+        .btn{
+            width:100%;
+            padding:12px;
+            background:linear-gradient(90deg,var(--p),var(--s));
+            color:#000;
+            border:none;
+            border-radius:10px;
+            font-weight:700;
+            cursor:pointer;
+            font-size:.9rem;
+            transition:opacity .2s,transform .2s
+        }
+        .btn:hover{opacity:.9;transform:translateY(-2px)}
+        
+        /* About Section */
+        .ab{
+            background:linear-gradient(180deg,rgba(56,189,248,.05),transparent);
+            padding:60px 0;
+            margin:40px 0
+        }
+        .ab-g{
+            display:grid;
+            grid-template-columns:1.2fr 1fr;
+            gap:50px;
+            align-items:start
+        }
+        .ab h2{
+            color:var(--p);
+            font-size:1.6rem;
+            margin-bottom:25px;
+            display:flex;
+            align-items:center;
+            gap:12px;
+            font-weight:800
+        }
+        .ab p{
+            color:var(--m);
+            margin-bottom:18px;
+            line-height:1.9;
+            font-size:.95rem
+        }
+        .ab .hl{
+            color:var(--p);
+            font-weight:700;
+            background:rgba(56,189,248,.1);
+            padding:2px 8px;
+            border-radius:4px
+        }
+        
+        .st-g{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:15px;
+            margin-top:30px
+        }
+        .st-c{
+            background:var(--c);
+            border:1px solid var(--d);
+            padding:20px;
+            border-radius:12px;
+            text-align:center;
+            transition:transform .3s
+        }
+        .st-c:hover{transform:translateY(-3px);border-color:var(--p)}
+        .st-n{
+            font-size:1.6rem;
+            font-weight:800;
+            color:var(--p);
+            margin-bottom:5px
+        }
+        .st-l{font-size:.75rem;color:var(--m)}
         
         /* News Box */
-        .nw{background:var(--c);border:1px solid var(--d);border-radius:16px;padding:25px}
-        .nw h3{color:var(--p);margin-bottom:15px;font-size:1.1rem}
-        .nw-i{margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid var(--d)}
+        .nw{
+            background:var(--c);
+            border:1px solid var(--d);
+            border-radius:16px;
+            padding:25px;
+            position:sticky;
+            top:90px
+        }
+        .nw h3{
+            color:var(--p);
+            margin-bottom:20px;
+            font-size:1.1rem;
+            display:flex;
+            align-items:center;
+            gap:10px
+        }
+        .nw-i{
+            margin-bottom:18px;
+            padding-bottom:18px;
+            border-bottom:1px solid var(--d)
+        }
         .nw-i:last-child{border:none;margin:0;padding:0}
-        .nw-i small{color:var(--p);font-size:.65rem;font-weight:700}
-        .nw-i h4{font-size:.85rem;margin:8px 0}
-        .nw-i p{font-size:.75rem;color:var(--m)}
+        .nw-i small{
+            color:var(--g);
+            font-size:.7rem;
+            font-weight:700;
+            background:rgba(16,185,129,.1);
+            padding:3px 8px;
+            border-radius:20px
+        }
+        .nw-i h4{font-size:.9rem;margin:10px 0 6px;font-weight:600}
+        .nw-i p{font-size:.8rem;color:var(--m);line-height:1.5}
         
         /* Articles */
-        .ar .gd{margin-top:20px}
+        .ar{margin-top:40px}
         
-        /* Footer - Clean & Legal Pages Visible */
-        .ft{background:var(--c);border-top:2px solid var(--p);padding:50px 0 20px;margin-top:60px}
-        .ft-g{display:grid;grid-template-columns:2fr 1fr 1.5fr;gap:40px;margin-bottom:30px}
-        .ft-h{color:var(--p);font-size:1rem;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px}
-        .ft p{color:var(--m);font-size:.85rem;line-height:1.8}
+        /* ==================== FOOTER - SINGLE & PERFECT ==================== */
+        .ft{
+            background:var(--c);
+            border-top:3px solid var(--p);
+            padding:60px 0 25px;
+            margin-top:80px;
+            position:relative
+        }
+        .ft::before{
+            content:"";
+            position:absolute;
+            top:-3px;
+            left:0;
+            right:0;
+            height:3px;
+            background:linear-gradient(90deg,var(--p),var(--s),var(--a))
+        }
+        
+        /* Footer Grid - 3 Columns */
+        .ft-g{
+            display:grid;
+            grid-template-columns:1.5fr 1fr 1.5fr;
+            gap:50px;
+            margin-bottom:40px
+        }
+        
+        /* Column 1: Brand */
+        .ft-brand .ft-h{
+            font-size:1.3rem;
+            margin-bottom:20px;
+            display:flex;
+            align-items:center;
+            gap:10px
+        }
+        .ft-brand .ft-h img{
+            width:32px;
+            height:32px;
+            border-radius:50%;
+            border:1.5px solid var(--p)
+        }
+        .ft-brand p{
+            color:var(--m);
+            font-size:.9rem;
+            line-height:1.9;
+            margin-bottom:20px
+        }
+        .ft-contact{
+            display:flex;
+            flex-direction:column;
+            gap:12px
+        }
+        .ft-contact a{
+            color:var(--m);
+            font-size:.9rem;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            transition:.2s
+        }
+        .ft-contact a:hover{color:var(--p)}
+        .ft-contact i{
+            width:30px;
+            height:30px;
+            background:rgba(56,189,248,.1);
+            border-radius:50%;
+            display:grid;
+            place-items:center;
+            color:var(--p);
+            font-size:.8rem
+        }
+        
+        /* Column 2: Quick Links */
+        .ft-h{
+            color:var(--t);
+            font-size:1.05rem;
+            font-weight:700;
+            margin-bottom:20px;
+            padding-bottom:10px;
+            border-bottom:1px solid var(--d);
+            display:flex;
+            align-items:center;
+            gap:8px
+        }
+        .ft-h i{color:var(--p)}
+        
         .ft ul{list-style:none}
         .ft li{margin-bottom:12px}
-        .ft a{color:var(--m);font-size:.85rem;display:flex;align-items:center;gap:8px;transition:.2s}
-        .ft a:hover{color:var(--p)}
-        .ft a i{width:20px;color:var(--p)}
-        .rq{background:#ef4444;color:#fff;padding:2px 6px;border-radius:10px;font-size:.6rem;margin-right:6px}
+        .ft a{
+            color:var(--m);
+            font-size:.9rem;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            transition:.2s;
+            padding:5px 0
+        }
+        .ft a:hover{color:var(--p);padding-right:5px}
+        .ft a i{
+            width:20px;
+            color:var(--m);
+            font-size:.8rem;
+            transition:.2s
+        }
+        .ft a:hover i{color:var(--p)}
         
-        .ft-sc{display:flex;gap:10px;margin-top:20px}
-        .ft-sc a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1rem;transition:.2s}
-        .ft-sc a:hover{transform:translateY(-3px)}
+        /* Column 3: LEGAL PAGES (AdSense Required) */
+        .legal-box{
+            background:rgba(15,23,42,.5);
+            border:1px solid var(--d);
+            border-radius:12px;
+            padding:20px;
+            border-right:3px solid var(--r)
+        }
+        .legal-box .ft-h{
+            color:var(--r);
+            border-bottom-color:rgba(239,68,68,.3);
+            margin-bottom:15px
+        }
+        .legal-box .ft-h i{color:var(--r)}
         
-        .cr{text-align:center;padding-top:20px;border-top:1px solid var(--d);color:var(--m);font-size:.75rem}
+        .rq{
+            background:var(--r);
+            color:#fff;
+            padding:2px 8px;
+            border-radius:20px;
+            font-size:.65rem;
+            font-weight:700;
+            margin-left:8px
+        }
+        
+        .legal-note{
+            margin-top:15px;
+            padding-top:15px;
+            border-top:1px solid var(--d);
+            font-size:.75rem;
+            color:var(--m);
+            line-height:1.6
+        }
+        .legal-note strong{color:var(--r)}
+        
+        /* Social Icons */
+        .ft-sc{
+            display:flex;
+            gap:12px;
+            margin-top:25px
+        }
+        .ft-sc a{
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            display:grid;
+            place-items:center;
+            color:#fff;
+            font-size:1rem;
+            transition:all .3s;
+            border:1px solid rgba(255,255,255,.1)
+        }
+        .ft-sc a:hover{
+            transform:translateY(-3px);
+            box-shadow:0 10px 20px rgba(0,0,0,.3)
+        }
+        
+        /* Copyright - Single Line */
+        .cr{
+            text-align:center;
+            padding-top:25px;
+            border-top:1px solid var(--d);
+            color:var(--m);
+            font-size:.8rem;
+            display:flex;
+            flex-direction:column;
+            gap:8px
+        }
+        .cr strong{color:var(--t)}
+        .cr-links{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-top:10px
+        }
+        .cr-links a{color:var(--m);font-size:.75rem}
+        .cr-links a:hover{color:var(--p)}
+        
+        /* AdSense Note */
+        .adsense-note{
+            background:rgba(255,255,255,.03);
+            padding:10px;
+            border-radius:8px;
+            margin-top:10px;
+            font-size:.7rem;
+            color:var(--m)
+        }
         
         /* Responsive */
+        @media(max-width:968px){
+            .ft-g{grid-template-columns:1fr 1fr;gap:40px}
+            .ft-brand{grid-column:1/-1}
+        }
         @media(max-width:768px){
             .ab-g{grid-template-columns:1fr}
-            .ft-g{grid-template-columns:1fr;gap:30px}
+            .nw{position:static;margin-top:30px}
             .st-g{grid-template-columns:repeat(2,1fr)}
+            .ft-g{grid-template-columns:1fr;gap:30px}
         }
         @media(max-width:480px){
+            .nv{justify-content:center;gap:15px}
+            .lg span{font-size:1rem}
             .st-g{grid-template-columns:1fr}
-            .nv{justify-content:center}
+            .hr{margin-top:80px;padding:40px 15px}
         }
     </style>
 </head>
 <body>
 
 <!-- Loader -->
-<div id="L"><div class="sp"></div></div>
+<div id="L" role="status" aria-label="جاري التحميل">
+    <div class="sp"></div>
+</div>
 
 <!-- Header -->
 <header class="hd">
     <div class="w nv">
-        <a href="/" class="lg">
-            <img src="https://i.ibb.co/W4JRFLhF/logo-webp.webp" alt="ProScholarTools">
+        <a href="/" class="lg" aria-label="الصفحة الرئيسية">
+            <img src="https://i.ibb.co/W4JRFLhF/logo-webp.webp" alt="ProScholarTools Logo" loading="lazy" width="36" height="36">
             <span>ProScholarTools</span>
         </a>
         <div class="rt">
-            <div class="lg-sw">
-                <button class="a" onclick="sl('ar')" data-l="ar">AR</button>
-                <button onclick="sl('en')" data-l="en">EN</button>
+            <div class="lg-sw" role="group" aria-label="تبديل اللغة">
+                <button class="a" onclick="sl('ar')" data-l="ar" aria-pressed="true">AR</button>
+                <button onclick="sl('en')" data-l="en" aria-pressed="false">EN</button>
             </div>
             <div class="sc">
-                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" class="fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" class="li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://t.me/gogoareef" target="_blank" class="tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer" class="fb" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer" class="li" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer" class="tg" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -152,61 +635,67 @@
     </div>
 </section>
 
-<!-- Ad -->
-<div class="w ad">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="1234567890" data-ad-format="auto"></ins>
+<!-- AdSense Container -->
+<div class="w ad" aria-label="إعلان">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
 </div>
 
-<!-- Tools -->
+<!-- Main Content -->
 <main class="w">
+    <!-- Academic Tools -->
     <div class="st"><i class="fas fa-graduation-cap"></i> الأدوات الأكاديمية</div>
     <div class="gd" id="g1">
-        <div class="cd">
-            <div class="ic" style="background:linear-gradient(135deg,#38bdf8,#818cf8)">✍️</div>
+        <article class="cd" onclick="location.href='/research-writer.html'">
+            <div class="ic" style="background:linear-gradient(135deg,var(--p),var(--s))">✍️</div>
             <h3>كاتب الأبحاث</h3>
             <p>AI لكتابة الأبحاث مع المراجع التلقائية</p>
             <div class="tg"><span>ذكاء اصطناعي</span><span>2000+ كلمة</span></div>
             <button class="btn">ابدأ الكتابة</button>
-        </div>
-        <div class="cd">
+        </article>
+        
+        <article class="cd" onclick="location.href='/plagiarism-checker.html'">
             <div class="ic" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">🔍</div>
             <h3>فاحص الانتحال</h3>
             <p>كشف التشابه والمحتوى المنسوخ بدقة 99%</p>
             <div class="tg"><span>99% دقة</span><span>كشف AI</span></div>
             <button class="btn">فحص النص</button>
-        </div>
-        <div class="cd">
+        </article>
+        
+        <article class="cd" onclick="location.href='/apa-formatter.html'">
             <div class="ic" style="background:linear-gradient(135deg,#f59e0b,#d97706)">📚</div>
             <h3>منسق APA</h3>
             <p>تنسيق المراجع البحثية تلقائياً</p>
             <div class="tg"><span>APA 7</span><span>تلقائي</span></div>
             <button class="btn">نسق المراجع</button>
-        </div>
+        </article>
     </div>
     
+    <!-- Financial Tools -->
     <div class="st"><i class="fas fa-calculator"></i> الأدوات المالية</div>
     <div class="gd" id="g2">
-        <div class="cd">
+        <article class="cd" onclick="location.href='/loan-calculator.html'">
             <div class="ic" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🏦</div>
             <h3>حاسبة القروض</h3>
             <p>حساب الأقساط والفائدة المركبة</p>
             <div class="tg"><span>جدول استهلاك</span><span>فائدة مركبة</span></div>
             <button class="btn">احسب الآن</button>
-        </div>
-        <div class="cd">
+        </article>
+        
+        <article class="cd" onclick="location.href='/gpa-calculator.html'">
             <div class="ic" style="background:linear-gradient(135deg,#c084fc,#9333ea)">📊</div>
             <h3>حاسبة GPA</h3>
             <p>احسب معدلك في جميع أنظمة التقييم</p>
             <div class="tg"><span>4.0/5.0/100%</span><span>تراكمي</span></div>
             <button class="btn">احسب المعدل</button>
-        </div>
-        <div class="cd">
+        </article>
+        
+        <article class="cd" onclick="location.href='/gold-calculator.html'">
             <div class="ic" style="background:linear-gradient(135deg,#fbbf24,#d97706)">🪙</div>
             <h3>حاسبة الذهب</h3>
             <p>تحويل العيارات وأسعار الذهب اللحظية</p>
             <div class="tg"><span>سعر لحظي</span><span>جميع العيارات</span></div>
             <button class="btn">احسب السعر</button>
-        </div>
+        </article>
     </div>
 </main>
 
@@ -217,18 +706,41 @@
             <h2><i class="fas fa-shield-alt"></i> من نحن</h2>
             <p><span class="hl">ProScholarTools</span> هي منصة عالمية تأسست عام 2019 لخدمة الباحثين العرب بأدوات الذكاء الاصطناعي المتطورة.</p>
             <p>نشرف على المحتوى <span class="hl">نخبة من الأساتذة الجامعيين</span> والخبراء القانونيين والماليين لضمان الدقة والموثوقية في كل أداة نقدمها.</p>
+            
             <div class="st-g">
-                <div class="st-c"><div class="st-n">150K+</div><div class="st-l">مستخدم نشط</div></div>
-                <div class="st-c"><div class="st-n">25+</div><div class="st-l">أداة متخصصة</div></div>
-                <div class="st-c"><div class="st-n">15+</div><div class="st-l">جامعة شريكة</div></div>
+                <div class="st-c">
+                    <div class="st-n">150K+</div>
+                    <div class="st-l">مستخدم نشط</div>
+                </div>
+                <div class="st-c">
+                    <div class="st-n">25+</div>
+                    <div class="st-l">أداة متخصصة</div>
+                </div>
+                <div class="st-c">
+                    <div class="st-n">15+</div>
+                    <div class="st-l">جامعة شريكة</div>
+                </div>
             </div>
         </div>
-        <div class="nw">
+        
+        <aside class="nw">
             <h3><i class="fas fa-newspaper"></i> آخر التحديثات</h3>
-            <div class="nw-i"><small>Google Trends</small><h4>الذكاء الاصطناعي في البحث العلمي</h4><p>تطورات جديدة في استخدام AI للأبحاث</p></div>
-            <div class="nw-i"><small>قانون</small><h4>تحديثات قانونية 2026</h4><p>تعديلات مهمة على أنظمة المعاشات</p></div>
-            <div class="nw-i"><small>تعليم</small><h4>منح دراسية جديدة</h4><p>فرص تمويل للماجستير والدكتوراه</p></div>
-        </div>
+            <div class="nw-i">
+                <small>Google Trends</small>
+                <h4>الذكاء الاصطناعي في البحث العلمي</h4>
+                <p>تطورات جديدة في استخدام AI للأبحاث</p>
+            </div>
+            <div class="nw-i">
+                <small>قانون</small>
+                <h4>تحديثات قانونية 2026</h4>
+                <p>تعديلات مهمة على أنظمة المعاشات</p>
+            </div>
+            <div class="nw-i">
+                <small>تعليم</small>
+                <h4>منح دراسية جديدة</h4>
+                <p>فرص تمويل للماجستير والدكتوراه</p>
+            </div>
+        </aside>
     </div>
 </section>
 
@@ -237,36 +749,77 @@
     <div class="w">
         <div class="st"><i class="fas fa-star"></i> مقالات حصرية</div>
         <div class="gd">
-            <div class="cd" onclick="location.href='gold-forecast-2026.html'">
-                <div class="ic" style="background:linear-gradient(135deg,#f59e0b,#d97706)"><i class="fas fa-chart-line"></i></div>
+            <article class="cd" onclick="location.href='gold-forecast-2026.html'">
+                <div class="ic" style="background:linear-gradient(135deg,#f59e0b,#d97706)">
+                    <i class="fas fa-chart-line"></i>
+                </div>
                 <h3>توقعات الذهب 2026</h3>
                 <p>تحليل عميق لمستقبل المعدن الأصفر</p>
                 <button class="btn">اقرأ المقال</button>
-            </div>
-            <div class="cd" onclick="location.href='pension-law-2026.html'">
-                <div class="ic" style="background:linear-gradient(135deg,#22c55e,#16a34a)"><i class="fas fa-gavel"></i></div>
+            </article>
+            
+            <article class="cd" onclick="location.href='pension-law-2026.html'">
+                <div class="ic" style="background:linear-gradient(135deg,#22c55e,#16a34a)">
+                    <i class="fas fa-gavel"></i>
+                </div>
                 <h3>قانون المعاشات الجديد</h3>
                 <p>شرح مفصل لحساب التقاعد 2026</p>
                 <button class="btn">اقرأ التفاصيل</button>
-            </div>
-            <div class="cd" onclick="location.href='academic-ai-tools.html'">
-                <div class="ic" style="background:linear-gradient(135deg,#c084fc,#9333ea)"><i class="fas fa-robot"></i></div>
+            </article>
+            
+            <article class="cd" onclick="location.href='academic-ai-tools.html'">
+                <div class="ic" style="background:linear-gradient(135deg,#c084fc,#9333ea)">
+                    <i class="fas fa-robot"></i>
+                </div>
                 <h3>دليل NotebookLM</h3>
                 <p>إنجاز الأبحاث بالذكاء الاصطناعي</p>
                 <button class="btn">ابدأ التعلم</button>
-            </div>
+            </article>
         </div>
     </div>
 </section>
 
-<!-- Footer - Clean & Legal Pages -->
+<!-- ==================== FOOTER - SINGLE & LEGAL ==================== -->
 <footer class="ft">
     <div class="w ft-g">
-        <!-- Column 1: About -->
-        <div>
-            <div class="ft-h"><i class="fas fa-info-circle"></i> عن المنصة</div>
-            <p style="margin-bottom:15px">ProScholarTools منصة عالمية متخصصة في أدوات الذكاء الاصطناعي للباحثين والأكاديميين. نقدم حلولاً موثوقة بإشراف نخبة من أساتذة الجامعات.</p>
-            <p><i class="fas fa-envelope" style="color:var(--p);margin-left:8px"></i> info@proscholartools.com</p>
+        <!-- Column 1: Brand & Contact -->
+        <div class="ft-brand">
+            <div class="ft-h">
+                <img src="https://i.ibb.co/W4JRFLhF/logo-webp.webp" alt="Logo" loading="lazy">
+                ProScholarTools
+            </div>
+            <p>منصة عالمية متخصصة في أدوات الذكاء الاصطناعي للباحثين والأكاديميين. نقدم حلولاً موثوقة بإشراف نخبة من أساتذة الجامعات.</p>
+            
+            <div class="ft-contact">
+                <a href="mailto:info@proscholartools.com">
+                    <i class="fas fa-envelope"></i>
+                    info@proscholartools.com
+                </a>
+                <a href="tel:+966501234567">
+                    <i class="fas fa-phone"></i>
+                    +966 50 123 4567
+                </a>
+                <a href="/contact.html">
+                    <i class="fas fa-map-marker-alt"></i>
+                    تواصل معنا
+                </a>
+            </div>
+            
+            <!-- Social -->
+            <div class="ft-sc">
+                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" rel="noopener noreferrer" style="background:#1877f2" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" rel="noopener noreferrer" style="background:#0a66c2" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://t.me/gogoareef" target="_blank" rel="noopener noreferrer" style="background:#08c" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://www.tiktok.com/@proscholartools" target="_blank" rel="noopener noreferrer" style="background:#000;border:1px solid #333" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
         </div>
         
         <!-- Column 2: Quick Links -->
@@ -275,78 +828,104 @@
             <ul>
                 <li><a href="/"><i class="fas fa-home"></i> الرئيسية</a></li>
                 <li><a href="/about.html"><i class="fas fa-users"></i> من نحن</a></li>
+                <li><a href="/tools.html"><i class="fas fa-tools"></i> جميع الأدوات</a></li>
+                <li><a href="/blog.html"><i class="fas fa-blog"></i> المدونة</a></li>
                 <li><a href="/contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                <li><a href="/sitemap.xml"><i class="fas fa-sitemap"></i> خريطة الموقع</a></li>
             </ul>
         </div>
         
-        <!-- Column 3: Legal Pages (REQUIRED for AdSense) -->
-        <div>
-            <div class="ft-h"><i class="fas fa-shield-alt"></i> الصفحات القانونية</div>
+        <!-- Column 3: LEGAL PAGES (Required for AdSense) -->
+        <div class="legal-box">
+            <div class="ft-h"><i class="fas fa-gavel"></i> الصفحات القانونية</div>
             <ul>
                 <li>
                     <a href="/privacy-policy.html">
-                        <i class="fas fa-lock"></i> 
-                        <span class="rq">مطلوب</span>
+                        <i class="fas fa-lock"></i>
+                        <span class="rq">مطلوب AdSense</span>
                         سياسة الخصوصية
                     </a>
                 </li>
                 <li>
                     <a href="/terms.html">
-                        <i class="fas fa-file-contract"></i> 
-                        <span class="rq">مطلوب</span>
+                        <i class="fas fa-file-contract"></i>
+                        <span class="rq">مطلوب AdSense</span>
                         شروط الاستخدام
                     </a>
                 </li>
                 <li>
                     <a href="/cookie-policy.html">
-                        <i class="fas fa-cookie-bite"></i> 
-                        <span class="rq">مطلوب</span>
+                        <i class="fas fa-cookie-bite"></i>
+                        <span class="rq">مطلوب AdSense</span>
                         سياسة الكوكيز
                     </a>
                 </li>
                 <li>
                     <a href="/disclaimer.html">
-                        <i class="fas fa-exclamation-triangle"></i> 
+                        <i class="fas fa-exclamation-triangle"></i>
                         إخلاء المسؤولية
                     </a>
                 </li>
             </ul>
             
-            <!-- Social in Footer -->
-            <div class="ft-sc">
-                <a href="https://www.facebook.com/share/1CmPf78D4n/" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/معاشي-و-تأميناتي/" target="_blank" class="li" style="background:#0a66c2"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://t.me/gogoareef" target="_blank" class="tg" style="background:#08c"><i class="fab fa-telegram-plane"></i></a>
-                <a href="https://www.tiktok.com/@proscholartools" target="_blank" style="background:#000;border:1px solid #444"><i class="fab fa-tiktok"></i></a>
+            <div class="legal-note">
+                <strong>ملاحظة هامة:</strong> هذه الصفحات إلزامية للموافقة على AdSense. يجب أن تحتوي على معلومات حقيقية ودقيقة حول جمع البيانات واستخدام الكوكيز.
+            </div>
+            
+            <div class="adsense-note">
+                <i class="fas fa-info-circle"></i> نستخدم Google AdSense لعرض الإعلانات. باستخدامك للموقع فإنك توافق على <a href="/cookie-policy.html" style="color:var(--p);text-decoration:underline">سياسة الكوكيز</a>.
             </div>
         </div>
     </div>
     
+    <!-- Copyright Bar - Single Line -->
     <div class="w cr">
-        <p>© 2025 <strong style="color:var(--t)">ProScholarTools</strong>. جميع الحقوق محفوظة.</p>
-        <p style="margin-top:8px;font-size:.7rem">نستخدم Google AdSense لعرض الإعلانات. باستخدامك للموقع فإنك توافق على سياسة الكوكيز.</p>
+        <div>
+            © 2025 <strong>ProScholarTools</strong>. جميع الحقوق محفوظة.
+        </div>
+        <div class="cr-links">
+            <a href="/privacy-policy.html">الخصوصية</a>
+            <a href="/terms.html">الشروط</a>
+            <a href="/cookie-policy.html">الكوكيز</a>
+        </div>
     </div>
 </footer>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-
-<!-- AdSense -->
+<!-- AdSense Script -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809" crossorigin="anonymous"></script>
 
-<!-- Simple Scripts -->
+<!-- Scripts -->
 <script>
 // Remove loader
-window.onload=()=>{
-    document.getElementById('L').classList.add('h');
-    if(window.adsbygoogle)(adsbygoogle=window.adsbygoogle||[]).push({});
-};
+window.addEventListener('load', function(){
+    setTimeout(() => {
+        document.getElementById('L').classList.add('h');
+    }, 500);
+    
+    // Initialize AdSense
+    if(typeof adsbygoogle !== 'undefined'){
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+});
 
-// Language switch
+// Language switch (Fixed)
 function sl(l){
-    document.querySelectorAll('.lg-sw button').forEach(b=>b.classList.toggle('a',b.dataset.l===l);
+    document.querySelectorAll('.lg-sw button').forEach(b => {
+        b.classList.toggle('a', b.dataset.l === l);
+        b.setAttribute('aria-pressed', b.dataset.l === l);
+    });
     // Add your translation logic here
+    console.log('Language switched to:', l);
 }
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+});
 </script>
 
 </body>
