@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | ProScholarTools</title>
+    <meta name="description" content="سياسة الخصوصية لموقع ProScholarTools - نحن نحترم خصوصيتك ونحمي بياناتك الشخصية.">
+    <link rel="icon" type="image/webp" href="https://your-image-url.com/favicon.webp">
+    
+    <style>
+        :root{--p:#38bdf8;--s:#818cf8;--b:#0f172a;--c:rgba(30,41,59,.8);--t:#f8fafc;--m:#94a3b8;--d:rgba(148,163,184,.2)}
+        *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+        body{background:var(--b);color:var(--t);line-height:1.8}
+        .w{max-width:900px;margin:0 auto;padding:20px}
+        header{background:var(--c);border-bottom:1px solid var(--d);padding:20px 0;margin-bottom:40px}
+        .nav{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--p),var(--s));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+        .back{color:var(--m);text-decoration:none;display:flex;align-items:center;gap:8px}
+        .back:hover{color:var(--p)}
+        
+        h1{color:var(--p);margin-bottom:30px;font-size:2rem}
+        h2{color:var(--s);margin:30px 0 15px;font-size:1.2rem;border-right:3px solid var(--p);padding-right:12px}
+        p{margin-bottom:20px;color:var(--m);text-align:justify}
+        ul{margin:20px 0;padding-right:20px;color:var(--m)}
+        li{margin-bottom:10px}
+        .highlight{color:var(--p);font-weight:600}
+        .date{background:var(--c);border:1px solid var(--d);padding:15px;border-radius:8px;margin:20px 0;color:var(--m);font-size:.9rem}
+        
+        footer{margin-top:60px;padding:30px 0;text-align:center;color:var(--m);border-top:1px solid var(--d);font-size:.85rem}
+        a{color:var(--p);text-decoration:none}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="w nav">
+        <a href="/" class="logo">ProScholarTools</a>
+        <a href="/" class="back">← العودة للرئيسية</a>
+    </div>
+</header>
+
+<div class="w">
+    <h1>سياسة الخصوصية</h1>
+    
+    <div class="date">
+        <strong>تاريخ آخر تحديث:</strong> 15 يناير 2025
+    </div>
+
+    <p>
+        في <span class="highlight">ProScholarTools</span>، نحن نلتزم بحماية خصوصيتك وسرية بياناتك الشخصية. 
+        هذه السياسة توضح كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتك عند استخدامك لموقعنا.
+    </p>
+
+    <h2>1. المعلومات التي نجمعها</h2>
+    <p>قد نقوم بجمع المعلومات التالية:</p>
+    <ul>
+        <li><strong>معلومات الاستخدام:</strong> عناوين IP، نوع المتصفح، الصفحات المزارة، الوقت المستغرق</li>
+        <li><strong>معلومات الجهاز:</strong> نوع الجهاز، نظام التشغيل، دقة الشاشة</li>
+        <li><strong>البيانات المدخلة:</strong> النصوص التي تدخلها في أدواتنا (لا نحتفظ بها ما لم تختر ذلك)</li>
+        <li><strong>معلومات Google AdSense:</strong> بيانات ملفات تعريف الارتباط للإعلانات المستهدفة</li>
+    </ul>
+
+    <h2>2. كيفية استخدام المعلومات</h2>
+    <p>نستخدم معلوماتك للأغراض التالية:</p>
+    <ul>
+        <li>تحسين تجربة المستخدم وأداء الموقع</li>
+        <li>عرض الإعلانات المناسبة عبر Google AdSense</li>
+        <li>تحليل حركة المرور وإحصائيات الاستخدام</li>
+        <li>منع الاحتيال وحماية الأمان</li>
+        <li>الرد على استفساراتك وطلبات الدعم</li>
+    </ul>
+
+    <h2>3. ملفات تعريف الارتباط (Cookies)</h2>
+    <p>
+        نستخدم ملفات تعريف الارتباط وتحليلات Google لتحسين الخدمة. 
+        يمكنك تعطيل الكوكيز من إعدادات متصفحك، لكن هذا قد يؤثر على بعض الوظائف.
+    </p>
+
+    <h2>4. Google AdSense وDoubleClick DART</h2>
+    <p>
+        نستخدم Google AdSense لعرض الإعلانات. قد تستخدم Google تقنية DART 
+        لعرض إعلانات مستهدفة بناءً على زياراتك لموقعنا والمواقع الأخرى. 
+        يمكنك إلغاء استخدام DART عبر 
+        <a href="https://policies.google.com/technologies/ads" target="_blank">إعدادات إعلانات Google</a>.
+    </p>
+
+    <h2>5. حماية البيانات</h2>
+    <p>
+        نتخذ إجراءات أمنية صارمة لحماية بياناتك:
+    </p>
+    <ul>
+        <li>تشفير SSL/TLS لجميع الاتصالات</li>
+        <li>حماية جدران الحماية (Firewalls)</li>
+        <li>تحديثات أمنية منتظمة للنظام</li>
+        <li>وصول محدود للبيانات الحساسة</li>
+    </ul>
+
+    <h2>6. حقوقك</h2>
+    <p>لديك الحق في:</p>
+    <ul>
+        <li>الوصول إلى بياناتك الشخصية</li>
+        <li>طلب تصحيح أو حذف بياناتك</li>
+        <li>الاعتراض على معالجة بياناتك</li>
+        <li>طلب نقل بياناتك</li>
+    </ul>
+
+    <h2>7. الروابط الخارجية</h2>
+    <p>
+        موقعنا قد يحتوي على روابط لمواقع خارجية. نحن غير مسؤولين عن ممارسات 
+        الخصوصية في تلك المواقع.
+    </p>
+
+    <h2>8. التواصل معنا</h2>
+    <p>
+        لأي استفسارات حول هذه السياسة، يرجى التواصل معنا عبر:<br>
+        <strong>البريد الإلكتروني:</strong> <a href="mailto:info@proscholartools.com">info@proscholartools.com</a>
+    </p>
+</div>
+
+<footer>
+    <div class="w">
+        <p>© 2025 ProScholarTools. جميع الحقوق محفوظة.</p>
+        <p style="margin-top:10px">
+            <a href="/about.html">من نحن</a> |
+            <a href="/terms.html">شروط الاستخدام</a> |
+            <a href="/cookie-policy.html">سياسة الكوكيز</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
