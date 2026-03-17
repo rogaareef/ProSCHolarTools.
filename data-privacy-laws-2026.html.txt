@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><title>بياناتك هي نفط 2026: كيف تحمي خصوصيتك قانونياً؟</title></head>
+<body style="background: #020617; color: white; font-family: 'Cairo'; padding: 40px;">
+    <div style="max-width: 850px; margin: 0 auto;">
+        <h1 style="color: #34d399;">حقك في "النسيان الرقمي": دليلنا لحماية الخصوصية</h1>
+        <p>في عالم مليء بأدوات التجسس والذكاء الاصطناعي، أصبحت بياناتك الشخصية سلعة تباع وتشترى. من واقع دراستي للقانون الرقمي، أرى أن الوعي بـ "سيادة البيانات" هو خط الدفاع الأول. في <strong>proscholartools</strong>، قمنا بمراجعة قوانين حماية البيانات في المنطقة العربية لنضع لك خطوات عملية لمواجهة أي انتهاك لخصوصيتك...</p>
+    </div>
+</body>
+</html>

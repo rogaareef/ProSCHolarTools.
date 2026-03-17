@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اقتصاديات الحروب 2026 | تأثير النزاعات على أسعار النفط والذهب والبورصات - proscholartools</title>
+    <meta name="description" content="تحليل برو سكولار تولز حول اقتصاديات الحروب في 2026. كيف تؤثر النزاعات الجيوسياسية على أسعار النفط، الذهب، سلاسل الإمداد العالمية، ومستقبل الاستثمار الآمن.">
+    <link rel="icon" type="image/webp" href="../img/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root { --primary: #38bdf8; --danger: #ef4444; --bg: #020617; --glass: rgba(255, 255, 255, 0.05); }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: white; line-height: 1.8; margin: 0; padding: 0; }
+        .article-container { max-width: 950px; margin: 40px auto; padding: 20px; }
+        .glass-body { background: var(--glass); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
+        h1 { color: var(--primary); font-size: 2.4rem; text-align: center; margin-bottom: 30px; line-height: 1.3; }
+        h2 { color: var(--danger); margin-top: 40px; border-right: 4px solid var(--danger); padding-right: 15px; }
+        p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 25px; text-align: justify; }
+        .war-impact-box { background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); padding: 25px; border-radius: 15px; margin: 30px 0; }
+        .chart-sim { border-top: 1px dashed var(--primary); padding-top: 20px; font-style: italic; color: #94a3b8; }
+        .footer-nav { margin-top: 60px; text-align: center; border-top: 1px solid var(--glass); padding-top: 30px; }
+        .btn-trade { background: var(--danger); color: white; padding: 12px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
+        strong { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div class="article-container">
+    <article class="glass-body">
+        <h1>اقتصاديات الحروب 2026: كيف تعيد الصراعات الجيوسياسية تشكيل ثروات العالم؟</h1>
+
+        <p>في مطلع عام 2026، يشهد العالم تحولاً جذرياً في مفهوم "اقتصاديات الأزمات". لم تعد الحروب مجرد صراعات عسكرية على الأرض، بل تحولت إلى حروب اقتصادية تمتد آثارها إلى كل محفظة استثمارية وكل بيت. في <strong>proscholartools</strong>، نحلل بعمق كيف أصبحت النزاعات هي المحرك الأول لأسعار الذهب والنفط والسلع الاستراتيجية.</p>
+
+        <section>
+            <h2>النفط كقوة جيوسياسية في 2026</h2>
+            <div class="war-impact-box">
+                <p>تظل الطاقة هي شريان الحياة للاقتصاد العالمي. أي اضطراب في ممرات الملاحة الدولية في 2026 يترجم فوراً إلى قفزات سعرية في برميل برنت. الدول المصدرة والمستوردة على حد سواء تجد نفسها في صراع مع "تضخم الطاقة" الذي يرفع تكاليف الشحن والإنتاج بنسب قياسية.</p>
+            </div>
+            <p>نحن نراقب في <strong>برو سكولار تولز</strong> كيف تتأثر البورصات العالمية بأخبار الجبهات. المستثمر الذكي اليوم لا يراقب الشاشات المالية فقط، بل يراقب الخرائط السياسية بدقة، لأن "علاوة المخاطر" (Risk Premium) أصبحت هي المكون الأكبر في سعر برميل النفط اليوم.</p>
+        </section>
+
+        <section>
+            <h2>الذهب: الملاذ الأخير في أوقات عدم اليقين</h2>
+            <p>تاريخياً، الذهب هو العدو اللدود للتوترات. في 2026، ومع تصاعد النزاعات، لاحظنا تدفقاً غير مسبوق للسيولة من أسهم التكنولوجيا إلى سبائك الذهب. لماذا؟ لأن الذهب لا يحمل "مخاطر الائتمان"؛ فهو أصل مادي لا تعتمد قيمته على وعود الحكومات أو استقرار البنوك المركزية التي قد تتعرض لعقوبات اقتصادية.</p>
+            <p><strong>توقعاتنا:</strong> استمرار الضغط الشرائي على الذهب طالما استمرت حالة "عدم اليقين" الجيوسياسي. الذهب في 2026 ليس للزينة، بل هو "درع حماية" ضد انهيار العملات الورقية في مناطق النزاع.</p>
+        </section>
+
+        <section>
+            <h2>سلاسل الإمداد وتضخم الغذاء</h2>
+            <p>الحرب في 2026 لم تعد تقتل بالرصاص فقط، بل تقتل بـ "الجوع السعري". تعطل تصدير الحبوب والزيوت من مناطق الصراع أدى إلى موجة تضخم غذائي لم يشهدها العالم منذ عقود. في <strong>proscholartools</strong>، نؤكد أن الأمن الغذائي أصبح جزءاً لا يتجزأ من الأمن القومي للدول، مما يدفع الحكومات لإنشاء مخازن استراتيجية ضخمة تزيد من الطلب العالمي وترفع الأسعار أكثر.</p>
+        </section>
+
+        <section>
+            <h2>مستقبل الاستثمار في ظل الفوضى</h2>
+            <p>كيف تحمي أموالك؟ في هذا المناخ، ينصح خبراؤنا القانونيون والماليون بتنويع الأصول (Diversification). لا تضع كل بيضك في سلة "العملات المحلية" في أوقات الحروب. فكر في أصول عابرة للحدود: الذهب، العملات الرقمية المستقرة المدعومة بالدولار، وأسهم شركات الدفاع والطاقة.</p>
+            <div class="chart-sim">
+                * ملاحظة: يتم تحديث بيانات التحليل المالي في proscholartools لحظياً بناءً على آخر التطورات الميدانية.
+            </div>
+        </section>
+
+        <div class="footer-nav">
+            <p>تابع أسعار الذهب والبورصة لحظة بلحظة عبر أدواتنا الذكية</p>
+            <a href="../index.html" class="btn-trade">فتح حاسبة البورصة والذهب</a>
+        </div>
+    </article>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "تأثير الحروب على الاقتصاد العالمي وأسعار الذهب 2026",
+  "description": "تحليل شامل حول كيفية تأثير النزاعات الجيوسياسية على أسواق الطاقة والمعادن النفيسة.",
+  "author": { "@type": "Organization", "name": "proscholartools" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "proscholartools",
+    "logo": { "@type": "ImageObject", "url": "https://proscholartools.com/img/logo.webp" }
+  },
+  "datePublished": "2026-03-17",
+  "keywords": "اقتصاديات الحروب, سعر النفط 2026, استثمار الذهب في الأزمات"
+}
+</script>
+
+</body>
+</html>

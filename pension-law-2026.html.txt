@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قانون المعاشات الجديد 2026 | دليل حساب التأمينات الاجتماعية - proscholartools</title>
+    <meta name="description" content="دليل قانوني شامل من proscholartools حول تعديلات قانون المعاشات 2026، شروط المعاش المبكر، زيادة المعاشات، وكيفية حساب المستحقات التأمينية للموظفين.">
+    <link rel="icon" type="image/webp" href="../img/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root { --primary: #38bdf8; --accent: #34d399; --bg: #020617; --glass: rgba(255, 255, 255, 0.05); }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: white; line-height: 1.8; margin: 0; padding: 0; }
+        .article-container { max-width: 950px; margin: 40px auto; padding: 20px; }
+        .glass-body { background: var(--glass); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+        h1 { color: var(--primary); font-size: 2.3rem; text-align: center; margin-bottom: 25px; border-bottom: 2px solid var(--glass); padding-bottom: 15px; }
+        h2 { color: var(--accent); margin-top: 45px; display: flex; align-items: center; gap: 10px; }
+        h2::before { content: "\f0e3"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--primary); }
+        p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 25px; text-align: justify; }
+        .legal-note { background: rgba(52, 211, 153, 0.1); border-right: 5px solid var(--accent); padding: 25px; border-radius: 12px; margin: 30px 0; }
+        .info-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: rgba(255,255,255,0.02); }
+        .info-table th, .info-table td { border: 1px solid rgba(255,255,255,0.1); padding: 15px; text-align: center; }
+        .info-table th { background: var(--primary); color: #020617; }
+        .footer-nav { margin-top: 60px; text-align: center; border-top: 1px solid var(--glass); padding-top: 30px; }
+        .btn-home { background: var(--primary); color: #020617; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<div class="article-container">
+    <article class="glass-body">
+        <h1>قانون المعاشات والتأمينات الاجتماعية 2026: الرؤية القانونية والتحليل التقني</h1>
+
+        <div class="legal-note">
+            <i class="fas fa-balance-scale"></i> <strong>إدارة proscholartools:</strong> هذا الدليل مُعد ومُراجع بواسطة باحثين قانونيين متخصصين في تشريعات التأمين الاجتماعي لضمان تقديم المعلومة القانونية الصحيحة والموثقة.
+        </div>
+
+        <section>
+            <h2>فلسفة التعديلات الجديدة في 2026</h2>
+            <p>مع بداية عام 2026، دخلت حيز التنفيذ مجموعة من التعديلات الجوهرية على قانون التأمينات والمعاشات. تهدف هذه التعديلات في مقامها الأول إلى تحقيق التوازن بين الاستدامة المالية لصناديق المعاشات وبين حماية القوة الشرائية لأصحاب المعاشات في ظل التضخم العالمي.</p>
+            <p>نحن في <strong>proscholartools</strong>، نرى أن المشرع اتجه نحو رقمنة المنظومة التأمينية بالكامل، مما يسهل على المواطن معرفة حقوقه دون تعقيدات بيروقراطية. القانون الجديد لا يعالج فقط سن التقاعد، بل يمتد ليشمل "الأجر التأميني" وكيفية رفعه تدريجياً لضمان معاش كريم.</p>
+        </section>
+
+        <section>
+            <h2>شروط المعاش المبكر في ميزان القانون</h2>
+            <p>يعد ملف المعاش المبكر من أكثر الملفات حساسية قانونية في 2026. اشترط القانون الجديد توافر مدة اشتراك تأمينية فعلية تعطي الحق في معاش لا يقل عن 50% من أجر التسوية الأخير، وبما لا يقل عن الحد الأدنى للمعاشات المعلن عنه.</p>
+            <p>استخدامك لأدوات <strong>proscholartools</strong> يتيح لك حساب هذه النسب برمجياً قبل اتخاذ قرار الاستقالة أو التقاعد المبكر، حيث أن الوقوع في فخ "عدم استيفاء المدة" قد يحرم الموظف من معاشه لسنوات طويلة.</p>
+        </section>
+
+        <section>
+            <h2>الحد الأدنى والزيادات السنوية 2026</h2>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>البند التطورى</th>
+                        <th>عام 2025</th>
+                        <th>توقعات 2026</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>الحد الأدنى للمعاش</td>
+                        <td>مستوى أساسي</td>
+                        <td>زيادة مرتبطة بالتضخم</td>
+                    </tr>
+                    <tr>
+                        <td>نسبة الزيادة السنوية</td>
+                        <td>15% (كحد أقصى)</td>
+                        <td>متغيرة (حسب مؤشر الأسعار)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>في عام 2026، أصبح ربط الزيادة السنوية بمعدل التضخم أمراً دستورياً وقانونياً ملزماً. وهذا يعني أن أصحاب المعاشات في مأمن نسبياً من تقلبات الأسعار العالمية، حيث يتم مراجعة "أجر الاشتراك" بصفة دورية كل شهر يناير.</p>
+        </section>
+
+        <section>
+            <h2>التأمين الصحي للمتقاعدين</h2>
+            <p>لا ينفصل قانون المعاشات عن قانون التأمين الصحي الشامل. في 2026، تم دمج قاعدة بيانات المتقاعدين تلقائياً في منظومة الرعاية الصحية، حيث يتم خصم اشتراك ضئيل مقابل خدمة طبية متكاملة. نحن في المنصة نوفر لك قسماً خاصاً لشرح كيفية استخراج البطاقة العلاجية الرقمية وتفعيلها.</p>
+        </section>
+
+        <section>
+            <h2>نصيحة القانونيين في proscholartools</h2>
+            <p>بصفتنا باحثين في هذا المجال، ننصح دائماً بـ "ضم مدد الخدمة" و "شراء مدد اعتبارية" لمن اقترب من سن التقاعد ولم يستكمل المدة الموجبة للمعاش. إن الثقافة القانونية التأمينية هي استثمارك الحقيقي لتأمين خريف العمر.</p>
+        </section>
+
+        <div class="footer-nav">
+            <p>هل تريد حساب معاشك بدقة بناءً على آخر تعديلات 2026؟</p>
+            <a href="../index.html" class="btn-home">استخدم حاسبة المعاشات الذكية الآن</a>
+        </div>
+    </article>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "دليل قانون المعاشات الجديد 2026 | حاسبة التأمينات",
+  "description": "تحليل قانوني شامل لتعديلات قانون المعاشات والتأمينات لعام 2026 بإشراف باحثين قانونيين من proscholartools.",
+  "author": { "@type": "Organization", "name": "proscholartools" },
+  "datePublished": "2026-03-17"
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><title>إصابات العمل في 2026: دليلي العملي للحصول على تعويضك كاملاً</title></head>
+<body style="background: #020617; color: white; font-family: 'Cairo'; padding: 40px;">
+    <div style="max-width: 850px; margin: 0 auto;">
+        <h1 style="color: #ef4444;">خلف الكواليس: كيف تضيع حقوق العمال في تقارير الإصابة؟</h1>
+        <p>من واقع عملي في لجان <strong>NOSI</strong> وتخصصي في السلامة المهنية، يؤلمني رؤية عامل تضيع حقوقه بسبب خطأ في صياغة محضر الإصابة. في هذا المقال، أضع بين يديك "خلاصة الإجراءات" التي يجب اتخاذها في أول 24 ساعة لضمان حقك القانوني والطبي، بعيداً عن تعقيدات البيروقراطية...</p>
+    </div>
+</body>
+</html>
