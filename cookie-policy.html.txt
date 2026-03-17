@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الكوكيز | ProScholarTools</title>
+    <meta name="description" content="سياسة ملفات تعريف الارتباط (الكوكيز) في ProScholarTools - كيف نستخدمها وكيف تتحكم فيها.">
+    <link rel="icon" type="image/webp" href="https://your-image-url.com/favicon.webp">
+    
+    <style>
+        :root{--p:#38bdf8;--s:#818cf8;--b:#0f172a;--c:rgba(30,41,59,.8);--t:#f8fafc;--m:#94a3b8;--d:rgba(148,163,184,.2)}
+        *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+        body{background:var(--b);color:var(--t);line-height:1.8}
+        .w{max-width:900px;margin:0 auto;padding:20px}
+        header{background:var(--c);border-bottom:1px solid var(--d);padding:20px 0;margin-bottom:40px}
+        .nav{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--p),var(--s));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+        .back{color:var(--m);text-decoration:none}
+        .back:hover{color:var(--p)}
+        
+        h1{color:var(--p);margin-bottom:30px;font-size:2rem}
+        h2{color:var(--s);margin:30px 0 15px;font-size:1.2rem;border-right:3px solid var(--p);padding-right:12px}
+        p{margin-bottom:20px;color:var(--m);text-align:justify}
+        ul{margin:20px 0;padding-right:20px;color:var(--m)}
+        li{margin-bottom:10px}
+        table{width:100%;border-collapse:collapse;margin:20px 0;color:var(--m)}
+        th,td{border:1px solid var(--d);padding:12px;text-align:right}
+        th{background:var(--c);color:var(--p)}
+        
+        footer{margin-top:60px;padding:30px 0;text-align:center;color:var(--m);border-top:1px solid var(--d);font-size:.85rem}
+        a{color:var(--p);text-decoration:none}
+        .btn{display:inline-block;background:var(--p);color:#000;padding:10px 20px;border-radius:8px;margin-top:10px;font-weight:600}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="w nav">
+        <a href="/" class="logo">ProScholarTools</a>
+        <a href="/" class="back">← العودة للرئيسية</a>
+    </div>
+</header>
+
+<div class="w">
+    <h1>سياسة ملفات تعريف الارتباط (Cookies)</h1>
+
+    <p>
+        تستخدم <strong>ProScholarTools</strong> ملفات تعريف الارتباط (الكوكيز) وتحليلات Google 
+        لتحسين تجربة المستخدم وتقديم إعلانات مناسبة عبر Google AdSense.
+    </p>
+
+    <h2>1. ما هي الكوكيز؟</h2>
+    <p>
+        الكوكيز هي ملفات نصية صغيرة تُخزن على جهازك عند زيارة المواقع. 
+        تساعدنا في تذكر تفضيلاتك وتحسين أداء الموقع.
+    </p>
+
+    <h2>2. أنواع الكوكيز التي نستخدمها</h2>
+    <table>
+        <tr>
+            <th>النوع</th>
+            <th>الغرض</th>
+            <th>مدة الصلاحية</th>
+        </tr>
+        <tr>
+            <td>أساسية</td>
+            <td>تشغيل الموقع الأساسي (اللغة، الجلسات)</td>
+            <td>جلسة واحدة / سنة</td>
+        </tr>
+        <tr>
+            <td>التحليلات</td>
+            <td>Google Analytics - فهم كيفية استخدام الموقع</td>
+            <td>2 سنة</td>
+        </tr>
+        <tr>
+            <td>الإعلانات</td>
+            <td>Google AdSense - عرض إعلانات مستهدفة</td>
+            <td>13 شهر</td>
+        </tr>
+        <tr>
+            <td>الوظيفية</td>
+            <td>تذكر الإعدادات والتفضيلات</td>
+            <td>1 سنة</td>
+        </tr>
+    </table>
+
+    <h2>3. كيفية استخدام Google للكوكيز</h2>
+    <p>
+        نستخدم Google AdSense وGoogle Analytics. قد تقوم Google بجمع المعلومات عبر:
+    </p>
+    <ul>
+        <li>ملفات تعريف الارتباط للإعلانات (DoubleClick DART)</li>
+        <li>معرفات الإعلانات على الأجهزة المحمولة</li>
+        <li>معرفات المستخدمين المجهولين</li>
+    </ul>
+    <p>
+        يمكنك إلغاء استخدام ملفات تعريف الارتباط لإعلانات Google عبر 
+        <a href="https://adssettings.google.com" target="_blank">إعدادات إعلانات Google</a>.
+    </p>
+
+    <h2>4. كيف تتحكم في الكوكيز</h2>
+    <p>يمكنك إدارة الكوكيز عبر:</p>
+    <ul>
+        <li><strong>إعدادات المتصفح:</strong> يمكنك حظر أو حذف الكوكيز من إعدادات المتصفح</li>
+        <li><strong>أدوات إلغاء الاشتراك:</strong> زيارة <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out</a></li>
+        <li><strong>إعدادات الإعلانات:</strong> تعديل تفضيلات الإعلانات في حساب Google</li>
+    </ul>
+
+    <h2>5. التأثير على الخدمة</h2>
+    <p>
+        إذا قمت بتعطيل الكوكيز، قد لا يعمل بعض أجزاء الموقع بشكل صحيح، 
+        وقد لا تتمكن من استخدام بعض الميزات الشخصية.
+    </p>
+
+    <h2>6. التحديثات</h2>
+    <p>
+        قد نقوم بتحديث هذه السياسة بشكل دوري. 
+        تاريخ آخر تحديث: <strong>15 يناير 2025</strong>.
+    </p>
+
+    <h2>7. التواصل</h2>
+    <p>
+        لأي استفسارات حول الكوكيز، يرجى مراسلتنا على:
+        <a href="mailto:info@proscholartools.com">info@proscholartools.com</a>
+    </p>
+    
+    <a href="/privacy-policy.html" class="btn">العودة لسياسة الخصوصية</a>
+</div>
+
+<footer>
+    <div class="w">
+        <p>© 2025 ProScholarTools. جميع الحقوق محفوظة.</p>
+        <p style="margin-top:10px">
+            <a href="/about.html">من نحن</a> |
+            <a href="/privacy-policy.html">سياسة الخصوصية</a> |
+            <a href="/terms.html">شروط الاستخدام</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
