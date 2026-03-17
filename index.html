@@ -1,419 +1,1748 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ✅ العنوان الجديد - ProScholarTools فقط -->
-    <title>ProScholarTools | منصة الأدوات الأكاديمية والبحثية الذكية</title>
+    <!-- Dynamic Title & Meta -->
+    <title id="page-title">ProScholarTools | منصة الأدوات الأكاديمية والبحثية الذكية</title>
+    <meta name="description" id="meta-desc" content="ProScholarTools - منصة متكاملة للأدوات الأكاديمية والبحثية. فاحص انتحال، حاسبة GPA، أدوات PDF.">
     
-    <!-- Meta Tags -->
-    <meta name="description" content="ProScholarTools - منصة متكاملة للأدوات الأكاديمية والبحثية. فاحص انتحال، حاسبة GPA، أدوات PDF، ودعم الباحثين.">
-    <meta name="keywords" content="ProScholarTools, أدوات بحثية, فاحص انتحال, حاسبة GPA, أدوات أكاديمية">
-    <meta name="author" content="ProScholarTools">
+    <meta property="og:title" id="og-title" content="ProScholarTools">
+    <meta property="og:description" id="og-desc" content="أدوات ذكية للباحثين والطلاب">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="ProScholarTools | منصة الأدوات الأكاديمية">
-    <meta property="og:description" content="أدوات ذكية للباحثين والطلاب">
-    <meta property="og:site_name" content="ProScholarTools">
-    
-    <!-- Twitter -->
-    <meta name="twitter:title" content="ProScholarTools">
-    
-    <!-- Canonical -->
     <link rel="canonical" href="https://proscholartools.com/">
     
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <!-- Hreflang for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://proscholartools.com/?lang=ar">
+    <link rel="alternate" hreflang="en" href="https://proscholartools.com/?lang=en">
+    <link rel="alternate" hreflang="fr" href="https://proscholartools.com/?lang=fr">
+    <link rel="alternate" hreflang="es" href="https://proscholartools.com/?lang=es">
+    <link rel="alternate" hreflang="de" href="https://proscholartools.com/?lang=de">
+    <link rel="alternate" hreflang="tr" href="https://proscholartools.com/?lang=tr">
+    <link rel="alternate" hreflang="x-default" href="https://proscholartools.com/">
     
-    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <!-- Critical CSS -->
     <style>
-        :root{--primary:#38bdf8;--bg:#0f172a;--text:#f8fafc;--card:rgba(30,41,59,0.8)}
+        /* ===== CORE STYLES (UNCHANGED) ===== */
+        :root{
+            --primary:#38bdf8;
+            --primary-dark:#0284c7;
+            --secondary:#818cf8;
+            --accent:#f472b6;
+            --success:#22c55e;
+            --warning:#f59e0b;
+            --danger:#ef4444;
+            --gold:#ffd700;
+            --bg:#0f172a;
+            --surface:rgba(30,41,59,0.8);
+            --card:rgba(255,255,255,0.03);
+            --text:#f8fafc;
+            --text-muted:#94a3b8;
+            --border:rgba(148,163,184,0.2);
+        }
+        
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-        .container{max-width:1400px;margin:0 auto;padding:0 20px}
         
-        /* Top Bar */
-        .top-bar{background:rgba(0,0,0,0.3);border-bottom:1px solid rgba(255,255,255,0.1);padding:10px 0;position:sticky;top:0;z-index:1001}
-        .top-bar-content{display:flex;justify-content:space-between;align-items:center}
+        html{
+            scroll-behavior:smooth;
+        }
         
-        .social-icons{display:flex;gap:12px}
-        .social-icon{width:35px;height:35px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--text);text-decoration:none;transition:all 0.3s}
-        .social-icon:hover{background:var(--primary);color:#000;transform:translateY(-3px)}
+        html[dir="ltr"]{
+            direction:ltr;
+        }
         
-        .lang-switcher{display:flex;gap:8px}
-        .lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.2);color:#94a3b8;padding:6px 14px;border-radius:20px;cursor:pointer;font-size:0.85rem;transition:all 0.3s}
-        .lang-btn:hover,.lang-btn.active{background:var(--primary);color:#000;border-color:var(--primary)}
+        html[dir="rtl"]{
+            direction:rtl;
+        }
         
-        .loader{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 0.5s}
-        .loader.hidden{opacity:0;pointer-events:none}
-        .spinner{width:50px;height:50px;border:3px solid rgba(56,189,248,0.3);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite}
-        @keyframes spin{to{transform:rotate(360deg)}}
+        body{
+            font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.6;
+            overflow-x:hidden;
+        }
         
-        /* ✅ Hero with ProScholarTools */
-        .hero{padding:60px 20px 40px;text-align:center}
-        .logo-container{margin-bottom:20px}
+        .container{
+            max-width:1400px;
+            margin:0 auto;
+            padding:0 20px;
+        }
         
-        /* ✅ الاسم الجديد هنا */
+        /* ===== TOP BAR (ENHANCED) ===== */
+        .top-bar{
+            background:rgba(0,0,0,0.4);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid var(--border);
+            padding:12px 0;
+            position:sticky;
+            top:0;
+            z-index:1001;
+        }
+        
+        .top-bar-content{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:15px;
+        }
+        
+        /* Social Icons - Exact Position per Direction */
+        .social-icons{
+            display:flex;
+            gap:10px;
+            align-items:center;
+        }
+        
+        html[dir="rtl"] .social-icons{
+            /* Right side in RTL */
+        }
+        
+        html[dir="ltr"] .social-icons{
+            /* Left side in LTR - will be ordered by flex */
+        }
+        
+        .social-icon{
+            width:38px;
+            height:38px;
+            border-radius:50%;
+            background:rgba(255,255,255,0.08);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:var(--text);
+            text-decoration:none;
+            transition:all 0.3s ease;
+            border:1px solid transparent;
+        }
+        
+        .social-icon:hover{
+            background:var(--primary);
+            color:#000;
+            transform:translateY(-3px);
+            border-color:var(--primary);
+            box-shadow:0 8px 20px rgba(56,189,248,0.3);
+        }
+        
+        /* Language Switcher - ENHANCED */
+        .lang-switcher{
+            display:flex;
+            gap:6px;
+            align-items:center;
+            background:rgba(0,0,0,0.3);
+            padding:6px;
+            border-radius:50px;
+            border:1px solid var(--border);
+        }
+        
+        .lang-btn{
+            background:transparent;
+            border:none;
+            color:var(--text-muted);
+            padding:8px 16px;
+            border-radius:50px;
+            cursor:pointer;
+            font-size:0.85rem;
+            font-weight:600;
+            transition:all 0.3s ease;
+            display:flex;
+            align-items:center;
+            gap:6px;
+            text-transform:uppercase;
+        }
+        
+        .lang-btn:hover{
+            color:var(--text);
+            background:rgba(255,255,255,0.05);
+        }
+        
+        .lang-btn.active{
+            background:var(--primary);
+            color:#000;
+            box-shadow:0 4px 15px rgba(56,189,248,0.4);
+        }
+        
+        .lang-flag{
+            font-size:1.1rem;
+        }
+        
+        /* ===== LOADER ===== */
+        .loader{
+            position:fixed;
+            inset:0;
+            background:var(--bg);
+            z-index:9999;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:opacity 0.5s ease;
+        }
+        
+        .loader.hidden{
+            opacity:0;
+            pointer-events:none;
+        }
+        
+        .spinner{
+            width:60px;
+            height:60px;
+            border:4px solid rgba(56,189,248,0.2);
+            border-top-color:var(--primary);
+            border-radius:50%;
+            animation:spin 1s linear infinite;
+        }
+        
+        @keyframes spin{
+            to{transform:rotate(360deg)}
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero{
+            padding:80px 20px 50px;
+            text-align:center;
+            position:relative;
+        }
+        
+        .hero::before{
+            content:'';
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            width:600px;
+            height:600px;
+            background:radial-gradient(circle,var(--primary)0%,transparent70%);
+            opacity:0.08;
+            pointer-events:none;
+        }
+        
+        .logo-container{
+            position:relative;
+            z-index:1;
+            margin-bottom:25px;
+        }
+        
         .site-name{
-            font-size:2.8rem;
+            font-size:clamp(2.2rem,6vw,3.5rem);
             font-weight:900;
-            background:linear-gradient(135deg,#38bdf8 0%,#818cf8 50%,#c084fc 100%);
+            background:linear-gradient(135deg,var(--primary)0%,var(--secondary)50%,var(--accent)100%);
             -webkit-background-clip:text;
             -webkit-text-fill-color:transparent;
             background-clip:text;
             letter-spacing:-2px;
             display:inline-block;
+            text-transform:none;
         }
         
-        .site-name span{color:#f472b6;-webkit-text-fill-color:#f472b6}
+        .site-name span{
+            -webkit-text-fill-color:var(--accent);
+        }
         
-        .tagline{color:#94a3b8;font-size:1.2rem;margin-top:15px;font-weight:400}
-        .tagline strong{color:var(--primary);font-weight:600}
+        .tagline{
+            color:var(--text-muted);
+            font-size:clamp(1rem,2.5vw,1.3rem);
+            margin-top:15px;
+            font-weight:400;
+            max-width:600px;
+            margin-left:auto;
+            margin-right:auto;
+            line-height:1.7;
+        }
         
-        /* Ad Units */
-        .ad-unit{margin:30px auto;background:rgba(255,255,255,0.02);border:1px dashed rgba(148,163,184,0.3);border-radius:12px;padding:15px;text-align:center;min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-        .ad-label{font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:2px;margin-bottom:5px}
+        .tagline strong{
+            color:var(--primary);
+            font-weight:600;
+        }
         
-        /* Tools Grid */
-        .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin:40px 0}
-        .tool-card{background:var(--card);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:25px;transition:all 0.3s;cursor:pointer;backdrop-filter:blur(10px)}
-        .tool-card:hover{transform:translateY(-5px);border-color:var(--primary);box-shadow:0 15px 35px rgba(56,189,248,0.2)}
-        .tool-icon{width:60px;height:60px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:15px;background:linear-gradient(135deg,var(--primary),#818cf8)}
-        .tool-card h3{font-size:1.25rem;margin-bottom:10px;color:var(--text)}
-        .tool-card p{color:#94a3b8;font-size:0.95rem;margin-bottom:15px;line-height:1.6}
-        .btn{width:100%;padding:12px;background:linear-gradient(135deg,var(--primary),#818cf8);color:#000;border:none;border-radius:10px;font-weight:700;cursor:pointer;transition:all 0.3s}
-        .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(56,189,248,0.3)}
+        /* ===== AD UNITS ===== */
+        .ad-unit{
+            margin:30px auto;
+            background:var(--card);
+            border:1px dashed var(--border);
+            border-radius:16px;
+            padding:20px;
+            text-align:center;
+            min-height:100px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            position:relative;
+            overflow:hidden;
+        }
         
-        .section-title{font-size:1.5rem;color:var(--primary);margin:50px 0 25px;display:flex;align-items:center;gap:12px;padding-bottom:15px;border-bottom:2px solid rgba(255,255,255,0.1)}
+        .ad-unit::before{
+            content:'';
+            position:absolute;
+            inset:0;
+            background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);
+            animation:shimmer 3s infinite;
+        }
         
-        /* Footer */
-        footer{margin-top:80px;background:rgba(0,0,0,0.5);border-top:1px solid rgba(255,255,255,0.1);padding:50px 0 20px}
-        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px}
-        .footer-section h4{color:var(--primary);margin-bottom:20px;font-size:1.1rem;font-weight:700}
-        .footer-section p{color:#94a3b8;line-height:1.8;font-size:0.95rem}
-        .footer-links{list-style:none}
-        .footer-links li{margin-bottom:12px}
-        .footer-links a{color:#94a3b8;text-decoration:none;display:flex;align-items:center;gap:10px;transition:all 0.3s;font-size:0.95rem}
-        .footer-links a:hover{color:var(--primary);padding-right:5px}
-        .footer-links a i{font-size:0.8rem;color:var(--primary)}
+        @keyframes shimmer{
+            0%{transform:translateX(-100%)}
+            100%{transform:translateX(100%)}
+        }
         
-        .required-pages{background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.3);border-radius:12px;padding:20px;margin-top:20px}
-        .required-pages h5{color:var(--primary);margin-bottom:15px;font-size:1rem;display:flex;align-items:center;gap:8px}
-        .badge-required{background:#ef4444;color:white;padding:2px 8px;border-radius:20px;font-size:0.7rem;margin-right:6px;font-weight:700}
+        .ad-label{
+            font-size:0.65rem;
+            color:#64748b;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            margin-bottom:8px;
+            position:relative;
+            z-index:1;
+        }
         
-        .copyright{text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1);color:#64748b;font-size:0.9rem}
-        .adsense-notice{background:rgba(255,255,255,0.05);padding:15px;border-radius:10px;margin-top:20px;text-align:center;font-size:0.85rem;color:#64748b}
-        .adsense-notice a{color:var(--primary);text-decoration:none;font-weight:600}
+        /* ===== SECTIONS ===== */
+        .section-title{
+            font-size:clamp(1.3rem,3vw,1.8rem);
+            color:var(--primary);
+            margin:60px 0 30px;
+            display:flex;
+            align-items:center;
+            gap:12px;
+            padding-bottom:15px;
+            border-bottom:2px solid var(--border);
+            font-weight:700;
+        }
         
-        /* Modal */
-        #modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.9);z-index:2000;align-items:center;justify-content:center;padding:20px}
-        #modal-content{background:#1e293b;border:2px solid var(--primary);border-radius:20px;max-width:600px;width:100%;max-height:85vh;overflow-y:auto;position:relative;animation:modalIn 0.3s ease}
-        @keyframes modalIn{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
-        .modal-close{position:absolute;top:15px;right:15px;background:#ef4444;color:white;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;z-index:10;transition:all 0.3s}
-        .modal-close:hover{transform:rotate(90deg)}
+        html[dir="ltr"] .section-title{
+            border-bottom:none;
+            border-left:4px solid var(--primary);
+            padding-left:15px;
+            padding-bottom:0;
+        }
         
+        html[dir="rtl"] .section-title{
+            border-left:none;
+            border-right:4px solid var(--primary);
+            padding-right:15px;
+            padding-bottom:0;
+        }
+        
+        /* ===== TOOLS GRID ===== */
+        .tools-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+            margin:40px 0;
+        }
+        
+        @media(min-width:1200px){
+            .tools-grid{
+                grid-template-columns:repeat(3,1fr);
+            }
+        }
+        
+        .tool-card{
+            background:var(--card);
+            border:1px solid var(--border);
+            border-radius:20px;
+            padding:30px;
+            transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+            cursor:pointer;
+            position:relative;
+            overflow:hidden;
+        }
+        
+        .tool-card::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:4px;
+            background:linear-gradient(90deg,var(--primary),var(--secondary));
+            opacity:0;
+            transition:opacity 0.3s;
+        }
+        
+        .tool-card:hover{
+            transform:translateY(-10px);
+            border-color:var(--primary);
+            box-shadow:0 25px 50px rgba(0,0,0,0.5);
+        }
+        
+        .tool-card:hover::before{
+            opacity:1;
+        }
+        
+        .tool-icon{
+            width:70px;
+            height:70px;
+            border-radius:16px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:2rem;
+            margin-bottom:20px;
+            background:linear-gradient(135deg,var(--primary),var(--secondary));
+            box-shadow:0 15px 35px rgba(56,189,248,0.3);
+            transition:transform 0.3s;
+        }
+        
+        .tool-card:hover .tool-icon{
+            transform:scale(1.1)rotate(-5deg);
+        }
+        
+        .tool-card h3{
+            font-size:1.3rem;
+            margin-bottom:12px;
+            color:var(--text);
+            font-weight:700;
+        }
+        
+        .tool-card p{
+            color:var(--text-muted);
+            font-size:0.95rem;
+            margin-bottom:20px;
+            line-height:1.7;
+        }
+        
+        .tool-meta{
+            display:flex;
+            gap:10px;
+            margin-bottom:20px;
+            flex-wrap:wrap;
+        }
+        
+        .tool-meta span{
+            font-size:0.8rem;
+            color:var(--text-muted);
+            background:rgba(255,255,255,0.05);
+            padding:6px 12px;
+            border-radius:50px;
+            display:flex;
+            align-items:center;
+            gap:5px;
+        }
+        
+        .btn{
+            width:100%;
+            padding:14px;
+            background:linear-gradient(135deg,var(--primary),var(--secondary));
+            color:#000;
+            border:none;
+            border-radius:12px;
+            font-weight:700;
+            font-size:1rem;
+            cursor:pointer;
+            transition:all 0.3s;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+        }
+        
+        .btn:hover{
+            transform:translateY(-3px);
+            box-shadow:0 15px 30px rgba(56,189,248,0.4);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer{
+            margin-top:100px;
+            background:linear-gradient(180deg,rgba(0,0,0,0.3)0%,rgba(0,0,0,0.6)100%);
+            border-top:1px solid var(--border);
+            padding:60px 0 30px;
+            position:relative;
+        }
+        
+        footer::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:1px;
+            background:linear-gradient(90deg,transparent,var(--primary),transparent);
+        }
+        
+        .footer-content{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:40px;
+            margin-bottom:50px;
+        }
+        
+        .footer-section h4{
+            color:var(--primary);
+            margin-bottom:20px;
+            font-size:1.2rem;
+            font-weight:700;
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+        
+        .footer-section p{
+            color:var(--text-muted);
+            line-height:1.9;
+            font-size:0.95rem;
+        }
+        
+        .footer-links{
+            list-style:none;
+        }
+        
+        .footer-links li{
+            margin-bottom:12px;
+        }
+        
+        .footer-links a{
+            color:var(--text-muted);
+            text-decoration:none;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            transition:all 0.3s;
+            font-size:0.95rem;
+            padding:5px 0;
+        }
+        
+        html[dir="ltr"] .footer-links a:hover{
+            color:var(--primary);
+            padding-left:10px;
+        }
+        
+        html[dir="rtl"] .footer-links a:hover{
+            color:var(--primary);
+            padding-right:10px;
+        }
+        
+        .footer-links a i{
+            color:var(--primary);
+            font-size:0.9rem;
+            width:20px;
+            text-align:center;
+        }
+        
+        .required-pages{
+            background:linear-gradient(135deg,rgba(56,189,248,0.1),rgba(129,140,248,0.05));
+            border:1px solid rgba(56,189,248,0.3);
+            border-radius:16px;
+            padding:25px;
+        }
+        
+        .required-pages h5{
+            color:var(--primary);
+            margin-bottom:18px;
+            font-size:1.05rem;
+            font-weight:700;
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+        
+        .badge-required{
+            background:var(--danger);
+            color:white;
+            padding:3px 10px;
+            border-radius:20px;
+            font-size:0.7rem;
+            font-weight:700;
+            text-transform:uppercase;
+        }
+        
+        .copyright{
+            text-align:center;
+            padding-top:40px;
+            border-top:1px solid var(--border);
+            color:#64748b;
+            font-size:0.9rem;
+        }
+        
+        .copyright strong{
+            color:var(--text);
+        }
+        
+        .adsense-notice{
+            background:var(--card);
+            padding:15px 20px;
+            border-radius:12px;
+            margin-top:20px;
+            font-size:0.85rem;
+            color:#64748b;
+            border:1px solid var(--border);
+        }
+        
+        .adsense-notice a{
+            color:var(--primary);
+            text-decoration:none;
+            font-weight:600;
+            margin:0 8px;
+        }
+        
+        /* ===== MODAL ===== */
+        #modal-overlay{
+            display:none;
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,0.9);
+            backdrop-filter:blur(10px);
+            z-index:2000;
+            align-items:center;
+            justify-content:center;
+            padding:20px;
+            overflow-y:auto;
+        }
+        
+        #modal-overlay.active{
+            display:flex;
+        }
+        
+        #modal-content{
+            background:var(--surface);
+            border:2px solid var(--primary);
+            border-radius:24px;
+            max-width:650px;
+            width:100%;
+            max-height:90vh;
+            overflow-y:auto;
+            position:relative;
+            animation:modalIn 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+        }
+        
+        @keyframes modalIn{
+            from{
+                opacity:0;
+                transform:scale(0.8) translateY(50px);
+            }
+            to{
+                opacity:1;
+                transform:scale(1) translateY(0);
+            }
+        }
+        
+        .modal-close{
+            position:absolute;
+            top:20px;
+            right:20px;
+            background:var(--danger);
+            color:white;
+            border:none;
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            cursor:pointer;
+            font-size:1.5rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:all 0.3s;
+            z-index:10;
+        }
+        
+        html[dir="rtl"] .modal-close{
+            right:auto;
+            left:20px;
+        }
+        
+        .modal-close:hover{
+            transform:rotate(90deg)scale(1.1);
+        }
+        
+        #modal-body{
+            padding:45px 35px 35px;
+        }
+        
+        .modal-title{
+            font-size:1.6rem;
+            margin-bottom:25px;
+            color:var(--primary);
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+        
+        .input-group{
+            margin-bottom:20px;
+        }
+        
+        .input-group label{
+            display:block;
+            margin-bottom:8px;
+            color:var(--text-muted);
+            font-size:0.95rem;
+            font-weight:500;
+        }
+        
+        .input-group input,
+        .input-group select,
+        .input-group textarea{
+            width:100%;
+            padding:14px;
+            background:rgba(0,0,0,0.3);
+            border:1px solid var(--border);
+            border-radius:12px;
+            color:var(--text);
+            font-size:1rem;
+            transition:all 0.3s;
+        }
+        
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus{
+            outline:none;
+            border-color:var(--primary);
+            box-shadow:0 0 0 3px rgba(56,189,248,0.1);
+        }
+        
+        .input-group textarea{
+            min-height:120px;
+            resize:vertical;
+        }
+        
+        /* ===== RESPONSIVE ===== */
         @media(max-width:768px){
-            .top-bar-content{flex-direction:column;gap:10px}
-            .site-name{font-size:2rem}
-            .tools-grid{grid-template-columns:1fr}
+            .top-bar-content{
+                flex-direction:column-reverse;
+                gap:15px;
+            }
+            
+            .lang-switcher{
+                order:1;
+            }
+            
+            .social-icons{
+                order:2;
+            }
+            
+            .site-name{
+                font-size:2rem;
+            }
+            
+            .tools-grid{
+                grid-template-columns:1fr;
+            }
+            
+            #modal-body{
+                padding:30px 20px 25px;
+            }
+        }
+        
+        /* ===== PRINT ===== */
+        @media print{
+            .ad-unit,.lang-switcher,.social-icons{display:none!important}
+            body{background:white;color:black}
+            .tool-card{break-inside:avoid;border:1px solid #ccc}
         }
     </style>
     
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119422909390809" crossorigin="anonymous"></script>
-    
-    <!-- Schema -->
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"ProScholarTools","url":"https://proscholartools.com/","description":"منصة أدوات أكاديمية وبحثية ذكية"}
-    </script>
 </head>
 <body>
 
-    <!-- Loading -->
-    <div class="loader" id="loader"><div class="spinner"></div></div>
+    <!-- ===== LOADER ===== -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
 
-    <!-- Top Bar -->
+    <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="container top-bar-content">
-            <div class="lang-switcher">
-                <button class="lang-btn active" onclick="setLang('ar')">🇸🇦 العربية</button>
-                <button class="lang-btn" onclick="setLang('en')">🇺🇸 English</button>
+            
+            <!-- Language Switcher -->
+            <div class="lang-switcher" role="navigation" aria-label="Language selector">
+                <button class="lang-btn active" onclick="setLang('ar')" data-lang="ar" aria-label="العربية">
+                    <span class="lang-flag">🇸🇦</span>
+                    <span>AR</span>
+                </button>
+                <button class="lang-btn" onclick="setLang('en')" data-lang="en" aria-label="English">
+                    <span class="lang-flag">🇬🇧</span>
+                    <span>EN</span>
+                </button>
+                <button class="lang-btn" onclick="setLang('fr')" data-lang="fr" aria-label="Français">
+                    <span class="lang-flag">🇫🇷</span>
+                    <span>FR</span>
+                </button>
+                <button class="lang-btn" onclick="setLang('es')" data-lang="es" aria-label="Español">
+                    <span class="lang-flag">🇪🇸</span>
+                    <span>ES</span>
+                </button>
+                <button class="lang-btn" onclick="setLang('de')" data-lang="de" aria-label="Deutsch">
+                    <span class="lang-flag">🇩🇪</span>
+                    <span>DE</span>
+                </button>
+                <button class="lang-btn" onclick="setLang('tr')" data-lang="tr" aria-label="Türkçe">
+                    <span class="lang-flag">🇹🇷</span>
+                    <span>TR</span>
+                </button>
             </div>
             
-            <!-- ✅ الأيقونات في أقصى اليمين -->
-            <div class="social-icons">
-                <a href="#" class="social-icon" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon" title="تويتر"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon" title="انستغرام"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon" title="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon" title="تلغرام"><i class="fab fa-telegram-plane"></i></a>
-                <a href="mailto:support@proscholartools.com" class="social-icon" title="بريد إلكتروني"><i class="fas fa-envelope"></i></a>
+            <!-- Social Icons -->
+            <div class="social-icons" role="navigation" aria-label="Social media links">
+                <a href="https://facebook.com/ProScholarTools" class="social-icon" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/ProScholarTools" class="social-icon" target="_blank" rel="noopener" title="Twitter / X" aria-label="Twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://instagram.com/ProScholarTools" class="social-icon" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/company/ProScholarTools" class="social-icon" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://t.me/ProScholarTools" class="social-icon" target="_blank" rel="noopener" title="Telegram" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://youtube.com/@ProScholarTools" class="social-icon" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="mailto:info@proscholartools.com" class="social-icon" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
+            
         </div>
     </div>
 
-    <!-- Header Ad -->
+    <!-- ===== HEADER AD ===== -->
     <div class="container" style="margin-top:20px;">
         <div class="ad-unit">
-            <div class="ad-label">إعلان Google</div>
+            <div class="ad-label" data-i18n="adLabel">إعلان Google</div>
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </div>
 
-    <!-- ✅ Hero with Correct Name: ProScholarTools -->
+    <!-- ===== HERO ===== -->
     <header class="hero">
         <div class="logo-container">
-            <!-- ✅ الاسم الجديد: ProScholarTools -->
             <div class="site-name">Pro<span>Scholar</span>Tools</div>
-            <div class="tagline">
+            <div class="tagline" data-i18n="tagline">
                 منصة <strong>الأدوات الأكاديمية</strong> والبحثية الذكية
             </div>
         </div>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="container">
-        
+
         <!-- Academic Tools -->
         <section>
-            <h2 class="section-title"><i class="fas fa-graduation-cap" style="color:#38bdf8"></i> أدوات أكاديمية</h2>
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                <span data-i18n="academicTools">أدوات أكاديمية</span>
+            </h2>
+            
             <div class="tools-grid">
                 <article class="tool-card" onclick="openTool('writer')">
                     <div class="tool-icon">✍️</div>
-                    <h3>كاتب الأبحاث الذكي</h3>
-                    <p>اكتب مقالات أكاديمية مع المراجع والهيكلة الصحيحة</p>
-                    <button class="btn">ابدأ الكتابة</button>
+                    <h3 data-i18n="writerTitle">كاتب الأبحاث الذكي</h3>
+                    <p data-i18n="writerDesc">اكتب مقالات أكاديمية مع المراجع والهيكلة الصحيحة</p>
+                    <div class="tool-meta">
+                        <span>⚡ <span data-i18n="aiPowered">AI</span></span>
+                        <span>📄 <span data-i18n="words2000">2000+ words</span></span>
+                    </div>
+                    <button class="btn" data-i18n="startWriting">ابدأ الكتابة</button>
                 </article>
 
                 <article class="tool-card" onclick="openTool('plagiarism')">
                     <div class="tool-icon" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">🔍</div>
-                    <h3>فاحص الانتحال</h3>
-                    <p>تحقق من أصالة النصوص والمحتوى البحثي</p>
-                    <button class="btn">فحص النص</button>
+                    <h3 data-i18n="plagiarismTitle">فاحص الانتحال</h3>
+                    <p data-i18n="plagiarismDesc">تحقق من أصالة النصوص والمحتوى البحثي</p>
+                    <div class="tool-meta">
+                        <span>🎯 <span data-i18n="accuracy99">99% accuracy</span></span>
+                        <span>🤖 <span data-i18n="aiDetection">AI Detection</span></span>
+                    </div>
+                    <button class="btn" data-i18n="checkText">فحص النص</button>
                 </article>
 
                 <article class="tool-card" onclick="openTool('references')">
                     <div class="tool-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">📚</div>
-                    <h3>منسق المراجع APA</h3>
-                    <p>نظّم مراجعك البحثية تلقائياً</p>
-                    <button class="btn">نسّق المراجع</button>
+                    <h3 data-i18n="referencesTitle">منسق المراجع APA</h3>
+                    <p data-i18n="referencesDesc">نظّم مراجعك البحثية تلقائياً حسب معايير APA</p>
+                    <div class="tool-meta">
+                        <span>📋 <span data-i18n="apaStyle">APA 7th</span></span>
+                        <span>⚡ <span data-i18n="autoFormat">Auto-format</span></span>
+                    </div>
+                    <button class="btn" data-i18n="formatRefs">نسّق المراجع</button>
                 </article>
             </div>
         </section>
 
         <!-- Financial Tools -->
         <section>
-            <h2 class="section-title"><i class="fas fa-calculator" style="color:#22c55e"></i> أدوات مالية</h2>
+            <h2 class="section-title">
+                <i class="fas fa-calculator"></i>
+                <span data-i18n="financialTools">أدوات مالية</span>
+            </h2>
+            
             <div class="tools-grid">
                 <article class="tool-card" onclick="openTool('loan')">
                     <div class="tool-icon" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🏦</div>
-                    <h3>حاسبة القروض</h3>
-                    <p>احسب الأقساط والفوائد المركبة</p>
-                    <button class="btn">احسب الآن</button>
+                    <h3 data-i18n="loanTitle">حاسبة القروض</h3>
+                    <p data-i18n="loanDesc">احسب الأقساط والفوائد المركبة بسهولة</p>
+                    <div class="tool-meta">
+                        <span>📊 <span data-i18n="amortization">Amortization</span></span>
+                        <span>💰 <span data-i18n="compoundInterest">Compound</span></span>
+                    </div>
+                    <button class="btn" data-i18n="calculateNow">احسب الآن</button>
                 </article>
 
                 <article class="tool-card" onclick="openTool('gpa')">
                     <div class="tool-icon" style="background:linear-gradient(135deg,#c084fc,#9333ea)">📊</div>
-                    <h3>حاسبة GPA</h3>
-                    <p>احسب معدلك التراكمي في جميع الأنظمة</p>
-                    <button class="btn">احسب المعدل</button>
+                    <h3 data-i18n="gpaTitle">حاسبة GPA</h3>
+                    <p data-i18n="gpaDesc">احسب معدلك التراكمي في جميع أنظمة التقييم</p>
+                    <div class="tool-meta">
+                        <span>🎓 <span data-i18n="allSystems">4.0/5.0/100%</span></span>
+                        <span>📈 <span data-i18n="cumulative">Cumulative</span></span>
+                    </div>
+                    <button class="btn" data-i18n="calculateGPA">احسب المعدل</button>
                 </article>
             </div>
         </section>
 
-        <!-- Mid Ad -->
-        <div class="ad-unit" style="margin:40px auto;">
+        <!-- File Tools -->
+        <section>
+            <h2 class="section-title">
+                <i class="fas fa-file-alt"></i>
+                <span data-i18n="fileTools">أدوات الملفات</span>
+            </h2>
+            
+            <div class="tools-grid">
+                <article class="tool-card" onclick="openTool('pdf')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)">📄</div>
+                    <h3 data-i18n="pdfTitle">أدوات PDF</h3>
+                    <p data-i18n="pdfDesc">دمج، تقسيم، ضغط وتحويل ملفات PDF</p>
+                    <div class="tool-meta">
+                        <span>🔀 <span data-i18n="mergeSplit">Merge/Split</span></span>
+                        <span>🗜️ <span data-i18n="compress">Compress</span></span>
+                    </div>
+                    <button class="btn" data-i18n="openTools">أدخل الأدوات</button>
+                </article>
+
+                <article class="tool-card" onclick="openTool('image')">
+                    <div class="tool-icon" style="background:linear-gradient(135deg,#fb923c,#ea580c)">🖼️</div>
+                    <h3 data-i18n="imageTitle">تحويل الصور</h3>
+                    <p data-i18n="imageDesc">حول الصور بين الصيغ مع ضغط ذكي</p>
+                    <div class="tool-meta">
+                        <span>🔄 <span data-i18n="allFormats">PNG/JPG/WebP</span></span>
+                        <span>⚡ <span data-i18n="smartCompress">Smart</span></span>
+                    </div>
+                    <button class="btn" data-i18n="convertImage">حوّل الصورة</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Mid Page Ad -->
+        <div class="ad-unit" style="margin:50px auto;">
+            <div class="ad-label" data-i18n="adLabel">إعلان Google</div>
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6119422909390809" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
     </main>
 
-    <!-- ✅ Footer with Required Pages -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 
                 <div class="footer-section">
-                    <h4>عن ProScholarTools</h4>
-                    <p>منصة متخصصة في تقديم الأدوات الذكية للباحثين والطلاب. نسعى لتبسيط العمليات البحثية باستخدام أحدث التقنيات.</p>
+                    <h4><i class="fas fa-info-circle"></i> <span data-i18n="aboutTitle">عن ProScholarTools</span></h4>
+                    <p data-i18n="aboutDesc">منصة متخصصة في تقديم الأدوات الذكية للباحثين والطلاب والأكاديميين. نسعى لتبسيط العمليات البحثية باستخدام أحدث التقنيات.</p>
                 </div>
 
                 <div class="footer-section">
-                    <h4>روابط سريعة</h4>
+                    <h4><i class="fas fa-link"></i> <span data-i18n="quickLinks">روابط سريعة</span></h4>
                     <ul class="footer-links">
-                        <li><a href="/"><i class="fas fa-home"></i> الرئيسية</a></li>
-                        <li><a href="/blog/"><i class="fas fa-blog"></i> المدونة</a></li>
-                        <li><a href="/contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                        <li>
+                            <a href="/">
+                                <i class="fas fa-home"></i>
+                                <span data-i18n="home">الرئيسية</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/">
+                                <i class="fas fa-blog"></i>
+                                <span data-i18n="blog">المدونة</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@proscholartools.com">
+                                <i class="fas fa-envelope"></i>
+                                <span data-i18n="contactUs">اتصل بنا</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- ✅ الصفحات المطلوبة لـ AdSense -->
                 <div class="footer-section required-pages">
-                    <h5><i class="fas fa-shield-alt"></i> صفحات مطلوبة</h5>
+                    <h5><i class="fas fa-shield-alt"></i> <span data-i18n="requiredPages">صفحات مطلوبة</span></h5>
                     <ul class="footer-links">
                         <li>
                             <a href="/privacy-policy.html">
-                                <span class="badge-required">مطلوب</span>
-                                <i class="fas fa-lock"></i> سياسة الخصوصية
+                                <span class="badge-required" data-i18n="requiredBadge">مطلوب</span>
+                                <i class="fas fa-lock"></i>
+                                <span data-i18n="privacyPolicy">سياسة الخصوصية</span>
                             </a>
                         </li>
                         <li>
                             <a href="/terms.html">
-                                <span class="badge-required">مطلوب</span>
-                                <i class="fas fa-file-contract"></i> شروط الخدمة
+                                <span class="badge-required" data-i18n="requiredBadge">مطلوب</span>
+                                <i class="fas fa-file-contract"></i>
+                                <span data-i18n="termsOfService">شروط الخدمة</span>
                             </a>
                         </li>
                         <li>
                             <a href="/cookie-policy.html">
-                                <span class="badge-required">مطلوب</span>
-                                <i class="fas fa-cookie-bite"></i> سياسة الكوكيز
+                                <span class="badge-required" data-i18n="requiredBadge">مطلوب</span>
+                                <i class="fas fa-cookie-bite"></i>
+                                <span data-i18n="cookiePolicy">سياسة الكوكيز</span>
                             </a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>تواصل معنا</h4>
+                    <h4><i class="fas fa-address-card"></i> <span data-i18n="contactInfo">تواصل معنا</span></h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:support@proscholartools.com"><i class="fas fa-envelope"></i> support@proscholartools.com</a></li>
+                        <li>
+                            <a href="mailto:info@proscholartools.com">
+                                <i class="fas fa-envelope"></i>
+                                info@proscholartools.com
+                            </a>
+                        </li>
                     </ul>
-                    <div style="margin-top:15px;display:flex;gap:10px;">
-                        <a href="#" class="social-icon" style="width:38px;height:38px"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon" style="width:38px;height:38px"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" style="width:38px;height:38px"><i class="fab fa-instagram"></i></a>
+                    
+                    <div class="social-icons" style="margin-top:20px;">
+                        <a href="https://facebook.com/ProScholarTools" class="social-icon" style="width:40px;height:40px;" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/ProScholarTools" class="social-icon" style="width:40px;height:40px;" target="_blank" title="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/ProScholarTools" class="social-icon" style="width:40px;height:40px;" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@ProScholarTools" class="social-icon" style="width:40px;height:40px;" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
                 
             </div>
 
-            <!-- ✅ Copyright with ProScholarTools -->
             <div class="copyright">
-                <p>© 2025 <strong>ProScholarTools</strong>. جميع الحقوق محفوظة.</p>
+                <p>© 2025 <strong>ProScholarTools</strong>. <span data-i18n="allRightsReserved">جميع الحقوق محفوظة</span>.</p>
                 <div class="adsense-notice">
-                    هذا الموقع يستخدم Google AdSense | 
-                    <a href="/privacy-policy.html">سياسة الخصوصية</a> | 
-                    <a href="/cookie-policy.html">ملفات الكوكيز</a>
+                    <span data-i18n="usesAdSense">هذا الموقع يستخدم Google AdSense</span> | 
+                    <a href="/privacy-policy.html" data-i18n="privacy">سياسة الخصوصية</a> | 
+                    <a href="/cookie-policy.html" data-i18n="cookies">ملفات الكوكيز</a>
                 </div>
             </div>
             
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- ===== MODAL ===== -->
     <div id="modal-overlay" onclick="if(event.target===this)closeModal()">
         <div id="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
-            <div id="modal-body" style="padding:40px 30px 30px"></div>
+            <div id="modal-body"></div>
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- ===== MULTILINGUAL SYSTEM ===== -->
     <script>
-        // Hide loader
-        window.addEventListener('load', () => {
-            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 500);
-        });
-
-        // Language
-        function setLang(lang) {
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.includes(lang==='ar'?'العربية':'English'));
-            });
-        }
-
-        // Modal functions
-        function openTool(tool) {
-            const modal = document.getElementById('modal-overlay');
-            const body = document.getElementById('modal-body');
+        // ==================== TRANSLATIONS ====================
+        const translations = {
+            ar: {
+                // Meta
+                pageTitle: "ProScholarTools | منصة الأدوات الأكاديمية والبحثية الذكية",
+                metaDesc: "ProScholarTools - منصة متكاملة للأدوات الأكاديمية والبحثية. فاحص انتحال، حاسبة GPA، أدوات PDF.",
+                
+                // UI
+                adLabel: "إعلان Google",
+                tagline: "منصة <strong>الأدوات الأكاديمية</strong> والبحثية الذكية",
+                
+                // Sections
+                academicTools: "أدوات أكاديمية",
+                financialTools: "أدوات مالية",
+                fileTools: "أدوات الملفات",
+                
+                // Tools
+                writerTitle: "كاتب الأبحاث الذكي",
+                writerDesc: "اكتب مقالات أكاديمية مع المراجع والهيكلة الصحيحة",
+                aiPowered: "ذكاء اصطناعي",
+                words2000: "2000+ كلمة",
+                startWriting: "ابدأ الكتابة",
+                
+                plagiarismTitle: "فاحص الانتحال",
+                plagiarismDesc: "تحقق من أصالة النصوص والمحتوى البحثي",
+                accuracy99: "دقة 99%",
+                aiDetection: "كشف AI",
+                checkText: "فحص النص",
+                
+                referencesTitle: "منسق المراجع APA",
+                referencesDesc: "نظّم مراجعك البحثية تلقائياً حسب معايير APA",
+                apaStyle: "APA الإصدار 7",
+                autoFormat: "تنسيق تلقائي",
+                formatRefs: "نسّق المراجع",
+                
+                loanTitle: "حاسبة القروض",
+                loanDesc: "احسب الأقساط والفوائد المركبة بسهولة",
+                amortization: "جدول استهلاك",
+                compoundInterest: "فائدة مركبة",
+                calculateNow: "احسب الآن",
+                
+                gpaTitle: "حاسبة GPA",
+                gpaDesc: "احسب معدلك التراكمي في جميع أنظمة التقييم",
+                allSystems: "4.0/5.0/100%",
+                cumulative: "تراكمي",
+                calculateGPA: "احسب المعدل",
+                
+                pdfTitle: "أدوات PDF",
+                pdfDesc: "دمج، تقسيم، ضغط وتحويل ملفات PDF",
+                mergeSplit: "دمج/تقسيم",
+                compress: "ضغط",
+                openTools: "أدخل الأدوات",
+                
+                imageTitle: "تحويل الصور",
+                imageDesc: "حول الصور بين الصيغ مع ضغط ذكي",
+                allFormats: "PNG/JPG/WebP",
+                smartCompress: "ضغط ذكي",
+                convertImage: "حوّل الصورة",
+                
+                // Footer
+                aboutTitle: "عن ProScholarTools",
+                aboutDesc: "منصة متخصصة في تقديم الأدوات الذكية للباحثين والطلاب والأكاديميين. نسعى لتبسيط العمليات البحثية باستخدام أحدث التقنيات.",
+                quickLinks: "روابط سريعة",
+                home: "الرئيسية",
+                blog: "المدونة",
+                contactUs: "اتصل بنا",
+                requiredPages: "صفحات مطلوبة",
+                requiredBadge: "مطلوب",
+                privacyPolicy: "سياسة الخصوصية",
+                termsOfService: "شروط الخدمة",
+                cookiePolicy: "سياسة الكوكيز",
+                contactInfo: "تواصل معنا",
+                allRightsReserved: "جميع الحقوق محفوظة",
+                usesAdSense: "هذا الموقع يستخدم Google AdSense",
+                privacy: "سياسة الخصوصية",
+                cookies: "ملفات الكوكيز",
+                
+                // Modal placeholders
+                topicPlaceholder: "عنوان البحث...",
+                requirementsPlaceholder: "المتطلبات...",
+                pasteTextHere: "الصق النص هنا...",
+                amountUSD: "المبلغ ($)",
+                interestRate: "نسبة الفائدة (%)",
+                years: "السنوات",
+                courseName: "المادة",
+                grade: "الدرجة",
+                credits: "الساعات",
+                addCourse: "+ إضافة مادة",
+                
+                // Buttons
+                generateContent: "🚀 إنشاء المحتوى",
+                analyze: "🔍 تحليل",
+                check: "🔍 فحص",
+                calculate: "🧮 احسب",
+                close: "إغلاق",
+                
+                // Results
+                monthlyPayment: "القسط الشهري",
+                totalInterest: "إجمالي الفائدة",
+                totalPayment: "الإجمالي الكلي",
+                gpaResult: "المعدل التراكمي",
+                originalityScore: "نسبة الأصالة",
+                aiProbability: "احتمالية AI"
+            },
             
-            const contents = {
-                writer: `<h2 style="color:#38bdf8;margin-bottom:20px">✍️ كاتب الأبحاث</h2>
-                        <input id="w-title" style="width:100%;padding:12px;margin-bottom:15px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="عنوان البحث...">
-                        <textarea id="w-desc" rows="4" style="width:100%;padding:12px;margin-bottom:15px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="المتطلبات..."></textarea>
-                        <button class="btn" onclick="alert('جاري الاتصال بالخادم...')">🚀 إنشاء المحتوى</button>`,
-                        
-                plagiarism: `<h2 style="color:#3b82f6;margin-bottom:20px">🔍 فاحص الانتحال</h2>
-                            <textarea id="p-text" rows="6" style="width:100%;padding:12px;margin-bottom:15px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="الصق النص هنا..."></textarea>
-                            <button class="btn" style="background:linear-gradient(135deg,#3b82f6,#2563eb);color:white" onclick="alert('جاري الفحص...')">🔍 فحص النص</button>`,
-                            
-                loan: `<h2 style="color:#22c55e;margin-bottom:20px">🏦 حاسبة القروض</h2>
-                       <input type="number" id="l-amount" style="width:100%;padding:12px;margin-bottom:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="المبلغ ($)">
-                       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px">
-                           <input type="number" id="l-rate" style="padding:12px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="الفائدة %" step="0.1">
-                           <input type="number" id="l-years" style="padding:12px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" placeholder="السنوات">
-                       </div>
-                       <button class="btn" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white" onclick="calcLoan()">🧮 احسب</button>
-                       <div id="l-res" style="display:none;margin-top:20px;padding:20px;background:#0f172a;border-radius:10px;text-align:center">
-                           <div style="font-size:2rem;color:#38bdf8;font-weight:800" id="l-monthly">\$0</div>
-                           <div style="color:#94a3b8">القسط الشهري</div>
-                       </div>`,
-                       
-                gpa: `<h2 style="color:#c084fc;margin-bottom:20px">📊 حاسبة GPA</h2>
-                      <div id="grade-rows">
-                          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-bottom:10px">
-                              <input placeholder="المادة" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white">
-                              <input type="number" placeholder="الدرجة" class="g-grade" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white">
-                              <input type="number" placeholder="الساعات" class="g-credit" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" value="3">
-                          </div>
-                      </div>
-                      <button onclick="addGradeRow()" style="width:100%;padding:10px;margin-bottom:15px;background:transparent;border:1px dashed #334155;color:#94a3b8;border-radius:8px;cursor:pointer">+ إضافة مادة</button>
-                      <button class="btn" style="background:linear-gradient(135deg,#c084fc,#9333ea);color:white" onclick="calcGPA()">📊 احسب المعدل</button>
-                      <div id="gpa-res" style="display:none;margin-top:20px;padding:20px;background:#0f172a;border-radius:10px;text-align:center">
-                          <div style="font-size:3rem;color:#c084fc;font-weight:800" id="gpa-val">0.00</div>
-                          <div style="color:#94a3b8">المعدل التراكمي</div>
-                      </div>`,
-                      
-                default: `<h2 style="color:#38bdf8">قيد التطوير</h2><p style="color:#94a3b8;text-align:center">سيتم إضافة هذه الأداة قريباً</p>`
-            };
+            en: {
+                // Meta
+                pageTitle: "ProScholarTools | Smart Academic & Research Tools Platform",
+                metaDesc: "ProScholarTools - Complete platform for academic and research tools. Plagiarism checker, GPA calculator, PDF tools.",
+                
+                // UI
+                adLabel: "Google Ad",
+                tagline: "Smart platform for <strong>academic</strong> and research tools",
+                
+                // Sections
+                academicTools: "Academic Tools",
+                financialTools: "Financial Tools",
+                fileTools: "File Tools",
+                
+                // Tools
+                writerTitle: "AI Research Writer",
+                writerDesc: "Write academic papers with proper references and structure",
+                aiPowered: "AI Powered",
+                words2000: "2000+ words",
+                startWriting: "Start Writing",
+                
+                plagiarismTitle: "Plagiarism Checker",
+                plagiarismDesc: "Verify text authenticity and research content",
+                accuracy99: "99% Accuracy",
+                aiDetection: "AI Detection",
+                checkText: "Check Text",
+                
+                referencesTitle: "APA Reference Manager",
+                referencesDesc: "Automatically format your research references per APA",
+                apaStyle: "APA 7th Ed.",
+                autoFormat: "Auto-format",
+                formatRefs: "Format References",
+                
+                loanTitle: "Loan Calculator",
+                loanDesc: "Calculate installments and compound interest easily",
+                amortization: "Amortization",
+                compoundInterest: "Compound",
+                calculateNow: "Calculate Now",
+                
+                gpaTitle: "GPA Calculator",
+                gpaDesc: "Calculate your cumulative GPA in all grading systems",
+                allSystems: "4.0/5.0/100%",
+                cumulative: "Cumulative",
+                calculateGPA: "Calculate GPA",
+                
+                pdfTitle: "PDF Tools",
+                pdfDesc: "Merge, split, compress and convert PDF files",
+                mergeSplit: "Merge/Split",
+                compress: "Compress",
+                openTools: "Open Tools",
+                
+                imageTitle: "Image Converter",
+                imageDesc: "Convert images between formats with smart compression",
+                allFormats: "PNG/JPG/WebP",
+                smartCompress: "Smart",
+                convertImage: "Convert Image",
+                
+                // Footer
+                aboutTitle: "About ProScholarTools",
+                aboutDesc: "Specialized platform providing smart tools for researchers, students, and academics. We aim to simplify research processes using latest technologies.",
+                quickLinks: "Quick Links",
+                home: "Home",
+                blog: "Blog",
+                contactUs: "Contact Us",
+                requiredPages: "Required Pages",
+                requiredBadge: "REQUIRED",
+                privacyPolicy: "Privacy Policy",
+                termsOfService: "Terms of Service",
+                cookiePolicy: "Cookie Policy",
+                contactInfo: "Contact Info",
+                allRightsReserved: "All Rights Reserved",
+                usesAdSense: "This site uses Google AdSense",
+                privacy: "Privacy",
+                cookies: "Cookies",
+                
+                // Modal placeholders
+                topicPlaceholder: "Research topic...",
+                requirementsPlaceholder: "Requirements...",
+                pasteTextHere: "Paste text here...",
+                amountUSD: "Amount ($)",
+                interestRate: "Interest rate (%)",
+                years: "Years",
+                courseName: "Course name",
+                grade: "Grade",
+                credits: "Credits",
+                addCourse: "+ Add course",
+                
+                // Buttons
+                generateContent: "🚀 Generate Content",
+                analyze: "🔍 Analyze",
+                check: "🔍 Check",
+                calculate: "🧮 Calculate",
+                close: "Close",
+                
+                // Results
+                monthlyPayment: "Monthly Payment",
+                totalInterest: "Total Interest",
+                totalPayment: "Total Payment",
+                gpaResult: "GPA",
+                originalityScore: "Originality Score",
+                aiProbability: "AI Probability"
+            },
             
-            body.innerHTML = contents[tool] || contents.default;
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('modal-overlay').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Calculator functions
-        function calcLoan() {
-            const P = parseFloat(document.getElementById('l-amount').value) || 0;
-            const r = (parseFloat(document.getElementById('l-rate').value) || 0) / 100 / 12;
-            const n = (parseFloat(document.getElementById('l-years').value) || 0) * 12;
-            if(P && r && n) {
-                const monthly = P * (r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
-                document.getElementById('l-monthly').textContent = '$' + monthly.toFixed(2);
-                document.getElementById('l-res').style.display = 'block';
+            fr: {
+                pageTitle: "ProScholarTools | Plateforme d'Outils Académiques Intelligents",
+                metaDesc: "ProScholarTools - Plateforme complète pour outils académiques. Vérificateur de plagiat, calculateur de GPA, outils PDF.",
+                adLabel: "Publicité Google",
+                tagline: "Plateforme intelligente pour <strong>outils académiques</strong> et de recherche",
+                academicTools: "Outils Académiques",
+                financialTools: "Outils Financiers",
+                fileTools: "Outils de Fichiers",
+                writerTitle: "Rédacteur de Recherches IA",
+                writerDesc: "Rédigez des articles académiques avec références et structure",
+                aiPowered: "IA",
+                words2000: "2000+ mots",
+                startWriting: "Commencer",
+                plagiarismTitle: "Vérificateur de Plagiat",
+                plagiarismDesc: "Vérifiez l'authenticité des textes et contenus",
+                accuracy99: "99% Précision",
+                aiDetection: "Détection IA",
+                checkText: "Vérifier",
+                referencesTitle: "Gestionnaire APA",
+                referencesDesc: "Formatez automatiquement vos références selon APA",
+                apaStyle: "APA 7e Éd.",
+                autoFormat: "Auto-format",
+                formatRefs: "Formater",
+                loanTitle: "Calculateur de Prêt",
+                loanDesc: "Calculez les mensualités et intérêts composés",
+                amortization: "Amortissement",
+                compoundInterest: "Composé",
+                calculateNow: "Calculer",
+                gpaTitle: "Calculateur GPA",
+                gpaDesc: "Calculez votre GPA cumulé dans tous les systèmes",
+                allSystems: "4.0/5.0/100%",
+                cumulative: "Cumulé",
+                calculateGPA: "Calculer GPA",
+                pdfTitle: "Outils PDF",
+                pdfDesc: "Fusionner, diviser, compresser et convertir PDF",
+                mergeSplit: "Fusion/Diviser",
+                compress: "Compresser",
+                openTools: "Ouvrir",
+                imageTitle: "Convertisseur d'Images",
+                imageDesc: "Convertissez images avec compression intelligente",
+                allFormats: "PNG/JPG/WebP",
+                smartCompress: "Intelligent",
+                convertImage: "Convertir",
+                aboutTitle: "À Propos",
+                aboutDesc: "Plateforme spécialisée en outils intelligents pour chercheurs et étudiants.",
+                quickLinks: "Liens Rapides",
+                home: "Accueil",
+                blog: "Blog",
+                contactUs: "Contact",
+                requiredPages: "Pages Requises",
+                requiredBadge: "REQUIS",
+                privacyPolicy: "Politique de Confidentialité",
+                termsOfService: "Conditions d'Utilisation",
+                cookiePolicy: "Politique des Cookies",
+                contactInfo: "Contact",
+                allRightsReserved: "Tous Droits Réservés",
+                usesAdSense: "Ce site utilise Google AdSense",
+                privacy: "Confidentialité",
+                cookies: "Cookies",
+                topicPlaceholder: "Sujet de recherche...",
+                requirementsPlaceholder: "Exigences...",
+                pasteTextHere: "Collez le texte ici...",
+                amountUSD: "Montant ($)",
+                interestRate: "Taux d'intérêt (%)",
+                years: "Années",
+                courseName: "Cours",
+                grade: "Note",
+                credits: "Crédits",
+                addCourse: "+ Ajouter cours",
+                generateContent: "🚀 Générer",
+                analyze: "🔍 Analyser",
+                check: "🔍 Vérifier",
+                calculate: "🧮 Calculer",
+                close: "Fermer",
+                monthlyPayment: "Mensualité",
+                totalInterest: "Intérêts Totaux",
+                totalPayment: "Paiement Total",
+                gpaResult: "GPA",
+                originalityScore: "Score d'Originalité",
+                aiProbability: "Probabilité IA"
+            },
+            
+            es: {
+                pageTitle: "ProScholarTools | Plataforma de Herramientas Académicas Inteligentes",
+                metaDesc: "ProScholarTools - Plataforma completa de herramientas académicas. Verificador de plagio, calculadora GPA, herramientas PDF.",
+                adLabel: "Anuncio de Google",
+                tagline: "Plataforma inteligente para <strong>herramientas académicas</strong> de investigación",
+                academicTools: "Herramientas Académicas",
+                financialTools: "Herramientas Financieras",
+                fileTools: "Herramientas de Archivos",
+                writerTitle: "Escritor de Investigación IA",
+                writerDesc: "Escriba artículos académicos con referencias y estructura",
+                aiPowered: "IA",
+                words2000: "2000+ palabras",
+                startWriting: "Comenzar",
+                plagiarismTitle: "Verificador de Plagio",
+                plagiarismDesc: "Verifique autenticidad de textos y contenido",
+                accuracy99: "99% Precisión",
+                aiDetection: "Detección IA",
+                checkText: "Verificar",
+                referencesTitle: "Gestor APA",
+                referencesDesc: "Formatee referencias automáticamente según APA",
+                apaStyle: "APA 7ª Ed.",
+                autoFormat: "Auto-formato",
+                formatRefs: "Formatear",
+                loanTitle: "Calculadora de Préstamos",
+                loanDesc: "Calcule cuotas e interés compuesto fácilmente",
+                amortization: "Amortización",
+                compoundInterest: "Compuesto",
+                calculateNow: "Calcular",
+                gpaTitle: "Calculadora GPA",
+                gpaDesc: "Calcule su GPA acumulativo en todos los sistemas",
+                allSystems: "4.0/5.0/100%",
+                cumulative: "Acumulativo",
+                calculateGPA: "Calcular GPA",
+                pdfTitle: "Herramientas PDF",
+                pdfDesc: "Fusionar, dividir, comprimir y convertir PDF",
+                mergeSplit: "Fusionar/Dividir",
+                compress: "Comprimir",
+                openTools: "Abrir",
+                imageTitle: "Conversor de Imágenes",
+                imageDesc: "Convierta imágenes con compresión inteligente",
+                allFormats: "PNG/JPG/WebP",
+                smartCompress: "Inteligente",
+                convertImage: "Convertir",
+                aboutTitle: "Acerca de",
+                aboutDesc: "Plataforma especializada en herramientas inteligentes para investigadores y estudiantes.",
+                quickLinks: "Enlaces Rápidos",
+                home: "Inicio",
+                blog: "Blog",
+                contactUs: "Contacto",
+                requiredPages: "Páginas Requeridas",
+                requiredBadge: "REQUERIDO",
+                privacyPolicy: "Política de Privacidad",
+                termsOfService: "Términos de Servicio",
+                cookiePolicy: "Política de Cookies",
+                contactInfo: "Información de Contacto",
+                allRightsReserved: "Todos los Derechos Reservados",
+                usesAdSense: "Este sitio usa Google AdSense",
+                privacy: "Privacidad",
+                cookies: "Cookies",
+                topicPlaceholder: "Tema de investigación...",
+                requirementsPlaceholder: "Requisitos...",
+                pasteTextHere: "Pegue texto aquí...",
+                amountUSD: "Monto ($)",
+                interestRate: "Tasa de interés (%)",
+                years: "Años",
+                courseName: "Curso",
+                grade: "Calificación",
+                credits: "Créditos",
+                addCourse: "+ Añadir curso",
+                generateContent: "🚀 Generar",
+                analyze: "🔍 Analizar",
+                check: "🔍 Verificar",
+                calculate: "🧮 Calcular",
+                close: "Cerrar",
+                monthlyPayment: "Pago Mensual",
+                totalInterest: "Interés Total",
+                totalPayment: "Pago Total",
+                gpaResult: "GPA",
+                originalityScore: "Puntaje de Originalidad",
+                aiProbability: "Probabilidad IA"
+            },
+            
+            de: {
+                pageTitle: "ProScholarTools | Intelligente Akademische Tools Plattform",
+                metaDesc: "ProScholarTools - Komplette Plattform für akademische Tools. Plagiatsprüfer, GPA-Rechner, PDF-Tools.",
+                adLabel: "Google Anzeige",
+                tagline: "Intelligente Plattform für <strong>akademische</strong> Forschungstools",
+                academicTools: "Akademische Tools",
+                financialTools: "Finanz-Tools",
+                fileTools: "Datei-Tools",
+                writerTitle: "KI-Forschungsschreiber",
+                writerDesc: "Schreiben Sie akademische Arbeiten mit Referenzen und Struktur",
+                aiPowered: "KI",
+                words2000: "2000+ Wörter",
+                startWriting: "Starten",
+                plagiarismTitle: "Plagiatsprüfer",
+                plagiarismDesc: "Überprüfen Sie Textauthentizität und Forschungsinhalt",
+                accuracy99: "99% Genauigkeit",
+                aiDetection: "KI-Erkennung",
+                checkText: "Prüfen",
+                referencesTitle: "APA-Manager",
+                referencesDesc: "Formatieren Sie Referenzen automatisch nach APA",
+                apaStyle: "APA 7. Aufl.",
+                autoFormat: "Auto-Format",
+                formatRefs: "Formatieren",
+                loanTitle: "Darlehensrechner",
+                loanDesc: "Berechnen Sie Raten und Zinseszins einfach",
+                amortization: "Tilgung",
+                compoundInterest: "Zinseszins",
+                calculateNow: "Berechnen",
+                gpaTitle: "GPA-Rechner",
+                gpaDesc: "Berechnen Sie Ihren GPA in allen Bewertungssystemen",
+                allSystems: "4.0/5.0/100%",
+                cumulative: "Kumulativ",
+                calculateGPA: "GPA Berechnen",
+                pdfTitle: "PDF-Tools",
+                pdfDesc: "Zusammenführen, teilen, komprimieren und konvertieren",
+                mergeSplit: "Zusammen/Teilen",
+                compress: "Komprimieren",
+                openTools: "Öffnen",
+                imageTitle: "Bildkonverter",
+                imageDesc: "Konvertieren Sie Bilder mit intelligenter Kompression",
+                allFormats: "PNG/JPG/WebP",
+                smartCompress: "Intelligent",
+                convertImage: "Konvertieren",
+                aboutTitle: "Über Uns",
+                aboutDesc: "Spezialisierte Plattform für intelligente Tools für Forscher und Studenten.",
+                quickLinks: "Schnelllinks",
+                home: "Startseite",
+                blog: "Blog",
+                contactUs: "Kontakt",
+                requiredPages: "Erforderliche Seiten",
+                requiredBadge: "ERFORDERLICH",
+                privacyPolicy: "Datenschutzrichtlinie",
+                termsOfService: "Nutzungsbedingungen",
+                cookiePolicy: "Cookie-Richtlinie",
+                contactInfo: "Kontaktinformationen",
+                allRightsReserved: "Alle Rechte Vorbehalten",
+                usesAdSense: "Diese Seite verwendet Google AdSense",
+                privacy: "Datenschutz",
+                cookies: "Cookies",
+                topicPlaceholder: "Forschungsthema...",
+                requirementsPlaceholder: "Anforderungen...",
+                pasteTextHere: "Text hier einfügen...",
+                amountUSD: "Betrag ($)",
+                interestRate: "Zinssatz (%)",
+                years: "Jahre",
+                courseName: "Kurs",
+                grade: "Note",
+                credits: "Credits",
+                addCourse: "+ Kurs hinzufügen",
+                generateContent: "🚀 Generieren",
+                analyze: "🔍 Analysieren",
+                check: "🔍 Prüfen",
+                calculate: "🧮 Berechnen",
+                close: "Schließen",
+                monthlyPayment: "Monatliche Rate",
+                totalInterest: "Gesamtzinsen",
+                totalPayment: "Gesamtzahlung",
+                gpaResult: "GPA",
+                originalityScore: "Originalitätswert",
+                aiProbability: "KI-Wahrscheinlichkeit"
+            },
+            
+            tr: {
+                pageTitle: "ProScholarTools | Akıllı Akademik Araçlar Platformu",
+                metaDesc: "ProScholarTools - Akademik araçlar için eksiksiz platform. İntihal denetleyicisi, GPA hesaplayıcı, PDF araçları.",
+                adLabel: "Google Reklamı",
+                tagline: "<strong>Akademik</strong> ve araştırma araçları için akıllı platform",
+                academicTools: "Akademik Araçlar",
+                financialTools: "Finansal Araçlar",
+                fileTools: "Dosya Araçları",
+                writerTitle: "AI Araştırma Yazarı",
+                writerDesc: "Referanslar ve yapı ile akademik makaleler yazın",
+                aiPowered: "AI",
+                words2000: "2000+ kelime",
+                startWriting: "Başla",
+                plagiarismTitle: "İntihal Denetleyicisi",
+                plagiarismDesc: "Metin ve içerik orijinalliğini doğrulayın",
+                accuracy99: "%99 Doğruluk",
+                aiDetection: "AI Tespiti",
+                checkText: "Kontrol Et",
+                referencesTitle: "APA Yöneticisi",
+                referencesDesc: "Referanslarınızı APA'ya göre otomatik formatlayın",
+                apaStyle: "APA 7. Baskı",
+                autoFormat: "Oto-format",
+                formatRefs: "Formatla",
+                loanTitle: "Kredi Hesaplayıcı",
+                loanDesc: "Taksitleri ve bileşik faizi kolayca hesaplayın",
+                amortization: "Amortisman",
+                compoundInterest: "Bileşik Faiz",
+                calculateNow: "Hesapla",
+                gpaTitle: "GPA Hesaplayıcı",
+                gpaDesc: "Tüm not sistemlerinde GPA'nizi hesaplayın",
+                allSystems: "4.0/5.0/100%",
+                cumulative: "Kümülatif",
+                calculateGPA: "GPA Hesapla",
+                pdfTitle: "PDF Araçları",
+                pdfDesc: "PDF birleştirme, bölme, sıkıştırma ve dönüştürme",
+                mergeSplit: "Birleştir/Böl",
+                compress: "Sıkıştır",
+                openTools: "Aç",
+                imageTitle: "Görüntü Dönüştürücü",
+                imageDesc: "Akıllı sıkıştırma ile görüntüleri dönüştürün",
+                allFormats: "PNG/JPG/WebP",
+                smartCompress: "Akıllı",
+                convertImage: "Dönüştür",
+                aboutTitle: "Hakkımızda",
+                aboutDesc: "Araştırmacılar ve öğrenciler için akıllı araçlar sunan uzmanlaşmış platform.",
+                quickLinks: "Hızlı Bağlantılar",
+                home: "Ana Sayfa",
+                blog: "Blog",
+                contactUs: "İletişim",
+                requiredPages: "Gerekli Sayfalar",
+                requiredBadge: "ZORUNLU",
+                privacyPolicy: "Gizlilik Politikası",
+                termsOfService: "Kullanım Şartları",
+                cookiePolicy: "Çerez Politikası",
+                contactInfo: "İletişim Bilgileri",
+                allRightsReserved: "Tüm Hakları Saklıdır",
+                usesAdSense: "Bu site Google AdSense kullanır",
+                privacy: "Gizlilik",
+                cookies: "Çerezler",
+                topicPlaceholder: "Araştırma konusu...",
+                requirementsPlaceholder: "Gereksinimler...",
+                pasteTextHere: "Metni buraya yapıştırın...",
+                amountUSD: "Tutar ($)",
+                interestRate: "Faiz oranı (%)",
+                years: "Yıl",
+                courseName: "Ders",
+                grade: "Not",
+                credits: "Kredi",
+                addCourse: "+ Ders ekle",
+                generateContent: "🚀 Oluştur",
+                analyze: "🔍 Analiz Et",
+                check: "🔍 Kontrol Et",
+                calculate: "🧮 Hesapla",
+                close: "Kapat",
+                monthlyPayment: "Aylık Ödeme",
+                totalInterest: "Toplam Faiz",
+                totalPayment: "Toplam Ödeme",
+                gpaResult: "GPA",
+                originalityScore: "Orijinallik Skoru",
+                aiProbability: "AI Olasılığı"
             }
-        }
+        };
 
-        function addGradeRow() {
-            const row = document.createElement('div');
-            row.style.cssText = 'display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-bottom:10px';
-            row.innerHTML = `<input placeholder="المادة" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white"><input type="number" placeholder="الدرجة" class="g-grade" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white"><input type="number" placeholder="الساعات" class="g-credit" style="padding:10px;background:#0f172a;border:1px solid #334155;border-radius:8px;color:white" value="3">`;
-            document.getElementById('grade-rows').appendChild(row);
+        // ==================== LANGUAGE SYSTEM ====================
+        
+        let currentLang = 'ar';
+        
+        // Detect language from URL or localStorage
+        function initLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('proscholar-lang');
+            
+            const lang = urlLang || savedLang || 'ar';
+            setLang(lang, false);
         }
-
-        function calcGPA() {
-            const grades = document.querySelectorAll('.g-grade');
-            const credits = document.querySelectorAll('.g-credit');
-            let totalPoints = 0, totalCredits = 0;
-            grades.forEach((g, i) => {
-                const grade = parseFloat(g.value) || 0;
-                const credit = parseFloat(credits[i].value) || 0;
-                totalPoints += grade * credit;
-                totalCredits += credit;
+        
+        function setLang(lang, save = true) {
+            if (!translations[lang]) lang = 'ar';
+            currentLang = lang;
+            
+            // Save preference
+            if (save) {
+                localStorage.setItem('proscholar-lang', lang);
+                // Update URL without reload
+                const url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.pushState({}, '', url);
+            }
+            
+            // Update HTML attributes
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
             });
-            const gpa = totalCredits ? (totalPoints / totalCredits / 20 * 4).toFixed(2) : '0.00';
-            document.getElementById('gpa-val').textContent = gpa;
-            document.getElementById('gpa-res').style.display = 'block';
+            
+            // Update all translatable elements
+            updatePageContent();
+            
+            // Update meta tags for SEO
+            updateMetaTags();
         }
-    </script>
-</body>
-</html>
+        
+        function updatePageContent() {
+            const t = translations[currentLang];
+            
+            // Update elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (t[key]) {
+                    if (el.tagName === 'TITLE') {
+                        document.title = t[key];
+                    } else if (el.tagName === 'META') {
+                        el.content = t[key];
+                    } else {
+                        el.innerHTML = t[key];
+                    }
+                }
+            });
+            
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.dataset.i18nPlaceholder;
+                if (t[key]) el.placeholder = t[key];
+            });
+        }
+        
+        function updateMetaTags() {
+            const t = translations[currentLang];
+            document.title = t.pageTitle;
+            
+            const metaDesc = document.getElementById('meta-desc');
+            if (metaDesc) metaDesc.content = t.metaDesc;
+            
+            const ogTitle = document.getElementById('og-title');
+            const ogDesc = document.getElementById('og-desc');
+            if (ogTitle) ogTitle.content = t.pageTitle;
+            if (ogDesc) ogDesc.content = t.metaDesc;
+        }
+
+        // ==================== TOOL MODALS ====================
+        
+        const toolContents = {
+            writer: () => ({
+                title: translations[currentLang].writerTitle,
+                icon: '✍️',
+                color: '#38bdf8',
+                content: `
+                    <div class="input-group">
+                        <label>${translations[currentLang].topicPlaceholder}</label>
+                        <input type="text" id="w-topic" placeholder="${translations[currentLang].topicPlaceholder}">
+                    </div>
+                    <div class="input-group">
+                        <label>${translations[currentLang].requirementsPlaceholder}</label>
+                        <textarea id="w-req" rows="4" placeholder="${translations[currentLang].requirementsPlaceholder}"></textarea>
+                    </div>
+                    <button class="btn" onclick="simulateAI('writer')">${translations[currentLang].generateContent}</button>
+                    <div id="w-result" style="display:none;margin-top:20px;padding:20px;background:rgba(0,0,0,0.3);border-radius:12px;">
+                        <div id="w-output" style="line-height:1.8;"></div>
+                    </div>
+                `
+            }),
+            
+            plagiarism: () => ({
+                title: translations[currentLang].plagiarismTitle,
+                icon: '🔍',
+                color: '#3b82f6',
+                content: `
+                    <div class="input-group">
+                        <label>${translations[currentLang].pasteTextHere}</label>
+                        <textarea id="p-text" rows="6" placeholder="${translations[currentLang].pasteTextHere}"></textarea>
+                    </div>
+                    <button class="btn" style="background:linear-gradient(135deg,#3b82f6,#2563eb);color:white;" onclick="simulateAI('plagiarism')">${translations[currentLang].check}</button>
+                    <div id="p-result" style="display:none;margin-top:20px;">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                            <div style="text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-radius:12px;">
+                                <div style="font-size:2.5rem;font-weight:800;color:#22c55e;" id="p-originality">92%</div>
+                                <div style="color:#94a3b8;font-size:0.9rem;">${translations[currentLang].originalityScore}</div>
+                            </div>
+                            <div style="text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-radius:12px;">
+                                <div style="font-size:2.5rem;font-weight:800;color:#f59e0b;" id="p-ai">8%</div>
+                                <div style="color:#94a3b8;font-size:0.9rem;">${translations[currentLang].aiProbability}</div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }),
+            
+            loan: () => ({
+                title: translations[currentLang].loanTitle,
+                icon: '🏦',
+                color: '#22c55e',
+                content: `
+                    <div class="input-group">
+                        <label>${translations[currentLang].amountUSD}</label>
+                        <input type="number" id="l-amount" placeholder="100000">
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;">
+                        <div class="input-group">
+                            <label>${translations[currentLang].interestRate}</label>
+                            <input type="number" id="l-rate" placeholder="5.5" step="0.1">
+                        </div>
+                        <div class="input-group">
+                            <label>${translations[currentLang].years}</label>
+                            <input type="number" id="l-years" placeholder="5">
+                        </div>
+                    </div>
+                    <button class="btn" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white;" onclick="calculateLoan()">${translations[currentLang].calculate}</button>
+                    <div id="l-result" style="display:none;margin-top:20px;">
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
+                            <div style="text-align:center;padding:15px;background:rgba(0,0,0,0.3);border-radius:12px;">
+                                <div style="font-size:1.5rem;font-weight:800;color:#38bdf8;" id="l-monthly">\$0</div>
+                                <div style="color:#94a3b8;font-size:0.8rem;">${translations[currentLang].monthly
