@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.proscholartools.com/</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.00</priority>
+    <loc>https://proscholartools.com/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
 
-  <url><loc>https://www.proscholartools.com/gold-forecast-2026.html</loc><priority>0.90</priority></url>
-  <url><loc>https://www.proscholartools.com/pension-law-2026.html</loc><priority>0.90</priority></url>
-  <url><loc>https://www.proscholartools.com/academic-ai-tools.html</loc><priority>0.90</priority></url>
-  <url><loc>https://www.proscholartools.com/global-economy-war-impact.html</loc><priority>0.85</priority></url>
-  <url><loc>https://www.proscholartools.com/loan-interest-guide-2026.html</loc><priority>0.85</priority></url>
-  <url><loc>https://www.proscholartools.com/ai-for-teachers-2026.html</loc><priority>0.85</priority></url>
-  <url><loc>https://www.proscholartools.com/rare-books-search-guide.html</loc><priority>0.85</priority></url>
-  <url><loc>https://www.proscholartools.com/tiktok-viral-ai-scripts.html</loc><priority>0.85</priority></url>
+  <url>
+    <loc>https://proscholartools.com/ultimate-ai-guide-2026.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-  <url><loc>https://www.proscholartools.com/ai-media-converter-guide.html</loc><priority>0.80</priority></url>
-  <url><loc>https://www.proscholartools.com/global-health-insurance-2026.html</loc><priority>0.80</priority></url>
-  <url><loc>https://www.proscholartools.com/stock-market-analysis-2026.html</loc><priority>0.80</priority></url>
-  <url><loc>https://www.proscholartools.com/scispace-advanced-academic-guide.html</loc><priority>0.80</priority></url>
-  <url><loc>https://www.proscholartools.com/online-earning-strategies-2026.html</loc><priority>0.75</priority></url>
-  <url><loc>https://www.proscholartools.com/age-calculator-meaning.html</loc><priority>0.75</priority></url>
-  <url><loc>https://www.proscholartools.com/speech-to-text-ai-transcription.html</loc><priority>0.75</priority></url>
-  <url><loc>https://www.proscholartools.com/stock-market-news-trends-2026.html</loc><priority>0.75</priority></url>
-  <url><loc>https://www.proscholartools.com/best-ai-research-tools-comparison.html</loc><priority>0.75</priority></url>
-  <url><loc>https://www.proscholartools.com/cyber-security-data-protection-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/stable-coins-crypto-investment-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/remote-learning-ai-education-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/ai-stock-market-trading-bots-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/bank-loan-interest-calculator-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/ai-image-enhancement-tools-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/gold-market-trends-live-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/academic-trust-and-ai-ethics.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/global-tax-calculator-guide-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/video-to-text-ai-translation-2026.html</loc><priority>0.70</priority></url>
-  <url><loc>https://www.proscholartools.com/ai-pedagogy-for-future-teachers.html</loc><priority>0.70</priority></url>
+  <url>
+    <loc>https://proscholartools.com/pension-law-2026.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <priority>0.8</priority>
+  </url>
 
-  <url><loc>https://www.proscholartools.com/terms-of-service.html</loc><priority>0.50</priority></url>
-  <url><loc>https://www.proscholartools.com/about-us-proscholar.html</loc><priority>0.50</priority></url>
+  <url>
+    <loc>https://proscholartools.com/academic-ai-tools.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <priority>0.8</priority>
+  </url>
 
+  <url>
+    <loc>https://proscholartools.com/privacy-policy.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://proscholartools.com/terms-of-service.html</loc>
+    <priority>0.5</priority>
+  </url>
 </urlset>
