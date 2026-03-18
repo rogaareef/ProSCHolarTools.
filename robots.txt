@@ -1,5 +1,14 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
+Allow: /index.html
+Allow: /ultimate-ai-guide-2026.html
+Allow: /pension-law-2026.html
+Allow: /academic-ai-tools.html
+Allow: /img/
+
+# استبعاد الملفات المؤقتة لزيادة سرعة الأرشفة
 Disallow: /private/
+Disallow: /tmp/
+
+# الربط العالمي بخريطة الموقع (أهم سطر لجوجل)
 Sitemap: https://proscholartools.com/sitemap.xml
