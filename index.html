@@ -2,1006 +2,127 @@
 <html lang="ar" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.title">ProScholarTools | المنصة العالمية للأدوات الأكاديمية والذكاء الاصطناعي</title>
     
-    <!-- Dynamic Title per Language -->
-    <title data-i18n="meta.title">ProScholarTools | Global Academic & Financial Tools Platform</title>
-    
-    <!-- SEO Multilingual -->
-    <meta name="description" data-i18n="meta.desc" content="AI-powered academic tools for researchers worldwide - Plagiarism checker, research writer, financial calculators">
-    <meta name="keywords" content="academic tools, AI research, plagiarism checker, GPA calculator, global education">
-    
-    <!-- Hreflang Tags for Global SEO -->
-    <link rel="alternate" hreflang="ar" href="https://proscholartools.com/ar/" />
-    <link rel="alternate" hreflang="en" href="https://proscholartools.com/en/" />
-    <link rel="alternate" hreflang="fr" href="https://proscholartools.com/fr/" />
-    <link rel="alternate" hreflang="es" href="https://proscholartools.com/es/" />
-    <link rel="alternate" hreflang="ur" href="https://proscholartools.com/ur/" />
-    <link rel="alternate" hreflang="hi" href="https://proscholartools.com/hi/" />
-    <link rel="alternate" hreflang="x-default" href="https://proscholartools.com/en/" />
-    
-    <!-- Canonical with language parameter -->
-    <link rel="canonical" href="https://proscholartools.com/" id="canonical-link">
-    
-    <!-- Geo Tags for Global Reach -->
+    <meta name="description" data-i18n="meta.desc" content="أدوات أكاديمية متطورة، تحليل قانون المعاشات 2026، ودليل النبراس للذكاء الاصطناعي بإشراف خبراء دكتوراه.">
+    <meta name="keywords" content="الذكاء الاصطناعي, قانون المعاشات, أبحاث أكاديمية, ProScholarTools">
+    <meta name="robots" content="index, follow">
     <meta name="geo.region" content="Global">
-    <meta name="geo.position" content="24.7136;46.6753">
-    <meta name="ICBM" content="24.7136, 46.6753">
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
-    
-    <!-- Open Graph Multilingual -->
-    <meta property="og:locale" content="ar_AR" id="og-locale">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:locale:alternate" content="fr_FR">
-    <meta property="og:locale:alternate" content="es_ES">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://proscholartools.com/">
-    <meta property="og:title" data-i18n="og.title" content="ProScholarTools | Smart Academic Tools">
-    <meta property="og:description" data-i18n="og.desc" content="Global platform for AI academic tools">
-    <meta property="og:image" content="https://proscholartools.com/assets/og-global.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-    
-    <!-- Preconnect for Global CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    
-    <!-- Critical CSS with RTL/LTR Support -->
+
+    <link rel="alternate" hreflang="ar" href="https://proscholartools.com/" />
+    <link rel="alternate" hreflang="en" href="https://proscholartools.com/?lang=en" />
+    <link rel="canonical" href="https://proscholartools.com/" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        :root{
-            --p:#38bdf8;--s:#818cf8;--a:#f472b6;--b:#0f172a;--c:#1e293b;
-            --t:#f8fafc;--m:#94a3b8;--d:#334155;
-            --dir:rtl;
-            --text-align:right;
-            --float:right;
-            --margin-start:0;
-            --margin-end:auto;
-        }
+        :root { --p: #38bdf8; --a: #fbbf24; --bg: #020617; --card: rgba(255,255,255,0.03); }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: white; margin: 0; overflow-x: hidden; }
+        .w { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        /* LTR Override Variables */
-        [dir="ltr"]{
-            --dir:ltr;
-            --text-align:left;
-            --float:left;
-            --margin-start:0;
-            --margin-end:auto;
-        }
+        /* الهيدر */
+        header { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(2,6,23,0.9); position: sticky; top:0; z-index:100; }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--p); text-decoration: none; display: flex; align-items: center; gap: 10px; }
         
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        html{scroll-behavior:smooth}
-        body{
-            font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
-            background:var(--b);
-            color:var(--t);
-            line-height:1.6;
-            direction:var(--dir);
-            text-align:var(--text-align);
-            min-height:100vh;
-            text-rendering:optimizeSpeed;
-            transition:all 0.3s ease;
-        }
-        
-        /* Language Font Stacks */
-        [lang="ar"],[lang="ur"]{font-family:'Segoe UI','Noto Naskh Arabic',Arial,sans-serif}
-        [lang="hi"]{font-family:'Segoe UI','Noto Sans Devanagari',Arial,sans-serif}
-        
-        /* RTL/LTR Utilities */
-        .start-float{float:var(--float)}
-        .text-start{text-align:var(--text-align)}
-        .me-auto{margin-inline-end:auto}
-        .ms-auto{margin-inline-start:auto}
-        
-        /* Fast Loader */
-        #L{
-            position:fixed;
-            inset:0;
-            background:var(--b);
-            z-index:9999;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            transition:opacity 0.3s;
-        }
-        #L.h{opacity:0;pointer-events:none}
-        .sp{
-            width:40px;
-            height:40px;
-            border:3px solid var(--d);
-            border-top-color:var(--p);
-            border-radius:50%;
-            animation:spin 1s linear infinite;
-        }
-        @keyframes spin{to{transform:rotate(360deg)}}
-        
-        /* Header */
-        .hd{
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(15,23,42,.98);
-            backdrop-filter:blur(10px);
-            border-bottom:1px solid var(--d);
-            z-index:100;
-            padding:0.75rem 0;
-        }
-        .w{max-width:1200px;margin:0 auto;padding:0 1.25rem}
-        .nv{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            gap:1rem;
-            flex-wrap:wrap;
-        }
-        
-        /* Global Logo */
-        .lg{display:flex;align-items:center;gap:0.75rem;font-weight:800;font-size:1.1rem;color:var(--t)}
-        .lg-icon{
-            width:36px;
-            height:36px;
-            background:linear-gradient(135deg,var(--p),var(--s));
-            border-radius:50%;
-            display:grid;
-            place-items:center;
-            font-size:1.4rem;
-            flex-shrink:0;
-            border:2px solid rgba(255,255,255,0.1);
-            animation:pulse 2s infinite;
-        }
-        @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(56,189,248,0.4)}50%{box-shadow:0 0 0 10px rgba(56,189,248,0)}}
-        
-        /* Advanced Language Switcher */
-        .lang-menu{position:relative}
-        .lang-btn{
-            display:flex;
-            align-items:center;
-            gap:0.5rem;
-            background:var(--c);
-            border:1px solid var(--d);
-            color:var(--t);
-            padding:0.5rem 1rem;
-            border-radius:50px;
-            cursor:pointer;
-            font-size:0.9rem;
-            font-weight:600;
-            transition:all 0.3s;
-        }
-        .lang-btn:hover{background:var(--d);border-color:var(--p)}
-        .lang-btn img{width:20px;height:20px;border-radius:50%;object-fit:cover}
-        .lang-dropdown{
-            position:absolute;
-            top:120%;
-            inset-inline-end:0;
-            background:var(--c);
-            border:1px solid var(--d);
-            border-radius:12px;
-            padding:0.5rem;
-            min-width:180px;
-            box-shadow:0 10px 40px rgba(0,0,0,0.5);
-            opacity:0;
-            visibility:hidden;
-            transform:translateY(-10px);
-            transition:all 0.3s;
-            z-index:1000;
-        }
-        .lang-menu.active .lang-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
-        .lang-item{
-            display:flex;
-            align-items:center;
-            gap:0.75rem;
-            padding:0.75rem;
-            border-radius:8px;
-            cursor:pointer;
-            transition:background 0.2s;
-        }
-        .lang-item:hover{background:var(--d)}
-        .lang-item.active{background:var(--p);color:#000}
-        .lang-item img{width:24px;height:24px;border-radius:50%}
-        .lang-item span{font-size:0.85rem}
-        .lang-item small{font-size:0.7rem;opacity:0.7;margin-inline-start:auto}
-        
-        /* Social Icons Global */
-        .sc{display:flex;gap:0.5rem}
-        .sc a{
-            width:34px;
-            height:34px;
-            border-radius:50%;
-            display:grid;
-            place-items:center;
-            color:#fff;
-            font-size:0.85rem;
-            transition:transform 0.2s;
-            border:1px solid rgba(255,255,255,0.1);
-        }
-        .sc a:hover{transform:translateY(-3px) scale(1.1)}
-        .fb{background:#1877f2}
-        .li{background:#0a66c2}
-        .tg{background:#08c}
-        .tt{background:#000;border-color:#333}
-        
-        /* Hero Global */
-        .hr{
-            margin-top:80px;
-            padding:4rem 1.25rem;
-            text-align:center;
-            background:radial-gradient(circle at 50% 50%,rgba(56,189,248,0.1) 0%,transparent 60%);
-        }
-        .hr h1{
-            font-size:clamp(2rem,5vw,3.5rem);
-            font-weight:800;
-            margin-bottom:1rem;
-            line-height:1.2;
-        }
-        .hr h1 span{color:var(--p);display:block}
-        .hr p{
-            color:var(--m);
-            max-width:600px;
-            margin:0 auto;
-            font-size:1.1rem;
-            line-height:1.7;
-        }
-        
-        .global-badge{
-            display:inline-flex;
-            align-items:center;
-            gap:0.5rem;
-            background:rgba(56,189,248,0.1);
-            border:1px solid var(--p);
-            color:var(--p);
-            padding:0.5rem 1rem;
-            border-radius:50px;
-            font-size:0.85rem;
-            margin-bottom:1.5rem;
-            font-weight:600;
-        }
-        
-        /* Tools Grid */
-        .gd{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-            gap:1.5rem;
-            margin:3rem 0;
-        }
-        .cd{
-            background:var(--c);
-            border:1px solid var(--d);
-            border-radius:16px;
-            padding:1.5rem;
-            transition:all 0.3s;
-            cursor:pointer;
-            position:relative;
-            overflow:hidden;
-        }
-        .cd:hover{
-            border-color:var(--p);
-            transform:translateY(-5px);
-            box-shadow:0 20px 40px rgba(0,0,0,0.3);
-        }
-        .cd::before{
-            content:'';
-            position:absolute;
-            top:0;
-            inset-inline-start:0;
-            width:4px;
-            height:100%;
-            background:linear-gradient(to bottom,var(--p),var(--s));
-            transform:scaleY(0);
-            transition:transform 0.3s;
-        }
-        .cd:hover::before{transform:scaleY(1)}
-        
-        .ic{
-            width:50px;
-            height:50px;
-            border-radius:12px;
-            display:grid;
-            place-items:center;
-            font-size:1.5rem;
-            margin-bottom:1rem;
-            margin-inline-end:auto;
-        }
-        
-        .btn{
-            width:100%;
-            padding:0.875rem;
-            background:linear-gradient(90deg,var(--p),var(--s));
-            color:#000;
-            border:none;
-            border-radius:10px;
-            font-weight:700;
-            cursor:pointer;
-            font-size:0.95rem;
-            margin-top:1rem;
-            transition:opacity 0.2s;
-        }
-        
-        /* Stats Section */
-        .stats{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-            gap:1.5rem;
-            margin:4rem 0;
-            text-align:center;
-        }
-        .stat-item{
-            background:var(--c);
-            border:1px solid var(--d);
-            padding:2rem;
-            border-radius:16px;
-            transition:transform 0.3s;
-        }
-        .stat-item:hover{transform:translateY(-5px);border-color:var(--p)}
-        .stat-num{
-            font-size:2.5rem;
-            font-weight:800;
-            color:var(--p);
-            display:block;
-            margin-bottom:0.5rem;
-        }
-        .stat-label{color:var(--m);font-size:0.9rem}
-        
-        /* Global Footer */
-        .ft{
-            background:var(--c);
-            border-top:2px solid var(--p);
-            padding:4rem 0 2rem;
-            margin-top:6rem;
-        }
-        .ft-g{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:3rem;
-            margin-bottom:3rem;
-        }
-        .ft h3{
-            color:var(--t);
-            font-size:1.1rem;
-            margin-bottom:1.5rem;
-            display:flex;
-            align-items:center;
-            gap:0.75rem;
-        }
-        .ft p, .ft a{color:var(--m);font-size:0.9rem;line-height:1.8}
-        .ft a{display:block;margin-bottom:0.75rem;transition:color 0.2s}
-        .ft a:hover{color:var(--p)}
-        
-        .legal-box{
-            background:rgba(15,23,42,0.5);
-            border:1px solid var(--d);
-            border-radius:12px;
-            padding:1.5rem;
-            border-inline-start:4px solid #ef4444;
-        }
-        
-        /* Language Direction Specific Fixes */
-        [dir="ltr"] .ic{margin-inline-end:0;margin-inline-start:0}
-        [dir="rtl"] .lang-dropdown{inset-inline-end:0;inset-inline-start:auto}
-        [dir="ltr"] .lang-dropdown{inset-inline-start:0;inset-inline-end:auto}
-        
-        .cr{
-            text-align:center;
-            padding-top:2rem;
-            border-top:1px solid var(--d);
-            color:var(--m);
-            font-size:0.85rem;
-        }
-        
-        /* Responsive */
-        @media(max-width:768px){
-            .lang-btn span{display:none}
-            .hr h1{font-size:1.75rem}
-            .stats{grid-template-columns:1fr}
-        }
+        /* زر اللغة */
+        .lang-btn { background: var(--card); border: 1px solid var(--p); color: white; padding: 5px 15px; border-radius: 20px; cursor: pointer; }
+
+        /* البطاقات */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 50px 0; }
+        .card { background: var(--card); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: var(--p); transform: translateY(-5px); }
+        .card i { font-size: 2.5rem; color: var(--p); margin-bottom: 15px; }
+        .btn { background: var(--p); color: #000; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; }
+
+        /* المنبثقة */
+        #pop { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 1000; }
+        .pop-c { background: #0f172a; border: 2px solid var(--p); padding: 30px; border-radius: 20px; text-align: center; max-width: 400px; }
+
+        footer { text-align: center; padding: 40px; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.1); }
+        .social { margin-bottom: 20px; }
+        .social a { color: white; margin: 0 10px; font-size: 1.2rem; }
     </style>
-    
-    <!-- Async Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
 
-<!-- Global Loader -->
-<div id="L" role="status" aria-label="Loading"><div class="sp"></div></div>
-
-<!-- Header -->
-<header class="hd">
-    <div class="w nv">
-        <a href="/" class="lg">
-            <div class="lg-icon">🌍</div>
-            <span>ProScholarTools</span>
-        </a>
-        
-        <div style="display:flex;align-items:center;gap:1rem">
-            <!-- Language Switcher -->
-            <div class="lang-menu" id="langMenu">
-                <button class="lang-btn" onclick="toggleLangMenu()">
-                    <span id="currentFlag">🇸🇦</span>
-                    <span id="currentLangLabel">العربية</span>
-                    <i class="fas fa-chevron-down" style="font-size:0.7rem"></i>
-                </button>
-                <div class="lang-dropdown">
-                    <div class="lang-item active" onclick="changeLang('ar')" data-lang="ar">
-                        <span>🇸🇦</span>
-                        <span>العربية</span>
-                        <small>RTL</small>
-                    </div>
-                    <div class="lang-item" onclick="changeLang('en')" data-lang="en">
-                        <span>🇺🇸</span>
-                        <span>English</span>
-                        <small>LTR</small>
-                    </div>
-                    <div class="lang-item" onclick="changeLang('fr')" data-lang="fr">
-                        <span>🇫🇷</span>
-                        <span>Français</span>
-                        <small>LTR</small>
-                    </div>
-                    <div class="lang-item" onclick="changeLang('es')" data-lang="es">
-                        <span>🇪🇸</span>
-                        <span>Español</span>
-                        <small>LTR</small>
-                    </div>
-                    <div class="lang-item" onclick="changeLang('ur')" data-lang="ur">
-                        <span>🇵🇰</span>
-                        <span>اردو</span>
-                        <small>RTL</small>
-                    </div>
-                    <div class="lang-item" onclick="changeLang('hi')" data-lang="hi">
-                        <span>🇮🇳</span>
-                        <span>हिंदी</span>
-                        <small>LTR</small>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Social -->
-            <div class="sc">
-                <a href="#" class="fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                <a href="#" class="tt" aria-label="TikTok">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Hero Section -->
-<section class="hr">
-    <div class="w">
-        <div class="global-badge">
-            <i class="fas fa-globe"></i>
-            <span data-i18n="global.badge">Trusted by 150K+ Users Worldwide</span>
-        </div>
-        <h1 data-i18n="hero.title">
-            <span>Smart Academic</span>
-            Tools for Everyone
-        </h1>
-        <p data-i18n="hero.desc">
-            Global platform providing AI-powered research tools, plagiarism detection, and financial calculators for students and researchers worldwide
-        </p>
-    </div>
-</section>
-
-<!-- Stats -->
-<div class="w stats">
-    <div class="stat-item">
-        <span class="stat-num">150K+</span>
-        <span class="stat-label" data-i18n="stats.users">Global Users</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-num">25+</span>
-        <span class="stat-label" data-i18n="stats.tools">Smart Tools</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-num">6</span>
-        <span class="stat-label" data-i18n="stats.languages">Languages</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-num">99%</span>
-        <span class="stat-label" data-i18n="stats.accuracy">Accuracy Rate</span>
+<div id="pop">
+    <div class="pop-c">
+        <h2 data-i18n="pop.title">مرحباً بك في برو سكولار</h2>
+        <p data-i18n="pop.desc">اكتشف دليل "النبراس" للذكاء الاصطناعي 2026</p>
+        <a href="ultimate-ai-guide-2026.html" class="btn">دخول الدليل</a>
+        <button onclick="document.getElementById('pop').style.display='none'" style="display:block; margin: 15px auto; background:none; color:grey; border:none; cursor:pointer;">إغلاق</button>
     </div>
 </div>
 
-<!-- Tools -->
+<header>
+    <div class="w nav">
+        <a href="/" class="logo"><i class="fas fa-globe"></i> ProScholarTools</a>
+        <button class="lang-btn" onclick="toggleLang()">English</button>
+    </div>
+</header>
+
 <main class="w">
-    <h2 style="color:var(--p);margin:3rem 0 1.5rem;text-align:center;font-size:1.8rem" data-i18n="tools.title">
-        Powerful Tools for Global Researchers
-    </h2>
-    
-    <div class="gd">
-        <article class="cd">
-            <div class="ic" style="background:linear-gradient(135deg,var(--p),var(--s))">✍️</div>
-            <h3 data-i18n="tools.writer.title">AI Research Writer</h3>
-            <p style="color:var(--m);margin:1rem 0;line-height:1.6" data-i18n="tools.writer.desc">
-                Generate academic papers with automatic citations and references in APA, MLA, Chicago formats
-            </p>
-            <button class="btn" data-i18n="tools.writer.btn">Start Writing</button>
-        </article>
-        
-        <article class="cd">
-            <div class="ic" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">🔍</div>
-            <h3 data-i18n="tools.plag.title">Plagiarism Checker</h3>
-            <p style="color:var(--m);margin:1rem 0;line-height:1.6" data-i18n="tools.plag.desc">
-                Advanced AI detection with 99% accuracy. Check against global academic databases
-            </p>
-            <button class="btn" data-i18n="tools.plag.btn">Check Text</button>
-        </article>
-        
-        <article class="cd">
-            <div class="ic" style="background:linear-gradient(135deg,#22c55e,#16a34a)">🌍</div>
-            <h3 data-i18n="tools.trans.title">Global Translator</h3>
-            <p style="color:var(--m);margin:1rem 0;line-height:1.6" data-i18n="tools.trans.desc">
-                Academic translation with terminology preservation across 100+ languages
-            </p>
-            <button class="btn" data-i18n="tools.trans.btn">Translate</button>
-        </article>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-microchip"></i>
+            <h3 data-i18n="card1.t">نبراس الذكاء الاصطناعي</h3>
+            <p data-i18n="card1.d">دليلك الشامل لأدوات المستقبل والربح التقني.</p>
+            <a href="ultimate-ai-guide-2026.html" class="btn">اكتشف الآن</a>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-balance-scale"></i>
+            <h3 data-i18n="card2.t">قانون المعاشات 2026</h3>
+            <p data-i18n="card2.d">تحليل قانوني شامل للثغرات والحقوق التأمينية.</p>
+            <a href="pension-law-2026.html" class="btn">اقرأ البحث</a>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-user-shield"></i>
+            <h3 data-i18n="card3.t">الخصوصية والأمان</h3>
+            <p data-i18n="card3.d">نلتزم بحماية بياناتك وفق المعايير العالمية.</p>
+            <a href="privacy-policy.html" class="btn">عرض السياسة</a>
+        </div>
     </div>
 </main>
 
-<!-- Footer -->
-<footer class="ft">
-    <div class="w ft-g">
-        <div>
-            <h3><i class="fas fa-globe-americas"></i> ProScholarTools</h3>
-            <p data-i18n="footer.about">
-                Empowering researchers worldwide with cutting-edge AI tools. Breaking language barriers in academic research.
-            </p>
-        </div>
-        
-        <div>
-            <h3 data-i18n="footer.links">Quick Links</h3>
-            <a href="/about.html" data-i18n="footer.about_link">About Us</a>
-            <a href="/contact.html" data-i18n="footer.contact">Contact</a>
-            <a href="/api.html">API Access</a>
-        </div>
-        
-        <div class="legal-box">
-            <h3 style="color:#ef4444"><i class="fas fa-shield-alt"></i> <span data-i18n="footer.legal">Legal</span></h3>
-            <a href="/privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
-            <a href="/terms.html" data-i18n="footer.terms">Terms of Use</a>
-            <a href="/cookies.html" data-i18n="footer.cookies">Cookie Policy</a>
-        </div>
+<footer>
+    <div class="social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
     </div>
-    
-    <div class="cr">
-        <p>© 2025 ProScholarTools. <span data-i18n="footer.rights">All Rights Reserved. Serving Global Academic Community.</span></p>
-        <p style="margin-top:0.5rem;font-size:0.8rem">
-            <span id="userLocation">🌍 Detecting your location...</span>
-        </p>
-    </div>
+    <p>© 2026 ProScholarTools | Global Academic Research Team</p>
 </footer>
 
-<!-- Global Translations -->
 <script>
-// Translation Database
-const i18n = {
-    ar: {
-        meta: {
-            title: "ProScholarTools | المنصة العالمية للأدوات الأكاديمية",
-            desc: "منصة عالمية توفر أدوات ذكاء اصطناعي للباحثين - كاشف انتحال، كاتب بحثي، حاسبات مالية"
-        },
-        og: {
-            title: "ProScholarTools | أدوات أكاديمية ذكية",
-            desc: "منصة عالمية للباحثين والطلاب في جميع أنحاء العالم"
-        },
-        global: { badge: "موثوق من 150K+ مستخدم حول العالم" },
-        hero: {
-            title: "<span>أدوات أكاديمية</span> ذكية للجميع",
-            desc: "منصة عالمية توفر أدوات بحثية مدعومة بالذكاء الاصطناعي، كشف الانتحال، والحاسبات المالية للطلاب والباحثين حول العالم"
-        },
-        stats: {
-            users: "مستخدم عالمي",
-            tools: "أداة ذكية",
-            languages: "لغات",
-            accuracy: "نسبة الدقة"
-        },
-        tools: {
-            title: "أدوات قوية للباحثين العالميين",
-            writer: {
-                title: "كاتب الأبحاث AI",
-                desc: "إنشاء أوراق أكاديمية مع استشهادات تلقائية بالصيغ APA، MLA، شيكاغو",
-                btn: "ابدأ الكتابة"
-            },
-            plag: {
-                title: "فاحص الانتحال",
-                desc: "كشف متقدم بالذكاء الاصطناعي بدقة 99%. فحص مقابل قواعد البيانات الأكاديمية العالمية",
-                btn: "فحص النص"
-            },
-            trans: {
-                title: "المترجم العالمي",
-                desc: "ترجمة أكاديمية مع الحفاظ على المصطلحات عبر 100+ لغة",
-                btn: "ترجم الآن"
-            }
-        },
-        footer: {
-            about: "تمكين الباحثين حول العالم بأدوات ذكاء اصطناعي متطورة. كسر حواجز اللغة في البحث العلمي.",
-            links: "روابط سريعة",
-            about_link: "من نحن",
-            contact: "اتصل بنا",
-            legal: "قانوني",
-            privacy: "سياسة الخصوصية",
-            terms: "شروط الاستخدام",
-            cookies: "سياسة الكوكيز",
-            rights: "جميع الحقوق محفوظة. نخدم المجتمع الأكاديمي العالمي"
+    // نظام الترجمة
+    const trans = {
+        en: {
+            "meta.title": "ProScholarTools | Global AI & Academic Platform",
+            "card1.t": "AI Nebras Guide", "card1.d": "Your guide to future tools and tech profit.",
+            "card2.t": "Pension Law 2026", "card2.d": "Legal analysis of insurance rights.",
+            "card3.t": "Privacy Policy", "card3.d": "We protect your data globally.",
+            "pop.title": "Welcome to ProScholar", "pop.desc": "Discover the 2026 AI Nebras Guide"
         }
-    },
-    en: {
-        meta: {
-            title: "ProScholarTools | Global Academic & Financial Platform",
-            desc: "Worldwide platform providing AI research tools, plagiarism detection, and financial calculators for global students"
-        },
-        og: {
-            title: "ProScholarTools | Smart Academic Tools",
-            desc: "Global platform for researchers and students worldwide"
-        },
-        global: { badge: "Trusted by 150K+ Users Worldwide" },
-        hero: {
-            title: "<span>Smart Academic</span> Tools for Everyone",
-            desc: "Global platform providing AI-powered research tools, plagiarism detection, and financial calculators for students and researchers worldwide"
-        },
-        stats: {
-            users: "Global Users",
-            tools: "Smart Tools",
-            languages: "Languages",
-            accuracy: "Accuracy Rate"
-        },
-        tools: {
-            title: "Powerful Tools for Global Researchers",
-            writer: {
-                title: "AI Research Writer",
-                desc: "Generate academic papers with automatic citations in APA, MLA, Chicago formats",
-                btn: "Start Writing"
-            },
-            plag: {
-                title: "Plagiarism Checker",
-                desc: "Advanced AI detection with 99% accuracy. Check against global academic databases",
-                btn: "Check Text"
-            },
-            trans: {
-                title: "Global Translator",
-                desc: "Academic translation with terminology preservation across 100+ languages",
-                btn: "Translate Now"
-            }
-        },
-        footer: {
-            about: "Empowering researchers worldwide with cutting-edge AI tools. Breaking language barriers in academic research.",
-            links: "Quick Links",
-            about_link: "About Us",
-            contact: "Contact",
-            legal: "Legal",
-            privacy: "Privacy Policy",
-            terms: "Terms of Use",
-            cookies: "Cookie Policy",
-            rights: "All Rights Reserved. Serving Global Academic Community"
-        }
-    },
-    fr: {
-        meta: {
-            title: "ProScholarTools | Plateforme Académique Mondiale",
-            desc: "Outils de recherche IA, détection de plagiat et calculateurs financiers pour étudiants mondiaux"
-        },
-        og: {
-            title: "ProScholarTools | Outils Académiques Intelligents",
-            desc: "Plateforme mondiale pour chercheurs et étudiants"
-        },
-        global: { badge: "Fait confiance par 150K+ utilisateurs" },
-        hero: {
-            title: "<span>Outils Académiques</span> Intelligents",
-            desc: "Plateforme mondiale fournissant des outils de recherche IA, détection de plagiat et calculateurs financiers"
-        },
-        stats: {
-            users: "Utilisateurs",
-            tools: "Outils",
-            languages: "Langues",
-            accuracy: "Précision"
-        },
-        tools: {
-            title: "Outils Puissants pour Chercheurs",
-            writer: {
-                title: "Rédacteur IA",
-                desc: "Générez des papiers académiques avec citations automatiques APA, MLA, Chicago",
-                btn: "Commencer"
-            },
-            plag: {
-                title: "Détecteur Plagiat",
-                desc: "Détection IA avancée avec 99% de précision. Vérification globale",
-                btn: "Vérifier"
-            },
-            trans: {
-                title: "Traducteur Global",
-                desc: "Traduction académique préservant la terminologie sur 100+ langues",
-                btn: "Traduire"
-            }
-        },
-        footer: {
-            about: "Autonomiser les chercheurs mondiaux avec des outils IA de pointe.",
-            links: "Liens Rapides",
-            about_link: "À Propos",
-            contact: "Contact",
-            legal: "Légal",
-            privacy: "Confidentialité",
-            terms: "Conditions",
-            cookies: "Cookies",
-            rights: "Tous Droits Réservés"
-        }
-    },
-    es: {
-        meta: {
-            title: "ProScholarTools | Plataforma Académica Global",
-            desc: "Herramientas de investigación IA, detector de plagio y calculadoras financieras"
-        },
-        og: {
-            title: "ProScholarTools | Herramientas Académicas",
-            desc: "Plataforma global para investigadores y estudiantes"
-        },
-        global: { badge: "Confiado por 150K+ usuarios globales" },
-        hero: {
-            title: "<span>Herramientas Académicas</span> Inteligentes",
-            desc: "Plataforma global con herramientas de investigación IA, detector de plagio y calculadoras financieras"
-        },
-        stats: {
-            users: "Usuarios Globales",
-            tools: "Herramientas",
-            languages: "Idiomas",
-            accuracy: "Precisión"
-        },
-        tools: {
-            title: "Herramientas para Investigadores Globales",
-            writer: {
-                title: "Escritor IA",
-                desc: "Genere papers académicos con citas automáticas APA, MLA, Chicago",
-                btn: "Escribir"
-            },
-            plag: {
-                title: "Detector Plagio",
-                desc: "Detección avanzada IA con 99% precisión. Verificación global",
-                btn: "Verificar"
-            },
-            trans: {
-                title: "Traductor Global",
-                desc: "Traducción académica preservando terminología en 100+ idiomas",
-                btn: "Traducir"
-            }
-        },
-        footer: {
-            about: "Empoderando investigadores globales con herramientas IA avanzadas.",
-            links: "Enlaces Rápidos",
-            about_link: "Nosotros",
-            contact: "Contacto",
-            legal: "Legal",
-            privacy: "Privacidad",
-            terms: "Términos",
-            cookies: "Cookies",
-            rights: "Derechos Reservados"
-        }
-    },
-    ur: {
-        meta: {
-            title: "ProScholarTools | عالمی تعلیمی پلیٹ فارم",
-            desc: "AI تحقیقی ٹولز، پیچیدگی کا پتہ لگانے والے اور مالی کیلکولیٹر"
-        },
-        og: {
-            title: "ProScholarTools | ذہین تعلیمی ٹولز",
-            desc: "محققین اور طلباء کے لیے عالمی پلیٹ فارم"
-        },
-        global: { badge: "150K+ صارفین کا اعتماد" },
-        hero: {
-            title: "<span>ذہین تعلیمی</span> ٹولز",
-            desc: "AI سے چلنے والے تحقیقی ٹولز، پیچیدگی چیکر اور مالی کیلکولیٹرز فراہم کرنے والا عالمی پلیٹ فارم"
-        },
-        stats: {
-            users: "عالمی صارفین",
-            tools: "ذہین ٹولز",
-            languages: "زبانیں",
-            accuracy: "درستگی"
-        },
-        tools: {
-            title: "عالمی محققین کے لیے طاقتور ٹولز",
-            writer: {
-                title: "AI ریسرچ رائٹر",
-                desc: "APA، MLA، شکاگو فارمیٹ میں خودکار حوالوں کے ساتھ تعلیمی کاغذات بنائیں",
-                btn: "لکھنا شروع کریں"
-            },
-            plag: {
-                title: "پیچیدگی چیکر",
-                desc: "99% درستگی کے ساتھ جدید AI کا پتہ لگانا۔ عالمی تعلیمی ڈیٹا بیس کے خلاف چیک کریں",
-                btn: "متن چیک کریں"
-            },
-            trans: {
-                title: "عالمی مترجم",
-                desc: "100+ زبانوں میں اصطلاحات کو برقرار رکھتے ہوئے تعلیمی ترجمہ",
-                btn: "ترجمہ کریں"
-            }
-        },
-        footer: {
-            about: "جدید ترین AI ٹولز کے ساتھ دنیا بھر کے محققین کو بااختیار بنانا۔",
-            links: "فوری لنکس",
-            about_link: "ہمارے بارے میں",
-            contact: "رابطہ",
-            legal: "قانونی",
-            privacy: "رازداری کی پالیسی",
-            terms: "استعمال کی شرائط",
-            cookies: "کوکیز کی پالیسی",
-            rights: "جملہ حقوق محفوظ ہیں"
-        }
-    },
-    hi: {
-        meta: {
-            title: "ProScholarTools | वैश्विक शैक्षिक प्लेटफॉर्म",
-            desc: "AI अनुसंधान उपकरण, प्लagiarism डिटेक्टर और वित्तीय कैलकुलेटर"
-        },
-        og: {
-            title: "ProScholarTools | स्मार्ट शैक्षिक उपकरण",
-            desc: "शोधकर्ताओं और छात्रों के लिए वैश्विक मंच"
-        },
-        global: { badge: "150K+ वैश्विक उपयोगकर्ताओं का विश्वास" },
-        hero: {
-            title: "<span>स्मार्ट शैक्षिक</span> उपकरण",
-            desc: "AI-संचालित अनुसंधान उपकरण, प्लagiarism डिटेक्शन और छात्रों के लिए वित्तीय कैलकुलेटर प्रदान करने वाला वैश्विक मंच"
-        },
-        stats: {
-            users: "वैश्विक उपयोगकर्ता",
-            tools: "स्मार्ट उपकरण",
-            languages: "भाषाएँ",
-            accuracy: "सटीकता दर"
-        },
-        tools: {
-            title: "वैश्विक शोधकर्ताओं के लिए शक्तिशाली उपकरण",
-            writer: {
-                title: "AI रिसर्च राइटर",
-                desc: "APA, MLA, शिकागो प्रारूप में स्वचालित उद्धरण के साथ शैक्षिक पत्र बनाएं",
-                btn: "लिखना शुरू करें"
-            },
-            plag: {
-                title: "प्लagiarism चेकर",
-                desc: "99% सटीकता के साथ उन्नत AI का पता लगाना। वैश्विक शैक्षिक डेटाबेस के विरुद्ध जांचें",
-                btn: "टेक्स्ट जांचें"
-            },
-            trans: {
-                title: "वैश्विक अनुवादक",
-                desc: "100+ भाषाओं में शब्दावली संरक्षण के साथ शैक्षिक अनुवाद",
-                btn: "अनुवाद करें"
-            }
-        },
-        footer: {
-            about: "अत्याधुनिक AI उपकरणों के साथ दुनिया भर के शोधकर्ताओं को सशक्त बनाना।",
-            links: "त्वरित लिंक",
-            about_link: "हमारे बारे में",
-            contact: "संपर्क",
-            legal: "कानूनी",
-            privacy: "गोपनीयता नीति",
-            terms: "उपयोग की शर्तें",
-            cookies: "कुकी नीति",
-            rights: "सर्वाधिकार सुरक्षित"
-        }
-    }
-};
-
-// RTL Languages Configuration
-const rtlLanguages = ['ar', 'ur', 'fa', 'he'];
-const flagEmojis = {
-    ar: '🇸🇦', en: '🇺🇸', fr: '🇫🇷', 
-    es: '🇪🇸', ur: '🇵🇰', hi: '🇮🇳'
-};
-const languageNames = {
-    ar: 'العربية', en: 'English', fr: 'Français', 
-    es: 'Español', ur: 'اردو', hi: 'हिंदी'
-};
-
-// Initialize
-let currentLang = localStorage.getItem('proscholar-lang') || detectBrowserLang();
-
-function detectBrowserLang() {
-    const lang = navigator.language || navigator.userLanguage || 'en';
-    const shortLang = lang.split('-')[0];
-    return i18n[shortLang] ? shortLang : 'en';
-}
-
-function toggleLangMenu() {
-    document.getElementById('langMenu').classList.toggle('active');
-}
-
-function changeLang(lang) {
-    if (!i18n[lang]) return;
-    
-    currentLang = lang;
-    localStorage.setItem('proscholar-lang', lang);
-    
-    // Update HTML attributes
-    const html = document.getElementById('html-root');
-    html.lang = lang;
-    html.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
-    
-    // Update meta tags
-    document.title = i18n[lang].meta.title;
-    document.querySelector('meta[name="description"]').content = i18n[lang].meta.desc;
-    document.getElementById('og-locale').content = lang + (lang === 'en' ? '_US' : lang === 'ar' ? '_AR' : '_' + lang.toUpperCase());
-    
-    // Update UI elements with animation
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const keys = el.getAttribute('data-i18n').split('.');
-        let value = i18n[lang];
-        keys.forEach(key => value = value?.[key]);
-        
-        if (value) {
-            el.style.opacity = '0';
-            setTimeout(() => {
-                if (keys[0] === 'hero' && keys[1] === 'title') {
-                    el.innerHTML = value;
-                } else {
-                    el.textContent = value;
-                }
-                el.style.opacity = '1';
-            }, 150);
-        }
-    });
-    
-    // Update language button
-    document.getElementById('currentFlag').textContent = flagEmojis[lang];
-    document.getElementById('currentLangLabel').textContent = languageNames[lang];
-    
-    // Update active state in dropdown
-    document.querySelectorAll('.lang-item').forEach(item => {
-        item.classList.toggle('active', item.dataset.lang === lang);
-    });
-    
-    // Close menu
-    document.getElementById('langMenu').classList.remove('active');
-    
-    // Update canonical URL
-    const canonical = document.getElementById('canonical-link');
-    canonical.href = `https://proscholartools.com/${lang}/`;
-    
-    // Track language change (optional analytics)
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'language_change', { language: lang });
-    }
-}
-
-// Detect User Location for personalization
-function detectLocation() {
-    const locationEl = document.getElementById('userLocation');
-    const langNames = {
-        'SA': '🇸🇦 السعودية', 'AE': '🇦🇪 الإمارات', 'EG': '🇪🇬 مصر',
-        'PK': '🇵🇰 باكستان', 'IN': '🇮🇳 الهند', 'US': '🇺🇸 USA',
-        'FR': '🇫🇷 France', 'ES': '🇪🇸 España', 'GB': '🇬🇧 UK'
     };
-    
-    // Simulated detection - in production use IP geolocation API
-    const userLang = navigator.language;
-    let location = '🌍 Global';
-    
-    if (userLang.includes('ar')) location = langNames['SA'] || '🌍 Arab World';
-    else if (userLang.includes('en-US')) location = langNames['US'];
-    else if (userLang.includes('en-GB')) location = langNames['GB'];
-    else if (userLang.includes('fr')) location = langNames['FR'];
-    else if (userLang.includes('es')) location = langNames['ES'];
-    else if (userLang.includes('ur')) location = langNames['PK'];
-    else if (userLang.includes('hi')) location = langNames['IN'];
-    
-    if (locationEl) locationEl.textContent = `📍 ${location}`;
-}
 
-// Close dropdown when clicking outside
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.lang-menu')) {
-        document.getElementById('langMenu')?.classList.remove('active');
+    function toggleLang() {
+        const root = document.getElementById('html-root');
+        const isAr = root.getAttribute('lang') === 'ar';
+        if(isAr) {
+            root.setAttribute('lang', 'en'); root.setAttribute('dir', 'ltr');
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.innerText = trans.en[key];
+            });
+        } else { location.reload(); }
     }
-});
 
-// Initialize on load
-window.addEventListener('load', () => {
-    setTimeout(() => document.getElementById('L').classList.add('h'), 300);
-    changeLang(currentLang);
-    detectLocation();
-});
-
-// Prevent flash of untranslated content
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.visibility = 'visible';
-});
+    window.onload = () => { setTimeout(() => { document.getElementById('pop').style.display='flex'; }, 2000); };
 </script>
-
 </body>
 </html>
