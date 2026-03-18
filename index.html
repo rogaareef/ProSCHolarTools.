@@ -1,58 +1,49 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="html-root">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProScholarTools | المنصة العالمية الشاملة 2026</title>
+    <title>ProScholarTools | المنصة الأكاديمية العالمية 2026</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
     <style>
         :root { --p: #38bdf8; --a: #fbbf24; --bg: #020617; --card: rgba(255,255,255,0.05); }
         body { font-family: 'Cairo', sans-serif; background: var(--bg); color: white; margin: 0; line-height: 1.6; }
-        .w { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+        .w { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* الهيدر */
         header { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(2,6,23,0.9); position: sticky; top:0; z-index:100; backdrop-filter: blur(10px); }
         .nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.6rem; font-weight: 900; color: var(--p); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        
-        /* قسم الشبكة العملاق للمقالات */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0; }
+        .logo { font-size: 1.6rem; font-weight: 900; color: var(--p); text-decoration: none; }
+
+        /* شبكة المقالات الشاملة (كل المقالات) */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
         .card { background: var(--card); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 15px; text-align: center; transition: 0.3s; }
         .card:hover { border-color: var(--p); transform: translateY(-5px); background: rgba(56, 189, 248, 0.05); }
         .card i { font-size: 2.2rem; color: var(--p); margin-bottom: 15px; display: block; }
-        .btn { background: var(--p); color: #000; padding: 8px 20px; border-radius: 7px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; font-size: 0.9rem; }
+        .btn { background: var(--p); color: #000; padding: 8px 20px; border-radius: 7px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
 
-        /* السوشيال ميديا الكاملة */
-        .social-full { background: rgba(255,255,255,0.02); padding: 40px 0; text-align: center; border-radius: 20px; margin: 40px 0; }
+        /* قسم السوشيال ميديا الكامل */
+        .social-full { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; }
         .social-icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
         .social-icons a { width: 45px; height: 45px; display: grid; place-items: center; background: var(--card); border-radius: 50%; color: white; text-decoration: none; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
         .social-icons a:hover { background: var(--p); color: #000; transform: scale(1.1); }
 
-        /* الفوتر القانوني الكامل */
-        footer { padding: 60px 0; background: #010409; border-top: 1px solid var(--p); text-align: center; }
-        .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; max-width: 900px; margin: 30px auto; }
-        .legal-grid a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; padding: 10px; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); }
-        .legal-grid a:hover { color: var(--p); border-color: var(--p); }
-
-        #pop { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; z-index: 2000; }
+        /* الفوتر القانوني الكامل لأدسنس */
+        footer { padding: 40px 0; background: #010409; border-top: 2px solid var(--p); text-align: center; }
+        .legal-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; max-width: 1000px; margin: 20px auto; }
+        .legal-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; padding: 8px; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); }
+        .legal-links a:hover { color: var(--p); border-color: var(--p); }
     </style>
 </head>
 <body>
 
-<div id="pop">
-    <div style="background: #0f172a; border: 2px solid var(--p); padding: 40px; border-radius: 25px; text-align: center; max-width: 400px;">
-        <i class="fas fa-crown" style="font-size: 3rem; color: var(--a); margin-bottom: 20px;"></i>
-        <h2>مرحباً بك في المنصة الشاملة</h2>
-        <p>استكشف دليل النبراس وأكثر من 30 مقالاً بحثياً متطوراً.</p>
-        <button onclick="document.getElementById('pop').style.display='none'" class="btn" style="width: 100%; cursor:pointer;">دخول الموقع</button>
-    </div>
-</div>
-
 <header>
     <div class="w nav">
         <a href="/" class="logo"><i class="fas fa-university"></i> ProScholarTools</a>
-        <div class="sc">
-            <a href="contact.html" style="color:white; text-decoration:none; font-size:0.9rem;"><i class="fas fa-envelope"></i> اتصل بنا</a>
-        </div>
+        <a href="contact.html" style="color:var(--p); text-decoration:none; font-weight:bold;">اتصل بنا</a>
     </div>
 </header>
 
@@ -61,77 +52,56 @@
         <div class="card" style="border: 2px solid var(--a);">
             <i class="fas fa-bolt" style="color: var(--a);"></i>
             <h3>نبراس الذكاء الاصطناعي 2026</h3>
-            <p>الدليل العالمي الأهم للباحثين والطلاب.</p>
             <a href="ultimate-ai-guide-2026.html" class="btn" style="background:var(--a)">دخول الدليل</a>
         </div>
         <div class="card">
             <i class="fas fa-balance-scale"></i>
             <h3>قانون المعاشات الجديد</h3>
-            <p>تحليل الحقوق التأمينية والمالية 2026.</p>
             <a href="pension-law-2026.html" class="btn">اقرأ البحث</a>
         </div>
         <div class="card">
             <i class="fas fa-microscope"></i>
             <h3>أدوات الباحث الأكاديمي</h3>
-            <p>أحدث محركات الذكاء الاصطناعي للبحث.</p>
-            <a href="academic-ai-tools.html" class="btn">استخدم الأداة</a>
+            <a href="academic-ai-tools.html" class="btn">استخدام الأداة</a>
         </div>
         <div class="card">
             <i class="fas fa-shield-virus"></i>
             <h3>فحص الانتحال العلمي</h3>
-            <p>تأكد من أصالة أبحاثك بلمسة زر.</p>
             <a href="plagiarism-checker.html" class="btn">افحص الآن</a>
         </div>
-        <div class="card">
-            <i class="fas fa-chart-line"></i>
-            <h3>تحليل الذهب العالمي</h3>
-            <p>توقعات السوق والذهب لعام 2026.</p>
-            <a href="crypto-currency-legal-framework-2026.html" class="btn">عرض التحليل</a>
         </div>
-        <div class="card">
-            <i class="fas fa-user-graduate"></i>
-            <h3>أدوات المعلمين الذكية</h3>
-            <p>كيف يستخدم المعلم الذكاء الاصطناعي؟</p>
-            <a href="ai-tools-for-teachers-2026.html" class="btn">اقرأ المزيد</a>
-        </div>
-    </div>
 
     <section class="social-full">
-        <h3>انضم لمجتمعنا العالمي</h3>
+        <h3>انضم إلينا على منصات التواصل</h3>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
     </section>
 </main>
 
 <footer>
     <div class="w">
-        <p>ProScholarTools | السيادة المعرفية الرقمية</p>
-        <p style="font-size:0.8rem; opacity:0.6;">بإشراف باحث دكتوراه وخبير NOSI - محمد ربيع عريف</p>
+        <p>بإشراف باحث دكتوراه وخبير NOSI - محمد ربيع عريف</p>
         
-        <div class="legal-grid">
+        <div class="legal-links">
             <a href="privacy-policy.html"><i class="fas fa-user-shield"></i> سياسة الخصوصية</a>
             <a href="terms-of-service.html"><i class="fas fa-file-contract"></i> شروط الخدمة</a>
             <a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i> إخلاء المسؤولية</a>
-            <a href="cookie-policy.html"><i class="fas fa-cookie"></i> سياسة الكوكيز</a>
-            <a href="compliance.html"><i class="fas fa-check-circle"></i> الامتثال القانوني</a>
-            <a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a>
+            <a href="cookie-policy.html"><i class="fas fa-cookie"></i> ملفات تعريف الارتباط</a>
             <a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a>
             <a href="sitemap.xml"><i class="fas fa-sitemap"></i> خريطة الموقع</a>
         </div>
         
-        <p style="margin-top:20px; font-size:0.7rem;">© 2026 جميع الحقوق محفوظة</p>
+        <p style="margin-top:20px; font-size:0.7rem; opacity:0.5;">© 2026 ProScholarTools. جميع الحقوق محفوظة.</p>
     </div>
 </footer>
 
-<script>
-    window.onload = () => { setTimeout(() => { document.getElementById('pop').style.display='flex'; }, 1500); };
-</script>
 </body>
 </html>
