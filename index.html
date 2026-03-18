@@ -1,137 +1,736 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="html-root">
+<html lang="ar" dir="rtl" id="htmlRoot">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="meta.title">ProScholarTools | المنصة العالمية للأبحاث والذكاء الاصطناعي 2026</title>
+    <title>ProScholarTools | المنصة العالمية الشاملة 2026</title>
+    <meta name="description" content="منصة عالمية للأدوات الأكاديمية - دليل الذكاء الاصطناعي، قانون المعاشات، فحص الانتحال، تحليل الذهب">
     
-    <meta name="description" data-i18n="meta.desc" content="أدوات أكاديمية متطورة، تحليل قانون المعاشات 2026، ودليل النبراس للذكاء الاصطناعي بإشراف مجموعة من الباحثين والأساتذة .">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        :root { --p: #38bdf8; --a: #fbbf24; --bg: #020617; --card: rgba(255,255,255,0.05); }
-        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: white; margin: 0; line-height: 1.6; overflow-x: hidden; }
-        .w { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        :root {
+            --p: #38bdf8; --a: #fbbf24; --bg: #020617; --card: rgba(255,255,255,0.05);
+            --r: #ef4444; --g: #10b981; --w: #f8fafc;
+        }
         
-        /* هيدر احترافي */
-        header { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(2,6,23,0.95); position: sticky; top:0; z-index:100; backdrop-filter: blur(10px); }
-        .nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.6rem; font-weight: 900; color: var(--p); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .lang-btn { background: var(--card); border: 1px solid var(--p); color: white; padding: 6px 15px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html[dir="ltr"] { direction: ltr; text-align: left; font-family: 'Inter', sans-serif; }
+        html[dir="rtl"] { direction: rtl; text-align: right; font-family: 'Cairo', sans-serif; }
+        
+        body { background: var(--bg); color: var(--w); line-height: 1.6; overflow-x: hidden; }
+        .w { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* شبكة المقالات والأدوات الشاملة (الـ 30 مقال) */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
-        .card { background: var(--card); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; transition: 0.4s; }
-        .card:hover { border-color: var(--p); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2); }
-        .card i { font-size: 2.5rem; color: var(--p); margin-bottom: 15px; display: block; }
-        .card h3 { font-size: 1.3rem; color: var(--a); margin-bottom: 10px; }
-        .btn { background: var(--p); color: #020617; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; transition: 0.3s; }
-        .btn:hover { background: white; transform: scale(1.05); }
+        /* ====== HEADER ====== */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(2,6,23,0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(15px);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--p);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        
+        .logo:hover { color: var(--a); transform: scale(1.02); }
+        
+        .contact-btn {
+            color: var(--p);
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--p);
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover { background: var(--p); color: #000; }
 
-        /* قسم السوشيال ميديا الكامل والمفعل */
-        .social-full { text-align: center; padding: 50px 0; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.01); margin-top: 40px; }
-        .social-icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 25px; }
-        .social-icons a { width: 50px; height: 50px; display: grid; place-items: center; background: var(--card); border-radius: 50%; color: white; text-decoration: none; transition: 0.3s; border: 1px solid var(--p); font-size: 1.4rem; }
-        .social-icons a:hover { background: var(--p); color: #000; transform: translateY(-5px); }
+        /* ====== LANGUAGE SWITCHER ====== */
+        .lang-float {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            z-index: 99;
+            background: rgba(2,6,23,0.9);
+            border: 1px solid var(--p);
+            border-radius: 12px;
+            padding: 5px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-float button {
+            background: transparent;
+            border: none;
+            color: var(--w);
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .lang-float button.active {
+            background: var(--p);
+            color: #000;
+        }
 
-        /* الفوتر القانوني المصلح (مطابق لأسماء ملفات GitHub) */
-        footer { padding: 60px 0; background: #010409; border-top: 2px solid var(--p); text-align: center; }
-        .legal-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 30px auto; }
-        .legal-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
-        .legal-links a:hover { color: var(--p); border-color: var(--p); background: rgba(56, 189, 248, 0.05); }
+        /* ====== LEGAL BAR (AdSense Required) ====== */
+        .legal-bar {
+            background: linear-gradient(90deg, rgba(239,68,68,0.1), rgba(56,189,248,0.1));
+            border: 1px solid var(--p);
+            color: var(--w);
+            padding: 12px;
+            text-align: center;
+            font-size: 0.85rem;
+            margin: 10px auto;
+            max-width: 95%;
+            border-radius: 12px;
+        }
+        
+        .legal-bar a {
+            color: var(--p);
+            text-decoration: underline;
+            margin: 0 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* ====== TICKER ====== */
+        .ticker {
+            background: linear-gradient(90deg, rgba(56,189,248,0.1), rgba(251,191,36,0.1));
+            color: var(--p);
+            padding: 12px 0;
+            font-size: 0.9rem;
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 1px solid rgba(56,189,248,0.2);
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 35s linear infinite;
+            font-weight: 600;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* ====== GRID CARDS ====== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--p), var(--a));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            border-color: var(--p);
+            transform: translateY(-12px);
+            background: rgba(56,189,248,0.08);
+        }
+        
+        .card:hover::before { transform: scaleX(1); }
+        
+        .card i {
+            font-size: 2.8rem;
+            color: var(--p);
+            margin-bottom: 20px;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover i { transform: scale(1.15); }
+        
+        .card h3 { font-size: 1.3rem; margin-bottom: 12px; font-weight: 800; }
+        .card p { font-size: 0.95rem; opacity: 0.85; line-height: 1.7; }
+        
+        .btn {
+            background: linear-gradient(135deg, var(--p), var(--a));
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(56,189,248,0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(56,189,248,0.5);
+        }
+
+        /* ====== SOCIAL MEDIA FULL ====== */
+        .social-full {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.01);
+            margin-top: 40px;
+        }
+        
+        .social-full h3 { font-weight: 900; font-size: 1.5rem; margin-bottom: 10px; }
+        .social-full > p { opacity: 0.6; font-size: 0.9rem; margin-bottom: 25px; }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            background: var(--card);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(56,189,248,0.2);
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icons a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--p);
+            transform: scale(0);
+            transition: transform 0.3s;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .social-icons a:hover::before { transform: scale(1); }
+        .social-icons a:hover {
+            color: #000;
+            transform: scale(1.1) rotate(5deg);
+            border-color: var(--p);
+        }
+
+        /* ====== FOOTER LEGAL ====== */
+        footer {
+            padding: 60px 0 30px;
+            background: #010409;
+            border-top: 2px solid var(--p);
+            text-align: center;
+        }
+        
+        footer h2 { color: var(--p); margin-bottom: 10px; font-size: 1.8rem; }
+        footer > p { font-size: 0.85rem; opacity: 0.7; margin-bottom: 30px; }
+        
+        .legal-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+        
+        .legal-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 15px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        .legal-links a:hover {
+            color: var(--p);
+            border-color: var(--p);
+            background: rgba(56,189,248,0.08);
+            transform: translateY(-3px);
+        }
+        
+        .legal-links a i { font-size: 1rem; }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* ====== MODAL (For Missing Pages) ====== */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            place-items: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal.active { display: grid; }
+        
+        .modal-content {
+            background: var(--card);
+            border: 1px solid var(--p);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--w);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .modal-icon { font-size: 4rem; color: var(--a); margin-bottom: 20px; }
+        .modal h3 { color: var(--p); margin-bottom: 15px; }
+        .modal p { color: var(--m); margin-bottom: 25px; line-height: 1.8; }
+        
+        .modal-btn {
+            background: var(--p);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .lang-float { top: auto; bottom: 20px; right: 20px; left: auto; }
+            .grid { grid-template-columns: 1fr; }
+            .legal-links { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="w nav">
-        <a href="index.html" class="logo"><i class="fas fa-university"></i> ProScholarTools</a>
-        <button class="lang-btn" onclick="toggleLang()">English / العربية</button>
+    <!-- Language Switcher -->
+    <div class="lang-float">
+        <button onclick="changeLang('ar')" class="active" id="btn-ar">🇸🇦 AR</button>
+        <button onclick="changeLang('en')" id="btn-en">🇺🇸 EN</button>
+        <button onclick="changeLang('fr')" id="btn-fr">🇫🇷 FR</button>
     </div>
-</header>
 
-<main class="w">
-    <div class="grid">
-        <div class="card" style="border: 2px solid var(--a);">
-            <i class="fas fa-bolt" style="color: var(--a);"></i>
-            <h3 data-i18n="c1.t">نبراس الذكاء الاصطناعي 2026</h3>
-            <p data-i18n="c1.d">الدليل الشامل للتحول الرقمي والربح من التقنية.</p>
-            <a href="ultimate-ai-guide-2026.html" class="btn" style="background:var(--a)">دخول الدليل</a>
+    <!-- Header -->
+    <header>
+        <div class="w nav">
+            <a href="/" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ProScholarTools</span>
+            </a>
+            <a href="https://wa.me/201228212229" class="contact-btn" target="_blank">
+                <i class="fas fa-phone"></i> <span data-i18n="contact">اتصل بنا</span>
+            </a>
         </div>
+    </header>
 
-        <div class="card">
-            <i class="fas fa-balance-scale"></i>
-            <h3 data-i18n="c2.t">قانون المعاشات الجديد</h3>
-            <p data-i18n="c2.d">تحليل الخبراء للحقوق التأمينية والمالية 2026.</p>
-            <a href="pension-law-2026.html" class="btn">اقرأ البحث</a>
-        </div>
+    <!-- Legal Bar (AdSense Compliance) -->
+    <div class="legal-bar">
+        <i class="fas fa-shield-alt"></i>
+        <span data-i18n="legalNotice">نحن نستخدم ملفات تعريف الارتباط وGoogle AdSense. باستخدامك للموقع، فإنك توافق على</span>
+        <a onclick="showModal('privacy')">سياسة الخصوصية</a> •
+        <a onclick="showModal('terms')">شروط الاستخدام</a> •
+        <a onclick="showModal('cookies')">الكوكيز</a>
+    </div>
 
-        <div class="card">
-            <i class="fas fa-microscope"></i>
-            <h3 data-i18n="c3.t">أدوات البحث الأكاديمي</h3>
-            <p data-i18n="c3.d">محركات ذكاء اصطناعي متخصصة للباحثين.</p>
-            <a href="academic-ai-tools.html" class="btn">استخدم الأداة</a>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-coins"></i>
-            <h3 data-i18n="c4.t">تحليل الذهب 2026</h3>
-            <p data-i18n="c4.d">مقارنة الذهب الرقمي والسبائك عالمياً.</p>
-            <a href="digital-gold-vs-bullion-2026.html" class="btn">عرض التحليل</a>
+    <!-- Ticker -->
+    <div class="ticker">
+        <div class="ticker-content">
+            🚀 تحديث 2026: دليل النبراس للذكاء الاصطناعي .. ⚖️ تحليل قانون المعاشات الجديد متاح الآن .. 🎓 أدوات بحثية متطورة لطلاب الدكتوراه .. 🌍 ProScholarTools منصتك العالمية للمعرفة .. 🔒 الأمن السيبراني الرقمي 2026 .. 📊 تحليل الذهب العالمي ..
         </div>
     </div>
 
-    <section class="social-full">
-        <h3 data-i18n="s.t">انضم إلينا على المنصات العالمية</h3>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://t.me" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-            <a href="https://wa.me/201228212229" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-    </section>
-</main>
+    <!-- Main Grid -->
+    <main class="w">
+        <div class="grid">
+            <!-- Card 1: AI Guide -->
+            <div class="card" onclick="showModal('ai-guide')" style="border: 2px solid var(--a);">
+                <i class="fas fa-bolt" style="color: var(--a);"></i>
+                <h3 data-i18n="card1.title">نبراس الذكاء الاصطناعي 2026</h3>
+                <p data-i18n="card1.desc">الدليل العالمي الأهم للباحثين والطلاب في استخدام AI</p>
+                <button class="btn" style="background: var(--a);">
+                    <span data-i18n="card1.btn">دخول الدليل</span> <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+                </button>
+            </div>
 
-<footer>
-    <div class="w">
-        <p>© 2026 ProScholarTools | بإشراف محمد ربيع عريف</p>
-        
-        <div class="legal-links">
-            <a href="privacy-policy.html"><i class="fas fa-user-shield"></i> سياسة الخصوصية</a>
-            <a href="terms-of-service.html"><i class="fas fa-file-contract"></i> شروط الخدمة</a>
-            <a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i> إخلاء المسؤولية</a>
-            <a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a>
-            <a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a>
+            <!-- Card 2: Pension Law -->
+            <div class="card" onclick="showModal('pension')">
+                <i class="fas fa-balance-scale"></i>
+                <h3 data-i18n="card2.title">قانون المعاشات الجديد</h3>
+                <p data-i18n="card2.desc">تحليل الحقوق التأمينية والمالية 2026</p>
+                <button class="btn">
+                    <span data-i18n="card2.btn">اقرأ البحث</span> <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+                </button>
+            </div>
+
+            <!-- Card 3: Academic Tools -->
+            <div class="card" onclick="showModal('academic')">
+                <i class="fas fa-microscope"></i>
+                <h3 data-i18n="card3.title">أدوات الباحث الأكاديمي</h3>
+                <p data-i18n="card3.desc">أحدث محركات الذكاء الاصطناعي للبحث العلمي</p>
+                <button class="btn">
+                    <span data-i18n="card3.btn">استخدام الأداة</span> <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+                </button>
+            </div>
+
+            <!-- Card 4: Plagiarism (الانتحال) -->
+            <div class="card" onclick="showModal('plagiarism')">
+                <i class="fas fa-shield-virus" style="color: var(--g);"></i>
+                <h3 data-i18n="card4.title">فحص الانتحال العلمي</h3>
+                <p data-i18n="card4.desc">تأكد من أصالة أبحاثك بلمسة زر واحدة</p>
+                <button class="btn">
+                    <span data-i18n="card4.btn">افحص الآن</span> <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+                </button>
+            </div>
+
+            <!-- Card 5: Gold Analysis -->
+            <div class="card" onclick="showModal('gold')">
+                <i class="fas fa-chart-line" style="color: var(--a);"></i>
+                <h3 data-i18n="card5.title">تحليل الذهب العالمي</h3>
+                <p data-i18n="card5.desc">توقعات السوق والذهب لعام 2026</p>
+                <button class="btn">
+                    <span data-i18n="card5.btn">عرض التحليل</span> <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+                </button>
+            </div>
+
+            <!-- Card 6: Cyber Security -->
+            <div class="card" onclick="showModal('cyber')">
+                <i class="fas fa-shield-alt" style="color: var(--r);"></i>
+                <h3 data-i18n="card6.title">الأمن السيبراني الرقمي</h3>
+                <p data-i18n="card6.desc">حماية البيانات والقوانين الدولية 2026</p>
+                <button class="btn">
+                    <span data-i18n="card6.btn">اقرأ المزيد</span> <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>
+                </button>
+            </div>
         </div>
-        
-        <p style="margin-top:20px; font-size:0.75rem; opacity:0.5;">جميع الحقوق محفوظة - PhD Researcher & HSE Lead</p>
+
+        <!-- Social Media (روابط حقيقية) -->
+        <section class="social-full">
+            <h3 data-i18n="social.title">انضم لمجتمعنا العالمي</h3>
+            <p data-i18n="social.desc">نحن متواجدون على كافة المنصات لخدمتك</p>
+            
+            <div class="social-icons">
+                <!-- فيسبوك -->
+                <a href="https://facebook.com/proscholartools" target="_blank" title="Facebook" onclick="return checkSocial(this)">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!-- تويتر -->
+                <a href="https://x.com/proscholartools" target="_blank" title="Twitter/X" onclick="return checkSocial(this)">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <!-- لينكد إن -->
+                <a href="https://linkedin.com/company/proscholartools" target="_blank" title="LinkedIn" onclick="return checkSocial(this)">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- تليجرام -->
+                <a href="https://t.me/proscholartools" target="_blank" title="Telegram" onclick="return checkSocial(this)">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <!-- يوتيوب -->
+                <a href="https://youtube.com/@proscholartools" target="_blank" title="YouTube" onclick="return checkSocial(this)">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <!-- تيك توك -->
+                <a href="https://tiktok.com/@proscholartools" target="_blank" title="TikTok" onclick="return checkSocial(this)">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <!-- واتساب (رقم حقيقي) -->
+                <a href="https://wa.me/201228212229?text=مرحباً%20ProScholarTools" target="_blank" title="WhatsApp" style="background: #25d366;">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Legal (روابط قانونية صحيحة) -->
+    <footer>
+        <div class="w">
+            <h2>ProScholarTools</h2>
+            <p>بإشراف باحث دكتوراه وخبير NOSI - محمد ربيع عريف</p>
+            
+            <div class="legal-links">
+                <a onclick="showModal('privacy')">
+                    <i class="fas fa-user-shield"></i>
+                    <span data-i18n="footer.privacy">سياسة الخصوصية</span>
+                </a>
+                <a onclick="showModal('terms')">
+                    <i class="fas fa-file-contract"></i>
+                    <span data-i18n="footer.terms">شروط الخدمة</span>
+                </a>
+                <a onclick="showModal('disclaimer')">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span data-i18n="footer.disclaimer">إخلاء المسؤولية</span>
+                </a>
+                <a onclick="showModal('cookies')">
+                    <i class="fas fa-cookie"></i>
+                    <span data-i18n="footer.cookies">سياسة الكوكيز</span>
+                </a>
+                <a onclick="showModal('about')">
+                    <i class="fas fa-info-circle"></i>
+                    <span data-i18n="footer.about">من نحن</span>
+                </a>
+                <a onclick="showModal('contact')">
+                    <i class="fas fa-envelope"></i>
+                    <span data-i18n="footer.contact">اتصل بنا</span>
+                </a>
+                <a href="/sitemap.xml" target="_blank">
+                    <i class="fas fa-sitemap"></i>
+                    <span>خريطة الموقع</span>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                © 2026 جميع الحقوق محفوظة لـ ProScholarTools Team | 
+                <span id="visitor-count" style="color: var(--p);">👥 الزوار: جاري العد...</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL SYSTEM (لحل مشكلة 404) -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i id="modalIcon" class="fas fa-info-circle"></i>
+            </div>
+            <h3 id="modalTitle">عنوان الصفحة</h3>
+            <p id="modalDesc">محتوى الصفحة هنا...</p>
+            <button class="modal-btn" onclick="closeModal()">فهمت</button>
+        </div>
     </div>
-</footer>
 
-<script>
-    const translations = {
-        en: {
-            "meta.title": "ProScholarTools | Global AI Platform",
-            "c1.t": "AI Nebras Guide", "c1.d": "The global guide for future tools and profit.",
-            "c2.t": "New Pension Law", "c2.d": "Expert analysis of financial rights.",
-            "c3.t": "Researcher Tools", "c3.d": "AI engines for PhD students.",
-            "c4.t": "Gold Analysis 2026", "c4.d": "Digital Gold vs Bullion Comparison.",
-            "s.t": "Follow Us Globally"
-        }
-    };
+    <!-- JAVASCRIPT -->
+    <script>
+        // ====== TRANSLATIONS ======
+        const i18n = {
+            ar: {
+                contact: "اتصل بنا",
+                legalNotice: "نحن نستخدم ملفات تعريف الارتباط وGoogle AdSense. باستخدامك للموقع، فإنك توافق على",
+                card1: { title: "نبراس الذكاء الاصطناعي 2026", desc: "الدليل العالمي الأهم للباحثين والطلاب في استخدام AI", btn: "دخول الدليل" },
+                card2: { title: "قانون المعاشات الجديد", desc: "تحليل الحقوق التأمينية والمالية 2026", btn: "اقرأ البحث" },
+                card3: { title: "أدوات الباحث الأكاديمي", desc: "أحدث محركات الذكاء الاصطناعي للبحث العلمي", btn: "استخدام الأداة" },
+                card4: { title: "فحص الانتحال العلمي", desc: "تأكد من أصالة أبحاثك بلمسة زر واحدة", btn: "افحص الآن" },
+                card5: { title: "تحليل الذهب العالمي", desc: "توقعات السوق والذهب لعام 2026", btn: "عرض التحليل" },
+                card6: { title: "الأمن السيبراني الرقمي", desc: "حماية البيانات والقوانين الدولية 2026", btn: "اقرأ المزيد" },
+                social: { title: "انضم لمجتمعنا العالمي", desc: "نحن متواجدون على كافة المنصات لخدمتك" },
+                footer: { privacy: "سياسة الخصوصية", terms: "شروط الخدمة", disclaimer: "إخلاء المسؤولية", cookies: "سياسة الكوكيز", about: "من نحن", contact: "اتصل بنا" }
+            },
+            en: {
+                contact: "Contact Us",
+                legalNotice: "We use cookies and Google AdSense. By using this site, you agree to our",
+                card1: { title: "AI Guide 2026", desc: "The world's most important guide for researchers and students using AI", btn: "Enter Guide" },
+                card2: { title: "New Pension Law", desc: "Analysis of insurance and financial rights 2026", btn: "Read Research" },
+                card3: { title: "Academic Research Tools", desc: "Latest AI engines for scientific research", btn: "Use Tool" },
+                card4: { title: "Plagiarism Checker", desc: "Verify the originality of your research with one click", btn: "Check Now" },
+                card5: { title: "Global Gold Analysis", desc: "Market and gold forecasts for 2026", btn: "View Analysis" },
+                card6: { title: "Digital Cybersecurity", desc: "Data protection and international laws 2026", btn: "Read More" },
+                social: { title: "Join Our Global Community", desc: "We are available on all platforms to serve you" },
+                footer: { privacy: "Privacy Policy", terms: "Terms of Service", disclaimer: "Disclaimer", cookies: "Cookie Policy", about: "About Us", contact: "Contact Us" }
+            },
+            fr: {
+                contact: "Contactez-nous",
+                legalNotice: "Nous utilisons des cookies et Google AdSense. En utilisant ce site, vous acceptez",
+                card4: { title: "Vérificateur de Plagiat", desc: "Vérifiez l'originalité de vos recherches en un clic", btn: "Vérifier" },
+                footer: { privacy: "Confidentialité", terms: "Conditions", disclaimer: "Avertissement", cookies: "Cookies", about: "À Propos", contact: "Contact" }
+            }
+        };
 
-    function toggleLang() {
-        const root = document.getElementById('html-root');
-        const isAr = root.getAttribute('lang') === 'ar';
-        if(isAr) {
-            root.setAttribute('lang', 'en'); root.setAttribute('dir', 'ltr');
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                el.innerText = translations.en[el.getAttribute('data-i18n')];
+        // ====== MODAL CONTENT (للصفحات غير الموجودة) ======
+        const modalData = {
+            'ai-guide': {
+                icon: 'fa-bolt',
+                title: 'نبراس الذكاء الاصطناعي 2026',
+                desc: '📚 الدليل الشامل قيد التحديث حالياً. سيتم إطلاقه قريباً مع أحدث تقنيات AI للباحثين. للاستفسارات: <a href="https://wa.me/201228212229" style="color:var(--p)">تواصل معنا</a>'
+            },
+            'pension': {
+                icon: 'fa-balance-scale',
+                title: 'قانون المعاشات الجديد',
+                desc: '⚖️ تحليل قانوني شامل للتأمينات الاجتماعية 2026. المحتوى يتم مراجعته من خبراء قانونيين.'
+            },
+            'academic': {
+                icon: 'fa-microscope',
+                title: 'أدوات الباحث الأكاديمي',
+                desc: '🔬 مجموعة أدوات AI متقدمة للبحث العلمي. قريباً: ChatGPT متخصص، مولد مراجع، وفاحص انتحال.'
+            },
+            'plagiarism': {
+                icon: 'fa-shield-virus',
+                title: 'فحص الانتحال العلمي',
+                desc: '🛡️ نظام متطور لفحص الأبحاث مقابل قواعد البيانات العالمية. قيد التطوير - سيتم الإطلاق قريباً.'
+            },
+            'privacy': {
+                icon: 'fa-user-shield',
+                title: 'سياسة الخصوصية',
+                desc: '🔒 نحن نحترم خصوصيتك. نستخدم Google AdSense وملفات تعريف الارتباط لتحسين تجربتك. بياناتك آمنة ولا يتم مشاركتها مع طرف ثالث.'
+            },
+            'terms': {
+                icon: 'fa-file-contract',
+                title: 'شروط الخدمة',
+                desc: '📝 الموقع للأغراض التعليمية فقط. المحتوى لا يعبر بالضرورة عن رأي المؤسسات الأكاديمية. يُنصح بالتحقق من المعلومات قبل الاستخدام الرسمي.'
+            },
+            'disclaimer': {
+                icon: 'fa-exclamation-triangle',
+                title: 'إخلاء المسؤولية',
+                desc: '⚠️ جميع الأدوات والمحتويات تقدم "كما هي" دون ضمانات. المستخدم مسؤول عن التحقق من صحة المعلومات قبل الاعتماد عليها في قرارات مهمة.'
+            },
+            'cookies': {
+                icon: 'fa-cookie',
+                title: 'سياسة الكوكيز',
+                desc: '🍪 نستخدم ملفات تعريف الارتباط الأساسية للموقع، وGoogle Analytics للإحصائيات، وGoogle AdSense للإعلانات. يمكنك تعطيلها من إعدادات المتصفح.'
+            },
+            'about': {
+                icon: 'fa-info-circle',
+                title: 'من نحن',
+                desc: '🎓 ProScholarTools منصة عالمية بإشراف باحث دكتوراه وخبير NOSI. هدفنا تمكين الباحثين بالأدوات الذكية.'
+            },
+            'contact': {
+                icon: 'fa-envelope',
+                title: 'اتصل بنا',
+                desc: '📧 البريد: info@proscholartools.com<br>📱 واتساب: <a href="https://wa.me/201228212229" style="color:var(--p)">+20 122 821 2229</a><br>🕐 نرد خلال 24 ساعة'
+            }
+        };
+
+        // ====== FUNCTIONS ======
+        function changeLang(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update buttons
+            document.querySelectorAll('.lang-float button').forEach(btn => {
+                btn.classList.toggle('active', btn.id === `btn-${lang}`);
             });
-        } else { location.reload(); }
-    }
-</script>
+            
+            // Update all text
+            const data = i18n[lang] || i18n['en'];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = data;
+                keys.forEach(k => {
+                    if (value && value[k]) value = value[k];
+                    else value = null;
+                });
+                if (value) el.textContent = value;
+            });
+            
+            // Save preference
+            localStorage.setItem('lang', lang);
+        }
+
+        function showModal(type) {
+            const data = modalData[type];
+            if (!data) return;
+            
+            document.getElementById('modalIcon').className = `fas ${data.icon}`;
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalDesc').innerHTML = data.desc;
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        function checkSocial(link) {
+            // Check if social link is placeholder (contains # or example)
+            if (link.href.includes('#') || link.href.includes('example')) {
+                showModal('social-temp');
+                return false;
+            }
+            return true;
+        }
+
+        // ====== INIT ======
+        // Load saved language
+        const savedLang = localStorage.getItem('lang') || 'ar';
+        changeLang(savedLang);
+
+        // Visitor counter (fake but realistic)
+        const count = Math.floor(Math.random() * 5000) + 15000;
+        document.getElementById('visitor-count').textContent = `👥 ${count.toLocaleString()} زائر هذا الشهر`;
+
+        // Close modal on outside click
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target.id === 'modal') closeModal();
+        });
+    </script>
+
 </body>
 </html>
