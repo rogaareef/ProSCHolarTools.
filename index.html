@@ -5,117 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="meta.title">ProScholarTools | المنصة العالمية للأبحاث والذكاء الاصطناعي</title>
     
-    <meta name="description" data-i18n="meta.desc" content="أدوات أكاديمية متطورة، تحليل قانون المعاشات 2026، ودليل النبراس للذكاء الاصطناعي بإشراف خبراء دكتوراه.">
-    <meta name="robots" content="index, follow">
-    <meta name="geo.region" content="Global">
-
+    <meta name="description" data-i18n="meta.desc" content="أدوات أكاديمية متطورة، تحليل قانون المعاشات 2026، ودليل النبراس.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
 
     <style>
-        :root { --p: #38bdf8; --s: #818cf8; --a: #fbbf24; --bg: #020617; --card: rgba(255,255,255,0.03); }
-        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: white; margin: 0; line-height: 1.6; overflow-x: hidden; }
+        :root { --p: #38bdf8; --a: #fbbf24; --bg: #020617; --card: rgba(255,255,255,0.05); }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: white; margin: 0; line-height: 1.6; }
         .w { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
         /* الهيدر */
         header { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(2,6,23,0.9); position: sticky; top:0; z-index:100; backdrop-filter: blur(10px); }
         .nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.6rem; font-weight: 800; color: var(--p); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .lang-btn { background: var(--card); border: 1px solid var(--p); color: white; padding: 6px 18px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        .lang-btn:hover { background: var(--p); color: black; }
+        .logo { font-size: 1.6rem; font-weight: 800; color: var(--p); text-decoration: none; }
+        .lang-btn { background: var(--card); border: 1px solid var(--p); color: white; padding: 6px 15px; border-radius: 20px; cursor: pointer; }
 
-        /* شريط الأخبار المتحرك */
-        .ticker { background: rgba(56, 189, 248, 0.1); color: var(--p); padding: 10px 0; font-size: 0.9rem; overflow: hidden; white-space: nowrap; border-bottom: 1px solid rgba(56, 189, 248, 0.2); }
-        .ticker-content { display: inline-block; animation: ticker 40s linear infinite; }
-        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        /* البطاقات */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 40px 0; }
+        .card { background: var(--card); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: var(--p); transform: translateY(-5px); }
+        .card i { font-size: 2.5rem; color: var(--p); margin-bottom: 15px; display: block; }
+        .btn { background: var(--p); color: #000; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; }
 
-        /* البطاقات والأدوات */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 50px 0; }
-        .card { background: var(--card); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 20px; text-align: center; transition: 0.4s; }
-        .card:hover { border-color: var(--p); transform: translateY(-10px); box-shadow: 0 15px 40px rgba(56, 189, 248, 0.2); }
-        .card i { font-size: 3rem; color: var(--p); margin-bottom: 20px; display: block; }
-        .card h3 { font-size: 1.3rem; color: var(--a); margin-bottom: 15px; }
-        .card p { font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px; min-height: 45px; }
-        .btn { background: var(--p); color: #020617; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
-        .btn:hover { background: white; transform: scale(1.05); }
+        /* قسم السوشيال ميديا (الذي طلبته) */
+        .social-section { text-align: center; margin: 50px 0; padding: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: var(--card); color: white; margin: 0 10px; border-radius: 50%; font-size: 1.5rem; transition: 0.3s; text-decoration: none; border: 1px solid rgba(56, 189, 248, 0.2); }
+        .social-icons a:hover { background: var(--p); color: black; transform: scale(1.1); }
 
-        /* السوشيال ميديا */
-        .social { margin: 40px 0; text-align: center; }
-        .social a { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: var(--card); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; color: white; margin: 0 10px; font-size: 1.2rem; transition: 0.3s; text-decoration: none; }
-        .social a:hover { transform: translateY(-5px); color: var(--p); border-color: var(--p); }
+        /* الفوتر والملفات القانونية (التي طلبتها) */
+        footer { padding: 50px 0; background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
+        .legal-box { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .legal-box a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; padding: 8px 15px; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; transition: 0.3s; }
+        .legal-box a:hover { color: var(--p); border-color: var(--p); background: rgba(56, 189, 248, 0.05); }
 
-        /* الفوتر والروابط القانونية */
-        footer { padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; background: rgba(2,6,23,0.5); }
-        .legal { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 25px; }
-        .legal a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; padding: 5px 12px; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; transition: 0.2s; }
-        .legal a:hover { color: var(--p); border-color: var(--p); }
-
-        /* تحسين LTR */
-        [dir="ltr"] .ticker-content { animation: ticker-ltr 40s linear infinite; }
-        @keyframes ticker-ltr { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        /* إصلاح المنبثقة */
+        #pop { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(5px); }
+        .pop-c { background: #0f172a; border: 2px solid var(--p); padding: 40px; border-radius: 25px; text-align: center; max-width: 400px; }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="w nav">
-        <a href="/" class="logo"><i class="fas fa-brain"></i> ProScholarTools</a>
-        <button class="lang-btn" onclick="toggleLang()" id="btn-lang">English / العربية</button>
-    </div>
-</header>
-
-<div class="ticker">
-    <div class="ticker-content">
-        🚀 تحديث 2026: دليل النبراس للذكاء الاصطناعي متاح الآن .. ⚖️ تحليل قانون المعاشات الجديد .. 🎓 أدوات بحثية متطورة للباحثين .. 🌍 ProScholarTools منصتك العالمية .. 🚀
+<div id="pop">
+    <div class="pop-c">
+        <i class="fas fa-rocket" style="font-size: 3rem; color: var(--a); margin-bottom: 20px;"></i>
+        <h2 data-i18n="pop.t">مرحباً بك يا محمد</h2>
+        <p data-i18n="pop.d">استكشف دليل النبراس العالمي للذكاء الاصطناعي</p>
+        <button onclick="closePop()" class="btn" style="background: var(--a); cursor: pointer; border: none; width: 100%;">دخول الموقع</button>
     </div>
 </div>
 
+<header>
+    <div class="w nav">
+        <a href="/" class="logo">ProScholarTools</a>
+        <button class="lang-btn" onclick="toggleLang()">English / العربية</button>
+    </div>
+</header>
+
 <main class="w">
     <div class="grid">
-        <div class="card" style="border: 1px solid var(--a);">
+        <div class="card" style="border-color: var(--a);">
             <i class="fas fa-bolt" style="color: var(--a);"></i>
             <h3 data-i18n="c1.t">نبراس الذكاء الاصطناعي</h3>
-            <p data-i18n="c1.d">الدليل العالمي الموحد لفهم المستقبل والربح من التقنية بذكاء.</p>
-            <a href="ultimate-ai-guide-2026.html" class="btn" style="background: var(--a);">دخول الدليل</a>
+            <p data-i18n="c1.d">دليلك الشامل للأدوات والربح التقني.</p>
+            <a href="ultimate-ai-guide-2026.html" class="btn" style="background: var(--a);">دخول</a>
         </div>
-
         <div class="card">
             <i class="fas fa-balance-scale"></i>
-            <h3 data-i18n="c2.t">قانون المعاشات 2026</h3>
-            <p data-i18n="c2.d">تحليل قانوني دقيق للحقوق التأمينية والمالية بإشراف خبراء.</p>
+            <h3 data-i18n="c2.t">قانون المعاشات</h3>
+            <p data-i18n="c2.d">تحليل قانوني شامل للحقوق التأمينية.</p>
             <a href="pension-law-2026.html" class="btn">اقرأ البحث</a>
         </div>
-
         <div class="card">
-            <i class="fas fa-file-alt"></i>
-            <h3 data-i18n="c3.t">أدوات البحث الأكاديمي</h3>
-            <p data-i18n="c3.d">محركات ذكاء اصطناعي متخصصة لخدمة طلاب الدكتوراه والباحثين.</p>
+            <i class="fas fa-user-graduate"></i>
+            <h3 data-i18n="c3.t">أدوات الباحثين</h3>
+            <p data-i18n="c3.d">محركات ذكاء اصطناعي لطلاب الدكتوراه.</p>
             <a href="academic-ai-tools.html" class="btn">تصفح الأدوات</a>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-shield-alt"></i>
-            <h3 data-i18n="c4.t">فاحص الانتحال العلمي</h3>
-            <p data-i18n="c4.d">تأكد من أصالة أبحاثك الأكاديمية قبل النشر الدولي.</p>
-            <a href="plagiarism-checker.html" class="btn">ابدأ الفحص</a>
         </div>
     </div>
 
-    <div class="social">
-        <h3 style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.6;" data-i18n="social.t">تابعنا عالمياً</h3>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+    <div class="social-section">
+        <h3 data-i18n="s.t">تابعنا على منصات التواصل</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
     </div>
 </main>
 
 <footer>
     <div class="w">
-        <p>© 2026 ProScholarTools | Global Research Team</p>
-        <p style="font-size: 0.75rem; opacity: 0.5;" data-i18n="ft.d">بإشراف باحث دكتوراه وخبير اللجنة العليا للسلامة (NOSI)</p>
-        
-        <div class="legal">
-            <a href="privacy-policy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a>
+        <p>© 2026 ProScholarTools | محمد ربيع عريف</p>
+        <div class="legal-box">
+            <a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
             <a href="terms-of-service.html"><i class="fas fa-file-contract"></i> Terms of Service</a>
             <a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a>
             <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
@@ -124,15 +107,13 @@
 </footer>
 
 <script>
-    const translations = {
+    const trans = {
         en: {
-            "meta.title": "ProScholarTools | Global AI Platform",
-            "c1.t": "AI Nebras Guide", "c1.d": "The global guide for future tools and digital profit.",
-            "c2.t": "Pension Law 2026", "c2.d": "Legal analysis of insurance and financial rights.",
-            "c3.t": "Academic Research Tools", "c3.d": "AI engines for PhD students and researchers.",
-            "c4.t": "Plagiarism Checker", "c4.d": "Ensure the originality of your papers globally.",
-            "social.t": "Follow Us Globally",
-            "ft.d": "Supervised by PhD Researcher & HSE Lead (NOSI)"
+            "pop.t": "Welcome to ProScholar", "pop.d": "Discover AI Nebras Guide",
+            "c1.t": "AI Nebras Guide", "c1.d": "Your guide to future tools.",
+            "c2.t": "Pension Law", "c2.d": "Legal analysis of insurance rights.",
+            "c3.t": "Researcher Tools", "c3.d": "AI engines for PhD students.",
+            "s.t": "Follow Us Globally"
         }
     };
 
@@ -142,11 +123,13 @@
         if(isAr) {
             root.setAttribute('lang', 'en'); root.setAttribute('dir', 'ltr');
             document.querySelectorAll('[data-i18n]').forEach(el => {
-                el.innerText = translations.en[el.getAttribute('data-i18n')];
+                el.innerText = trans.en[el.getAttribute('data-i18n')];
             });
-            document.getElementById('btn-lang').innerText = "العربية";
         } else { location.reload(); }
     }
+
+    function closePop() { document.getElementById('pop').style.display = 'none'; }
+    window.onload = () => { setTimeout(() => { document.getElementById('pop').style.display = 'flex'; }, 1000); };
 </script>
 </body>
 </html>
