@@ -4,89 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Dynamic Title & Meta -->
+    <!-- ==================== SEO GLOBAL ==================== -->
     <title data-i18n="meta.title">ProScholarTools | المنصة العالمية الشاملة 2026</title>
-    <meta name="description" data-i18n="meta.desc" content="منصة عالمية للأدوات الأكاديمية - دليل الذكاء الاصطناعي، قانون المعاشات، فحص الانتحال، تحليل الذهب، الأمن السيبراني">
+    <meta name="description" data-i18n="meta.desc" content="منصة عالمية للأدوات الأكاديمية - دليل الذكاء الاصطناعي، قانون المعاشات، فحص الانتحال، تحليل الذهب">
     
-    <!-- Global SEO -->
+    <!-- Hreflang للSEO العالمي -->
     <link rel="alternate" hreflang="ar" href="https://proscholartools.com/">
     <link rel="alternate" hreflang="en" href="https://proscholartools.com/?lang=en">
     <link rel="alternate" hreflang="fr" href="https://proscholartools.com/?lang=fr">
+    <link rel="alternate" hreflang="x-default" href="https://proscholartools.com/">
     <link rel="canonical" href="https://proscholartools.com/" id="canonical">
     
     <!-- Open Graph -->
-    <meta property="og:locale" content="ar_AR" id="ogLocale">
+    <meta property="og:locale" content="ar_AR">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://proscholartools.com/">
     <meta property="og:title" content="ProScholarTools | المنصة العالمية الشاملة 2026">
     <meta property="og:description" content="دليل الذكاء الاصطناعي، قانون المعاشات، أدوات الباحث الأكاديمي">
     <meta property="og:image" content="https://proscholartools.com/og-image.jpg">
     
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ProScholarTools | المنصة العالمية 2026">
-    <meta name="twitter:description" content="أدوات أكاديمية متطورة بإشراف باحث دكتوراه">
-    
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "ProScholarTools",
         "url": "https://proscholartools.com",
-        "author": {
-            "@type": "Person",
-            "name": "محمد ربيع عريف",
-            "jobTitle": "باحث دكتوراه وخبير NOSI"
-        },
+        "author": {"@type": "Person", "name": "محمد ربيع عريف", "jobTitle": "باحث دكتوراه وخبير NOSI"},
         "description": "منصة عالمية للأدوات الأكاديمية والقانونية",
         "inLanguage": ["ar", "en", "fr"]
     }
     </script>
     
-    <!-- Favicon SVG -->
+    <!-- Favicon SVG خفيف -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     
-    <!-- Fonts (Async) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Font Awesome (Async) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all';this.onload=null;">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- Fonts (Cairo + Inter للعالمية) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --p: #38bdf8;
-            --a: #fbbf24;
-            --bg: #020617;
-            --card: rgba(255,255,255,0.05);
-            --r: #ef4444;
-            --g: #10b981;
-            --w: #f8fafc;
+            --p: #38bdf8; --a: #fbbf24; --bg: #020617; --card: rgba(255,255,255,0.05);
+            --r: #ef4444; --g: #10b981; --w: #f8fafc;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        html[dir="ltr"] { direction: ltr; text-align: left; }
-        html[dir="rtl"] { direction: rtl; text-align: right; }
+        /* ====== دعم RTL/LTR ====== */
+        html[dir="ltr"] { direction: ltr; text-align: left; font-family: 'Inter', sans-serif; }
+        html[dir="rtl"] { direction: rtl; text-align: right; font-family: 'Cairo', sans-serif; }
         
         body {
-            font-family: 'Cairo', 'Inter', -apple-system, sans-serif;
             background: var(--bg);
             color: var(--w);
             line-height: 1.6;
             overflow-x: hidden;
-            transition: all 0.3s ease;
         }
         
         .w { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Language Switcher */
-        .lang-switch {
+
+        /* ====== Language Switcher ====== */
+        .lang-float {
             position: fixed;
-            top: 80px;
+            top: 90px;
             left: 20px;
             z-index: 99;
             background: rgba(2,6,23,0.9);
@@ -94,9 +75,9 @@
             border-radius: 12px;
             padding: 5px;
             backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        
-        .lang-switch button {
+        .lang-float button {
             background: transparent;
             border: none;
             color: var(--w);
@@ -107,173 +88,6 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-        
-        .lang-switch button:hover,
-        .lang-switch button.active {
+        .lang-float button:hover, .lang-float button.active {
             background: var(--p);
             color: #000;
-        }
-        
-        /* الهيدر المحسّن */
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            background: rgba(2,6,23,0.95);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(15px);
-        }
-        
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 900;
-            color: var(--p);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
-        }
-        
-        .logo:hover { color: var(--a); transform: scale(1.02); }
-        
-        .contact-btn {
-            color: var(--p);
-            text-decoration: none;
-            font-weight: bold;
-            border: 2px solid var(--p);
-            padding: 8px 20px;
-            border-radius: 25px;
-            transition: all 0.3s;
-            font-size: 0.95rem;
-        }
-        
-        .contact-btn:hover {
-            background: var(--p);
-            color: #000;
-        }
-
-        /* Legal Notice Bar (AdSense Required) */
-        .legal-bar {
-            background: linear-gradient(90deg, rgba(239,68,68,0.1), rgba(56,189,248,0.1));
-            border: 1px solid var(--p);
-            color: var(--w);
-            padding: 12px;
-            text-align: center;
-            font-size: 0.85rem;
-            border-radius: 0 0 16px 16px;
-            margin: 0 auto;
-            max-width: 95%;
-        }
-        
-        .legal-bar a {
-            color: var(--p);
-            text-decoration: underline;
-            margin: 0 8px;
-            font-weight: 600;
-        }
-        
-        .legal-bar i {
-            color: var(--r);
-            margin: 0 5px;
-        }
-
-        /* شريط الأخبار المتحرك المحسّن */
-        .ticker {
-            background: linear-gradient(90deg, rgba(56,189,248,0.1), rgba(251,191,36,0.1));
-            color: var(--p);
-            padding: 12px 0;
-            font-size: 0.9rem;
-            overflow: hidden;
-            white-space: nowrap;
-            border-bottom: 1px solid rgba(56,189,248,0.2);
-        }
-        
-        .ticker-content {
-            display: inline-block;
-            animation: ticker 35s linear infinite;
-            font-weight: 600;
-        }
-        
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* شبكة المقالات المحسّنة */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 50px 0;
-        }
-        
-        .card {
-            background: var(--card);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 35px 25px;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--p), var(--a));
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-        
-        .card:hover {
-            border-color: var(--p);
-            transform: translateY(-12px) scale(1.02);
-            background: rgba(56,189,248,0.08);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-        }
-        
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .card i {
-            font-size: 2.8rem;
-            color: var(--p);
-            margin-bottom: 20px;
-            display: block;
-            transition: transform 0.3s;
-        }
-        
-        .card:hover i {
-            transform: scale(1.15);
-        }
-        
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            font-weight: 800;
-        }
-        
-        .card p {
-            font-size: 0.95rem;
-            opacity: 0.85;
-            line-height: 1.7;
-        }
-        
-        .btn {
-            background: linear-gradient(135deg, var(--p),
